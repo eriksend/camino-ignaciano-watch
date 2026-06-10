@@ -1,0 +1,170 @@
+# Camino Ignaciano monitor — source registry
+#
+# Each source has:
+#   name      human label shown on the dashboard
+#   url       page or feed to watch
+#   type      html | rss        (html = scrape main text & diff; rss = new entries)
+#   lang      es | en | ca | eu  (drives translation; ca/eu/es get translated to English)
+#   region    basque | rioja | navarre | aragon | catalonia | whole   (for filtering)
+#   tier      official | forum | guide | blog | social | town | tour
+#   weight    0.0–1.5 relevance multiplier; official/guide weighted higher
+#
+# Add or remove freely. The monitor is polite: one fetch per source per run,
+# a real User-Agent, and timeouts. Keep run frequency reasonable (daily is plenty).
+
+sources:
+  # ---- Official ----
+  - name: "Camino Ignaciano — Inicio (ES)"
+    url: "https://caminoignaciano.org/"
+    type: html
+    lang: es
+    region: whole
+    tier: official
+    weight: 1.4
+  - name: "Camino Ignaciano — Home (EN)"
+    url: "https://caminoignaciano.org/en/"
+    type: html
+    lang: en
+    region: whole
+    tier: official
+    weight: 1.4
+  - name: "Camino Ignaciano — Alojamiento (accommodation list)"
+    url: "https://caminoignaciano.org/alojamiento/"
+    type: html
+    lang: es
+    region: whole
+    tier: official
+    weight: 1.5
+  - name: "Camino Ignaciano — Aspectos prácticos"
+    url: "https://caminoignaciano.org/en/practicalities/"
+    type: html
+    lang: en
+    region: whole
+    tier: official
+    weight: 1.2
+  - name: "Camino Ignaciano — Credenciales / certificados"
+    url: "https://caminoignaciano.org/en/tips-for-pilgrims/"
+    type: html
+    lang: en
+    region: whole
+    tier: official
+    weight: 1.1
+
+  # ---- Guidebook / publishers ----
+  - name: "Jesuit Sources — official guide editions"
+    url: "https://jesuitsources.bc.edu/?s=camino+ignaciano"
+    type: html
+    lang: en
+    region: whole
+    tier: guide
+    weight: 1.0
+  - name: "Chris Lowney — books / Ignatian Way"
+    url: "http://chrislowney.com/wp/books/"
+    type: html
+    lang: en
+    region: whole
+    tier: guide
+    weight: 0.8
+
+  # ---- Forums (richest practical chatter, mostly Spanish) ----
+  - name: "Gronze — Camino Ignaciano (General)"
+    url: "https://www.gronze.com/foros/general/camino-ignaciano-2"
+    type: html
+    lang: es
+    region: whole
+    tier: forum
+    weight: 1.1
+  - name: "Gronze — Información Camino Ignaciano (Otros Caminos)"
+    url: "https://www.gronze.com/foros/otros-caminos/informacion-sobre-camino-ignaciano"
+    type: html
+    lang: es
+    region: whole
+    tier: forum
+    weight: 1.0
+  - name: "caminodesantiago.me — Ignatian threads"
+    url: "https://www.caminodesantiago.me/community/search/?q=Ignaciano&o=date"
+    type: html
+    lang: en
+    region: whole
+    tier: forum
+    weight: 1.0
+
+  # ---- Tracks ----
+  - name: "Wikiloc — Camino Ignaciano tracks"
+    url: "https://www.wikiloc.com/trails/search?q=camino%20ignaciano"
+    type: html
+    lang: es
+    region: whole
+    tier: guide
+    weight: 0.9
+
+  # ---- Blogs (Spanish-language travel/pilgrim blogs) ----
+  - name: "Nos vamos de ruta — Camino Ignaciano"
+    url: "https://nosvamosderuta.es/camino-ignaciano/"
+    type: html
+    lang: es
+    region: whole
+    tier: blog
+    weight: 0.8
+  - name: "Coge tu mochila — Camino Ignaciano"
+    url: "https://cogetumochila.com/blog/camino-ignaciano-quinto-aniversario-ruta-peregrinacion/"
+    type: html
+    lang: es
+    region: whole
+    tier: blog
+    weight: 0.7
+  - name: "Fermín Lopetegui — Guía (blog)"
+    url: "http://ferminlopetegui.blogspot.com/"
+    type: html
+    lang: es
+    region: basque
+    tier: blog
+    weight: 0.8
+
+  # ---- Tour operators (signal new/changed offerings, dates, prices) ----
+  - name: "Marly Camino — Ignatian Camino"
+    url: "https://marlycamino.com/camino/ignatian-camino/"
+    type: html
+    lang: en
+    region: whole
+    tier: tour
+    weight: 0.6
+  - name: "Camino Ignaciano MTB"
+    url: "https://www.caminoignacianomtb.com/"
+    type: html
+    lang: es
+    region: whole
+    tier: tour
+    weight: 0.5
+
+  # ---- Regional tourism / town halls (broad coverage) ----
+  - name: "Manresa Turisme — Sant Ignasi / Camí"
+    url: "https://www.manresaturisme.cat/esp/cami-ignasia"
+    type: html
+    lang: ca
+    region: catalonia
+    tier: town
+    weight: 0.8
+  - name: "Gipuzkoa — Camino Ignaciano (Aisialdi)"
+    url: "https://www.kulturweb.com/adm/ficha.asp?tipoficha=1&id=160137&que=557&L_Id=59&idioma=es"
+    type: html
+    lang: es
+    region: basque
+    tier: town
+    weight: 0.6
+
+  # ---- Catch-all news (Google News RSS, Spanish + English) ----
+  - name: "Google News — \"Camino Ignaciano\" (ES)"
+    url: "https://news.google.com/rss/search?q=%22camino+ignaciano%22&hl=es&gl=ES&ceid=ES:es"
+    type: rss
+    lang: es
+    region: whole
+    tier: social
+    weight: 0.9
+  - name: "Google News — \"Ignatian Camino\" (EN)"
+    url: "https://news.google.com/rss/search?q=%22ignatian+camino%22+OR+%22ignatian+way%22&hl=en-US&gl=US&ceid=US:en"
+    type: rss
+    lang: en
+    region: whole
+    tier: social
+    weight: 0.9
