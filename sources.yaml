@@ -128,7 +128,7 @@ sources:
     weight: 0.5
 
   # ---- Regional tourism / town halls (broad coverage) ----
-- name: "Cova de Sant Ignasi — Notícies (Manresa)"
+  - name: "Cova de Sant Ignasi — Notícies (Manresa)"
     url: "https://www.covamanresa.cat/en/actualitat"
     type: html
     lang: en
