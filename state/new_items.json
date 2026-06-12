@@ -1,0 +1,74 @@
+[
+  {
+    "source_name": "Camino Ignaciano — Inicio (ES)",
+    "url": "https://caminoignaciano.org/",
+    "region": "whole",
+    "tier": "official",
+    "lang": "es",
+    "weight": 1.4,
+    "text": "Loader\nEspere mientras se verifica su solicitudâ¦"
+  },
+  {
+    "source_name": "Camino Ignaciano — Home (EN)",
+    "url": "https://caminoignaciano.org/en/",
+    "region": "whole",
+    "tier": "official",
+    "lang": "en",
+    "weight": 1.4,
+    "text": "Loader\nEspere mientras se verifica su solicitudâ¦"
+  },
+  {
+    "source_name": "Camino Ignaciano — Alojamiento (accommodation list)",
+    "url": "https://caminoignaciano.org/alojamiento/",
+    "region": "whole",
+    "tier": "official",
+    "lang": "es",
+    "weight": 1.5,
+    "text": "Loader\nEspere mientras se verifica su solicitudâ¦"
+  },
+  {
+    "source_name": "Camino Ignaciano — Aspectos prácticos",
+    "url": "https://caminoignaciano.org/en/practicalities/",
+    "region": "whole",
+    "tier": "official",
+    "lang": "en",
+    "weight": 1.2,
+    "text": "Loader\nEspere mientras se verifica su solicitudâ¦"
+  },
+  {
+    "source_name": "Camino Ignaciano — Credenciales / certificados",
+    "url": "https://caminoignaciano.org/en/tips-for-pilgrims/",
+    "region": "whole",
+    "tier": "official",
+    "lang": "en",
+    "weight": 1.1,
+    "text": "Loader\nEspere mientras se verifica su solicitudâ¦"
+  },
+  {
+    "source_name": "Chris Lowney — books / Ignatian Way",
+    "url": "http://chrislowney.com/wp/books/",
+    "region": "whole",
+    "tier": "guide",
+    "lang": "en",
+    "weight": 0.8,
+    "text": "Espere mientras se verifica su solicitud…"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVmRtZVIyWDNLWEd6Skd2Mm0yTExqQktEMmFGZmNiTjI0VkxtcXJMSjJtS1ZvSUQ1NVlMUWlPWHJiMEZoQTJ5QkNOWUZINmdFdEZrcTBKQlZlVFJTa0ZMRlctTU5GQ01RTVlDZ01lT2FhcHhMOEw0blNrYTk3M3VReGcySTN6b0t3UXRHelUxVV9KLWtmdFpfcjI3RVpZT2EyUTAycU5faXQ0QkZZOFE?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "La Abadía de Montserrat acoge el punto de partida de una nueva edición de la Marxa del Pelegrí - Abadia de Montserrat\n<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOVmRtZVIyWDNLWEd6Skd2Mm0yTExqQktEMmFGZmNiTjI0VkxtcXJMSjJtS1ZvSUQ1NVlMUWlPWHJiMEZoQTJ5QkNOWUZINmdFdEZrcTBKQlZlVFJTa0ZMRlctTU5GQ01RTVlDZ01lT2FhcHhMOEw0blNrYTk3M3VReGcySTN6b0t3UXRHelUxVV9KLWtmdFpfcjI3RVpZT2EyUTAycU5faXQ0QkZZOFE?oc=5\" target=\"_blank\">La Abadía de Montserrat acoge el punto de partida de una nueva edición de la Marxa del Pelegrí</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Abadia de Montserrat</font>"
+  },
+  {
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaEVxMkowSVJHWVg5d2FiVHhxUVJqZy0yRlgwdDZ6cDBCb1RUWnFNLTVlQ055VlFUTEQ0YXJMamZydFBVRjNtWkVIc3VjeEFHbktKcy1MbnZ6SkNLOVZMQ0ItUzNxUjRNeTVObGgzX1hxLXlGUWwta3c3MWR6U1A0NV9zZTgtcVBBblR3bTFn?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "weight": 0.9,
+    "text": "Facing Tough Conversations on Race the Ignatian Way - Fordham Now\n<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPaEVxMkowSVJHWVg5d2FiVHhxUVJqZy0yRlgwdDZ6cDBCb1RUWnFNLTVlQ055VlFUTEQ0YXJMamZydFBVRjNtWkVIc3VjeEFHbktKcy1MbnZ6SkNLOVZMQ0ItUzNxUjRNeTVObGgzX1hxLXlGUWwta3c3MWR6U1A0NV9zZTgtcVBBblR3bTFn?oc=5\" target=\"_blank\">Facing Tough Conversations on Race the Ignatian Way</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fordham Now</font>"
+  }
+]
