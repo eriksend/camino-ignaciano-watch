@@ -62,7 +62,7 @@
     "title": "Official Camino Ignaciano homepage — route overview",
     "summary_en": "The official Camino Ignaciano website describes the recreation of Ignatius of Loyola's 1522 pilgrimage from Loyola to Manresa, passing through the Basque Country, La Rioja, Navarre, Aragón, and Catalonia. The site provides planning tips, accommodation listings, pilgrim credentials, and links to activities and associations.",
     "relevance": 17,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "9eb4c90a571ca208",
@@ -75,7 +75,7 @@
     "title": "Official Ignatian Way homepage — English-language overview",
     "summary_en": "The English homepage of the official Ignatian Way website presents Ignatius of Loyola's 1522 journey from Loyola to Manresa as a living pilgrimage route. It links to stage descriptions, accommodation, credentials, and spiritual preparation resources.",
     "relevance": 14,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "603e22fbc5e87ffc",
@@ -88,7 +88,7 @@
     "title": "Official accommodation directory for the full Camino Ignaciano",
     "summary_en": "The official website provides an alphabetically ordered accommodation list covering all regions from Loyola to Manresa — Euskadi, La Rioja, Navarre, Aragón, and Catalunya — with phone numbers, addresses, and bed counts. Options range from free pilgrim albergues (e.g. Alfaro: 10 beds free; Aranzazu: 56 beds) to rural guesthouses and hotels; several offer pilgrim discounts with a valid credencial. Town-hall contacts are also listed as fallback accommodation.",
     "relevance": 100,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "34d264f0d42f5646",
@@ -101,7 +101,7 @@
     "title": "Camino Ignaciano practicalities: spring timing, costs, and gear",
     "summary_en": "Spring and fall are the recommended seasons; summer temperatures in the Zaragoza/Ebro valley reach 40°C, and winter brings snow risk from Loyola to Logroño. Daily costs run €45–€65, with pilgrim refuges at €15–€20 and hotels at €30–€50; the Los Monegros stretch between Zaragoza and Fraga has limited accommodation and should be planned carefully. Gear recommendations include broken-in shoes, rain poncho, sun protection, and a pack no heavier than 10% of body weight.",
     "relevance": 90,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "79d8cbc02f8a574b",
@@ -114,7 +114,7 @@
     "title": "Ignatian Way pilgrim tips: credencial, hostel access, Monegros warning",
     "summary_en": "Pilgrims should obtain a credencial (pilgrim passport) before departure to access pilgrim hostels along the route; some Camino de Santiago hostels between Montserrat and Logroño may also accept Ignatian Way pilgrims. The Los Monegros section between Zaragoza and Fraga is flagged as the most difficult stretch due to very limited accommodation. Most public hostels allow only a single-night stay.",
     "relevance": 66,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c3e6e99094b53c3b",
@@ -127,7 +127,7 @@
     "title": "Chris Lowney bookshelf page — no Camino planning content",
     "summary_en": "The Chris Lowney website bookshelf page lists his published works, including Heroic Leadership, with no specific Camino Ignaciano planning information.",
     "relevance": 2,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "57af013c1d62e441",
@@ -140,7 +140,7 @@
     "title": "Off-topic: 'Un-Ignatian' crisis response at Ateneo de Manila",
     "summary_en": "A Tiebreaker Times article criticizes Ateneo de Manila University's institutional response to a crisis as the 'Un-Ignatian' way — this concerns Ignatian spirituality principles at a Philippine university, not the Camino Ignaciano walking route.",
     "relevance": 0,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c03b342d542b0652",
@@ -152,6 +152,32 @@
     "lang": "en",
     "title": "Off-topic: Ateneo de Manila officials at North American alumni convention",
     "summary_en": "News about Ateneo de Manila University officials attending the 7th Ateneo Alumni Association of North America (AAANA) Convention — entirely unrelated to the Camino Ignaciano pilgrimage route.",
+    "relevance": 0,
+    "is_new": false
+  },
+  {
+    "id": "d5a02c7f3495ff5c",
+    "detected_at": "2026-06-12T14:36:57Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVmRtZVIyWDNLWEd6Skd2Mm0yTExqQktEMmFGZmNiTjI0VkxtcXJMSjJtS1ZvSUQ1NVlMUWlPWHJiMEZoQTJ5QkNOWUZINmdFdEZrcTBKQlZlVFJTa0ZMRlctTU5GQ01RTVlDZ01lT2FhcHhMOEw0blNrYTk3M3VReGcySTN6b0t3UXRHelUxVV9KLWtmdFpfcjI3RVpZT2EyUTAycU5faXQ0QkZZOFE?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "es",
+    "title": "Montserrat Abbey hosts new edition of the Marxa del Pelegrí (Pilgrim's March)",
+    "summary_en": "Montserrat Abbey, the endpoint of the Camino Ignaciano, is hosting the start of a new edition of the Marxa del Pelegrí (Pilgrim's March), according to the Abadia de Montserrat. The snippet gives no date, route, or distance details for this edition.",
+    "relevance": 18,
+    "is_new": true
+  },
+  {
+    "id": "50b132b617949bef",
+    "detected_at": "2026-06-12T14:36:57Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaEVxMkowSVJHWVg5d2FiVHhxUVJqZy0yRlgwdDZ6cDBCb1RUWnFNLTVlQ055VlFUTEQ0YXJMamZydFBVRjNtWkVIc3VjeEFHbktKcy1MbnZ6SkNLOVZMQ0ItUzNxUjRNeTVObGgzX1hxLXlGUWwta3c3MWR6U1A0NV9zZTgtcVBBblR3bTFn?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Off-topic: Race conversations at Fordham using Ignatian framework",
+    "summary_en": "Fordham Now reports on a program addressing difficult conversations on race using Ignatian principles — this concerns Ignatian spirituality at a US university and has no relevance to the Camino Ignaciano walking route.",
     "relevance": 0,
     "is_new": true
   }
