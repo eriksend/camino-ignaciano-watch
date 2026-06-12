@@ -81,22 +81,12 @@ sources:
     region: whole
     tier: forum
     weight: 1.0
-  - name: "caminodesantiago.me — Ignatian threads"
-    url: "https://www.caminodesantiago.me/community/search/?q=Ignaciano&o=date"
-    type: html
-    lang: en
-    region: whole
-    tier: forum
-    weight: 1.0
+  # caminodesantiago.me and Wikiloc both hard-block scrapers (403 regardless of
+  # headers / login-walled). The daily discovery web-search still surfaces their
+  # publicly-indexed threads and tracks, so they're dropped as direct sources
+  # rather than logging a failure every run.
 
   # ---- Tracks ----
-  - name: "Wikiloc — Camino Ignaciano tracks"
-    url: "https://www.wikiloc.com/trails/search?q=camino%20ignaciano"
-    type: html
-    lang: es
-    region: whole
-    tier: guide
-    weight: 0.9
 
   # ---- Blogs (Spanish-language travel/pilgrim blogs) ----
   - name: "Nos vamos de ruta — Camino Ignaciano"
@@ -138,13 +128,27 @@ sources:
     weight: 0.5
 
   # ---- Regional tourism / town halls (broad coverage) ----
-  - name: "Manresa Turisme — Sant Ignasi / Camí"
-    url: "https://www.manresaturisme.cat/esp/cami-ignasia"
+  - name: "Cova de Sant Ignasi — Notícies (Manresa)"
+    url: "https://www.covamanresa.cat/en/actualitat"
+    type: html
+    lang: en
+    region: catalonia
+    tier: official
+    weight: 1.0
+  - name: "Cova de Sant Ignasi — Visiting hours / activities"
+    url: "https://www.covamanresa.cat/en/sanctuary-activities"
+    type: html
+    lang: en
+    region: catalonia
+    tier: official
+    weight: 0.9
+  - name: "Històries Manresanes — Camí Ignasià (blog)"
+    url: "https://www.historiesmanresanes.cat/"
     type: html
     lang: ca
     region: catalonia
-    tier: town
-    weight: 0.8
+    tier: blog
+    weight: 0.7
   - name: "Gipuzkoa — Camino Ignaciano (Aisialdi)"
     url: "https://www.kulturweb.com/adm/ficha.asp?tipoficha=1&id=160137&que=557&L_Id=59&idioma=es"
     type: html
