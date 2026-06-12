@@ -29,6 +29,12 @@ def esc(x) -> str:
     return html.escape(str(x if x is not None else ""))
 
 
+def translate_url(url: str, lang: str) -> str:
+    if lang == "en":
+        return url
+    return f"https://translate.google.com/translate?sl={lang}&tl=en&u={url}"
+
+
 def card(f: dict) -> str:
     rel = int(f.get("relevance", 0))
     region = f.get("region", "whole")
@@ -38,11 +44,12 @@ def card(f: dict) -> str:
     hi = " hi" if rel >= 60 else ""
     langcls = "es" if lang in ("es", "ca", "eu") else "en"
     when = esc(f.get("detected_at", ""))[:16].replace("T", " ")
+    link = translate_url(f.get("url", "#"), lang)
     return f"""<article class="card{new}" data-region="{esc(region)}"
       data-tier="{esc(f.get('tier',''))}" data-rel="{rel}" data-new="{1 if f.get('is_new') else 0}">
   <div class="row">
     <span class="score{hi}">{rel}</span>
-    <a class="ttl" href="{esc(f.get('url','#'))}" target="_blank" rel="noopener">{esc(f.get('title',''))}</a>
+    <a class="ttl" href="{esc(link)}" target="_blank" rel="noopener">{esc(f.get('title',''))}</a>
   </div>
   <div class="meta">
     <span class="dot" style="background:{color}"></span>{esc(region)} · {esc(f.get('tier',''))}
