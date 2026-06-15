@@ -439,7 +439,7 @@
     "title": "Camino Ignaciano official homepage — general route intro (ES)",
     "summary_en": "The official Spanish-language Camino Ignaciano homepage describes the 650 km pilgrimage from Loyola to Manresa following Ignatius of Loyola's 1522 route. The page links to preparation tips, stages, accommodation, credentials, and practical information. No new substantive planning content in this snapshot.",
     "relevance": 14,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "6b0382ece418e866",
@@ -452,7 +452,7 @@
     "title": "Ignatian Way official homepage — English version",
     "summary_en": "The English-language official Ignatian Way homepage describes the pilgrimage from Loyola to Manresa. It links to preparation advice, stage descriptions, accommodation, and credentials. This snapshot contains no new substantive planning content.",
     "relevance": 14,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "68794f403f6f1f14",
@@ -465,7 +465,7 @@
     "title": "Official accommodation list along Camino Ignaciano — full directory",
     "summary_en": "The official Camino Ignaciano accommodation page lists lodgings alphabetically by town from Agoncillo to beyond Vitoria-Gasteiz, including hostels, pensions, rural houses, and free municipal pilgrim refuges. Several hotels offer pilgrim discounts (e.g., Hotel HM Alfaro in Alfaro, 12% off; Hotel Palacios in Alfaro includes a pilgrim menu). Full phone numbers and addresses are provided for dozens of stops.",
     "relevance": 100,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "d93694e467e41290",
@@ -478,7 +478,7 @@
     "title": "Ignatian Way practicalities: seasons, costs, water, and accommodation budget",
     "summary_en": "Spring and autumn are recommended seasons; winter brings snow on the Loyola–Logroño section and summer temperatures near Zaragoza can reach 40 °C. Daily costs range from roughly €45–€65: accommodation runs €15–€20 in pilgrim refuges and €30–€50 in hostels/hotels; a tourist dinner menu costs around €15; tap water is described as generally safe. No kitchen facilities should be expected at refuges.",
     "relevance": 84,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c3fa807d08ec7ac6",
@@ -491,7 +491,7 @@
     "title": "Pilgrim credential requirements and Monegros accommodation gap — official advice",
     "summary_en": "Pilgrims must obtain a Credencial del Camino before departure to access pilgrim hostels; the official website advises contacting one of the issuing organisations. A critical accommodation gap exists on the long stretch between Zaragoza and Fraga (Los Monegros desert). Some Camino de Santiago hostels from Montserrat to Logroño may also accept Ignaciano credential holders, but this cannot be guaranteed.",
     "relevance": 75,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "07c096cbf0d4417d",
@@ -504,7 +504,7 @@
     "title": "Jesuit Sources (Boston College) lists new updated edition of Official Camino Ignaciano Guide",
     "summary_en": "A search of the Jesuit Sources website (Boston College) returns a listing for 'Official Guide to the Camino Ignaciano — New Updated Edition' among new products. This suggests a recently published revision of the official guidebook is available. No price or publication date is shown on the search results page.",
     "relevance": 65,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "da7b129f99898587",
@@ -517,7 +517,7 @@
     "title": "Chris Lowney bookshelf — no new Ignatian Way route content",
     "summary_en": "The Chris Lowney author website bookshelf page contains only a generic description of his published works with no specific new content about the Ignatian Way pilgrimage route.",
     "relevance": 4,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "1302e8f595d072dc",
@@ -530,7 +530,7 @@
     "title": "Gronze forum: difficulty, facilities, and traveller advice for Camino Ignaciano",
     "summary_en": "A Gronze general forum thread discusses the Camino Ignaciano (27 stages, 651 km, Loiola/Azpeitia to Montserrat/Manresa). Stage 2 (Zumárraga or Legazpi to Arantzazu, 15–19 km) is flagged as the hardest leg, requiring pilgrims to carry water and food. Multiple contributors note sparse facilities compared to the Camino Francés, and report that municipal pilgrim hostels across many towns are gradually improving.",
     "relevance": 46,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "f8cf6125e77ce02e",
@@ -543,7 +543,7 @@
     "title": "Gronze forum 2019: Camino Ignaciano services, hostels, and Camino de Santiago overlap",
     "summary_en": "A Gronze forum thread discusses pilgrimage logistics: towns including Azpeitia, Zumárraga, Arantzazu, and Araia reliably offer food and water. From Navarrete onward the route coincides in reverse with the Camino del Ebro/Camino de Santiago, making Santiago hostel network accessible with the Ignaciano credential. The route is described as less dense with infrastructure than the Camino Francés but manageable.",
     "relevance": 40,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "6b875599a90a172e",
@@ -556,7 +556,7 @@
     "title": "Spanish travel blog: introductory overview of the Camino Ignaciano",
     "summary_en": "A general introductory article describes the Camino Ignaciano as a 650 km, 27-stage pilgrimage through five autonomous communities. The article restates well-known facts about the route's history and structure. No new or firsthand planning information is included.",
     "relevance": 10,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "77b611761172613f",
@@ -569,7 +569,7 @@
     "title": "Lopetegui blog: stage notes for Catalonia stages 21–23 with waypoints and terrain warnings",
     "summary_en": "Detailed route notes for stages 21–23 in Catalonia: Fraga–Lleida (33 km, flat with 8 km along the Segre river), Lleida–Castellnou de Seana (32.8 km on agricultural tracks — carry extra water due to long gaps between towns), and Castellnou–Tárrega via Verdú (20.8 km, the 100 km credential mark). The Lleida–Castellnou stage explicitly warns to carry water reserves in warm weather.",
     "relevance": 40,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "27a08f8fd970e9f1",
@@ -582,7 +582,7 @@
     "title": "Marly Camino guided tour: Ignatian Camino September 2026 — 5,525 € for 13 days",
     "summary_en": "Tour operator Marly Camino offers a fully supported group walk of the Ignatian Camino in September 2026 (September 15–27) priced at 5,525 € per person (single supplement +1,325 €). The 13-day itinerary starts in Pamplona with a bus to Loyola and includes accommodation, guides, a support vehicle, and travel insurance. 2027 dates and prices are not yet published.",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "7c5f670a6ff1027b",
@@ -595,7 +595,7 @@
     "title": "MTB tour operator offers Camino Ignaciano cycling packages with luggage transfer",
     "summary_en": "A Catalan operator (guiesbtt.cat) offers guided mountain-bike packages for the Camino Ignaciano including luggage transfer, half-board accommodation, GPS tracks, and optional guide service. Contact: info@guiesbtt.cat / +34 610 355 736. No prices listed on the homepage.",
     "relevance": 6,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "3e766c541b6c5e31",
@@ -608,7 +608,7 @@
     "title": "Manresa local blog: history of medieval city walls — not pilgrimage-route content",
     "summary_en": "The Històries Manresanes blog currently features an article on the history of Manresa's medieval defensive walls (muralles), their eight city gates, and architectural evolution from the 10th to 17th centuries. This content is not related to walking the Camino Ignaciano but provides historical background on the endpoint city.",
     "relevance": 7,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "40a59a1ebba806db",
@@ -621,7 +621,7 @@
     "title": "Urretxu municipality promotes Camino Ignaciano at Madrid Fitur tourism fair",
     "summary_en": "The Urretxu (Gipuzkoa) town council participated in Fitur, Spain's major annual tourism fair, to present the Camino Ignaciano as a quality inland tourism destination. No new route or practical planning information is included.",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "28481bc64a42cf8c",
@@ -634,7 +634,7 @@
     "title": "Kanpezu and Laguardia exhibit at Fitur alongside Camino Ignaciano",
     "summary_en": "The towns of Kanpezu (Álava) and Laguardia (La Rioja Alavesa) exhibited at the Fitur tourism fair in Madrid connected to the Camino Ignaciano route. No new practical planning information is provided.",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "547d1fca03404b80",
@@ -646,6 +646,45 @@
     "lang": "en",
     "title": "National Review article on Ignatius Loyola's prayer life — off-topic",
     "summary_en": "A National Review article discusses the spiritual and prayer practices of Ignatius Loyola. The article is not about the physical Camino Ignaciano pilgrimage route and contains no planning-relevant information for walkers.",
+    "relevance": 4,
+    "is_new": false
+  },
+  {
+    "id": "d1dd9d8a279fcd22",
+    "detected_at": "2026-06-15T14:40:59+00:00",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT01zcUhGNU1oMVZEY2pVOUJnZ2JqOElHTmVaOGFqcHhGajR5ckhrNUdaY1hvY0w1SkR4VVJ6R0hFRjBoOGlRNEFoMDFNU056d0tUbjctS1pHT2ticWNKTjNiVmM3RkdwNjE3SGE1Z0FFbUVJek9naTlyWXR0amJmdGhFd2hBZkxCcm95V1JxUWE1TVhQREpmRTNzWVlqVzBk0gGmAUFVX3lxTE15Zlo3cXg3T2ptclplRjdrSEVNemNZU1g3RmtRb0o3ZVlnNWoxanc4OVIxelBHZ0piaWZfV09vcDR5YTVpandOZEVlTndsbjZRNndiTi04T3Y1NDA0VFhXX003MTh6bEU5SkZKRTN4TUVRM1R4X1FsdVBGUGhTZS1Hakp1d2h2bmRLdlhFSjUxcW02MC1EdTdSUUM5OG5fMmw2ai1nenc?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "El Diario Vasco: Camino Ignaciano named most enjoyable pilgrimage of the year",
+    "summary_en": "El Diario Vasco, a leading Basque newspaper, features the Camino Ignaciano as the most enjoyable pilgrimage of the year. Only the headline is available from the news feed; the article likely provides a positive firsthand or editorial perspective on the route. No specific planning details are available from this snippet.",
+    "relevance": 18,
+    "is_new": true
+  },
+  {
+    "id": "4414b1b0a5e21f6c",
+    "detected_at": "2026-06-15T14:40:59+00:00",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNRlhsMDdMd2hPcEZwZkNDSmJzNVJFTkhJWXlUZ3owc1VYeFBhazJFT24td05FcEpLYW9kVjJ3cUxGd0lVNE13OHR1b3prNmthMnZDcUpPbXJMdTlqX2xMVERxZ1dqVDUzMVAzLXBuTi1yTy13U2VzMEdZbUYzYXdrdlRXdndQRFnSAYwBQVVfeXFMTUx6SHhaLUV5eWRESHAxWnJXV3M5NXBhcUJ6YUVGUm03ZWZrMnozSVF5ZGQtenBweDgyOUZSZ29rRlZDeFVkcXZ3RUFlOHVDVWdXRTZLNXlwenRtcXpxTUE1NWRVUmIxdlMxVnNOSWlLeE5LaXRzNE1FekNGYldILU8yanRpQ3VtU3dVRjk?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "elDiario.es: Spanish pilgrimage routes beyond Camino de Santiago",
+    "summary_en": "elDiario.es publishes a roundup of Spanish pilgrimage routes that go beyond the Camino de Santiago. The Camino Ignaciano is listed among the featured alternatives, though no specific planning details are discernible from the headline alone. The article may help raise the route's profile but offers no new operational information.",
+    "relevance": 14,
+    "is_new": true
+  },
+  {
+    "id": "1b07bbc69c7fc59e",
+    "detected_at": "2026-06-15T14:40:59+00:00",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE93MWZaeVE5TEhlWTM2ZGxIbm9qSmJYeURfN2s5RUg4NUdONEhuNFdCNVV6bmRzQTAyc2NNR2FNUHgxOGEyLUMwSGJVN2F6ZDZ3ZFdLOWFsU3pfa2l5cmI1Wjg4dEZ3TkFFMmNRYmp4ZUpvMnFFMTJTNQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Ateneo de Manila: Ignatian community One-ing activity",
+    "summary_en": "Ateneo de Manila University (a Philippine Jesuit institution) publishes an article titled 'One-ing with the community,' referring to an Ignatian community-engagement activity on campus. This does not concern the Camino Ignaciano pilgrimage route in Spain.",
     "relevance": 4,
     "is_new": true
   }
