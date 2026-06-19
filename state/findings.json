@@ -965,7 +965,7 @@
     "title": "Camino Ignaciano in the Diocese of Vitoria — diocesisvitoria.org",
     "summary_en": "Diocesisvitoria.org publishes a piece on the Camino Ignaciano within the Diocese of Vitoria (Basque Country). Only the headline is available from the Google News RSS feed; no specific planning details are discernible.",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "f98cac7c29cd7fa8",
@@ -978,7 +978,7 @@
     "title": "San Ignacio de Loyola statue greets pilgrims at Lapuebla de Labarca — diocesisvitoria.org",
     "summary_en": "Diocesisvitoria.org reports that a figure of San Ignacio de Loyola greets pilgrims as they pass through Lapuebla de Labarca, a town on the Rioja Alavesa section of the Camino Ignaciano. Only the headline is available from the news feed; no details on whether this is a new installation or a recurring event.",
     "relevance": 23,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "da9b212a6b122a0d",
@@ -991,7 +991,7 @@
     "title": "Five Hundred Years of the Ignatian Camino — La Vanguardia",
     "summary_en": "La Vanguardia publishes a piece headlined 'Five Hundred Years of the Ignatian Camino.' Only the headline is available from the RSS feed; the article likely covers historical or Jubilee-related content about the 500th anniversary of Ignatius of Loyola's 1522 pilgrimage.",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "f40217dcc0997d41",
@@ -1003,6 +1003,32 @@
     "lang": "es",
     "title": "Film 'El camino ignaciano' — St. Ignatius of Loyola's route after his conversion — El Debate",
     "summary_en": "El Debate covers a film titled 'El camino ignaciano' documenting the itinerary of Saint Ignatius of Loyola following his conversion. This is a cultural/media piece about the route's history and is not a practical planning resource for pilgrims.",
+    "relevance": 14,
+    "is_new": false
+  },
+  {
+    "id": "b59bcc945b1761e3",
+    "detected_at": "2026-06-19T14:38:26Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQOTI0NXJ6aXlNZkNCZ2pqWHgwSmRGLVVHVy1Bb181cnBZbXNEdXJRMEJ3eUhNLVRvRk0zQmxtaHNGMDY1TXM3S29EV3JvVTBXOTJTVmR5SVBPMUV2Q0NwNXloS19jZThwUC1rLXhoRDUybm9wWWpTTkl5WHF6U1ZNbXMyeUNrdWl5STRCVHdvWkdsVVdiOWhlSU5ibC1RZDB6eEZoRlJOMkItRGxyREFTclpfNG13aU9JSEJKYTM1dTVVcndab2phUkFCMFBFcHVES3Y2OUYzNzbSAdgBQVVfeXFMUDkyNDVyeml5TWZDQmdqalh4MEpkRi1VR1ctQW9fNXJwWW1zRHVyUTBCd3lITS1Ub0ZNM0JsbWhzRjA2NU1zN0tvRFdyb1UwVzkyU1ZkeUlQTzFFdkNDcDV5aEtfY2U4cFAtay14aEQ1Mm5vcFlqU05JeVhxelNWTW1zMnlDa3VpeUk0QlR3b1pHbFVXYjloZUlOYmwtUWQwenhGaEZSTjJCLURsckRBU3JaXzRtd2lPSUhCSmEzNXU1VXJ3Wm9qYVJBQjBQRXB1REt2NjlGMzc2?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Off-topic: Lleida joins European EUniverCities university network",
+    "summary_en": "An article from La Paeria (Lleida city council) announces that Lleida has joined the EUniverCities European university network. This has no relevance to the Camino Ignaciano pilgrimage route.",
+    "relevance": 0,
+    "is_new": true
+  },
+  {
+    "id": "7ea17a8d8207bd1a",
+    "detected_at": "2026-06-19T14:38:26Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQY0JoNEk1TE96bnQ5RW93MjByNHotMHZjOGl4cmgtVFhCamw1eVphU25kZHFLTGZUZzI2MUczT2czbkdiZjRBTURXM3dIN3ZOSU94Mm43VFQ5eTBoRlpXdHZhMVRNVkxUQVYwcXJPcXJ4b0kxTU1SemozdEZiWUItWTlmMkRoRkhiek4tYjVXUTFxNFRVS3lxaGdRVDRnOVJrazlDVV8xLVdxSnVoSldPU3I1VlJRNko2OGVYQ094VzM5Mm9OMV94V9IBzgFBVV95cUxQa2MzTGd5LUc1WGpBLTRtTFBYNURFV0VjbUpoRnV5bFVRMkVYRkJ1T1ZGTHBBYVB0Um9Bak9feDJOSzctU19SSkpfaEtodTBEWjRCVzE4Q2lldVB2LVFYZWM0RHl2QWIxMHdSbWJobnRTc3Y0T2JQSXAxdEtLVnNIcE9rc1c3T0N4WlMxSVBNVDZnVk55d2xSdjhHZDFzSS1JS1hyZThCV3NHSktqOFlLWFpIX29kWFR6dFV3djl4emQzdHZIcmplS0hEN0lwZw?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Azpeitia and Azkoitia promote Camino Ignaciano at Fitur tourism fair",
+    "summary_en": "El Diario Vasco reports that the municipalities of Azpeitia and Azkoitia — located at the start of the Camino Ignaciano in the Basque Country — promoted the route at the Fitur international tourism fair in Madrid. No new practical planning information is provided.",
     "relevance": 14,
     "is_new": true
   }
