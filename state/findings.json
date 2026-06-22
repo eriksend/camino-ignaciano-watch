@@ -1083,5 +1083,31 @@
     "summary_en": "El Diario Vasco reports that the municipalities of Azpeitia and Azkoitia — located at the start of the Camino Ignaciano in the Basque Country — promoted the route at the Fitur international tourism fair in Madrid. No new practical planning information is provided.",
     "relevance": 14,
     "is_new": false
+  },
+  {
+    "id": "2861f0e1f922bfb9",
+    "detected_at": "2026-06-22T14:38:12Z",
+    "source_name": "Marly Camino — Ignatian Camino",
+    "url": "https://marlycamino.com/camino/ignatian-camino/",
+    "region": "whole",
+    "tier": "tour",
+    "lang": "en",
+    "title": "Marly Camino adds guided Ignatian Camino departure: Sep 16-28, 2027",
+    "summary_en": "Tour operator Marly Camino has added a new guided Ignatian Camino departure dated September 16–28, 2027. This is an autumn guided package and does not directly affect spring solo planning, but confirms ongoing guided offerings on the route.",
+    "relevance": 12,
+    "is_new": true
+  },
+  {
+    "id": "6176f39cc03e1c70",
+    "detected_at": "2026-06-22T14:38:12Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPOGVxdHRObzRhVHN5QkZRVWlOeTYxOXlaZ2NuSXZqbTF5YmJVUVpZRk9kNG1TMmdUQlVRcHNkMkZVN1Jyd21QaFlMQ2tLQzl5eGVRSk1rR2lYZDFlcHN4b0FxZ0VOT3gwVzVGdDBzMVNrNWV0b3B3M0E0X3dWTzlIeXoxVUNmeGdqTFZBUTM3NzJzU1M4dDBLLVMycUdqWk5iZ0NsV3Q2c3BZeUxRclNN?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Ateneo University to hold first Ignatian Festival, July 21 (off-route)",
+    "summary_en": "Ateneo (likely Ateneo de Manila, Philippines) is hosting its first Ignatian Festival on July 21, as reported by GMA Network. This is a university campus event in the Philippines, unrelated to the Camino Ignaciano pilgrimage route in Spain.",
+    "relevance": 3,
+    "is_new": true
   }
 ]
