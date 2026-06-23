@@ -1095,7 +1095,7 @@
     "title": "Marly Camino adds guided Ignatian Camino departure: Sep 16-28, 2027",
     "summary_en": "Tour operator Marly Camino has added a new guided Ignatian Camino departure dated September 16–28, 2027. This is an autumn guided package and does not directly affect spring solo planning, but confirms ongoing guided offerings on the route.",
     "relevance": 12,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "6176f39cc03e1c70",
@@ -1107,6 +1107,19 @@
     "lang": "en",
     "title": "Ateneo University to hold first Ignatian Festival, July 21 (off-route)",
     "summary_en": "Ateneo (likely Ateneo de Manila, Philippines) is hosting its first Ignatian Festival on July 21, as reported by GMA Network. This is a university campus event in the Philippines, unrelated to the Camino Ignaciano pilgrimage route in Spain.",
+    "relevance": 3,
+    "is_new": false
+  },
+  {
+    "id": "40acb1364f39e66a",
+    "detected_at": "2026-06-23T15:51:45Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOWNKSmo2TFVRYk5pVWNCbm4wUzd4cXlkV0h6UGRSbUtEb3ROanAxYm5aeVFUcXM0SFVua09scFZOZEtiVERhTkQ0QWY4TGt1SVhqanowaU90dUhhQ24yU0VsLTlnUFNZekxab21sV05HNkJYTXFCNDh2NDZfZW5ydzR4QWlITW4xV0xmV2lkU2RlSVF5VV9yTjU5SDViRVRMR1B4SGVyZEJtNEU?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Boston College Latino leadership certificate for Catholic parish service (off-topic)",
+    "summary_en": "Boston College is offering a leadership certificate program for Latinos seeking to serve Catholic parishes. This article appeared in the 'Ignatian Camino' Google News feed but has no relation to the Camino Ignaciano pilgrimage route in Spain.",
     "relevance": 3,
     "is_new": true
   }
