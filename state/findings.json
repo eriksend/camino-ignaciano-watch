@@ -1121,6 +1121,32 @@
     "title": "Boston College Latino leadership certificate for Catholic parish service (off-topic)",
     "summary_en": "Boston College is offering a leadership certificate program for Latinos seeking to serve Catholic parishes. This article appeared in the 'Ignatian Camino' Google News feed but has no relation to the Camino Ignaciano pilgrimage route in Spain.",
     "relevance": 3,
+    "is_new": false
+  },
+  {
+    "id": "83dea41db9f8dc87",
+    "detected_at": "2026-06-24T14:35:02Z",
+    "source_name": "Jesuit Sources — official guide editions",
+    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
+    "region": "whole",
+    "tier": "guide",
+    "lang": "en",
+    "title": "Jesuit Sources: New Edition — 'A Pilgrim's Testament' (Ignatian Memoirs)",
+    "summary_en": "Jesuit Sources (Boston College) lists a new edition of 'A Pilgrim's Testament: The Memoirs of Saint Ignatius of Loyola.' This is the primary spiritual narrative that underpins the Camino Ignaciano, useful background reading for pilgrims but not a practical walking guide.",
+    "relevance": 32,
+    "is_new": true
+  },
+  {
+    "id": "cabe99a9fb2a546a",
+    "detected_at": "2026-06-24T14:35:02Z",
+    "source_name": "Coge tu mochila — Camino Ignaciano",
+    "url": "https://cogetumochila.com/blog/camino-ignaciano-quinto-aniversario-ruta-peregrinacion/",
+    "region": "whole",
+    "tier": "blog",
+    "lang": "es",
+    "title": "Camino Ignaciano: Route Overview and 500th Anniversary Context (Spanish blog)",
+    "summary_en": "Spanish travel blog 'Coge tu mochila' publishes a general overview of the Camino Ignaciano marking the 500th anniversary of Ignatius of Loyola's pilgrimage. The post describes the 675 km route from the Loyola sanctuary near Azpeitia through Logroño, the Los Monegros desert, and Lleida to Manresa, noting very low pilgrim numbers (~2,500 completed it in 2019) and varied terrain. No new practical information specific to spring walking.",
+    "relevance": 18,
     "is_new": true
   }
 ]
