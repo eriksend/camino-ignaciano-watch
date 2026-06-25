@@ -1134,7 +1134,7 @@
     "title": "Jesuit Sources: New Edition — 'A Pilgrim's Testament' (Ignatian Memoirs)",
     "summary_en": "Jesuit Sources (Boston College) lists a new edition of 'A Pilgrim's Testament: The Memoirs of Saint Ignatius of Loyola.' This is the primary spiritual narrative that underpins the Camino Ignaciano, useful background reading for pilgrims but not a practical walking guide.",
     "relevance": 32,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "cabe99a9fb2a546a",
@@ -1147,6 +1147,32 @@
     "title": "Camino Ignaciano: Route Overview and 500th Anniversary Context (Spanish blog)",
     "summary_en": "Spanish travel blog 'Coge tu mochila' publishes a general overview of the Camino Ignaciano marking the 500th anniversary of Ignatius of Loyola's pilgrimage. The post describes the 675 km route from the Loyola sanctuary near Azpeitia through Logroño, the Los Monegros desert, and Lleida to Manresa, noting very low pilgrim numbers (~2,500 completed it in 2019) and varied terrain. No new practical information specific to spring walking.",
     "relevance": 18,
+    "is_new": false
+  },
+  {
+    "id": "cf67580b9ae8bad9",
+    "detected_at": "2026-06-25T14:37:22Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQY0tZZFpocHUwOVZGVUZJRndIajBwUk8zY3paWXRkdFFwN2JINWVIbHk1NXdBVHpQWlp4b3BUYlJOSDNjUjN0a2Z5cGFTT1JZX2huRG8zOVJXNmh6a2J2UjJZNVpzc0RCc2lDbVJOTUExVnlXaUdKNDFPc1ByQmtMTDMwTGxHeWxxRVlOcEltUmtId1EtdUcyUnBfVFJDdGdPMTA1NGlJelN0bjc0WUFsRFRPWWZ4azc2OENyWlJ0QmYtSjhsaG9obTFfMNIB0AFBVV95cUxNWmdUZFNzaGFtS1VheEJWM2w5ZjQ3ZlBKT1ljV0l3MTI5NDk3bWNLT0Rtd1h6YmdxOG1xdUZsUndycFlUOXU4ajBWcVc1MklBZkt2ODZZRTRRSE9yQ0tianJrTDV0eEV0aVBPU0MyWGpXV0hPak9DUXd1UGpGOGZUWjlfQV9OZFM3S1FzUEV3UjV6bGVTM1FCRm12aWM2QTJZVWFvQUlLWHFVVDdsWXpoTEkzOTJQWDhmSHk3bmpvYU9uWTNTN2w2QVdJUGZmRkUw?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Azkoitia Representatives to Present Camino Ignaciano at FITUR Tourism Fair",
+    "summary_en": "Representatives from Azkoitia will attend the presentation of the Camino Ignaciano at FITUR, Spain's international tourism trade fair. The participation highlights continued institutional backing for the route.",
+    "relevance": 18,
+    "is_new": true
+  },
+  {
+    "id": "400a6d6c201f2900",
+    "detected_at": "2026-06-25T14:37:22Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9JQlNLUjhMSGg1T2lqRDctVUdOWUZSY2llclZXVnNkbm1EYkhUd3dHbktNZ0dSUmZFNGtDMjZzUGdDVERIalhFQnI4ZHprZU9hYjhXcFRvZjdfSGQ5djVRdjhaRV9ROFNCa1FrcjRObTM2d1VUbU9DVHZpOXNNM3c?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "American Pilgrimages and the Ignatian Way — Jesuits.org",
+    "summary_en": "Jesuits.org published an article on American pilgrimages featuring the Ignatian Way. The piece explores the route's spiritual significance, particularly for pilgrims from the United States.",
+    "relevance": 23,
     "is_new": true
   }
 ]
