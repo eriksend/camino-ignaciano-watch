@@ -57,10 +57,13 @@ source was unreachable it simply won't appear in the input; skip it silently.
      "lang": "es|ca|eu|en",
      "title": "English headline",
      "summary_en": "1-3 sentence English summary",
+     "source_text": "verbatim text from the item (the raw `text` field from new_items.json)",
      "relevance": 0,
      "is_new": true
    }
    ```
+   `source_text` is the verbatim extracted/changed text that was scored — copy it from the
+   item's `text` field unchanged. This lets the report show a collapsible cached copy.
 
 6. **Rebuild the report:** `python scripts/build_report.py` (writes `docs/index.html`
    and `report.html`).

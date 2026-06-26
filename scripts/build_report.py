@@ -58,6 +58,7 @@ def card(f: dict) -> str:
     <span>· {when}</span>{' <span class="newtag">new</span>' if f.get('is_new') else ''}
   </div>
   <p class="summary">{esc(f.get('summary_en',''))}</p>
+  {('<details class="src"><summary>Cached source text</summary><pre>' + esc(f['source_text']) + '</pre></details>') if f.get('source_text') else ''}
 </article>"""
 
 
@@ -128,6 +129,12 @@ background:var(--waymark);border-radius:5px;padding:2px 6px}}
 .empty{{text-align:center;color:var(--ink-soft);padding:60px 20px;
 border:1px dashed var(--line);border-radius:14px}}
 .empty b{{display:block;font-size:16px;color:var(--ink);margin-bottom:6px}}
+.src{{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}}
+.src summary{{font-size:12px;color:var(--ink-soft);cursor:pointer;user-select:none}}
+.src summary:hover{{color:var(--waymark-deep)}}
+.src pre{{margin:8px 0 0;font-size:12px;line-height:1.5;white-space:pre-wrap;
+word-break:break-word;color:#4a463f;background:#f0ece4;border-radius:7px;
+padding:10px 12px;max-height:260px;overflow-y:auto}}
 </style></head><body>
 <header>
   <svg class="sun" viewBox="0 0 100 100" aria-hidden="true">
