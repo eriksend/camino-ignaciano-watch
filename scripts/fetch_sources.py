@@ -23,6 +23,7 @@ import yaml
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCES = os.path.join(ROOT, "sources.yaml")
 STATE_DIR = os.path.join(ROOT, "state")
+CACHE_DIR = os.path.join(STATE_DIR, "cache")
 STATE_FILE = os.path.join(STATE_DIR, "source_state.json")
 NEW_FILE = os.path.join(STATE_DIR, "new_items.json")
 
@@ -45,12 +46,29 @@ def sid(url: str) -> str:
     return hashlib.sha1(url.encode()).hexdigest()[:12]
 
 
-def fetch(url: str) -> str | None:
+def cache_paths(key: str) -> tuple[str, str]:
+    """Return (latest_html_path, prev_text_path) for a source key."""
+    return (
+        os.path.join(CACHE_DIR, f"{key}-latest.html"),
+        os.path.join(CACHE_DIR, f"{key}-prev.txt"),
+    )
+
+
+def fetch(url: str, key: str) -> str | None:
+    """Fetch URL; on success write raw HTML to cache. Falls back to cached copy."""
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    html_path, _ = cache_paths(key)
     try:
         r = requests.get(url, headers=HEADERS, timeout=30)
         r.raise_for_status()
+        with open(html_path, "w", encoding="utf-8", errors="replace") as fh:
+            fh.write(r.text)
         return r.text
     except Exception as exc:
+        if os.path.exists(html_path):
+            print(f"  ! fetch failed ({exc}); using cached copy")
+            with open(html_path, encoding="utf-8", errors="replace") as fh:
+                return fh.read()
         print(f"  ! fetch failed: {exc}")
         return None
 
@@ -139,16 +157,22 @@ def main() -> None:
             state[key] = {"seen_ids": list(seen)[-300:], "last_seen": now_iso()}
 
         else:  # html
-            html = fetch(src["url"])
+            html = fetch(src["url"], key)
             if html is None:
                 continue
             text = extract_main_text(html, src["url"])
             h = hashlib.sha256(text.encode()).hexdigest()
             prev = state.get(key)
+            _, prev_path = cache_paths(key)
             if not prev:
+                with open(prev_path, "w", encoding="utf-8") as fh:
+                    fh.write(text)
                 state[key] = {"hash": h, "extracted": text, "last_seen": now_iso()}
                 baselined += 1
             elif prev.get("hash") != h:
+                # preserve previous extracted text before overwriting
+                with open(prev_path, "w", encoding="utf-8") as fh:
+                    fh.write(prev.get("extracted", ""))
                 delta = added_text(prev.get("extracted", ""), text)
                 state[key] = {"hash": h, "extracted": text, "last_seen": now_iso()}
                 if delta.strip():
