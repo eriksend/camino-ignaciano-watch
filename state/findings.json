@@ -1,5 +1,19 @@
 [
   {
+    "id": "f9884901d2fc320d",
+    "detected_at": "2026-07-06T14:40:58Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQjA1aDhBVG5nVHFlSi11WHJYUWRyc1lMd1NfNVFjNFlvODNwQWZuZWhyNm15SXBZSGFUaW9KWE5UajlfMzZ3a0RmWWdpeWQyVzJkTHg5dWQ5WFUxQmF5WkVqanYzeVNnWkpBWW95eEwxaV9vcVVMdHlNNGNSWHFBSQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Camino Ignaciano to open youth pastoral program (Diocese of Burgos)",
+    "summary_en": "The Archdiocese of Burgos will use the Camino Ignaciano to open its new pastoral year for young people, per a news brief. Only the headline is available via the feed; no dates, route, or logistics details were retrievable.",
+    "source_text": "El Camino Ignaciano abrirá el curso pastoral para los jóvenes - Archidiócesis de Burgos\n<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOQjA1aDhBVG5nVHFlSi11WHJYUWRyc1lMd1NfNVFjNFlvODNwQWZuZWhyNm15SXBZSGFUaW9KWE5UajlfMzZ3a0RmWWdpeWQyVzJkTHg5dWQ5WFUxQmF5WkVqanYzeVNnWkpBWW95eEwxaV9vcVVMdHlNNGNSWHFBSQ?oc=5\" target=\"_blank\">El Camino Ignaciano abrirá el curso pastoral para los jóvenes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Archidiócesis de Burgos</font>",
+    "relevance": 9,
+    "is_new": true
+  },
+  {
     "id": "c6400f532bb1ba41",
     "detected_at": "2026-07-05T14:40:29Z",
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -11,7 +25,7 @@
     "summary_en": "A Google News teaser links to a naiz (Basque outlet) feature headlined \"Camino Ignaciano, 500 años después\" (500 years later). Only the headline is available via the feed; no article body, route, or accommodation details were retrievable.",
     "source_text": "Camino Ignaciano, 500 años después - naiz:\n<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTXBmSDdqYlFiUkNCSzZwd3VjSFNGVW00MHYtRDEtS21iOXFxOXp5eEFlN3VHSWNGVDl4YkVZVzhfWkI2WFAzaFA3MTMtc1F6Ym1mUWF5anUyUmEzMFlSWHFrb3lYQTBXVHozSUt6UXZNNmh0a1hzSmIwQmxBS3Itakc5VnFtQlRS0gGIAUFVX3lxTE5OZXdoeGpnbjN2cUZrcl9XUHB4LUpKMURpMjFFOFVuci1QcGxOZVpGWG0tVGdIVENkcmdpMFh0RlgySnpPMWF1OHVzTGM2bVBPRlhKOFlqYmxjc0JoUWhKNmd0cVdDOFhaZEcySHF4YjdJNldmeDVNOS1Sdl85VURiYzBBSlNWNkI?oc=5\" target=\"_blank\">Camino Ignaciano, 500 años después</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">naiz:</font>",
     "relevance": 18,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "8b96721a94fa8033",
