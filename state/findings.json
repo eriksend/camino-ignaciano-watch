@@ -1,5 +1,19 @@
 [
   {
+    "id": "4d7f90c469fcfdf8",
+    "detected_at": "2026-07-07T14:41:26Z",
+    "source_name": "Marly Camino — Ignatian Camino",
+    "url": "https://marlycamino.com/camino/ignatian-camino/",
+    "region": "whole",
+    "tier": "tour",
+    "lang": "en",
+    "title": "Marly Camino itinerary page adds mention of Oller de Mas near Manresa",
+    "summary_en": "Marly Camino's Ignatian Camino tour page now includes a reference to \"Oller de Mas – Manresa\"; the captured text gives no further detail on what changed or why.",
+    "source_text": "Oller de Mas – Manresa",
+    "relevance": 9,
+    "is_new": true
+  },
+  {
     "id": "f9884901d2fc320d",
     "detected_at": "2026-07-06T14:40:58Z",
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -11,7 +25,7 @@
     "summary_en": "The Archdiocese of Burgos will use the Camino Ignaciano to open its new pastoral year for young people, per a news brief. Only the headline is available via the feed; no dates, route, or logistics details were retrievable.",
     "source_text": "El Camino Ignaciano abrirá el curso pastoral para los jóvenes - Archidiócesis de Burgos\n<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOQjA1aDhBVG5nVHFlSi11WHJYUWRyc1lMd1NfNVFjNFlvODNwQWZuZWhyNm15SXBZSGFUaW9KWE5UajlfMzZ3a0RmWWdpeWQyVzJkTHg5dWQ5WFUxQmF5WkVqanYzeVNnWkpBWW95eEwxaV9vcVVMdHlNNGNSWHFBSQ?oc=5\" target=\"_blank\">El Camino Ignaciano abrirá el curso pastoral para los jóvenes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Archidiócesis de Burgos</font>",
     "relevance": 9,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c6400f532bb1ba41",
