@@ -1,5 +1,33 @@
 [
   {
+    "id": "ab99b8f6a2d9b76d",
+    "detected_at": "2026-07-08T14:42:22Z",
+    "source_name": "Jesuit Sources — official guide editions",
+    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
+    "region": "whole",
+    "tier": "guide",
+    "lang": "en",
+    "title": "Jesuit Sources search hit: Examen prayer, not route-related",
+    "summary_en": "A search of Jesuit Sources for \"camino ignaciano\" surfaced a page titled \"Prayer for Finding God in All Things: The Daily Examen of St. Ignatius of Loyola.\" It concerns Ignatian spirituality, not the physical route, accommodation, or logistics of the Camino Ignaciano.",
+    "source_text": "Prayer for Finding God in All Things: The Daily Examen of St. Ignatius of Loyola",
+    "relevance": 5,
+    "is_new": true
+  },
+  {
+    "id": "c2336cb2ea464a8b",
+    "detected_at": "2026-07-08T14:42:22Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5",
+    "region": "basque",
+    "tier": "social",
+    "lang": "es",
+    "title": "Campezo to open a new Camino Ignaciano pilgrim hostel this spring",
+    "summary_en": "El Correo reports that Campezo will debut a new pilgrim hostel (albergue) on the Camino Ignaciano this spring. Only the headline was retrievable via the Google News feed; capacity, price, and exact opening date are not given.",
+    "source_text": "Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano - El Correo\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5\" target=\"_blank\">Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Correo</font>",
+    "relevance": 81,
+    "is_new": true
+  },
+  {
     "id": "4d7f90c469fcfdf8",
     "detected_at": "2026-07-07T14:41:26Z",
     "source_name": "Marly Camino — Ignatian Camino",
@@ -11,7 +39,7 @@
     "summary_en": "Marly Camino's Ignatian Camino tour page now includes a reference to \"Oller de Mas – Manresa\"; the captured text gives no further detail on what changed or why.",
     "source_text": "Oller de Mas – Manresa",
     "relevance": 9,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "f9884901d2fc320d",

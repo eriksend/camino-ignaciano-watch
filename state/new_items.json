@@ -1,11 +1,20 @@
 [
   {
-    "source_name": "Marly Camino — Ignatian Camino",
-    "url": "https://marlycamino.com/camino/ignatian-camino/",
+    "source_name": "Jesuit Sources — official guide editions",
+    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
     "region": "whole",
-    "tier": "tour",
+    "tier": "guide",
     "lang": "en",
-    "weight": 0.6,
-    "text": "Oller de Mas – Manresa"
+    "weight": 1.0,
+    "text": "Prayer for Finding God in All Things: The Daily Examen of St. Ignatius of Loyola"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano - El Correo\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5\" target=\"_blank\">Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Correo</font>"
   }
 ]
