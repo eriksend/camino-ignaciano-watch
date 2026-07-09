@@ -1,20 +1,47 @@
 [
   {
-    "source_name": "Jesuit Sources — official guide editions",
-    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
-    "region": "whole",
-    "tier": "guide",
-    "lang": "en",
-    "weight": 1.0,
-    "text": "Prayer for Finding God in All Things: The Daily Examen of St. Ignatius of Loyola"
-  },
-  {
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mX2dad2h4VW5xZ3VMOTRjNm5Fa0ZnS2F3ODBsNmp3Mk1vUUk0UmZPRFZKMzlzR0pHemUzVy1ZbmtrOW55RTQydWFNbmNmVFl4SDl1M1dOdHNiNTBSWkpwNUp3?oc=5",
     "region": "whole",
     "tier": "social",
     "lang": "es",
     "weight": 0.9,
-    "text": "Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano - El Correo\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakg?oc=5\" target=\"_blank\">Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Correo</font>"
+    "text": "Zaragoza acoge la firma del convenio entre la Asociación de Municipios del Camino Ignaciano y la Compañía de Jesús para reforzar la promoción turística de la ruta - Ayuntamiento de Zaragoza\n<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE1mX2dad2h4VW5xZ3VMOTRjNm5Fa0ZnS2F3ODBsNmp3Mk1vUUk0UmZPRFZKMzlzR0pHemUzVy1ZbmtrOW55RTQydWFNbmNmVFl4SDl1M1dOdHNiNTBSWkpwNUp3?oc=5\" target=\"_blank\">Zaragoza acoge la firma del convenio entre la Asociación de Municipios del Camino Ignaciano y la Compañía de Jesús para reforzar la promoción turística de la ruta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ayuntamiento de Zaragoza</font>"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOSDFBdktjT0dfdDNrVGZSRzk1Ujg2ZjFhYzhIdUpndVFyVm9Sd2dRcDQ0YnV2ZnJyclNIUzdlZjZOVWV4eGhPME5heV95azdvTmxhMHNEam5IakJnd3BlOThSZVdKWWpSd2FLVE1ubTVnN0NNX2wtRjZNQXY5QzdpdXE3THBDc1phMFZseThwdm5LWG9rUWYxYkV6NUFpbUh3TW4tcmZyc1FhdktsNHZ1YzdwRnF6UFNVRmFzRTZKQWRPRV9ONFFuU0s1dVdNUGltaUI2cUlsUjV6TGVlaHBYTTBTT1JaZw?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "Zaragoza se suma al impulso del Camino Ignaciano: un itinerario de 650 kilómetros que unen Azpeitia y Manresa - Aragón Noticias (CARTV)\n<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOSDFBdktjT0dfdDNrVGZSRzk1Ujg2ZjFhYzhIdUpndVFyVm9Sd2dRcDQ0YnV2ZnJyclNIUzdlZjZOVWV4eGhPME5heV95azdvTmxhMHNEam5IakJnd3BlOThSZVdKWWpSd2FLVE1ubTVnN0NNX2wtRjZNQXY5QzdpdXE3THBDc1phMFZseThwdm5LWG9rUWYxYkV6NUFpbUh3TW4tcmZyc1FhdktsNHZ1YzdwRnF6UFNVRmFzRTZKQWRPRV9ONFFuU0s1dVdNUGltaUI2cUlsUjV6TGVlaHBYTTBTT1JaZw?oc=5\" target=\"_blank\">Zaragoza se suma al impulso del Camino Ignaciano: un itinerario de 650 kilómetros que unen Azpeitia y Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aragón Noticias (CARTV)</font>"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcXdoNXJHS1dlQVk0NWNiZ1ltUFVpYXJ6RTY2UHlhZ0dfaEgyOFgzc3RSVkI0QXV0bzNRbTRHeEFuT3h6VVUxTnZ3YVRLNURCYXJTV1lMc0I0VkpnaWc0dzRvcXpqNnpreFgyUl9keV96S3c4bWdyemNJU3dKcmt4MDZUVDdVUkNNLUxhZ1BLUXdyemRQZlFWR00wdWZCMmxsYW5qQnFJU2p1d0lQcmwtQV9GVUlOWktXU2FnZGZNYTA5QjhwbVdMaVhROGZ2aUJOX0IxUG1ZcHM4SDRrT1ZqZWItTFZNcXFDRm5NalM3WdIB9AFBVV95cUxOdzRSMnZ1YVhGZXJ6ODZLdHFBM0pTcGljaDdOd0sxdk8xZU9vODdSNTl3VVYyNlFQU3NzRHNtZnNzQlotMnB4OU1BM3lZZ1FuZUhKSEFyblQ1cm9yR2piTWdVb3BjMlBBVnd4cmpnRzdPV2pmSXJDRXpiaHFHRW00YjJtSmRyQmhESElHV1dEUXFQeFZnZDFVZkZiaVpoaUI0Q0VrLXBxS3E4UWxFQllNd0JySmVyUXlKdXpRRUxmVU9uUGtMd0FvRG0wN1NUNXp1eUJZdUZpdWpLdW5YRjUxbmZmTHR0NTdmYk11Y3k2RGo5a0Ja?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "Zaragoza impulsa el Camino Ignaciano como gran ruta de turismo interior, espiritual y cultural - Aragón Digital\n<a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcXdoNXJHS1dlQVk0NWNiZ1ltUFVpYXJ6RTY2UHlhZ0dfaEgyOFgzc3RSVkI0QXV0bzNRbTRHeEFuT3h6VVUxTnZ3YVRLNURCYXJTV1lMc0I0VkpnaWc0dzRvcXpqNnpreFgyUl9keV96S3c4bWdyemNJU3dKcmt4MDZUVDdVUkNNLUxhZ1BLUXdyemRQZlFWR00wdWZCMmxsYW5qQnFJU2p1d0lQcmwtQV9GVUlOWktXU2FnZGZNYTA5QjhwbVdMaVhROGZ2aUJOX0IxUG1ZcHM4SDRrT1ZqZWItTFZNcXFDRm5NalM3WdIB9AFBVV95cUxOdzRSMnZ1YVhGZXJ6ODZLdHFBM0pTcGljaDdOd0sxdk8xZU9vODdSNTl3VVYyNlFQU3NzRHNtZnNzQlotMnB4OU1BM3lZZ1FuZUhKSEFyblQ1cm9yR2piTWdVb3BjMlBBVnd4cmpnRzdPV2pmSXJDRXpiaHFHRW00YjJtSmRyQmhESElHV1dEUXFQeFZnZDFVZkZiaVpoaUI0Q0VrLXBxS3E4UWxFQllNd0JySmVyUXlKdXpRRUxmVU9uUGtMd0FvRG0wN1NUNXp1eUJZdUZpdWpLdW5YRjUxbmZmTHR0NTdmYk11Y3k2RGo5a0Ja?oc=5\" target=\"_blank\">Zaragoza impulsa el Camino Ignaciano como gran ruta de turismo interior, espiritual y cultural</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aragón Digital</font>"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHdEtiZjVYRnZJWjZ5UzEwcmRocmJsQVJHeGVUbWdvTFVoRDhzVXM1bVhSOFBKMFpMQnpBbzF0OVpzYXhhUXN1bnVkbXN0T0hJYmtCZGNn?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "🚶 Este es el Camino Ignaciano al que se ha sumado Zaragoza. Recrea el recorrido que hizo San Ignacio de Loyola en 1522 ya atraviesa cinco comunidades. #caminoignaciano #zaragoza #jordihereu #sanignaciodeloyola - instagram.com\n<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHdEtiZjVYRnZJWjZ5UzEwcmRocmJsQVJHeGVUbWdvTFVoRDhzVXM1bVhSOFBKMFpMQnpBbzF0OVpzYXhhUXN1bnVkbXN0T0hJYmtCZGNn?oc=5\" target=\"_blank\">🚶 Este es el Camino Ignaciano al que se ha sumado Zaragoza. Recrea el recorrido que hizo San Ignacio de Loyola en 1522 ya atraviesa cinco comunidades. #caminoignaciano #zaragoza #jordihereu #sanignaciodeloyola</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">instagram.com</font>"
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWS1BOXRKWE5fXzF6ZUtDRzhJdDhST21pQWZYMV9rSjdVZU0teUxHNU1VdHRaY3pCSHlMUjZJa0tkeUVMWjl1T1NuUmtZS1VHYzNQY2RDWVB0NUNwWnE4a2FCSlFrUk04NU52dngwdGh6UGlSY19mb1J2UXVXcjFYeU5IWGxlQ2RfQjA0MnJxeHN4RXNEQU4wdkd1X202VTVnQmt2WVhtTEZER19NWl9qTFByTUdReml2TDZpNjJkcVBIeXVkQk5pTHFydFZEYWtOaTBGdTZVTkc5NE56Qnd3VW1wUl9uQ0U?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "Hereu destaca la oportunidad del turismo religioso con el impulso de la Asociación de Municipios del Camino Ignaciano - Europa Press\n<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxNWS1BOXRKWE5fXzF6ZUtDRzhJdDhST21pQWZYMV9rSjdVZU0teUxHNU1VdHRaY3pCSHlMUjZJa0tkeUVMWjl1T1NuUmtZS1VHYzNQY2RDWVB0NUNwWnE4a2FCSlFrUk04NU52dngwdGh6UGlSY19mb1J2UXVXcjFYeU5IWGxlQ2RfQjA0MnJxeHN4RXNEQU4wdkd1X202VTVnQmt2WVhtTEZER19NWl9qTFByTUdReml2TDZpNjJkcVBIeXVkQk5pTHFydFZEYWtOaTBGdTZVTkc5NE56Qnd3VW1wUl9uQ0U?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con el impulso de la Asociación de Municipios del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Europa Press</font>"
   }
 ]
