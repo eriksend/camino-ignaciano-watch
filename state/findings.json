@@ -2534,7 +2534,7 @@
     "summary_en": "A headline from lasprovincias.es reports that Hereu (a Spanish official) highlighted the religious-tourism opportunity offered by the Camino Ignaciano Association. Only the headline was available, with no route, accommodation, or practical planning details.",
     "source_text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - lasprovincias.es\n<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQVl9jWmloeXg2SzljNUZ2Zkt2SlJLYzhxUWVBcEthUlc0blRhaDYwUjZES1pRSjViTm12aUxtUHQtbnBQb3ZxQzJqRUxwaC1Xd3pjN0t5S1BPd2Y4ZER0c09PanF0QVFIRUtYT2ZYLWRlU3F6OG00Nkk5elpfYTBDU3NlOVNNNVNyT3AwRUc4T2Y3UUpjTEdMcHVNSzdjWU5nN2k4UkdsdndUVmlqazVSRVE4dTRVcUptNE1xS3Zn?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">lasprovincias.es</font>",
     "relevance": 13,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "e1f111fbaefcab0b",
@@ -2548,6 +2548,34 @@
     "summary_en": "Notimérica ran the same headline as lasprovincias.es: Hereu highlighted the religious-tourism opportunity presented by the Camino Ignaciano Association. Only the headline was available, with no route, accommodation, or practical planning details.",
     "source_text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - Notimérica\n<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxPSzlRVHVaUmlMYV9lcnRoX2JzLU9teTlXMVNLNGJ0aFFtU1ZNT0F5RlRDbU5zbDZGZTk4Tlp4UmNtT2hGeS1rZnJmOHEtVWVhdkRzUXhKQVctY1VBNTQzYkFMeHhNc0NIeWZCbUhTN2JhRWh6ZHRZX2RRMUQwVTlvMVR3YmpkWWdGT21CM2FnX3Fta3lJcFhZSmxKODEtYjU5SmxlMWZjWEhiT2ZETHNKRWZRUFEwZGNyS3F2bGF6WlZLdHFuZWo0UGxLTQ?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Notimérica</font>",
     "relevance": 13,
+    "is_new": false
+  },
+  {
+    "id": "da07613a22d4ae08",
+    "detected_at": "2026-07-19T14:42:10Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPaHdFeU9RMHF5Z2NISzBuOEowSkF0LWs0eXUwYlphVTdENG42d09nMERjQjNFYmxoM2NfUXpJaVpBUnIzdi1xS3prWW1OTno1bTM2X3M1S0JwTDBpUGlNd3lPLW1vSXVJY2NXbVZscjV0WEFBR1E3OGR0Mno0VEFZckZqT0lGNGl2UlM3SjZGcmFqRWE1dzQ3SVhxcXpMMG1XTlItYm9Kb3hzSzFESnprRkNNODFfYWxfN0w0U1BHNEdYa0FBOVZTQQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "El Confidencial profiles Camino Ignaciano as alternate Santiago route",
+    "summary_en": "El Confidencial published a feature describing the Camino Ignaciano as a lesser-known pilgrimage route, presenting it as an alternative for Camino de Santiago pilgrims that follows the saint's path toward Jerusalem.",
+    "source_text": "La ruta por descubrir para los peregrinos que hacen el Camino de Santiago: sigue los pasos de otro santo hacia Jerusalén - El Confidencial\n<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPaHdFeU9RMHF5Z2NISzBuOEowSkF0LWs0eXUwYlphVTdENG42d09nMERjQjNFYmxoM2NfUXpJaVpBUnIzdi1xS3prWW1OTno1bTM2X3M1S0JwTDBpUGlNd3lPLW1vSXVJY2NXbVZscjV0WEFBR1E3OGR0Mno0VEFZckZqT0lGNGl2UlM3SjZGcmFqRWE1dzQ3SVhxcXpMMG1XTlItYm9Kb3hzSzFESnprRkNNODFfYWxfN0w0U1BHNEdYa0FBOVZTQQ?oc=5\" target=\"_blank\">La ruta por descubrir para los peregrinos que hacen el Camino de Santiago: sigue los pasos de otro santo hacia Jerusalén</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Confidencial</font>",
+    "relevance": 14,
+    "is_new": true
+  },
+  {
+    "id": "ade2d87adf0e448f",
+    "detected_at": "2026-07-19T14:42:10Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPMHVZOGEweTlUa2xXVzFRZ3ZHdDJfbl9IWk1GQ1Ftd19FMEpXSHdmSEc3QXpXU09aQzJRZ1dPaW5uRFM5NlNtSkx6cUM5SDNldGJIZlphQ3Y5OW9uVkMwVEs2QzE2N0lrcDVlekJHWEp1QVdiakx5eGVPUDYyR0NfSnB6QlgzTFhuNEtWb29nWnEwT1ZxOG1mWWU1MDJmZHVlZE1LNQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Crux profiles Jesuit who maintains the Ignatian pilgrim path",
+    "summary_en": "Crux (Catholic Pulse) published a profile of a Jesuit in Spain who has worked to keep the Camino Ignaciano pilgrim path alive and accessible for walkers.",
+    "source_text": "One tireless Jesuit keeps alive a pilgrim path for St. Ignatius in Spain - Crux | Taking the Catholic Pulse\n<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPMHVZOGEweTlUa2xXVzFRZ3ZHdDJfbl9IWk1GQ1Ftd19FMEpXSHdmSEc3QXpXU09aQzJRZ1dPaW5uRFM5NlNtSkx6cUM5SDNldGJIZlphQ3Y5OW9uVkMwVEs2QzE2N0lrcDVlekJHWEp1QVdiakx5eGVPUDYyR0NfSnB6QlgzTFhuNEtWb29nWnEwT1ZxOG1mWWU1MDJmZHVlZE1LNQ?oc=5\" target=\"_blank\">One tireless Jesuit keeps alive a pilgrim path for St. Ignatius in Spain</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crux | Taking the Catholic Pulse</font>",
+    "relevance": 32,
     "is_new": true
   }
 ]
