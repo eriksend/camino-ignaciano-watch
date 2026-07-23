@@ -1,5 +1,19 @@
 [
   {
+    "id": "abefdc2caf5622fc",
+    "detected_at": "2026-07-23T14:41:52Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPWUJqWW93Q1ZCVjhsSmZSUlRaenZTdDhoVFowSmdrZkVzcFRjdFJCdGEtYkpaRkJzeDl1SXV0Z1hhZ2xDZkMxR1ZBR0lUZkgyeGVhUlJ6NXBrWk5YSDBfSHVpcGxTWk9uSVU1MEljYVRPVGdqay01UFRpcHI4cHE4VjVlVzNGZFFBdWY5OHF3NUdXY3BmUnI2NVAxSzdXcHJrNXZyckRsRGw0Vy1lY1FCQWVsNkFRS0JDcE05RnZQcXpabU9wYXVLV1JlNC1Ra0tYdS1seHJPLUM4SDJLVVJici1BaGcyb1E?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Historic Loyola-Manresa route through Zaragoza tied to St. Ignatius",
+    "summary_en": "Aragón Digital profiles the historic route between Loyola and Manresa that passes through Zaragoza and is linked to St. Ignatius of Loyola. The item is a headline-only news teaser with no further route, date, or price details.",
+    "source_text": "La histórica ruta entre Loyola y Manresa que pasa por Zaragoza y tiene que ver con San Ignacio - Aragón Digital\n<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxPWUJqWW93Q1ZCVjhsSmZSUlRaenZTdDhoVFowSmdrZkVzcFRjdFJCdGEtYkpaRkJzeDl1SXV0Z1hhZ2xDZkMxR1ZBR0lUZkgyeGVhUlJ6NXBrWk5YSDBfSHVpcGxTWk9uSVU1MEljYVRPVGdqay01UFRpcHI4cHE4VjVlVzNGZFFBdWY5OHF3NUdXY3BmUnI2NVAxSzdXcHJrNXZyckRsRGw0Vy1lY1FCQWVsNkFRS0JDcE05RnZQcXpabU9wYXVLV1JlNC1Ra0tYdS1seHJPLUM4SDJLVVJici1BaGcyb1E?oc=5\" target=\"_blank\">La histórica ruta entre Loyola y Manresa que pasa por Zaragoza y tiene que ver con San Ignacio</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aragón Digital</font>",
+    "relevance": 22,
+    "is_new": true
+  },
+  {
     "id": "52886b666181806c",
     "detected_at": "2026-06-10T21:02:34Z",
     "source_name": "Nos vamos de ruta — Camino Ignaciano",
@@ -2632,7 +2646,7 @@
     "relevance": 0,
     "id": "d4fa4a6cdffeb919",
     "detected_at": "2026-07-22T14:42:36Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -2646,7 +2660,7 @@
     "relevance": 18,
     "id": "ce69b0708ed964b2",
     "detected_at": "2026-07-22T14:42:36Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Google News — \"Ignatian Camino\" (EN)",
@@ -2660,6 +2674,6 @@
     "relevance": 27,
     "id": "56116aec90535e69",
     "detected_at": "2026-07-22T14:42:36Z",
-    "is_new": true
+    "is_new": false
   }
 ]
