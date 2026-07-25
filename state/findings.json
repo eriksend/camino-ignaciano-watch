@@ -1,5 +1,19 @@
 [
   {
+    "id": "47e42f60e6b25618",
+    "detected_at": "2026-07-25T14:41:51Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllELUs5LW1fcG9tWDg5SEZuSEhlaDZsZi03Qkh1U3lvd1ZtRk1uaWlubmF0X3FHWWpNY0lhS1FNT0NNOFRLdHZtZEs1NmpZZTE0bm1PaWJEMUZnMjNQaDFpQzdxSG85ZDhOTElwVUNtM1JqWWYwSUk1ODJqd3o5eGZGR0JqSnlqUVE?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Zaragoza hosts signing of Camino Ignaciano municipalities-Jesuit tourism pact",
+    "summary_en": "The Association of Municipalities of the Camino Ignaciano and the Society of Jesus signed an agreement in Zaragoza to strengthen tourism promotion of the route, according to Zaragoza City Council.",
+    "source_text": "Zaragoza acoge la firma del convenio entre la Asociación de Municipios del Camino Ignaciano y la Compañía de Jesús para reforzar la promoción turística de la ruta - Ayuntamiento de Zaragoza\n<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxOMllELUs5LW1fcG9tWDg5SEZuSEhlaDZsZi03Qkh1U3lvd1ZtRk1uaWlubmF0X3FHWWpNY0lhS1FNT0NNOFRLdHZtZEs1NmpZZTE0bm1PaWJEMUZnMjNQaDFpQzdxSG85ZDhOTElwVUNtM1JqWWYwSUk1ODJqd3o5eGZGR0JqSnlqUVE?oc=5\" target=\"_blank\">Zaragoza acoge la firma del convenio entre la Asociación de Municipios del Camino Ignaciano y la Compañía de Jesús para reforzar la promoción turística de la ruta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ayuntamiento de Zaragoza</font>",
+    "relevance": 25,
+    "is_new": true
+  },
+  {
     "id": "1fc9b11099f2335d",
     "detected_at": "2026-07-24T14:41:51Z",
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -11,7 +25,7 @@
     "summary_en": "Outdooractive, a general outdoor-activity platform, has a page listing the Camino Ignaciano as a pilgrimage route. The Google News snippet is a bare directory-listing teaser with no new trip details, dates, or prices.",
     "source_text": "Camino Ignaciano • Ruta de peregrinación - Outdooractive\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQRmdqWHRwR3JKeFVaSGJFTUxqa2t2RURKeE5lbUZwU05kR0RzVDlsMGpBRU9IMWl4R0tSNUZMTGppYVpEclRRd3VVMDZJUmZwZHBzVEpJMUVsdGFaWVl4VGsyX2lOcm1zR2pMbXAzVEdGN0dGdkNwakRFcEFTdFN2Um1BQk1vSWxzNlVsWDVoNVQ?oc=5\" target=\"_blank\">Camino Ignaciano • Ruta de peregrinación</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Outdooractive</font>",
     "relevance": 14,
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "abefdc2caf5622fc",
