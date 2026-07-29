@@ -33,6 +33,7 @@ Run from the repo root:  python scripts/fetch_sources.py
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import os
 import time
@@ -72,12 +73,59 @@ def sid(url: str) -> str:
     return hashlib.sha1(url.encode()).hexdigest()[:12]
 
 
-def cache_paths(key: str) -> tuple[str, str]:
-    """Return (latest_html_path, prev_text_path) for a source key."""
+def cache_paths(key: str, kind: str = "html") -> tuple[str, str]:
+    """Return (latest_raw_path, prev_text_path) for a source key."""
+    ext = "pdf" if kind == "pdf" else "html"
     return (
-        os.path.join(CACHE_DIR, f"{key}-latest.html"),
+        os.path.join(CACHE_DIR, f"{key}-latest.{ext}"),
         os.path.join(CACHE_DIR, f"{key}-prev.txt"),
     )
+
+
+# alsa.es redirects a cookieless client to itself indefinitely, so every fetch
+# shares one cookie jar.
+SESSION = requests.Session()
+SESSION.headers.update(HEADERS)
+
+
+def fetch_raw(url: str, key: str, kind: str) -> bytes | None:
+    """Fetch URL as bytes; cache on success, fall back to the cached copy."""
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    raw_path, _ = cache_paths(key, kind)
+    try:
+        r = SESSION.get(url, timeout=45)
+        r.raise_for_status()
+        if kind != "pdf":
+            # aemet.es serves ISO-8859-15; honour the declared charset and only
+            # fall back to sniffing when the header omits one.
+            if "charset" not in r.headers.get("content-type", "").lower():
+                r.encoding = r.apparent_encoding or r.encoding
+            data = r.text.encode("utf-8", "replace")
+        else:
+            data = r.content
+        with open(raw_path, "wb") as fh:
+            fh.write(data)
+        return data
+    except Exception as exc:
+        if os.path.exists(raw_path):
+            print(f"  ! fetch failed ({exc}); using cached copy")
+            with open(raw_path, "rb") as fh:
+                return fh.read()
+        print(f"  ! fetch failed: {exc}")
+        return None
+
+
+def extract_pdf_text(data: bytes) -> str:
+    """Text layer of a PDF, or '' if unavailable."""
+    try:
+        from pypdf import PdfReader
+
+        reader = PdfReader(io.BytesIO(data))
+        pages = [(p.extract_text() or "") for p in reader.pages]
+        return "\n".join(" ".join(p.split()) for p in pages if p.strip()).strip()
+    except Exception as exc:
+        print(f"  · pdf text extraction unavailable ({exc}); hashing bytes")
+        return ""
 
 
 def as_date(value) -> date | None:
@@ -132,25 +180,6 @@ def due_reason(src: dict, entry: dict, today: date, now: datetime) -> str | None
         except ValueError:
             pass
     return None
-
-
-def fetch(url: str, key: str) -> str | None:
-    """Fetch URL; on success write raw HTML to cache. Falls back to cached copy."""
-    os.makedirs(CACHE_DIR, exist_ok=True)
-    html_path, _ = cache_paths(key)
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        with open(html_path, "w", encoding="utf-8", errors="replace") as fh:
-            fh.write(r.text)
-        return r.text
-    except Exception as exc:
-        if os.path.exists(html_path):
-            print(f"  ! fetch failed ({exc}); using cached copy")
-            with open(html_path, encoding="utf-8", errors="replace") as fh:
-                return fh.read()
-        print(f"  ! fetch failed: {exc}")
-        return None
 
 
 def extract_main_text(html: str, url: str) -> str:
@@ -285,14 +314,25 @@ def main() -> None:
             entry["seen_ids"] = list(seen)[-300:]
             entry["last_checked"] = now_iso()
 
-        else:  # html
-            html = fetch(src["url"], key)
-            if html is None:
+        else:  # html | pdf
+            kind = "pdf" if src["type"] == "pdf" else "html"
+            raw = fetch_raw(src["url"], key, kind)
+            if raw is None:
                 continue
-            text = extract_main_text(html, src["url"])
-            digest = hashlib.sha256(text.encode()).hexdigest()
+            if kind == "pdf":
+                text = extract_pdf_text(raw)
+                # Prefer hashing the text layer: PDF bytes can churn on metadata
+                # alone, which would fake a timetable revision every run.
+                digest = hashlib.sha256(
+                    text.encode() if len(text) > 40 else raw).hexdigest()
+                if len(text) <= 40:
+                    text = (f"(PDF at {src['url']} changed; {len(raw)} bytes, no "
+                            f"usable text layer — open it to see what moved.)")
+            else:
+                text = extract_main_text(raw.decode("utf-8", "replace"), src["url"])
+                digest = hashlib.sha256(text.encode()).hexdigest()
             previous_hash = entry.get("last_hash")
-            _, prev_path = cache_paths(key)
+            _, prev_path = cache_paths(key, kind)
 
             if not previous_hash:
                 with open(prev_path, "w", encoding="utf-8") as fh:

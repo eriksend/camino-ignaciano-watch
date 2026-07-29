@@ -176,6 +176,222 @@ sources:
     tier: town
     weight: 0.6
 
+  # ---- Transit: the two services the route actually depends on ----
+  # Both are logged quietly now (a change in 2026 is signal about how stable the
+  # corridor is) and escalate to alert on 2027-04-01, just before departure.
+  # Checking stops 2027-05-25, a few days after the walk ends.
+  #
+  # Verified 2026-07-29: concession T05 (Zaragoza-Fraga, Ebro axis) is operated by
+  # Ágreda Bus (Grupo Alsa) since lot 5 went live 14-Oct-2025. Contrary to the older
+  # guides, T5-1 DOES run on Sundays/holidays — one round trip, "circula todo el
+  # año" — but southbound reaches Venta de Santa Lucía only at 18:57, too late to
+  # walk on. The useful Sunday service is 17:01 back toward Fraga.
+  - name: "Gobierno de Aragón — Horarios T05 (Monegros timetable, official PDF)"
+    url: "https://www.aragon.es/documents/d/guest/horarios-t05"
+    type: pdf
+    lang: es
+    region: aragon
+    tier: official
+    weight: 1.5
+    notify: quiet
+    notify_from: "2027-04-01"
+    stop_after: "2027-05-25"
+    # Stable friendly URL; Aragón replaces the file in place. Header inside reads
+    # "Horarios oficiales a 14 de octubre de 2025". The authoritative answer on
+    # Sunday service and Venta de Santa Lucía times. No HTML equivalent exists.
+  - name: "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
+    url: "https://www.alsa.es/regionales/aragon"
+    type: html
+    lang: es
+    region: aragon
+    tier: official
+    weight: 1.3
+    notify: quiet
+    notify_from: "2027-04-01"
+    stop_after: "2027-05-25"
+    # Operator-side disruption notices. Needs a cookie jar or it 302s to itself
+    # forever — fetch_sources.py uses one requests.Session() for exactly this.
+  - name: "ATM Lleida — Line 126 / e3 Alcarràs–Lleida (timetable PDF)"
+    url: "https://atmlleida.cat/en/pdf-linia/126/"
+    type: pdf
+    lang: ca
+    region: catalonia
+    tier: official
+    weight: 1.5
+    notify: quiet
+    notify_from: "2027-04-01"
+    stop_after: "2027-05-25"
+    # Stable URL keyed by line number. NOTE: the /ca/ path 404s, only /en/ works —
+    # don't "fix" it. Day-type legend has no "diumenge"/"festiu" at all, which
+    # confirms there is no Sunday service on this line.
+  - name: "Autocars Gamón — Notícies RSS (e3 timetable changes)"
+    url: "https://autocarsgamon.com/feed/"
+    type: rss
+    lang: ca
+    region: catalonia
+    tier: official
+    weight: 1.4
+    notify: quiet
+    notify_from: "2027-04-01"
+    stop_after: "2027-05-25"
+    # The operator announces every reajustament d'horaris here first, ahead of the
+    # ATM PDF. Highest-value single watch for line 126/e3.
+
+  # ---- AEMET monthly climate summaries ----
+  # Dormant until 2027-03-01, then alert: before then a monthly climate bulletin
+  # says nothing actionable about a walk more than a year out. The regional
+  # "avance climatológico" series runs ~2 months ahead of the national one.
+  # NOTE: aemet.es serves ISO-8859-15, not UTF-8 (handled in fetch_sources.py).
+  - name: "AEMET — Avance climatológico mensual, País Vasco"
+    url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=pva"
+    type: html
+    lang: es
+    region: basque
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-03-01"
+    notify: alert
+  - name: "AEMET — Avance climatológico mensual, La Rioja"
+    url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=rio"
+    type: html
+    lang: es
+    region: rioja
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-03-01"
+    notify: alert
+  - name: "AEMET — Avance climatológico mensual, Navarra"
+    url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=nav"
+    type: html
+    lang: es
+    region: navarre
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-03-01"
+    notify: alert
+  - name: "AEMET — Avance climatológico mensual, Aragón"
+    url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=arn"
+    type: html
+    lang: es
+    region: aragon
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-03-01"
+    notify: alert
+  - name: "AEMET — Avance climatológico mensual, Cataluña"
+    url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=cat"
+    type: html
+    lang: es
+    region: catalonia
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-03-01"
+    notify: alert
+
+  # ---- AEMET meteoalerta (adverse-weather warnings, per province) ----
+  # Dormant until 2027-04-01 and stopped after 2027-05-25: daily warning feeds are
+  # pure noise a year out and vital during the walk. Alert throughout the window.
+  # Verified: wildfire risk is NOT in meteoalerta — "incendio" appears zero times
+  # in Plan Meteoalerta v9. Fire danger is the separate AEMET product below.
+  - name: "AEMET meteoalerta — Gipuzkoa (stages 1–2)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7520_RSS.xml"
+    type: rss
+    lang: es
+    region: basque
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — Álava/Araba (stages 3–6)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7501_RSS.xml"
+    type: rss
+    lang: es
+    region: basque
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — La Rioja (stages 7–11)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7626_RSS.xml"
+    type: rss
+    lang: es
+    region: rioja
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — Navarra (stages 5, 12)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7431_RSS.xml"
+    type: rss
+    lang: es
+    region: navarre
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — Zaragoza (Monegros crossing, stages 13–18)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6250_RSS.xml"
+    type: rss
+    lang: es
+    region: aragon
+    tier: official
+    weight: 1.4
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+    # Highest-stakes weather feed: heat and storm on the exposed desert-steppe
+    # stages around Bujaraloz and Venta de Santa Lucía, where there is no shade.
+  - name: "AEMET meteoalerta — Huesca (stages 19–20, Candasnos/Fraga)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6222_RSS.xml"
+    type: rss
+    lang: es
+    region: aragon
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — Lleida (stages 21–24)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6925_RSS.xml"
+    type: rss
+    lang: es
+    region: catalonia
+    tier: official
+    weight: 1.3
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+  - name: "AEMET meteoalerta — Barcelona (stages 25–27, Montserrat/Manresa)"
+    url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6908_RSS.xml"
+    type: rss
+    lang: es
+    region: catalonia
+    tier: official
+    weight: 1.2
+    dormant_until: "2027-04-01"
+    stop_after: "2027-05-25"
+    notify: alert
+
+  # ---- Fire danger (meteorological levels only; legal bans are regional) ----
+  - name: "AEMET — Peligro de incendios forestales (fire-danger levels)"
+    url: "https://www.aemet.es/es/eltiempo/prediccion/incendios"
+    type: html
+    lang: es
+    region: whole
+    tier: official
+    weight: 0.9
+    dormant_until: "2027-02-01"
+    notify: quiet
+    notify_from: "2027-04-01"
+    stop_after: "2027-05-25"
+    # Wakes 2027-02-01 to cover the Basque/Cantabrian Feb–Apr spring fire season
+    # (stages 1–6), quiet at first, alert from 2027-04-01. AEMET gives danger
+    # levels only — path closures come from Agents Rurals / INFOAR.
+
   # ---- Catch-all news (Google News RSS, Spanish + English) ----
   - name: "Google News — \"Camino Ignaciano\" (ES)"
     url: "https://news.google.com/rss/search?q=%22camino+ignaciano%22&hl=es&gl=ES&ceid=ES:es"
