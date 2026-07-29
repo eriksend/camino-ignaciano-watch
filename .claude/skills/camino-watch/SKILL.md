@@ -66,7 +66,7 @@ source was unreachable it simply won't appear in the input; skip it silently.
      "source_text": "verbatim text from the item (the raw `text` field from new_items.json)",
      "relevance": 0,
      "notify": "quiet|alert",
-     "kind": "fire_live|fire_aftermath   (fire items only; omit otherwise)",
+     "kind": "fire_live|fire_aftermath|fire_weather|route_block   (omit if none apply)",
      "stage": 24, "stage_end": "Cervera",
      "is_new": true
    }
@@ -152,6 +152,58 @@ burning, which overlaps the start of the walk. So:
 endpoints in `data/end_coords.json` (20 km radius, haversine), clusters them so one fire is
 one item, and pre-sets `notify` and `kind`. Trust its `kind` unless the item's own text
 contradicts it, and always name the affected stage(s) in your title.
+
+### Leading indicators — the risk that actually applies to this walk
+
+The fire that could touch this walk is **agricultural, not forest**: cereal-harvest
+machinery igniting dry stubble or standing grain in **La Segarra, Urgell, the Lleida plain,
+the Monegros and the Ebro plain** (climate bands `b3`, `b4`, `b5`). The protective fact is
+timing — normal cereal harvest there runs **mid-June onward**, i.e. *after* a ~20 May
+finish. The whole risk is that **a hot, dry spring advances the harvest** into the walk
+window. So the highest-value fire signal is not a detection at all; it is the antecedent
+condition that predicts an early harvest.
+
+Score these as **`kind: "fire_weather"`** and reason along that chain explicitly — an item
+is only worth a high score if it moves the harvest date, not merely because it says "dry":
+
+- **Fire Weather Index (FWI)** running high for the route provinces in Apr–May 2027 →
+  escalate. FWI is a forecast, so it is the earliest warning available.
+- **Drought / soil-moisture / spring precipitation anomalies.** Judge these against
+  `data/climate_bands.json`, which holds the planner's own 1991–2020 normals per band. A
+  bare percentage means nothing on its own; convert it. "Lleida at 40% of normal spring
+  precipitation" means band `b4` April fell from ~40 mm to roughly 16 mm — say so, in mm,
+  and name the band. An anomaly that leaves rainfall inside the normal range is a **low**
+  score even though the word "drought" appears.
+- **Any reporting of an unusually early or advanced cereal harvest** in the Lleida plain,
+  Urgell, La Segarra or Monegros → this is the indicator the others only predict, so score
+  it **high** (70+). Barley ripens before wheat, so "barley harvest started" is the earlier
+  tell. If a report puts machinery in the fields before ~1 June, that directly overlaps the
+  walk and should be called out as such.
+
+Order of confidence when they disagree: an observed early harvest beats a drought anomaly,
+which beats an FWI forecast. Don't stack three restatements of the same dry spring into
+three high scores — score the strongest once and note the others corroborate it.
+
+### Route-blocking restrictions are a separate category
+
+An access restriction can end a stage with **no fire burning anywhere near it**. Score these
+as **`kind: "route_block"`** and keep them distinct from fire proximity — they are a
+different failure mode and the report badges them separately.
+
+- **Catalonia — Pla ALFA.** Levels 2–3 can restrict access to forest and natural areas.
+  **Montserrat is a natural park** (Parc Natural de la Muntanya de Montserrat) and is the
+  stage 26 endpoint, so an ALFA restriction can block the **Igualada → Montserrat** climb or
+  the **Montserrat → Manresa** approach — the last two stages of the walk. When an ALFA
+  level is reported, state which level, which comarques (Anoia, Bages, Segarra, Urgell), and
+  whether park access is actually restricted or merely elevated.
+- **Aragón — INFOAR / *época de peligro alto*** can restrict access to forest areas and
+  regulate agricultural machinery and stubble burning during high risk. Relevant to the
+  Monegros crossing (stages ~17–20).
+
+A confirmed closure on a stage the walker must pass is **90+** regardless of season. An
+elevated risk level with no access consequence is **40–60**: real, but not yet blocking.
+Say plainly which of the two it is — "ALFA 2 declared" and "Montserrat paths closed" are
+very different findings and must not be blurred into one.
 
 ## Optional discovery step
 

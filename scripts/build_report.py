@@ -46,11 +46,20 @@ def card(f: dict) -> str:
     when = esc(f.get("detected_at", ""))[:16].replace("T", " ")
     link = translate_url(f.get("url", "#"), lang)
     alert = " is-alert" if f.get("notify") == "alert" else ""
+    kind = f.get("kind", "")
+    badges = ""
+    if alert:
+        badges += '<span class="alerttag">alert</span>'
+    if kind == "route_block":
+        badges += '<span class="blocktag">route blocked</span>'
+    elif kind == "fire_weather":
+        badges += '<span class="wxtag">fire weather</span>'
     stage = f.get("stage")
     stage_chip = (f'<span class="chip stage">stage {esc(stage)}'
                   f'{" · " + esc(f["stage_end"]) if f.get("stage_end") else ""}</span>'
                   ) if stage else ""
-    return f"""<article class="card{new}{alert}" data-region="{esc(region)}"
+    block = " is-block" if kind == "route_block" else ""
+    return f"""<article class="card{new}{alert}{block}" data-region="{esc(region)}"
       data-tier="{esc(f.get('tier',''))}" data-rel="{rel}" data-new="{1 if f.get('is_new') else 0}"
       data-notify="{esc(f.get('notify','quiet'))}" data-kind="{esc(f.get('kind',''))}">
   <div class="row">
@@ -58,7 +67,7 @@ def card(f: dict) -> str:
     <a class="ttl" href="{esc(link)}" target="_blank" rel="noopener">{esc(f.get('title',''))}</a>
   </div>
   <div class="meta">
-    {'<span class="alerttag">alert</span>' if alert else ''}
+    {badges}
     <span class="dot" style="background:{color}"></span>{esc(region)} · {esc(f.get('tier',''))}
     <span class="chip lang {langcls}">{esc(LANG_NAMES.get(lang, lang))}</span>
     <span class="chip">{esc(f.get('source_name',''))}</span>{stage_chip}
@@ -153,6 +162,14 @@ background:#b8180d;border-radius:5px;padding:2px 7px;font-weight:700}}
 .f.alertf{{border-color:#e0b4ae;color:#8e1a11}}
 .f.alertf:hover{{border-color:#b8180d}}
 .f.alertf.on{{background:#b8180d;color:#fff;border-color:#b8180d}}
+.card.is-block{{border-left:4px solid #6b2fb5}}
+.blocktag{{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#fff;
+background:#6b2fb5;border-radius:5px;padding:2px 7px;font-weight:700}}
+.wxtag{{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7a4a05;
+background:#f7e7c8;border-radius:5px;padding:2px 7px;font-weight:600}}
+.f.blockf{{border-color:#cdb6e6;color:#54248f}}
+.f.blockf:hover{{border-color:#6b2fb5}}
+.f.blockf.on{{background:#6b2fb5;color:#fff;border-color:#6b2fb5}}
 .chip.stage{{background:#e4ecf2;color:#2f6f86}}
 .gen b.al{{color:#b8180d}}
 .src pre{{margin:8px 0 0;font-size:12px;line-height:1.5;white-space:pre-wrap;
@@ -181,6 +198,7 @@ padding:10px 12px;max-height:260px;overflow-y:auto}}
     <button class="f alertf" data-k="notify" data-v="alert">Alerts</button>
     <button class="f" data-k="new" data-v="1">New this run</button>
     <button class="f" data-k="rel" data-v="60">High relevance</button>
+    <button class="f blockf" data-k="kind" data-v="route_block">Route blocked</button>
     <button class="f" data-k="kind" data-v="fire">Fire</button>
     {region_btns}{tier_btns}
   </div>

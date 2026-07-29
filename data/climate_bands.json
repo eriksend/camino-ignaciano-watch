@@ -1,0 +1,51 @@
+{
+  "_comment": "Climate normals copied from BANDS/SEED_BANDS in camino-itinerary-v13.html (the planner). Baseline period 1991-2020. Used to judge whether an AEMET precipitation/drought anomaly is actually dry FOR THIS STRETCH, rather than dry in the abstract. Keep in sync with the planner.",
+  "_baseline": "1991-2020 normals",
+  "_use": "A drought report is only actionable against a normal. E.g. 'Lleida spring precipitation 40% of normal' means band b4 April fell from ~40 mm to ~16 mm — enough to advance the cereal harvest into the walk window.",
+  "bands": {
+    "b1": {
+      "name": "Basque mountains",
+      "span": "Loyola → Araia",
+      "stages": [1, 2, 3],
+      "apr": {"high_c": [14, 16], "low_c": [5, 7], "rain_days": [12, 14], "rain_mm": [120, 140]},
+      "may": {"high_c": [17, 19], "low_c": [8, 10], "rain_days": [11, 12], "rain_mm": [120, 120]},
+      "station": "San Sebastián-Igeldo, adjusted −2–3 °C for interior elevation (weakest station match of the five)"
+    },
+    "b2": {
+      "name": "Álava plain & Rioja Alavesa",
+      "span": "Araia → Laguardia",
+      "stages": [4, 5, 6],
+      "apr": {"high_c": [15, 15], "low_c": [5, 5], "rain_days": [12, 12], "rain_mm": [60, 80]},
+      "may": {"high_c": [18, 19], "low_c": [7, 8], "rain_days": [11, 12], "rain_mm": [70, 70]},
+      "station": "Vitoria-Foronda (540 m) — good match for the plain"
+    },
+    "b3": {
+      "name": "Ebro valley",
+      "span": "Laguardia → Fuentes de Ebro",
+      "stages": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+      "apr": {"high_c": [17, 20], "low_c": [6, 8], "rain_days": [6, 8], "rain_mm": [40, 50]},
+      "may": {"high_c": [23, 25], "low_c": [10, 12], "rain_days": [7, 7], "rain_mm": [45, 45]},
+      "station": "Logroño-Agoncillo & Zaragoza airport"
+    },
+    "b4": {
+      "name": "Monegros & Bajo Cinca steppe",
+      "span": "Fuentes de Ebro → Lleida",
+      "stages": [17, 18, 19, 20, 21],
+      "apr": {"high_c": [20, 21], "low_c": [7, 8], "rain_days": [5, 6], "rain_mm": [40, 40]},
+      "may": {"high_c": [25, 25], "low_c": [11, 12], "rain_days": [5, 7], "rain_mm": [45, 45]},
+      "station": "Zaragoza & Lleida airports — no station in the Monegros interior; real conditions run hotter and drier than either",
+      "note": "No shade on route. Cierzo (NW wind) 50–70 km/h on ordinary spring days."
+    },
+    "b5": {
+      "name": "Catalan interior & Montserrat",
+      "span": "Lleida → Manresa",
+      "stages": [22, 23, 24, 25, 26, 27],
+      "apr": {"high_c": [19, 21], "low_c": [6, 7], "rain_days": [5, 7], "rain_mm": [40, 50]},
+      "may": {"high_c": [23, 25], "low_c": [10, 11], "rain_days": [6, 8], "rain_mm": [50, 60]},
+      "station": "Lleida; the Igualada–Montserrat stretch is interpolated (moderate confidence)",
+      "note": "Thunderstorm season begins in May. Montserrat (700 m+) runs several degrees cooler than these valley numbers."
+    }
+  },
+  "cereal_risk_bands": ["b3", "b4", "b5"],
+  "_cereal_note": "Cereal-machinery ignition risk concentrates in the Ebro plain (b3), Monegros (b4) and the Lleida plain / Urgell / La Segarra (b5). Normal harvest is mid-June onward, i.e. after a ~20 May finish — a hot, dry spring is what erodes that margin."
+}
