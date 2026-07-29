@@ -9,6 +9,21 @@
 #   tier      official | forum | guide | blog | social | town | tour
 #   weight    0.0–1.5 relevance multiplier; official/guide weighted higher
 #
+# Optional scheduling / notification fields (see scripts/fetch_sources.py):
+#   check          daily (default) | twice_daily | weekly | <hours>
+#                  How often the cheap hash-diff runs. Hashing costs ~nothing,
+#                  so there is rarely a reason to slow this down.
+#   analyze        on_change (default) | never
+#                  never = track the hash silently, no model call, no finding.
+#   notify         quiet (default) = report only | alert = also push a digest
+#   notify_from    YYYY-MM-DD; on/after this date quiet escalates to alert (one-way)
+#   dormant_until  YYYY-MM-DD; skip entirely before this date
+#   stop_after     YYYY-MM-DD; stop checking after this date
+#
+# The guiding principle: don't reduce how often we CHECK, reduce how loudly we
+# NOTIFY. A bus change in late 2026 is useful signal about corridor instability
+# and gets logged quietly; notify_from turns it into a phone buzz nearer the walk.
+#
 # Add or remove freely. The monitor is polite: one fetch per source per run,
 # a real User-Agent, and timeouts. Keep run frequency reasonable (daily is plenty).
 
@@ -28,6 +43,8 @@ sources:
     region: whole
     tier: official
     weight: 1.4
+  # Accommodation: openings, closures and price changes are the highest-value
+  # signal there is, but not worth a phone buzz until booking season.
   - name: "Camino Ignaciano — Alojamiento (accommodation list)"
     url: "https://caminoignaciano.org/alojamiento/"
     type: html
@@ -35,6 +52,8 @@ sources:
     region: whole
     tier: official
     weight: 1.5
+    notify: quiet
+    notify_from: "2027-03-01"
   - name: "Camino Ignaciano — Aspectos prácticos"
     url: "https://caminoignaciano.org/en/practicalities/"
     type: html

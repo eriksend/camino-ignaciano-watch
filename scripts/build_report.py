@@ -45,16 +45,23 @@ def card(f: dict) -> str:
     langcls = "es" if lang in ("es", "ca", "eu") else "en"
     when = esc(f.get("detected_at", ""))[:16].replace("T", " ")
     link = translate_url(f.get("url", "#"), lang)
-    return f"""<article class="card{new}" data-region="{esc(region)}"
-      data-tier="{esc(f.get('tier',''))}" data-rel="{rel}" data-new="{1 if f.get('is_new') else 0}">
+    alert = " is-alert" if f.get("notify") == "alert" else ""
+    stage = f.get("stage")
+    stage_chip = (f'<span class="chip stage">stage {esc(stage)}'
+                  f'{" · " + esc(f["stage_end"]) if f.get("stage_end") else ""}</span>'
+                  ) if stage else ""
+    return f"""<article class="card{new}{alert}" data-region="{esc(region)}"
+      data-tier="{esc(f.get('tier',''))}" data-rel="{rel}" data-new="{1 if f.get('is_new') else 0}"
+      data-notify="{esc(f.get('notify','quiet'))}" data-kind="{esc(f.get('kind',''))}">
   <div class="row">
     <span class="score{hi}">{rel}</span>
     <a class="ttl" href="{esc(link)}" target="_blank" rel="noopener">{esc(f.get('title',''))}</a>
   </div>
   <div class="meta">
+    {'<span class="alerttag">alert</span>' if alert else ''}
     <span class="dot" style="background:{color}"></span>{esc(region)} · {esc(f.get('tier',''))}
     <span class="chip lang {langcls}">{esc(LANG_NAMES.get(lang, lang))}</span>
-    <span class="chip">{esc(f.get('source_name',''))}</span>
+    <span class="chip">{esc(f.get('source_name',''))}</span>{stage_chip}
     <span>· {when}</span>{' <span class="newtag">new</span>' if f.get('is_new') else ''}
   </div>
   <p class="summary">{esc(f.get('summary_en',''))}</p>
@@ -63,14 +70,21 @@ def card(f: dict) -> str:
 
 
 def build(findings: list[dict]) -> str:
+    # This run's alert-tier finds lead; everything else stays chronological.
     findings = sorted(
         findings,
-        key=lambda f: (f.get("detected_at", ""), f.get("relevance", 0)),
+        key=lambda f: (
+            bool(f.get("is_new")) and f.get("notify") == "alert",
+            f.get("detected_at", ""),
+            f.get("relevance", 0),
+        ),
         reverse=True,
     )
     regions = sorted({f.get("region", "whole") for f in findings})
     tiers = sorted({f.get("tier", "other") for f in findings})
     new_count = sum(1 for f in findings if f.get("is_new"))
+    alert_count = sum(1 for f in findings
+                      if f.get("is_new") and f.get("notify") == "alert")
     generated = datetime.now(timezone.utc).isoformat(timespec="minutes").replace("T", " ")
     cards = "\n".join(card(f) for f in findings) or \
         '<div class="empty"><b>Nothing yet.</b> The first run records a baseline; ' \
@@ -132,6 +146,15 @@ border:1px dashed var(--line);border-radius:14px}}
 .src{{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}}
 .src summary{{font-size:12px;color:var(--ink-soft);cursor:pointer;user-select:none}}
 .src summary:hover{{color:var(--waymark-deep)}}
+.card.is-alert{{border-left:4px solid #b8180d;background:#fffaf7;
+box-shadow:0 1px 0 rgba(184,24,13,.10)}}
+.alerttag{{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#fff;
+background:#b8180d;border-radius:5px;padding:2px 7px;font-weight:700}}
+.f.alertf{{border-color:#e0b4ae;color:#8e1a11}}
+.f.alertf:hover{{border-color:#b8180d}}
+.f.alertf.on{{background:#b8180d;color:#fff;border-color:#b8180d}}
+.chip.stage{{background:#e4ecf2;color:#2f6f86}}
+.gen b.al{{color:#b8180d}}
 .src pre{{margin:8px 0 0;font-size:12px;line-height:1.5;white-space:pre-wrap;
 word-break:break-word;color:#4a463f;background:#f0ece4;border-radius:7px;
 padding:10px 12px;max-height:260px;overflow-y:auto}}
@@ -147,7 +170,7 @@ padding:10px 12px;max-height:260px;overflow-y:auto}}
     </g>
   </svg>
   <div><b>Camino Ignaciano</b><span class="k">watch</span></div>
-  <div class="gen">Generated {generated} UTC<br><b>{new_count}</b> new this run · {len(findings)} total</div>
+  <div class="gen">Generated {generated} UTC<br><b>{new_count}</b> new this run{f' · <b class="al">{alert_count}</b> alert' if alert_count else ''} · {len(findings)} total</div>
 </header>
 <main>
   <p class="intro">Loyola → Manresa · 27 stages · 650 km. New and changed content
@@ -155,8 +178,10 @@ padding:10px 12px;max-height:260px;overflow-y:auto}}
     translated and ranked for a spring walk.</p>
   <div class="filters">
     <button class="f on" data-k="all" data-v="">All</button>
+    <button class="f alertf" data-k="notify" data-v="alert">Alerts</button>
     <button class="f" data-k="new" data-v="1">New this run</button>
     <button class="f" data-k="rel" data-v="60">High relevance</button>
+    <button class="f" data-k="kind" data-v="fire">Fire</button>
     {region_btns}{tier_btns}
   </div>
   <div id="list">
@@ -173,6 +198,8 @@ btns.forEach(b=>b.onclick=()=>{{
     if(k==='region') show=c.dataset.region===v;
     else if(k==='tier') show=c.dataset.tier===v;
     else if(k==='new') show=c.dataset.new==='1';
+    else if(k==='notify') show=c.dataset.notify===v;
+    else if(k==='kind') show=(c.dataset.kind||'').startsWith(v);
     else if(k==='rel') show=parseInt(c.dataset.rel)>=parseInt(v);
     c.style.display=show?'':'none';
   }});
