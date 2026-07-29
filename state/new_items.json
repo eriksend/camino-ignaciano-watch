@@ -1,20 +1,20 @@
 [
   {
-    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
-    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONUY3eU5wRnZlS1RSdkFoa3VOOUZoa2tzc1Fkb19FZ3k3RENjYk9yWXk2bUhqalNlRWVlbURqX0I3NFZiM3BEYXpDVFhBMmUwbDctN0NXbjh3YVdHdFc5aFBvQlhZTkZiamZSb0dhbi1Nbm9GWWxCVkhfUk5BcUpqT01sVm1jdzkwRXI2b1dVYlZ4UHVrcGtuZ2ZnalN2OFh2WF9DR1Njc0pvNmZzODc4MTNCeXFneE0?oc=5",
+    "source_name": "Jesuit Sources — official guide editions",
+    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
     "region": "whole",
-    "tier": "social",
-    "lang": "es",
-    "weight": 0.9,
-    "text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - La Verdad\n<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxONUY3eU5wRnZlS1RSdkFoa3VOOUZoa2tzc1Fkb19FZ3k3RENjYk9yWXk2bUhqalNlRWVlbURqX0I3NFZiM3BEYXpDVFhBMmUwbDctN0NXbjh3YVdHdFc5aFBvQlhZTkZiamZSb0dhbi1Nbm9GWWxCVkhfUk5BcUpqT01sVm1jdzkwRXI2b1dVYlZ4UHVrcGtuZ2ZnalN2OFh2WF9DR1Njc0pvNmZzODc4MTNCeXFneE0?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">La Verdad</font>"
+    "tier": "guide",
+    "lang": "en",
+    "weight": 1.0,
+    "text": "Shakespeare and the Jesuits"
   },
   {
-    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMXJtRG0tRElYSUFETS1TS2xFNHZ6UEV2MmN0Rm9SVExldmF2QmJfQm5fLW12eTAybkVlRkk0amNMdHdfX2gxU1RsSUpKMVdYaUFXUTJaR2lGcjBOS24xVTJBSHNHUXBvTUlQNHFsMk15LW9pQ2N0OUQwOF94c3VsRURqSllHU25NOWFtTGd0d0pGSFlScHJPUg?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "es",
-    "weight": 0.9,
-    "text": "Calahorra se adhiere a la asociación de municipios del Camino Ignaciano - Ayuntamiento de Calahorra\n<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOMXJtRG0tRElYSUFETS1TS2xFNHZ6UEV2MmN0Rm9SVExldmF2QmJfQm5fLW12eTAybkVlRkk0amNMdHdfX2gxU1RsSUpKMVdYaUFXUTJaR2lGcjBOS24xVTJBSHNHUXBvTUlQNHFsMk15LW9pQ2N0OUQwOF94c3VsRURqSllHU25NOWFtTGd0d0pGSFlScHJPUg?oc=5\" target=\"_blank\">Calahorra se adhiere a la asociación de municipios del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ayuntamiento de Calahorra</font>"
+    "source_name": "Cova de Sant Ignasi — Notícies (Manresa)",
+    "url": "https://www.covamanresa.cat/en/actualitat",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "weight": 1.0,
+    "text": "We have detected that an unauthorized third party has fraudulently accessed certain information related to some reservations at the International Ignatian Spirituality Centre (CIEI)."
   }
 ]
