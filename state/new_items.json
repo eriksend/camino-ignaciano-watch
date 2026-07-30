@@ -1,20 +1,11 @@
 [
   {
-    "source_name": "Jesuit Sources — official guide editions",
-    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQR25XY2ZxZGlqVUpRYTE4a0NJMm0xT0ZWUGxVVXE0NGdEZTVheHZpZXJMNFJ4Yk9MYjY2MmxteF8wNEp2MVd1UWVXS2hJVHhOeEJ6QWRqVS1TOTAzTzNobUUta0hObk1pME1rbmtidHdLVUdnU0duYlNuRzU5VWF0S2RuUE1NZ0drSGljUlh0b1k2YjNyd2dyT29MNl9OcG5fRUVaRDhVNkNyLTBUQXFmN3hR?oc=5",
     "region": "whole",
-    "tier": "guide",
-    "lang": "en",
-    "weight": 1.0,
-    "text": "Shakespeare and the Jesuits"
-  },
-  {
-    "source_name": "Cova de Sant Ignasi — Notícies (Manresa)",
-    "url": "https://www.covamanresa.cat/en/actualitat",
-    "region": "catalonia",
-    "tier": "official",
-    "lang": "en",
-    "weight": 1.0,
-    "text": "We have detected that an unauthorized third party has fraudulently accessed certain information related to some reservations at the International Ignatian Spirituality Centre (CIEI)."
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "text": "La Ignasiana crece hacia Fraga: dos días de gravel, MTB y e-bike para descubrir el Camino Ignaciano - ESMTB.com\n<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQR25XY2ZxZGlqVUpRYTE4a0NJMm0xT0ZWUGxVVXE0NGdEZTVheHZpZXJMNFJ4Yk9MYjY2MmxteF8wNEp2MVd1UWVXS2hJVHhOeEJ6QWRqVS1TOTAzTzNobUUta0hObk1pME1rbmtidHdLVUdnU0duYlNuRzU5VWF0S2RuUE1NZ0drSGljUlh0b1k2YjNyd2dyT29MNl9OcG5fRUVaRDhVNkNyLTBUQXFmN3hR?oc=5\" target=\"_blank\">La Ignasiana crece hacia Fraga: dos días de gravel, MTB y e-bike para descubrir el Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ESMTB.com</font>"
   }
 ]
