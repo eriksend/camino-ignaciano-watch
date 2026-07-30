@@ -1,0 +1,32 @@
+{
+  "alfa:closures:off_route": {
+    "emit_count": 1,
+    "fingerprint": "Baronia de Rialb,Montmell-Marmellar,Montsant,Montsec d'Ares,Montsec de Rubies,Prades,Ribera_salada",
+    "first_seen": "2026-07-30T19:08:25+00:00",
+    "last_emitted": "2026-07-30T19:08:25+00:00",
+    "last_reason": "new",
+    "last_seen": "2026-07-30T19:08:25+00:00",
+    "peak_rank": 1,
+    "rank": 1
+  },
+  "alfa:level:tomorrow": {
+    "emit_count": 1,
+    "fingerprint": "4:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
+    "first_seen": "2026-07-30T19:08:25+00:00",
+    "last_emitted": "2026-07-30T19:08:25+00:00",
+    "last_reason": "new",
+    "last_seen": "2026-07-30T19:08:25+00:00",
+    "peak_rank": 4,
+    "rank": 4
+  },
+  "fwi:corridor": {
+    "emit_count": 1,
+    "fingerprint": "extreme:9+",
+    "first_seen": "2026-07-30T19:08:29+00:00",
+    "last_emitted": "2026-07-30T19:08:29+00:00",
+    "last_reason": "new",
+    "last_seen": "2026-07-30T19:08:29+00:00",
+    "peak_rank": 4,
+    "rank": 4
+  }
+}

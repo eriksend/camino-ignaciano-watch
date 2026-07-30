@@ -55,6 +55,7 @@ RETRO_SOURCES = ["VIIRS_SNPP_SP", "VIIRS_NOAA20_SP"]
 NEAR_KM = 20.0          # flag detections within this distance of an endpoint
 MAX_DAYS_PER_CALL = 10  # FIRMS area API ceiling
 # Walk dates are shared with fetch_alfa.py; edit them in walk_window.py only.
+import condition_ledger as cl  # noqa: E402
 from walk_window import WALK_END, WALK_START  # noqa: E402
 
 # ---- EFFIS Fire Weather Index (leading indicator; no API key required) ----
@@ -74,11 +75,17 @@ FWI_CLASSES = [
 ]
 FWI_REPORT_FROM = 21.3   # don't emit anything below "high" — it's noise
 FWI_ALERT_FROM = 38.0    # "very high" and up escalates inside the risk season
+FWI_SANE_MAX = 150.0     # above this it is a nodata sentinel, not weather
+FWI_HYSTERESIS = 2.0     # margin required to call a class transition real
 
 # The Basque/Cantabrian north has a distinct late-winter/spring fire season
 # (dry fohn winds + agricultural burning) that overlaps the walk window.
 SPRING_RISK_STAGES = range(1, 7)
 SPRING_RISK_MONTHS = (2, 3, 4, 5)
+# Cereal-machinery ignition season for the Ebro/Monegros/Catalan stages. Distinct
+# from SPRING_RISK_MONTHS above, which is the Basque föhn-wind season — these two
+# used to be an inline tuple and a constant that silently disagreed.
+CEREAL_RISK_MONTHS = (4, 5, 6)
 
 
 def load_stages() -> list[dict]:
@@ -180,10 +187,16 @@ def grid_value(grid: tuple[list[float], int, int], bbox: dict,
     x = min(width - 1, max(0, int(fx * width)))
     y = min(height - 1, max(0, int(fy * height)))
     idx = y * width + x
-    if 0 <= idx < len(values):
-        v = values[idx]
-        return v if v > 0 else None
-    return None
+    if not 0 <= idx < len(values):
+        return None
+    v = values[idx]
+    # Reject nodata as well as zero. Float32 rasters carry sentinels like 1e20 or
+    # 9999, and every one of those classifies as "very extreme" — which inside the
+    # walk window would fire an alert-tier push for a pixel with no data in it.
+    # Real FWI does not exceed ~150 even in extreme Mediterranean conditions.
+    if not (0 < v < FWI_SANE_MAX) or v != v:  # v != v catches NaN
+        return None
+    return v
 
 
 def firms_url(key: str, source: str, bbox: dict, days: int,
@@ -334,20 +347,26 @@ def to_items(clusters: list[dict], mode: str, today: date) -> list[dict]:
     return items
 
 
-def fwi_sweep(bbox: dict, stages: list[dict], today: date) -> list[dict]:
-    """Sample the FWI forecast at every stage endpoint and report the stretches
-    running 'high' or worse. Needs no API key."""
-    items: list[dict] = []
-    live = WALK_START <= today <= WALK_END
-    cereal_season = today.month in (4, 5, 6)
+def fwi_sweep(bbox: dict, stages: list[dict], today: date,
+              ledger: dict | None = None) -> list[dict]:
+    """Sample the FWI forecast and report the corridor's worst state.
 
+    ONE item per run describing max-over-horizon, not one per forecast day: the
+    3-day loop used to emit the same peak three times with a constant URL, which
+    was the largest single contributor to duplicate findings.
+    """
+    ledger = ledger if ledger is not None else {}
+    live = WALK_START <= today <= WALK_END
+    cereal_season = today.month in CEREAL_RISK_MONTHS
+
+    best: tuple[float, dict, float | None, date] | None = None
+    readings_by_day: dict[date, list] = {}
     for offset in range(FWI_FORECAST_DAYS):
         day = today + timedelta(days=offset)
         grid = fetch_fwi_grid(bbox, day, FWI_LAYER)
         if grid is None:
             continue
         anomaly = fetch_fwi_grid(bbox, day, FWI_ANOMALY_LAYER)
-
         readings = []
         for stage in stages:
             v = grid_value(grid, bbox, stage["lat"], stage["lon"])
@@ -355,51 +374,82 @@ def fwi_sweep(bbox: dict, stages: list[dict], today: date) -> list[dict]:
                 continue
             a = grid_value(anomaly, bbox, stage["lat"], stage["lon"]) if anomaly else None
             readings.append((stage, v, a))
+        readings_by_day[day] = readings
         print(f"  FWI {day}: {len(readings)}/{len(stages)} stage(s) at "
               f"'high' or worse")
-        if not readings:
-            continue
+        for stage, v, a in readings:
+            if best is None or v > best[0]:
+                best = (v, stage, a, day)
 
-        # One item per day, naming the worst stretch, rather than 27 near-identical ones.
-        readings.sort(key=lambda r: r[1], reverse=True)
-        worst_stage, worst_v, worst_a = readings[0]
-        cls = fwi_class(worst_v)
-        stage_list = ", ".join(
-            f"{s['end']} (stage {s['stage']}) {v:.0f}" for s, v, _ in readings[:6])
-        cereal = [s for s, _, _ in readings if s["stage"] >= 7]
-        notify = "alert" if (worst_v >= FWI_ALERT_FROM and (live or cereal_season)) \
-            else "quiet"
-        anom = ""
-        if worst_a is not None:
-            anom = (f" FWI anomaly at {worst_stage['end']} is {worst_a:+.1f} "
-                    f"versus the seasonal norm.")
-        harvest = ""
-        if cereal and cereal_season:
-            harvest = (" These are cereal stages — sustained high FWI in spring is "
-                       "what advances the harvest out of mid-June and puts machinery "
-                       "in dry fields while the walk is on.")
-        items.append({
-            "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-            "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-            "region": worst_stage["region"],
-            "tier": "official",
-            "lang": "en",
-            "weight": 1.2 if notify == "alert" else 0.9,
-            "notify": notify,
-            "kind": "fire_weather",
-            "stage": worst_stage["stage"],
-            "stage_end": worst_stage["end"],
-            "text": (
-                f"EFFIS Fire Weather Index forecast for {day.isoformat()} "
-                f"({'today' if offset == 0 else f'+{offset}d'}) reaches {worst_v:.1f} "
-                f"— '{cls}' on the EFFIS scale — at {worst_stage['end']} "
-                f"(stage {worst_stage['stage']}). {len(readings)} stage endpoint(s) "
-                f"are at 'high' (>= {FWI_REPORT_FROM}) or worse: {stage_list}."
-                f"{anom}{harvest} Classes: low <11.2, moderate 11.2-21.3, "
-                f"high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-            ),
-        })
-    return items
+    if best is None:
+        return []
+    worst_v, worst_stage, worst_a, worst_day = best
+    all_readings = [r for rs in readings_by_day.values() for r in rs]
+    peak_stages = sorted({s["stage"] for s, v, _ in all_readings
+                          if v >= FWI_ALERT_FROM})
+    breadth = len({s["stage"] for s, _, _ in all_readings})
+
+    # Hysteresis: require crossing the next threshold by +2.0 to escalate and
+    # dropping 2.0 below to relax, so 21.0 -> 21.4 -> 21.1 -> 21.5 is ONE event.
+    entry = ledger.get("fwi:corridor", {})
+    previous = entry.get("fingerprint", "") or ""
+    previous_class = previous.split(":")[0] if previous else ""
+    cls = fwi_class(worst_v)
+    if previous_class and cls != previous_class:
+        thresholds = {name: t for t, name in FWI_CLASSES}
+        edge = thresholds.get(cls)
+        if edge is not None and abs(worst_v - edge) < FWI_HYSTERESIS:
+            cls = previous_class  # too close to the edge to call it a change
+    band = "1-2" if breadth <= 2 else ("3-8" if breadth <= 8 else "9+")
+    fingerprint = f"{cls}:{band}"
+    rank = [n for _, n in FWI_CLASSES][::-1].index(cls) if cls in [
+        n for _, n in FWI_CLASSES] else 0
+
+    emit, why = cl.should_emit(ledger, "fwi:corridor", fingerprint, rank, today)
+    if not emit:
+        print(f"  · FWI {fingerprint}: {why}, not re-emitted")
+        return []
+
+    stage_list = ", ".join(
+        f"{s['end']} (stage {s['stage']}) {v:.0f}"
+        for s, v, _ in sorted(all_readings, key=lambda r: -r[1])[:6])
+    cereal = [s for s, _, _ in all_readings if s["stage"] >= 7]
+    notify = "alert" if (worst_v >= FWI_ALERT_FROM and (live or cereal_season)) \
+        else "quiet"
+    anom = ""
+    if worst_a is not None:
+        anom = (f" FWI anomaly at {worst_stage['end']} is {worst_a:+.1f} "
+                f"versus the seasonal norm.")
+    harvest = ""
+    if cereal and cereal_season:
+        harvest = (" These are cereal stages — sustained high FWI in spring is "
+                   "what advances the harvest out of mid-June and puts machinery "
+                   "in dry fields while the walk is on.")
+    return [{
+        "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+        "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+        "region": worst_stage["region"],
+        "tier": "official",
+        "lang": "en",
+        "weight": 1.2 if notify == "alert" else 0.9,
+        "notify": notify,
+        "kind": "fire_weather",
+        "item_key": "fwi:corridor",
+        "fingerprint": fingerprint,
+        "stage": worst_stage["stage"],
+        "stage_end": worst_stage["end"],
+        "text": (
+            f"EFFIS Fire Weather Index peaks at {worst_v:.1f} — '{cls}' on the "
+            f"EFFIS scale — at {worst_stage['end']} (stage {worst_stage['stage']}) "
+            f"on {worst_day.isoformat()}, across a {FWI_FORECAST_DAYS}-day forecast "
+            f"from {today.isoformat()}. {breadth} stage endpoint(s) reach 'high' "
+            f"(>= {FWI_REPORT_FROM}) or worse: {stage_list}."
+            + (f" At 'very high' or above: stages {peak_stages}." if peak_stages else "")
+            + f"{anom}{harvest} Reported because: {why}. Classes: low <11.2, "
+            f"moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, "
+            f"very extreme >70."
+        ),
+    }]
 
 
 def sweep(key: str, sources: list[str], bbox: dict, stages: list[dict],
@@ -477,7 +527,9 @@ def main() -> int:
     if not args.no_fwi and args.retro is None and not args.check:
         print(f"[{today}] EFFIS Fire Weather Index forecast "
               f"({FWI_FORECAST_DAYS} days) …")
-        fwi_items = fwi_sweep(bbox, stages, today)
+        fwi_ledger = cl.load()
+        fwi_items = fwi_sweep(bbox, stages, today, fwi_ledger)
+        cl.save(fwi_ledger)
 
     if not key:
         print("FIRMS_MAP_KEY is not set — skipping satellite fire detection.")

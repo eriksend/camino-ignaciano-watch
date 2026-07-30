@@ -41,6 +41,7 @@ from datetime import date, datetime, timedelta, timezone
 
 import requests
 
+import condition_ledger as cl
 from walk_window import in_walk_window, near_walk
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -146,14 +147,25 @@ def route_closures(rows: list[dict]) -> list[dict]:
 
 def build_items(today: date, levels: dict, closures: list[dict],
                 tomorrow_levels: dict, tomorrow_closures: list[dict],
-                all_closures: list[str]) -> list[dict]:
+                all_closures: list[str], ledger: dict) -> list[dict]:
     items: list[dict] = []
     escalate = near_walk(today)
     walking = in_walk_window(today)
 
     # 1. Closures affecting a route stage — the route-blocking case.
-    for c in closures + [dict(x, when="tomorrow") for x in tomorrow_closures]:
+    # One condition per space. `when` is deliberately NOT part of the identity:
+    # a closure announced for tomorrow used to re-emit tomorrow as "today".
+    seen_spaces = {}
+    for c in closures:
+        seen_spaces[fold(c["space"])] = dict(c, when="today")
+    for c in tomorrow_closures:
+        seen_spaces.setdefault(fold(c["space"]), dict(c, when="tomorrow"))
+    for fkey, c in sorted(seen_spaces.items()):
         when = c.get("when", "today")
+        emit, why = cl.should_emit(ledger, f"alfa:closure:{fkey}", "closed", 4, today)
+        if not emit:
+            print(f"  · closure {c['space']}: {why}, not re-emitted")
+            continue
         items.append({
             "source_name": "Pla ALFA — natural-space closures (Agents Rurals)",
             "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
@@ -185,6 +197,14 @@ def build_items(today: date, levels: dict, closures: list[dict],
         names = ", ".join(f"{m} ({c}, level {l})" for m, c, l in hot[:8])
         at_four = sorted({c for _, c, l in hot if l >= 4})
         blocking = peak >= 4
+        # Fingerprint excludes `names` on purpose: that list of up to 8
+        # municipalities is re-derived daily and churns while the level holds.
+        comarques = ",".join(sorted(snapshot.get("by_comarca", {})))
+        emit, why = cl.should_emit(
+            ledger, f"alfa:level:{when}", f"{peak}:{comarques}", peak, today)
+        if not emit:
+            print(f"  · level {peak} ({when}): {why}, not re-emitted")
+            continue
         items.append({
             "source_name": "Pla ALFA — daily fire-risk level (Agents Rurals)",
             "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
@@ -213,6 +233,10 @@ def build_items(today: date, levels: dict, closures: list[dict],
     off_route = [n for n in all_closures
                  if not any(k in fold(n) for k in ROUTE_SPACES)]
     if off_route and not closures:
+        emit, _ = cl.should_emit(ledger, "alfa:closures:off_route",
+                                 ",".join(sorted(off_route)), 1, today)
+        if not emit:
+            return items
         items.append({
             "source_name": "Pla ALFA — natural-space closures (Agents Rurals)",
             "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
@@ -265,13 +289,22 @@ def main() -> int:
         print("  tomorrow: " + ", ".join(f"{k}={v}" for k, v in
                                          sorted(levels_t['by_comarca'].items())))
 
+    ledger = cl.load()
+    # A route closure that has lifted is itself news while walking.
+    for key in [k for k in ledger if k.startswith("alfa:closure:")]:
+        if not any(fold(h["space"]) == key.split(":", 2)[2] for h in
+                   route_hits + route_hits_t):
+            if cl.clear(ledger, key, today):
+                print(f"  · {key} cleared — reporting the reopening")
     items = build_items(today, levels, route_hits, levels_t, route_hits_t,
-                        names_closed)
+                        names_closed, ledger)
+    items = cl.cap_alerts(items)
     if args.show:
         print(json.dumps(items, ensure_ascii=False, indent=2)[:1500])
         return 0
     with open(OUT_FILE, "w", encoding="utf-8") as fh:
         json.dump(items, fh, ensure_ascii=False, indent=2)
+    cl.save(ledger)
     alerts = sum(1 for i in items if i["notify"] == "alert")
     print(f"{len(items)} item(s) ({alerts} alert-tier). Wrote {OUT_FILE}")
     return 0

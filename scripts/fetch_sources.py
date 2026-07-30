@@ -16,6 +16,11 @@ Per-source scheduling and notification tiers (all optional, sane defaults):
       on_change (default) hands changed text to the model. `never` tracks the
       hash silently — the change is recorded in the ledger but no model call
       and no finding is produced.
+  analyze_from: YYYY-MM-DD
+      Stay silent (analyze: never) until this date, then start producing
+      findings. Use this INSTEAD of dormant_until for anything that matters
+      during the walk, so the source is exercised for months beforehand and a
+      dead URL surfaces early rather than on the trail.
   notify: quiet | alert
       quiet (default) = it lands in the report only. alert = it also feeds the
       push digest and is flagged prominently.
@@ -73,13 +78,17 @@ def sid(url: str) -> str:
     return hashlib.sha1(url.encode()).hexdigest()[:12]
 
 
-def cache_paths(key: str, kind: str = "html") -> tuple[str, str]:
-    """Return (latest_raw_path, prev_text_path) for a source key."""
+def cache_path(key: str, kind: str = "html") -> str:
+    """Path of the cached raw body for a source.
+
+    NOTE: state/cache/ is gitignored and the routine's container is ephemeral, so
+    this cache does NOT survive between scheduled runs — it only helps repeated
+    local runs. Change history lives in the committed ledger's `extracted`, not
+    here. (An earlier `-prev.txt` companion file was written twice per run and
+    never read once; it is gone.)
+    """
     ext = "pdf" if kind == "pdf" else "html"
-    return (
-        os.path.join(CACHE_DIR, f"{key}-latest.{ext}"),
-        os.path.join(CACHE_DIR, f"{key}-prev.txt"),
-    )
+    return os.path.join(CACHE_DIR, f"{key}-latest.{ext}")
 
 
 # alsa.es redirects a cookieless client to itself indefinitely, so every fetch
@@ -91,7 +100,7 @@ SESSION.headers.update(HEADERS)
 def fetch_raw(url: str, key: str, kind: str) -> bytes | None:
     """Fetch URL as bytes; cache on success, fall back to the cached copy."""
     os.makedirs(CACHE_DIR, exist_ok=True)
-    raw_path, _ = cache_paths(key, kind)
+    raw_path = cache_path(key, kind)
     try:
         r = SESSION.get(url, timeout=45)
         r.raise_for_status()
@@ -147,6 +156,22 @@ def min_interval_hours(src: dict) -> float:
     return float(CADENCE_HOURS.get(str(cadence).strip(), CADENCE_HOURS["daily"]))
 
 
+def effective_analyze(src: dict, today: date) -> str:
+    """on_change | never, honouring a one-way analyze_from date.
+
+    This is what lets a source be *exercised* long before it is allowed to
+    generate findings. Sources that only matter during the walk used to sit behind
+    `dormant_until`, which meant their first-ever fetch — URL still valid?
+    encoding? parseable? — happened inside the window they existed to serve. Now
+    they run silently from today and start producing findings on analyze_from.
+    """
+    mode = str(src.get("analyze", "on_change")).strip()
+    start = as_date(src.get("analyze_from"))
+    if start:
+        return "on_change" if today >= start else "never"
+    return mode if mode in ("on_change", "never") else "on_change"
+
+
 def effective_notify(src: dict, today: date) -> str:
     """quiet | alert, honouring the one-way notify_from escalation."""
     level = str(src.get("notify", "quiet")).strip()
@@ -182,15 +207,24 @@ def due_reason(src: dict, entry: dict, today: date, now: datetime) -> str | None
     return None
 
 
-def extract_main_text(html: str, url: str) -> str:
-    """Main body text, boilerplate removed, so we diff on content not chrome."""
+def extract_main_text(html: str, url: str) -> tuple[str, str]:
+    """Main body text, boilerplate removed, so we diff on content not chrome.
+
+    Returns (text, extractor). The extractor NAME matters as much as the text:
+    trafilatura and BeautifulSoup produce completely different shapes for the
+    same page (trafilatura keeps newlines/tabs and drops the <title>; the bs4
+    fallback single-spaces everything and includes it). Diffing one against the
+    other reports the whole page as new, which is how this monitor manufactured
+    seven relevance-100 "accommodation changed" findings from one unchanged page.
+    So callers must compare like with like.
+    """
     try:
         import trafilatura
 
         text = trafilatura.extract(html, url=url, favor_recall=True,
                                    include_comments=True)
         if text and len(text.strip()) > 40:
-            return text.strip()
+            return text.strip(), "trafilatura"
     except Exception:
         pass
     try:
@@ -199,9 +233,14 @@ def extract_main_text(html: str, url: str) -> str:
         soup = BeautifulSoup(html, "lxml")
         for tag in soup(["script", "style", "nav", "header", "footer"]):
             tag.decompose()
-        return " ".join(soup.get_text(" ").split())
+        return " ".join(soup.get_text(" ").split()), "bs4"
     except Exception:
-        return ""
+        return "", ""
+
+
+def norm_for_hash(text: str) -> str:
+    """Collapse cosmetic whitespace so formatting jitter can't flip the hash."""
+    return " ".join(text.split())
 
 
 def added_text(old: str, new: str) -> str:
@@ -216,6 +255,24 @@ def added_text(old: str, new: str) -> str:
         if ln.startswith("+") and not ln.startswith("+++")
     ]
     return "\n".join(a for a in added if a.strip())
+
+
+def retain_recent(previous: list[str], fresh: list[str], cap: int) -> list[str]:
+    """Append newly-seen ids and keep the newest `cap`, deterministically.
+
+    The old implementation was `list(set(seen))[-cap:]`. Python randomises string
+    hashing per process, so that retained an arbitrary subset that CHANGED every
+    run — meaning an evicted id could reappear later and be reported as fresh,
+    and the ledger JSON differed on every run even when nothing had changed.
+    Order-preserving and de-duplicated, oldest dropped first.
+    """
+    out = list(previous)
+    known = set(out)
+    for eid in fresh:
+        if eid not in known:
+            out.append(eid)
+            known.add(eid)
+    return out[-cap:]
 
 
 def load_json(path: str, default):
@@ -256,6 +313,8 @@ def main() -> None:
     baselined = 0
     skipped = 0
     changed_quiet = 0
+    rebaselined = 0
+    failed: list[str] = []
 
     now = datetime.now(timezone.utc)
     today = now.date()
@@ -286,19 +345,21 @@ def main() -> None:
             "lang": src.get("lang", "es"), "weight": float(src.get("weight", 1.0)),
             "notify": notify,
         }
-        analyze = str(src.get("analyze", "on_change")).strip()
+        analyze = effective_analyze(src, today)
 
         if src["type"] == "rss":
-            import feedparser
+            # Deliberately our own parser, not PyPI feedparser — see rss_compat.
+            import rss_compat
 
-            feed = feedparser.parse(src["url"])
+            feed = rss_compat.parse(src["url"])
             first_sight = not entry.get("seen_ids") and not entry.get("last_checked")
             seen = set(entry.get("seen_ids", []))
-            fresh = []
+            fresh, fresh_ids = [], []
             for item in feed.entries[:25]:
                 eid = item.get("id") or item.get("link") or item.get("title", "")
                 if eid and eid not in seen:
                     fresh.append(item)
+                    fresh_ids.append(eid)
                     seen.add(eid)
             if first_sight:
                 baselined += 1  # record what's there now, emit nothing
@@ -311,13 +372,18 @@ def main() -> None:
                         body = f"{item.get('title','')}\n{item.get('summary','')}".strip()
                         new_items.append({**meta, "url": item.get("link", src["url"]),
                                           "text": body[:MAX_CHARS]})
-            entry["seen_ids"] = list(seen)[-300:]
+            entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
+                                             fresh_ids, 300)
             entry["last_checked"] = now_iso()
 
         else:  # html | pdf
             kind = "pdf" if src["type"] == "pdf" else "html"
             raw = fetch_raw(src["url"], key, kind)
             if raw is None:
+                # A dead source must not be indistinguishable from a quiet one.
+                failed.append(src["name"])
+                entry["last_checked"] = now_iso()
+                entry["last_error"] = now_iso()
                 continue
             if kind == "pdf":
                 text = extract_pdf_text(raw)
@@ -328,29 +394,52 @@ def main() -> None:
                 if len(text) <= 40:
                     text = (f"(PDF at {src['url']} changed; {len(raw)} bytes, no "
                             f"usable text layer — open it to see what moved.)")
+                extractor = "pdf"
             else:
-                text = extract_main_text(raw.decode("utf-8", "replace"), src["url"])
-                digest = hashlib.sha256(text.encode()).hexdigest()
+                text, extractor = extract_main_text(
+                    raw.decode("utf-8", "replace"), src["url"])
+                if not text.strip():
+                    print("  ! extraction produced nothing; leaving baseline alone")
+                    entry["last_checked"] = now_iso()
+                    continue
+                # Hash the whitespace-normalised text so formatting jitter alone
+                # cannot look like a content change.
+                digest = hashlib.sha256(norm_for_hash(text).encode()).hexdigest()
             previous_hash = entry.get("last_hash")
-            _, prev_path = cache_paths(key, kind)
+            previous_text = entry.get("extracted", "")
+            previous_extractor = entry.get("extractor")
 
             if not previous_hash:
-                with open(prev_path, "w", encoding="utf-8") as fh:
-                    fh.write(text)
                 baselined += 1
+            elif previous_extractor and previous_extractor != extractor:
+                # Different extractor => different text shape => the diff would
+                # be the whole page. Re-baseline instead of inventing a finding.
+                print(f"  · re-extracted with {extractor} (was {previous_extractor})"
+                      f"; baseline refreshed, no finding")
+                rebaselined += 1
+            elif not previous_text.strip():
+                # A hash with no stored text: added_text() would return the whole
+                # page verbatim. Adopt the text quietly instead.
+                print("  · baseline had no stored text; refreshed, no finding")
+                rebaselined += 1
             elif previous_hash != digest:
-                # preserve previous extracted text before overwriting
-                with open(prev_path, "w", encoding="utf-8") as fh:
-                    fh.write(entry.get("extracted", ""))
-                delta = added_text(entry.get("extracted", ""), text)
+                delta = added_text(previous_text, text)
                 entry["last_change_seen"] = now_iso()
-                if delta.strip():
+                whole_page = len(delta) >= 0.7 * max(len(text), 1)
+                if whole_page:
+                    # Almost everything "changed" on a page we already had, which
+                    # in practice means re-extraction churn, not news.
+                    print(f"  · delta is {100 * len(delta) // max(len(text), 1)}% of "
+                          f"the page — suspected churn, re-baselined, no finding")
+                    rebaselined += 1
+                elif delta.strip():
                     if analyze == "never":
                         changed_quiet += 1
                     else:
                         new_items.append({**meta, "text": delta[:MAX_CHARS]})
 
             entry["last_hash"] = digest
+            entry["extractor"] = extractor
             entry["extracted"] = text
             entry["last_checked"] = now_iso()
 
@@ -363,8 +452,11 @@ def main() -> None:
 
     alerts = sum(1 for i in new_items if i.get("notify") == "alert")
     print(f"[{now_iso()}] {len(new_items)} new item(s) ({alerts} alert-tier); "
-          f"{baselined} baselined; {skipped} skipped (not due); "
-          f"{changed_quiet} silent change(s). Wrote {NEW_FILE}")
+          f"{baselined} baselined; {rebaselined} re-baselined (churn suppressed); "
+          f"{skipped} skipped (not due); {changed_quiet} silent change(s); "
+          f"{len(failed)} FAILED. Wrote {NEW_FILE}")
+    if failed:
+        print("  ! unreachable this run: " + ", ".join(failed))
 
 
 if __name__ == "__main__":

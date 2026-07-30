@@ -1,5 +1,18 @@
-"""
-Minimal feedparser shim using stdlib xml.etree.ElementTree.
+"""Minimal RSS/Atom parser over stdlib xml.etree.ElementTree.
+
+WHY THIS EXISTS, AND WHY IT IS NOT feedparser.
+
+The PyPI `feedparser` depends on `sgmllib3k`, whose wheel build fails on some
+Python/toolchain combinations — it failed in this project's own environment. For a
+job that runs unattended every day for months and must not break at 14:42 UTC on a
+morning nobody is watching, a 99-line parser you can read in full beats a
+dependency whose install has already failed once.
+
+It used to live at `scripts/feedparser.py`, which SHADOWED the real package:
+`scripts/` is on sys.path when these scripts run, so `import feedparser` silently
+resolved here instead of to the installed library. That worked but was invisible.
+Now it has its own name and is imported deliberately.
+
 Provides just enough of the feedparser API for fetch_sources.py:
   - parse(url) -> namespace with .entries list
   - each entry: dict-like with 'id', 'link', 'title', 'summary'

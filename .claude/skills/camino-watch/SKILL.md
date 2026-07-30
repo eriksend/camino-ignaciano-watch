@@ -47,10 +47,27 @@ source was unreachable it simply won't appear in the input; skip it silently.
    - Write `summary_en`: 1–3 sentences, plain and factual.
    - Score `relevance` 0–100 using the rubric below, then multiply by the item's
      `weight` and clamp to 100 (round to an integer).
+   - **Score the CHANGE, not the page's topic.** This is the single easiest way to
+     corrupt the log. The item's `text` is a *delta* — what appeared since last time — not
+     the page. An accommodation page whose delta is a reworded sentence is a low score even
+     though accommodation is the highest-value subject there is. This monitor previously
+     recorded **seven relevance-100 "accommodation changed" findings from one page that never
+     changed**, because the delta was scored as if it were the page. If the delta reads like
+     an entire page rather than an edit, say so and score it low: that is re-extraction churn,
+     not news.
+   - **Be consistent run to run.** The same substantive content should get roughly the same
+     score; the push threshold is a hard cutoff at 35, so ±20 points of drift on identical
+     material decides whether a phone buzzes. If an item resembles an earlier finding from the
+     same URL, match its score unless the content genuinely differs.
    - **Carry `notify` through unchanged** from the item to the finding. Never invent or
      upgrade it — the tier is set by `sources.yaml` and the fire script, not by you.
 
-4. **Append with dedup.** Compute `id` = first 16 hex chars of sha1(`url` + `title`).
+4. **Append with dedup.** If the item carries an **`item_key`**, compute `id` = first 16 hex
+   chars of sha1(`item_key` + `fingerprint`); otherwise sha1(`url` + `title`). The `item_key`
+   path exists because API-derived items (FWI, Pla ALFA) all share one constant URL, so
+   url+title dedup failed both ways there — a date in the title flooded, a stable title
+   collided and silently dropped a genuinely worse day. The scripts now suppress unchanged
+   conditions before you ever see them, so **anything that reaches you is already news**.
    Load `state/findings.json` (treat a missing file as `[]`). First set `is_new: false`
    on every existing finding. Then add each new finding with `is_new: true`, skipping any
    whose `id` already exists. Keep the newest ~500 findings. Write `state/findings.json`

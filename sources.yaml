@@ -77,15 +77,6 @@ sources:
     region: whole
     tier: guide
     weight: 1.0
-  - name: "Chris Lowney — books / Ignatian Way"
-    url: "http://chrislowney.com/wp/books/"
-    type: html
-    lang: en
-    region: whole
-    tier: guide
-    weight: 0.8
-
-  # ---- Forums (richest practical chatter, mostly Spanish) ----
   - name: "Gronze — Camino Ignaciano (General)"
     url: "https://www.gronze.com/foros/general/camino-ignaciano-2"
     type: html
@@ -131,22 +122,6 @@ sources:
     weight: 0.8
 
   # ---- Tour operators (signal new/changed offerings, dates, prices) ----
-  - name: "Marly Camino — Ignatian Camino"
-    url: "https://marlycamino.com/camino/ignatian-camino/"
-    type: html
-    lang: en
-    region: whole
-    tier: tour
-    weight: 0.6
-  - name: "Camino Ignaciano MTB"
-    url: "https://www.caminoignacianomtb.com/"
-    type: html
-    lang: es
-    region: whole
-    tier: tour
-    weight: 0.5
-
-  # ---- Regional tourism / town halls (broad coverage) ----
   - name: "Cova de Sant Ignasi — Notícies (Manresa)"
     url: "https://www.covamanresa.cat/en/actualitat"
     type: html
@@ -161,13 +136,6 @@ sources:
     region: catalonia
     tier: official
     weight: 0.9
-  - name: "Històries Manresanes — Camí Ignasià (blog)"
-    url: "https://www.historiesmanresanes.cat/"
-    type: html
-    lang: ca
-    region: catalonia
-    tier: blog
-    weight: 0.7
   - name: "Gipuzkoa — Camino Ignaciano (Aisialdi)"
     url: "https://www.kulturweb.com/adm/ficha.asp?tipoficha=1&id=160137&que=557&L_Id=59&idioma=es"
     type: html
@@ -175,6 +143,14 @@ sources:
     region: basque
     tier: town
     weight: 0.6
+
+  # Retired 2026-07-30 after measuring their output: these four churned
+  # constantly and produced only noise, so they cost a fetch and a model call
+  # per run while degrading the report's signal-to-noise:
+  #   Chris Lowney — books / Ignatian Way — mean relevance 3.4 over 7 findings
+  #   Marly Camino — Ignatian Camino — mean relevance 11.7 over 9 findings
+  #   Camino Ignaciano MTB — mean relevance 6.2 over 6 findings
+  #   Històries Manresanes — Camí Ignasià (blog) — mean relevance 10.4 over 7 findings
 
   # ---- Transit: the two services the route actually depends on ----
   # Both are logged quietly now (a change in 2026 is signal about how stable the
@@ -249,7 +225,8 @@ sources:
     region: basque
     tier: official
     weight: 1.2
-    dormant_until: "2027-03-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-03-01"  # was dormant_until — see effective_analyze()
     notify: alert
   - name: "AEMET — Avance climatológico mensual, La Rioja"
     url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=rio"
@@ -258,7 +235,8 @@ sources:
     region: rioja
     tier: official
     weight: 1.2
-    dormant_until: "2027-03-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-03-01"  # was dormant_until — see effective_analyze()
     notify: alert
   - name: "AEMET — Avance climatológico mensual, Navarra"
     url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=nav"
@@ -267,7 +245,8 @@ sources:
     region: navarre
     tier: official
     weight: 1.2
-    dormant_until: "2027-03-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-03-01"  # was dormant_until — see effective_analyze()
     notify: alert
   - name: "AEMET — Avance climatológico mensual, Aragón"
     url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=arn"
@@ -276,7 +255,8 @@ sources:
     region: aragon
     tier: official
     weight: 1.2
-    dormant_until: "2027-03-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-03-01"  # was dormant_until — see effective_analyze()
     notify: alert
   - name: "AEMET — Avance climatológico mensual, Cataluña"
     url: "https://www.aemet.es/es/serviciosclimaticos/vigilancia_clima/resumenes?w=1&k=cat"
@@ -285,7 +265,8 @@ sources:
     region: catalonia
     tier: official
     weight: 1.2
-    dormant_until: "2027-03-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-03-01"  # was dormant_until — see effective_analyze()
     notify: alert
 
   # ---- AEMET meteoalerta (adverse-weather warnings, per province) ----
@@ -300,7 +281,8 @@ sources:
     region: basque
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — Álava/Araba (stages 3–6)"
@@ -310,7 +292,8 @@ sources:
     region: basque
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — La Rioja (stages 7–11)"
@@ -320,7 +303,8 @@ sources:
     region: rioja
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — Navarra (stages 5, 12)"
@@ -330,7 +314,8 @@ sources:
     region: navarre
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — Zaragoza (Monegros crossing, stages 13–18)"
@@ -340,7 +325,8 @@ sources:
     region: aragon
     tier: official
     weight: 1.4
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
     # Highest-stakes weather feed: heat and storm on the exposed desert-steppe
@@ -352,7 +338,8 @@ sources:
     region: aragon
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — Lleida (stages 21–24)"
@@ -362,7 +349,8 @@ sources:
     region: catalonia
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
   - name: "AEMET meteoalerta — Barcelona (stages 25–27, Montserrat/Manresa)"
@@ -372,7 +360,8 @@ sources:
     region: catalonia
     tier: official
     weight: 1.2
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     stop_after: "2027-05-25"
     notify: alert
 
@@ -468,7 +457,8 @@ sources:
     region: aragon
     tier: official
     weight: 1.3
-    dormant_until: "2027-04-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     notify: alert
     stop_after: "2027-05-25"
     # Publishes daily 1 Jun – 15 Oct, and outside that window only when a zone
@@ -485,7 +475,8 @@ sources:
     region: whole
     tier: official
     weight: 1.2
-    dormant_until: "2027-02-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
     stop_after: "2027-05-25"
@@ -498,7 +489,8 @@ sources:
     region: whole
     tier: official
     weight: 1.2
-    dormant_until: "2027-02-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
     stop_after: "2027-05-25"
@@ -511,7 +503,8 @@ sources:
     region: whole
     tier: official
     weight: 1.1
-    dormant_until: "2027-02-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
     stop_after: "2027-05-25"
@@ -524,7 +517,8 @@ sources:
     region: catalonia
     tier: official
     weight: 0.6
-    dormant_until: "2027-02-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     stop_after: "2027-05-25"
     # INDIRECT only: this is water-supply drought (normalitat → emergència by
@@ -570,7 +564,8 @@ sources:
     region: whole
     tier: official
     weight: 0.9
-    dormant_until: "2027-02-01"
+    analyze: never        # exercised daily from now; silent until analyze_from
+    analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
     stop_after: "2027-05-25"
