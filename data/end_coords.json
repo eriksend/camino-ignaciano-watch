@@ -1,0 +1,33 @@
+{
+  "_comment": "Stage END-town coordinates, copied verbatim from END_COORDS in camino-itinerary-v13.html (the planner). Approximate town-centre coords; used for haversine distance filtering of fire detections. Keep in sync with the planner.",
+  "_bbox": {"west": -2.5, "south": 41.4, "east": 2.0, "north": 43.2},
+  "stages": [
+    {"stage": 1,  "end": "Zumárraga",            "lat": 43.083, "lon": -2.313, "region": "basque"},
+    {"stage": 2,  "end": "Arantzazu",            "lat": 42.981, "lon": -2.398, "region": "basque"},
+    {"stage": 3,  "end": "Araia",                "lat": 42.888, "lon": -2.328, "region": "basque"},
+    {"stage": 4,  "end": "Alda",                 "lat": 42.760, "lon": -2.398, "region": "basque"},
+    {"stage": 5,  "end": "Genevilla",            "lat": 42.639, "lon": -2.382, "region": "navarre"},
+    {"stage": 6,  "end": "Laguardia",            "lat": 42.554, "lon": -2.583, "region": "basque"},
+    {"stage": 7,  "end": "Navarrete",            "lat": 42.435, "lon": -2.559, "region": "rioja"},
+    {"stage": 8,  "end": "Logroño",              "lat": 42.466, "lon": -2.446, "region": "rioja"},
+    {"stage": 9,  "end": "Alcanadre",            "lat": 42.409, "lon": -2.117, "region": "rioja"},
+    {"stage": 10, "end": "Calahorra",            "lat": 42.305, "lon": -1.965, "region": "rioja"},
+    {"stage": 11, "end": "Alfaro",               "lat": 42.179, "lon": -1.749, "region": "rioja"},
+    {"stage": 12, "end": "Tudela",               "lat": 42.062, "lon": -1.607, "region": "navarre"},
+    {"stage": 13, "end": "Gallur",               "lat": 41.869, "lon": -1.283, "region": "aragon"},
+    {"stage": 14, "end": "Alagón",               "lat": 41.771, "lon": -1.121, "region": "aragon"},
+    {"stage": 15, "end": "Zaragoza",             "lat": 41.656, "lon": -0.878, "region": "aragon"},
+    {"stage": 16, "end": "Fuentes de Ebro",      "lat": 41.514, "lon": -0.630, "region": "aragon"},
+    {"stage": 17, "end": "Venta de Santa Lucía", "lat": 41.492, "lon": -0.399, "region": "aragon"},
+    {"stage": 18, "end": "Bujaraloz",            "lat": 41.497, "lon": -0.157, "region": "aragon"},
+    {"stage": 19, "end": "Candasnos",            "lat": 41.463, "lon": 0.049,  "region": "aragon"},
+    {"stage": 20, "end": "Fraga",                "lat": 41.535, "lon": 0.348,  "region": "aragon"},
+    {"stage": 21, "end": "Lleida",               "lat": 41.617, "lon": 0.626,  "region": "catalonia"},
+    {"stage": 22, "end": "El Palau d'Anglesola", "lat": 41.663, "lon": 0.921,  "region": "catalonia"},
+    {"stage": 23, "end": "Verdú",                "lat": 41.610, "lon": 1.143,  "region": "catalonia"},
+    {"stage": 24, "end": "Cervera",              "lat": 41.670, "lon": 1.272,  "region": "catalonia"},
+    {"stage": 25, "end": "Igualada",             "lat": 41.579, "lon": 1.617,  "region": "catalonia"},
+    {"stage": 26, "end": "Montserrat",           "lat": 41.593, "lon": 1.838,  "region": "catalonia"},
+    {"stage": 27, "end": "Manresa",              "lat": 41.728, "lon": 1.827,  "region": "catalonia"}
+  ]
+}

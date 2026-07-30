@@ -1,6 +1,6 @@
 requests
 beautifulsoup4
 lxml
-feedparser
 PyYAML
 trafilatura
+pypdf
