@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "weight": 0.9,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 27,
+    "stage_end": "Manresa",
+    "text": "EFFIS Fire Weather Index forecast for 2026-07-30 (today) reaches 57.5 — 'extreme' on the EFFIS scale — at Manresa (stage 27). 27 stage endpoint(s) are at 'high' (>= 21.3) or worse: Manresa (stage 27) 58, Alagón (stage 14) 55, Araia (stage 3) 54, Tudela (stage 12) 53, Cervera (stage 24) 49, Verdú (stage 23) 48. FWI anomaly at Manresa is +3.9 versus the seasonal norm. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+  },
+  {
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "weight": 0.9,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 27,
+    "stage_end": "Manresa",
+    "text": "EFFIS Fire Weather Index forecast for 2026-07-31 (+1d) reaches 52.4 — 'extreme' on the EFFIS scale — at Manresa (stage 27). 25 stage endpoint(s) are at 'high' (>= 21.3) or worse: Manresa (stage 27) 52, Igualada (stage 25) 51, Alfaro (stage 11) 50, Verdú (stage 23) 47, Navarrete (stage 7) 47, Logroño (stage 8) 47. FWI anomaly at Manresa is +3.2 versus the seasonal norm. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+  },
+  {
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "weight": 0.9,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 27,
+    "stage_end": "Manresa",
+    "text": "EFFIS Fire Weather Index forecast for 2026-08-01 (+2d) reaches 46.6 — 'very high' on the EFFIS scale — at Manresa (stage 27). 25 stage endpoint(s) are at 'high' (>= 21.3) or worse: Manresa (stage 27) 47, Cervera (stage 24) 46, Lleida (stage 21) 46, Verdú (stage 23) 44, Navarrete (stage 7) 43, Logroño (stage 8) 43. FWI anomaly at Manresa is +2.4 versus the seasonal norm. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+  }
+]

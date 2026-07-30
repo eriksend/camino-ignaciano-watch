@@ -34,6 +34,7 @@ import csv
 import io
 import json
 import math
+import struct
 import os
 import sys
 from datetime import date, datetime, timedelta, timezone
@@ -55,6 +56,24 @@ NEAR_KM = 20.0          # flag detections within this distance of an endpoint
 MAX_DAYS_PER_CALL = 10  # FIRMS area API ceiling
 WALK_START = date(2027, 4, 19)
 WALK_END = date(2027, 5, 20)
+
+# ---- EFFIS Fire Weather Index (leading indicator; no API key required) ----
+# The FWI *forecast* is the earliest warning available: it predicts the drying
+# that ripens cereal early and pulls harvest machinery into the walk window.
+# Note the published layer name "ecmwf007.fwi" in EFFIS's own docs is stale; the
+# live capabilities advertise mf010.* (MeteoFrance model, ~10 km, 3-day forecast).
+EFFIS_WMS = "https://maps.effis.emergency.copernicus.eu/effis"
+FWI_LAYER = "mf010.fwi"
+FWI_ANOMALY_LAYER = "mf010.anomaly"
+FWI_FORECAST_DAYS = 3
+# Official EFFIS classes. "Very extreme" was added in June 2021 for the
+# Mediterranean. Ordered high-to-low so the first match wins.
+FWI_CLASSES = [
+    (70.0, "very extreme"), (50.0, "extreme"), (38.0, "very high"),
+    (21.3, "high"), (11.2, "moderate"), (0.0, "low"),
+]
+FWI_REPORT_FROM = 21.3   # don't emit anything below "high" — it's noise
+FWI_ALERT_FROM = 38.0    # "very high" and up escalates inside the risk season
 
 # The Basque/Cantabrian north has a distinct late-winter/spring fire season
 # (dry fohn winds + agricultural burning) that overlaps the walk window.
@@ -79,6 +98,92 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     dl = math.radians(lon2 - lon1)
     a = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
     return 2 * r * math.asin(math.sqrt(a))
+
+
+def fwi_class(value: float) -> str:
+    for threshold, name in FWI_CLASSES:
+        if value >= threshold:
+            return name
+    return "low"
+
+
+def _tiff_floats(data: bytes) -> tuple[list[float], int, int]:
+    """Read an uncompressed single-band float32 GeoTIFF. MapServer returns a
+    plain strip, so this needs no GDAL."""
+    endian = "<" if data[:2] == b"II" else ">"
+    off = struct.unpack(endian + "I", data[4:8])[0]
+    count = struct.unpack(endian + "H", data[off:off + 2])[0]
+    sizes = {1: 1, 2: 1, 3: 2, 4: 4}
+    codes = {1: "B", 2: "c", 3: "H", 4: "I"}
+    tags: dict[int, list[int]] = {}
+    for i in range(count):
+        p = off + 2 + i * 12
+        tag, typ, n = struct.unpack(endian + "HHI", data[p:p + 8])
+        if typ not in sizes:
+            continue
+        total = sizes[typ] * n
+        if total <= 4:                       # value stored inline
+            raw = data[p + 8:p + 8 + total]
+        else:                                # value field is an offset to an array
+            ptr = struct.unpack(endian + "I", data[p + 8:p + 12])[0]
+            raw = data[ptr:ptr + total]
+        tags[tag] = list(struct.unpack(endian + f"{n}{codes[typ]}", raw))
+
+    def one(tag: int, default=None):
+        v = tags.get(tag)
+        return v[0] if v else default
+
+    width, height = one(256, 0), one(257, 0)
+    if one(339) != 3 or one(258) != 32:
+        raise ValueError("unexpected FWI raster encoding "
+                         f"(sampleformat={one(339)}, bits={one(258)})")
+    offsets, counts = tags.get(273), tags.get(279)
+    if not offsets or not counts:
+        raise ValueError("FWI raster has no strips")
+    # Large rasters come back as multiple strips; concatenate them in order.
+    payload = b"".join(data[o:o + c] for o, c in zip(offsets, counts))
+    values = list(struct.unpack(endian + f"{len(payload) // 4}f", payload))
+    return values, width, height
+
+
+def fetch_fwi_grid(bbox: dict, day: date, layer: str,
+                   px_per_deg: int = 40) -> tuple[list[float], int, int] | None:
+    """One raster covering the whole corridor, sampled locally per stage —
+    far politer than 27 point requests."""
+    width = max(2, int((bbox["east"] - bbox["west"]) * px_per_deg))
+    height = max(2, int((bbox["north"] - bbox["south"]) * px_per_deg))
+    query = {
+        "SERVICE": "WMS", "VERSION": "1.1.1", "REQUEST": "GetMap",
+        "LAYERS": layer, "STYLES": "", "SRS": "EPSG:4326",
+        "BBOX": f"{bbox['west']},{bbox['south']},{bbox['east']},{bbox['north']}",
+        "WIDTH": str(width), "HEIGHT": str(height),
+        "FORMAT": "image/tiff", "TIME": day.isoformat(),
+    }
+    try:
+        r = requests.get(EFFIS_WMS, params=query, timeout=60)
+        r.raise_for_status()
+        if not r.content.startswith((b"II", b"MM")):
+            head = r.content[:150].decode("utf-8", "replace").replace("\n", " ")
+            print(f"  ! FWI {layer} {day}: not a raster: {head}")
+            return None
+        return _tiff_floats(r.content)
+    except Exception as exc:
+        print(f"  ! FWI {layer} {day}: {exc}")
+        return None
+
+
+def grid_value(grid: tuple[list[float], int, int], bbox: dict,
+               lat: float, lon: float) -> float | None:
+    values, width, height = grid
+    fx = (lon - bbox["west"]) / (bbox["east"] - bbox["west"])
+    fy = (bbox["north"] - lat) / (bbox["north"] - bbox["south"])  # rows are top-down
+    x = min(width - 1, max(0, int(fx * width)))
+    y = min(height - 1, max(0, int(fy * height)))
+    idx = y * width + x
+    if 0 <= idx < len(values):
+        v = values[idx]
+        return v if v > 0 else None
+    return None
 
 
 def firms_url(key: str, source: str, bbox: dict, days: int,
@@ -229,6 +334,74 @@ def to_items(clusters: list[dict], mode: str, today: date) -> list[dict]:
     return items
 
 
+def fwi_sweep(bbox: dict, stages: list[dict], today: date) -> list[dict]:
+    """Sample the FWI forecast at every stage endpoint and report the stretches
+    running 'high' or worse. Needs no API key."""
+    items: list[dict] = []
+    live = WALK_START <= today <= WALK_END
+    cereal_season = today.month in (4, 5, 6)
+
+    for offset in range(FWI_FORECAST_DAYS):
+        day = today + timedelta(days=offset)
+        grid = fetch_fwi_grid(bbox, day, FWI_LAYER)
+        if grid is None:
+            continue
+        anomaly = fetch_fwi_grid(bbox, day, FWI_ANOMALY_LAYER)
+
+        readings = []
+        for stage in stages:
+            v = grid_value(grid, bbox, stage["lat"], stage["lon"])
+            if v is None or v < FWI_REPORT_FROM:
+                continue
+            a = grid_value(anomaly, bbox, stage["lat"], stage["lon"]) if anomaly else None
+            readings.append((stage, v, a))
+        print(f"  FWI {day}: {len(readings)}/{len(stages)} stage(s) at "
+              f"'high' or worse")
+        if not readings:
+            continue
+
+        # One item per day, naming the worst stretch, rather than 27 near-identical ones.
+        readings.sort(key=lambda r: r[1], reverse=True)
+        worst_stage, worst_v, worst_a = readings[0]
+        cls = fwi_class(worst_v)
+        stage_list = ", ".join(
+            f"{s['end']} (stage {s['stage']}) {v:.0f}" for s, v, _ in readings[:6])
+        cereal = [s for s, _, _ in readings if s["stage"] >= 7]
+        notify = "alert" if (worst_v >= FWI_ALERT_FROM and (live or cereal_season)) \
+            else "quiet"
+        anom = ""
+        if worst_a is not None:
+            anom = (f" FWI anomaly at {worst_stage['end']} is {worst_a:+.1f} "
+                    f"versus the seasonal norm.")
+        harvest = ""
+        if cereal and cereal_season:
+            harvest = (" These are cereal stages — sustained high FWI in spring is "
+                       "what advances the harvest out of mid-June and puts machinery "
+                       "in dry fields while the walk is on.")
+        items.append({
+            "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+            "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+            "region": worst_stage["region"],
+            "tier": "official",
+            "lang": "en",
+            "weight": 1.2 if notify == "alert" else 0.9,
+            "notify": notify,
+            "kind": "fire_weather",
+            "stage": worst_stage["stage"],
+            "stage_end": worst_stage["end"],
+            "text": (
+                f"EFFIS Fire Weather Index forecast for {day.isoformat()} "
+                f"({'today' if offset == 0 else f'+{offset}d'}) reaches {worst_v:.1f} "
+                f"— '{cls}' on the EFFIS scale — at {worst_stage['end']} "
+                f"(stage {worst_stage['stage']}). {len(readings)} stage endpoint(s) "
+                f"are at 'high' (>= {FWI_REPORT_FROM}) or worse: {stage_list}."
+                f"{anom}{harvest} Classes: low <11.2, moderate 11.2-21.3, "
+                f"high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+            ),
+        })
+    return items
+
+
 def sweep(key: str, sources: list[str], bbox: dict, stages: list[dict],
           days: int, start: date | None, label: str) -> list[dict]:
     hits: list[dict] = []
@@ -281,6 +454,8 @@ def main() -> int:
                     help="historical Jun-Sep sweep for the given years")
     ap.add_argument("--check", action="store_true",
                     help="probe whether the FIRMS API is serving, then exit")
+    ap.add_argument("--no-fwi", action="store_true",
+                    help="skip the EFFIS Fire Weather Index forecast sweep")
     args = ap.parse_args()
 
     os.makedirs(STATE_DIR, exist_ok=True)
@@ -289,11 +464,28 @@ def main() -> int:
     bbox = load_bbox()
     today = datetime.now(timezone.utc).date()
 
+    if args.check and not key:
+        # Diagnostic only: never touch the output file.
+        print("FIRMS_MAP_KEY is not set — nothing to check.")
+        print("Request a free key at "
+              "https://firms.modaps.eosdis.nasa.gov/api/map_key/")
+        return 1
+
+    # The FWI forecast is a separate, keyless service — it must still run when
+    # FIRMS is unavailable, because it is the earliest warning of the two.
+    fwi_items: list[dict] = []
+    if not args.no_fwi and args.retro is None and not args.check:
+        print(f"[{today}] EFFIS Fire Weather Index forecast "
+              f"({FWI_FORECAST_DAYS} days) …")
+        fwi_items = fwi_sweep(bbox, stages, today)
+
     if not key:
         print("FIRMS_MAP_KEY is not set — skipping satellite fire detection.")
         print("Request a free key at https://firms.modaps.eosdis.nasa.gov/api/map_key/")
         with open(OUT_FILE, "w", encoding="utf-8") as fh:
-            json.dump([], fh)
+            json.dump(fwi_items, fh, ensure_ascii=False, indent=2)
+        alerts = sum(1 for i in fwi_items if i["notify"] == "alert")
+        print(f"{len(fwi_items)} FWI item(s) ({alerts} alert-tier). Wrote {OUT_FILE}")
         return 0
 
     if args.check:
@@ -318,7 +510,7 @@ def main() -> int:
         mode = "live"
 
     clusters = cluster(hits)
-    items = to_items(clusters, mode, today)
+    items = fwi_items + to_items(clusters, mode, today)
     with open(OUT_FILE, "w", encoding="utf-8") as fh:
         json.dump(items, fh, ensure_ascii=False, indent=2)
 
