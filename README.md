@@ -65,10 +65,21 @@ Seasonal asymmetry matters: Spain's peak season is Jun–Sep, *outside* the walk
 the Basque/Cantabrian north has its own Feb–Apr season from dry föhn winds and agricultural
 burning, so fire near stages 1–6 in spring is weighted up.
 
-Satellite detection needs a free NASA FIRMS map key
+**Leading indicators matter more than detections here.** The fire that could actually touch
+an April–May walk is agricultural — cereal-harvest machinery igniting dry fields in La
+Segarra, Urgell, the Lleida plain, Monegros and the Ebro plain. Normal harvest is mid-June,
+*after* a ~20 May finish, so the whole question is whether a hot dry spring advances it. The
+monitor therefore watches antecedent conditions: the **EFFIS Fire Weather Index** forecast
+sampled at all 27 stage endpoints (plus its anomaly-vs-normal layer), AEMET drought and
+precipitation anomalies judged against the planner's own 1991–2020 normals in
+`data/climate_bands.json`, and any reporting of an early harvest. An observed early harvest
+outranks a drought anomaly, which outranks an FWI forecast.
+
+FWI needs **no API key** and runs even when the satellite half is switched off. Satellite
+detection does need a free NASA FIRMS map key
 ([request one](https://firms.modaps.eosdis.nasa.gov/api/map_key/)) set as `FIRMS_MAP_KEY` in
-the routine's environment. Without it `fetch_fires.py` exits cleanly having done nothing, so
-the daily run never breaks — you just lose the satellite half.
+the routine's environment; without it `fetch_fires.py` still does the FWI sweep and exits
+cleanly, so the daily run never breaks.
 
 ## Setup
 

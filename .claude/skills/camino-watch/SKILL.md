@@ -167,7 +167,12 @@ Score these as **`kind: "fire_weather"`** and reason along that chain explicitly
 is only worth a high score if it moves the harvest date, not merely because it says "dry":
 
 - **Fire Weather Index (FWI)** running high for the route provinces in Apr–May 2027 →
-  escalate. FWI is a forecast, so it is the earliest warning available.
+  escalate. FWI is a forecast, so it is the earliest warning available. `fetch_fires.py`
+  samples it at all 27 endpoints and hands you items already tagged `kind: "fire_weather"`,
+  with the class scale in the text (low <11.2, moderate 11.2–21.3, high 21.3–38, very high
+  38–50, extreme 50–70, very extreme >70). It only emits at "high" and above, and only
+  marks `alert` inside the walk window or the Apr–Jun cereal season — so a high summer
+  reading arriving in, say, July is genuinely a quiet item. Don't re-escalate it.
 - **Drought / soil-moisture / spring precipitation anomalies.** Judge these against
   `data/climate_bands.json`, which holds the planner's own 1991–2020 normals per band. A
   bare percentage means nothing on its own; convert it. "Lleida at 40% of normal spring
