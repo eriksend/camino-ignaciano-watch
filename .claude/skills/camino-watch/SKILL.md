@@ -189,6 +189,30 @@ Order of confidence when they disagree: an observed early harvest beats a drough
 which beats an FWI forecast. Don't stack three restatements of the same dry spring into
 three high scores — score the strongest once and note the others corroborate it.
 
+### Known fire history — don't re-litigate or conflate these
+
+Settled by research, already in `findings.json`. If a source mentions either, cross-reference
+rather than treating it as new:
+
+- **1 July 2025, Torrefeta i Florejacs (La Segarra)** — 5,577.50 ha (3,995 agricultural,
+  1,536 forest), 50 km perimeter, **two deaths**, Catalonia's first "sixth-generation" fire.
+  It ran **north/northwest** through Oliola, Cabanabona and Vilanova de l'Aguda, **26–28 km
+  from the Cervera endpoint**, and **did not reach the waymarked route**. No post-fire reports
+  of damaged waymarking, tracks, shade, bridges or lodging were found — that is an absence of
+  evidence, not a verified all-clear, so a credible route-damage report from this area would
+  still be a real finding.
+- **7 July 2026, same municipality** — a separate, much smaller **~113 ha** agricultural fire
+  near Selvanera; confinements in Biosca, Sanaüja, Massoteres; no deaths.
+
+**These are two different fires at the same place, a year apart.** Never merge them, and be
+careful with the area figure: 5,577 ha is the 2025 fire. Confinement reporting naming
+Massoteres or Biosca belongs to the 2026 event.
+
+Note what the 2025 fire demonstrates, because it supports the whole leading-indicator thesis
+above: it was **72% agricultural land, igniting 1 July** — right as harvest gets under way —
+and it moved at up to 28 km/h. That is the failure mode this monitor is watching for, and it
+is why an advanced harvest matters more than a forest-fire forecast.
+
 ### Route-blocking restrictions are a separate category
 
 An access restriction can end a stage with **no fire burning anywhere near it**. Score these

@@ -2787,5 +2787,41 @@
     "summary_en": "The Jesuit Schools Network Camino Ignaciano program for 2026 runs July 21–31 and is currently full; nominations received by January 15, 2026 were added to a waitlist. This is an institutional program for Jesuit school educators, not open to the general public.",
     "relevance": 12,
     "is_new": false
+  },
+  {
+    "id": "18507cebf5b4e042",
+    "detected_at": "2026-07-30T18:26:15Z",
+    "source_name": "Viquipèdia / 3Cat / Copernicus (research sweep)",
+    "url": "https://ca.wikipedia.org/wiki/Incendi_de_Torrefeta_de_2025",
+    "region": "catalonia",
+    "tier": "discovered",
+    "lang": "ca",
+    "title": "Torrefeta 2025 fire (5,577 ha, 2 deaths) burned north — route not reached",
+    "summary_en": "The major Torrefeta i Florejacs fire ignited 1 July 2025 at 17:08 in La Segarra and was declared controlled on 3 July, burning 5,577.50 ha (3,995 ha agricultural, 1,536 ha forest, 45 ha urban) with a 50 km perimeter and killing two farm workers. It spread north/northwest through Oliola, Cabanabona and Vilanova de l'Aguda (Noguera), 26-28 km from the Cervera stage endpoint, and no source names Cervera, Verdu, Tarrega or Sant Guim de Freixenet as burned — the waymarked Camino Ignaciano corridor was not reached. Catalonia's first 'sixth-generation' fire: pyrocumulus to ~14 km, fire-generated winds to 125 km/h, spread peaks ~28 km/h.",
+    "source_text": "Ignition 1 July 2025 17:08, Torrefeta i Florejacs (La Segarra, Lleida); stabilised 2 July; declared controlat 3 July 2025. Official area 5,577.50 ha = 3,995 agricultural + 1,536 forest + 45 urban; perimeter 50 km. Two dead (farm owner and his worker, from Agramunt); two firefighters lightly injured. Comarques burned: la Segarra, la Noguera, l'Urgell. Municipalities with burned surface: Torrefeta i Florejacs, Oliola, Cabanabona, Vilanova de l'Aguda; impact toward Agramunt and Cosco. Confinements: Agramunt, Artesa de Segre, Vilanova de l'Aguda, Guissona, Sanauja, Torrefeta i Florejacs, Oliola, Cabanabona, Ponts (14,000-20,000 people). Concern axis was the right flank toward Cabanabona and the Vall del Segre, i.e. due north. Natural area affected: les Valls del Sio i Llobregos. Catalonia's first sixth-generation fire. Copernicus Sentinel-2 burn-scar Image of the Day, 2 July 2025. Distance check (haversine, this repo): Oliola 26.8 km, Cabanabona 26.6 km, Vilanova de l'Aguda 28.4 km from the Cervera endpoint (41.670, 1.272) — all outside the 20 km flag radius; the Torrefeta town centre is 14.0 km but the burn ran away from the route. No post-fire reports found of damaged GR/Cami Ignasia waymarking, camins/pistes, lost shade, damaged bridges, or closed alberg/casa rural. Absence of evidence, not a verified all-clear.",
+    "relevance": 55,
+    "notify": "quiet",
+    "kind": "fire_aftermath",
+    "stage": 24,
+    "stage_end": "Cervera",
+    "is_new": true
+  },
+  {
+    "id": "8b7df2d29a261560",
+    "detected_at": "2026-07-30T18:26:15Z",
+    "source_name": "NacioDigital Lleida (research sweep)",
+    "url": "https://naciodigital.cat/lleida/societat/els-bombers-treballen-en-un-incendi-agricola-a-prop-de-torrefeta-i-florejacs-2026-07-07.html",
+    "region": "catalonia",
+    "tier": "discovered",
+    "lang": "ca",
+    "title": "Second, smaller Torrefeta fire 7 July 2026 (~113 ha) — distinct event",
+    "summary_en": "A second, much smaller agricultural fire burned about 113 ha near Selvanera in Torrefeta i Florejacs on 7 July 2026, with confinements in Biosca, Sanauja and Massoteres and no reported deaths. It is a separate event from the 5,577 ha July 2025 fire at the same municipality and must not be merged with it.",
+    "source_text": "7 July 2026, ~113 ha, agricultural fire near Selvanera / cami de Masco a Mas de Nadal, Torrefeta i Florejacs. Confinements: Biosca, Sanauja, Massoteres. No reported deaths. Distinct from the 1 July 2025 fire (5,577.50 ha, two deaths) at the same municipality. Massoteres/Biosca confinement reporting belongs to THIS 2026 event, not to 2025.",
+    "relevance": 15,
+    "notify": "quiet",
+    "kind": "fire_aftermath",
+    "stage": 24,
+    "stage_end": "Cervera",
+    "is_new": true
   }
 ]
