@@ -54,8 +54,8 @@ RETRO_SOURCES = ["VIIRS_SNPP_SP", "VIIRS_NOAA20_SP"]
 
 NEAR_KM = 20.0          # flag detections within this distance of an endpoint
 MAX_DAYS_PER_CALL = 10  # FIRMS area API ceiling
-WALK_START = date(2027, 4, 19)
-WALK_END = date(2027, 5, 20)
+# Walk dates are shared with fetch_alfa.py; edit them in walk_window.py only.
+from walk_window import WALK_END, WALK_START  # noqa: E402
 
 # ---- EFFIS Fire Weather Index (leading indicator; no API key required) ----
 # The FWI *forecast* is the earliest warning available: it predicts the drying

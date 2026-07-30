@@ -23,6 +23,13 @@ The work is split so each half does what it's good at:
   active-fire points for the corridor bounding box, filters them by haversine distance to
   the 27 stage endpoints in `data/end_coords.json` (20 km), and clusters them so one fire
   becomes one finding rather than hundreds of hotspot rows. Writes `state/fire_items.json`.
+- **`scripts/fetch_alfa.py`** — Catalan **Pla ALFA** fire-risk levels and natural-space
+  closures, from public ArcGIS JSON feeds (no key). Levels 0–2 only govern fire-risk *work*;
+  level 3 bans flame and spark-generating machinery but **not** walking; only level 4 can
+  close footpaths. Since Montserrat is a natural park and the stage 26 endpoint, a level-4
+  closure can block the last two stages — it happened in July 2026. The script trusts the
+  closures feed over the level, because spaces have been closed with no municipality at
+  level 4. Writes `state/alfa_items.json`.
 - **`scripts/build_report.py`** — renders `state/findings.json` into `docs/index.html`
   (and `report.html`): a static, filterable report styled around the camino's own orange
   waymark, regenerated every run.
@@ -67,8 +74,10 @@ burning, so fire near stages 1–6 in spring is weighted up.
 
 **Leading indicators matter more than detections here.** The fire that could actually touch
 an April–May walk is agricultural — cereal-harvest machinery igniting dry fields in La
-Segarra, Urgell, the Lleida plain, Monegros and the Ebro plain. Normal harvest is mid-June,
-*after* a ~20 May finish, so the whole question is whether a hot dry spring advances it. The
+Segarra, Urgell, the Lleida plain, Monegros and the Ebro plain. Barley on the Lleida plain
+normally harvests from **~20 May**, so a ~20 May finish has **no margin at all** — the walk's
+final stages already fall inside the normal barley harvest, and a hot dry spring moves
+machinery into the middle of the walk rather than merely closer to it. The
 monitor therefore watches antecedent conditions: the **EFFIS Fire Weather Index** forecast
 sampled at all 27 stage endpoints (plus its anomaly-vs-normal layer), AEMET drought and
 precipitation anomalies judged against the planner's own 1991–2020 normals in
@@ -111,11 +120,14 @@ You can run the mechanical parts locally without the routine:
 ```
 pip install -r requirements.txt
 python scripts/fetch_sources.py     # writes state/new_items.json
-python scripts/fetch_fires.py       # writes state/fire_items.json
+python scripts/fetch_fires.py       # writes state/fire_items.json (FWI + FIRMS)
+python scripts/fetch_alfa.py        # writes state/alfa_items.json (Pla ALFA)
 python scripts/build_report.py      # rebuilds the report from findings.json
 
 python scripts/fetch_fires.py --check            # is the FIRMS API serving?
 python scripts/fetch_fires.py --retro 2025 2026  # historical Jun-Sep sweep
+python scripts/fetch_fires.py --no-fwi           # skip the FWI sweep
+python scripts/fetch_alfa.py --show              # print ALFA state, write nothing
 ```
 
 Translation and scoring only happen inside the routine (that's where the model is), so a

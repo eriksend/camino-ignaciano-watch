@@ -20,16 +20,16 @@ Both optional; set them in the cloud environment's variables.
 | Variable | Effect |
 |---|---|
 | `CAMINO_NTFY_URL` | An [ntfy](https://ntfy.sh) topic URL (e.g. `https://ntfy.sh/your-private-topic`) for phone pushes. Only **`notify: alert`** findings are pushed — quiet ones stay in the report. Unset = no pushes at all. |
-| `FIRMS_MAP_KEY` | Free NASA FIRMS key ([request here](https://firms.modaps.eosdis.nasa.gov/api/map_key/)) enabling satellite wildfire detection near the route. Unset = `fetch_fires.py` does nothing and the run still succeeds. |
+| `FIRMS_MAP_KEY` | Free NASA FIRMS key ([request here](https://firms.modaps.eosdis.nasa.gov/api/map_key/)) enabling **satellite fire detection** near the route. Unset = `fetch_fires.py` still runs the EFFIS Fire Weather Index sweep (no key needed) and the run still succeeds; you only lose the satellite half. `fetch_alfa.py` needs no key at all. |
 
 ## Prompt
 
 ```
 Run the camino-watch routine. Follow .claude/skills/camino-watch/SKILL.md exactly.
 
-In brief: from the repo root, install requirements, then run scripts/fetch_sources.py
-and scripts/fetch_fires.py. For every item in state/new_items.json AND
-state/fire_items.json, translate it to English if needed, write a short title and 1-3
+In brief: from the repo root, install requirements, then run scripts/fetch_sources.py,
+scripts/fetch_fires.py and scripts/fetch_alfa.py. For every item in
+state/new_items.json, state/fire_items.json AND state/alfa_items.json, translate it to English if needed, write a short title and 1-3
 sentence summary, and score its relevance 0-100 per the skill's rubric (applying each
 item's weight). Carry each item's notify tier through to the finding unchanged. Append
 the results to state/findings.json, de-duplicating by id and marking this run's items

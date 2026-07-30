@@ -47,5 +47,5 @@
     }
   },
   "cereal_risk_bands": ["b3", "b4", "b5"],
-  "_cereal_note": "Cereal-machinery ignition risk concentrates in the Ebro plain (b3), Monegros (b4) and the Lleida plain / Urgell / La Segarra (b5). Normal harvest is mid-June onward, i.e. after a ~20 May finish — a hot, dry spring is what erodes that margin."
+  "_cereal_note": "Cereal-machinery ignition risk concentrates in the Ebro plain (b3), Monegros (b4) and the Lleida plain / Urgell / La Segarra (b5). CORRECTED: there is no protective margin. Barley on the Lleida plain normally harvests ~20 May to end June (MAPA: May 10%, June 90%); Monegros/Ebro barley runs late May to June, ~1-2 weeks behind Lleida. Wheat follows in June-July. Precedents: the Lleida secano campaign began 20 May in a recent year (a week early on heat), and in early May in 2020 in the earliest Segria zones. A ~20 May finish therefore lands INSIDE normal barley harvest, so a hot dry spring moves machinery into the middle of the walk rather than merely closer to it. Barley heading (espigado) leads harvest by ~4-6 weeks and is the earliest April signal."
 }

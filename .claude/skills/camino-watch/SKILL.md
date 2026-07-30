@@ -24,16 +24,20 @@ source was unreachable it simply won't appear in the input; skip it silently.
    pip install -r requirements.txt
    python scripts/fetch_sources.py
    python scripts/fetch_fires.py
+   python scripts/fetch_alfa.py
    ```
    `fetch_sources.py` writes `state/new_items.json` (new/changed chunks) and updates the
-   ledger `state/sources.json`. `fetch_fires.py` writes `state/fire_items.json` (satellite
-   fire detections near the route; empty and harmless if `FIRMS_MAP_KEY` is unset).
-   Neither script translates or scores — that is your job.
+   ledger `state/sources.json`. `fetch_fires.py` writes `state/fire_items.json` (the EFFIS
+   Fire Weather Index forecast, which needs no key, plus satellite fire detections if
+   `FIRMS_MAP_KEY` is set). `fetch_alfa.py` writes `state/alfa_items.json` (Catalan Pla ALFA
+   levels and, more importantly, natural-space closures). None of them translate or score —
+   that is your job.
 
-2. **Load both** `state/new_items.json` **and** `state/fire_items.json`, and process the
-   concatenation. Each item has: `source_name`, `url`, `region`, `tier`, `lang`, `weight`,
-   `notify`, `text`; fire items also carry `kind`. If both lists are empty, skip to step 6
-   (still regenerate the report) and finish, noting "no new items this run."
+2. **Load all three** — `state/new_items.json`, `state/fire_items.json` and
+   `state/alfa_items.json` — and process the concatenation. Each item has: `source_name`,
+   `url`, `region`, `tier`, `lang`, `weight`, `notify`, `text`; fire and ALFA items also carry
+   `kind`, and often `stage`/`stage_end`. If all three are empty, skip to step 6 (still
+   regenerate the report) and finish, noting "no new items this run."
 
 3. **For each item, produce a finding.** Read the `text`:
    - **Translate** to English if `lang` is not `en`. Preserve place names
@@ -157,11 +161,27 @@ contradicts it, and always name the affected stage(s) in your title.
 
 The fire that could touch this walk is **agricultural, not forest**: cereal-harvest
 machinery igniting dry stubble or standing grain in **La Segarra, Urgell, the Lleida plain,
-the Monegros and the Ebro plain** (climate bands `b3`, `b4`, `b5`). The protective fact is
-timing — normal cereal harvest there runs **mid-June onward**, i.e. *after* a ~20 May
-finish. The whole risk is that **a hot, dry spring advances the harvest** into the walk
-window. So the highest-value fire signal is not a detection at all; it is the antecedent
-condition that predicts an early harvest.
+the Monegros and the Ebro plain** (climate bands `b3`, `b4`, `b5`).
+
+**There is no protective margin. Do not assume one.** An earlier version of this file said
+normal harvest runs "mid-June onward, safely after a ~20 May finish". That is wrong, and it
+was wrong in the reassuring direction. The verified baseline:
+
+| Area | Barley (the early crop) | Wheat |
+|---|---|---|
+| Lleida plain / Urgell / La Segarra | **~20 May – end June** (MAPA: May 10%, June 90%) | June–July |
+| Monegros / Ebro valley (Aragón) | **late May – June**, ~1–2 weeks behind Lleida | June–July |
+
+Precedents: the Lleida secano campaign **began 20 May** in a recent year, reported as a week
+early because of heat; in 2020 it began in **early May** in the earliest Segrià zones. So the
+walk's final days across stages 21–27 fall **inside** the normal barley harvest, not before
+it, and a hot spring pushes machinery into the middle of the walk rather than merely closer
+to it. Treat the margin as zero and the question as "how far in, not whether".
+
+Barley matters more than wheat here: it ripens first, so it is always the earlier tell.
+Watch for **barley heading (*espigado*) reported early in the Monegros or Hoya de Huesca** —
+heading precedes harvest by roughly 4–6 weeks, which makes an April heading report the
+earliest actionable signal of all.
 
 Score these as **`kind: "fire_weather"`** and reason along that chain explicitly — an item
 is only worth a high score if it moves the harvest date, not merely because it says "dry":
@@ -181,13 +201,31 @@ is only worth a high score if it moves the harvest date, not merely because it s
   score even though the word "drought" appears.
 - **Any reporting of an unusually early or advanced cereal harvest** in the Lleida plain,
   Urgell, La Segarra or Monegros → this is the indicator the others only predict, so score
-  it **high** (70+). Barley ripens before wheat, so "barley harvest started" is the earlier
-  tell. If a report puts machinery in the fields before ~1 June, that directly overlaps the
-  walk and should be called out as such.
+  it **high** (70+). The **Segre** agriculture feed is the source that actually carries this;
+  it reported both the 20 May and the early-May precedents above. A report putting combines
+  in the fields **before ~20 May** means the harvest is running ahead of an already
+  zero-margin baseline — say so explicitly and name the stages affected.
+- **Barley heading (*espigado*) reported early** in Monegros / Hoya de Huesca → score 60+
+  even though it sounds like a minor agronomic detail. It leads harvest by ~4–6 weeks, so in
+  April it is the earliest warning that exists.
 
-Order of confidence when they disagree: an observed early harvest beats a drought anomaly,
-which beats an FWI forecast. Don't stack three restatements of the same dry spring into
-three high scores — score the strongest once and note the others corroborate it.
+Order of confidence when they disagree: an observed early harvest beats a heading report,
+which beats a drought anomaly, which beats an FWI forecast. Don't stack three restatements of
+the same dry spring into three high scores — score the strongest once and note the others
+corroborate it.
+
+**The regulatory blind spot.** Aragón's daily fire-alert regime (NAPIF) only publishes
+routinely from **1 June to 15 October** — after this walk ends — appearing earlier only if a
+zone reaches yellow or above. So during 19 Apr – 20 May, *absence of an Aragón alert bulletin
+is not reassurance and not a data failure*; there simply is no daily product yet. Meanwhile
+agricultural burning is already prohibited from **1 April** (permitted only 16 Oct – 31 Mar),
+which means any smoke seen on the Aragón stages during the walk is illegal, specially
+authorised, or a real fire — not routine stubble burning. Catalonia's Pla ALFA, by contrast,
+runs year-round and stays the primary official signal for the Catalan stages.
+
+For reference on what a high Aragón alert does to harvesting: under **red**, harvesting and
+baling stay permitted but are barred between **14:00 and 18:00** within 400 m of continuous
+woodland over 100 ha; under **red-plus** they can be banned outright.
 
 ### Known fire history — don't re-litigate or conflate these
 
@@ -219,20 +257,41 @@ An access restriction can end a stage with **no fire burning anywhere near it**.
 as **`kind: "route_block"`** and keep them distinct from fire proximity — they are a
 different failure mode and the report badges them separately.
 
-- **Catalonia — Pla ALFA.** Levels 2–3 can restrict access to forest and natural areas.
-  **Montserrat is a natural park** (Parc Natural de la Muntanya de Montserrat) and is the
-  stage 26 endpoint, so an ALFA restriction can block the **Igualada → Montserrat** climb or
-  the **Montserrat → Manresa** approach — the last two stages of the walk. When an ALFA
-  level is reported, state which level, which comarques (Anoia, Bages, Segarra, Urgell), and
-  whether park access is actually restricted or merely elevated.
-- **Aragón — INFOAR / *época de peligro alto*** can restrict access to forest areas and
-  regulate agricultural machinery and stubble burning during high risk. Relevant to the
-  Monegros crossing (stages ~17–20).
+**Catalonia — Pla ALFA. Get the levels right; it is easy to overstate them.** Verified
+against the official Agents Rurals page:
 
-A confirmed closure on a stage the walker must pass is **90+** regardless of season. An
-elevated risk level with no access consequence is **40–60**: real, but not yet blocking.
-Say plainly which of the two it is — "ALFA 2 declared" and "Montserrat paths closed" are
-very different findings and must not be blurred into one.
+| Level | What it actually does |
+|---|---|
+| 0–2 | A notification/authorisation regime for fire-**risk activities** (agricultural and forestry work). **Nothing restricts walkers.** |
+| 3 | Open flame banned in all open spaces; authorised stubble/pasture/pruning burns suspended; spark-generating machinery banned on forest land and within 500 m. **Still nothing about access on foot.** |
+| 4 | *"Es pot restringir l'accés als espais naturals protegits i altres zones forestals d'alta freqüentació"* — **the only level that can close footpaths**, and it is discretionary, applied by signed resolution. |
+
+So **a pilgrim on a marked path breaks no rule at level 3**, and "ALFA 3 declared" is not a
+route blockage. Only level 4 can shut paths, and even then only if a resolution says so.
+Beware older press coverage that describes access restrictions under "Alfa 3" — that wording
+predates the current five-level structure.
+
+**Montserrat is the real exposure.** It is a natural park and the stage 26 endpoint, so a
+level-4 closure can block the **Igualada → Montserrat** climb and the **Montserrat → Manresa**
+descent. This is not hypothetical: in July 2026 the park's paths were closed under level 4 and
+reopened on 25 July, while the rack railway, cable car and funiculars kept running — so the
+monastery stayed reachable mechanically even though the walking stages were gone. That is the
+distinction to draw for the reader: "can I still get there" and "can I still walk it" have
+different answers.
+
+**Trust the closures feed over the level.** `fetch_alfa.py` reads both, and the closures layer
+is authoritative: spaces have been listed as closed while no municipality sat at level 4, so
+inferring closures from the level alone would miss real ones. Never derive a closure from a
+level.
+
+**Aragón — INFOAR / NAPIF.** Can restrict forest access and regulate machinery and stubble
+burning. See the regulatory blind spot noted above: the daily bulletin only publishes 1 June –
+15 October, so for this walk its silence means nothing either way.
+
+Scoring: a **confirmed closure on a stage the walker must pass is 90+** regardless of season.
+An elevated risk level with no access consequence is **40–60** — real, but not blocking. Say
+plainly which it is. "ALFA 3 declared" and "Montserrat paths closed" are very different
+findings and must never be blurred into one.
 
 ## Optional discovery step
 
