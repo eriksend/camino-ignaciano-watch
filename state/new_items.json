@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "source_name": "Jesuit Sources — official guide editions",
+    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
+    "region": "whole",
+    "tier": "guide",
+    "lang": "en",
+    "weight": 1.0,
+    "notify": "quiet",
+    "text": "The Point of Departure of Metaphysics, Lessons on the Historical and Theoretical Development of the Problem of Knowledge: Cahier VI, Thomism Before Critical Philosophy, Thomism in Comparison with Some Recent Philosophies"
+  },
+  {
+    "source_name": "Cova de Sant Ignasi — Notícies (Manresa)",
+    "url": "https://www.covamanresa.cat/en/actualitat",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "weight": 1.0,
+    "notify": "quiet",
+    "text": "We are actively taking part in the various events and celebrations of the 2026 St Ignatius Festival, held in the city of Manresa.\nToday, Lluís Pagès, who has served as Deputy Director of La Cova de Sant Ignasi de Manresa since 2015, retired.\nWe have detected that an unauthorized third party has fraudulently accessed certain information related to some reservations at the International Ignatian Spirituality Centre (CIEI)."
+  }
+]
