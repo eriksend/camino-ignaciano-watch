@@ -73,6 +73,12 @@ def _parse_rss(root):
         entry["link"] = _text(item, "link")
         entry["id"] = _text(item, "guid") or entry["link"] or entry["title"]
         entry["summary"] = _text(item, "description", "content:encoded")
+        # Aggregators (notably Google News) put an opaque redirect in <link> and
+        # name the real publisher here. It is the only usable provenance they give.
+        src_el = item.find("source")
+        if src_el is not None:
+            entry["source_title"] = (src_el.text or "").strip()
+            entry["source_url"] = src_el.get("url", "")
         entries.append(entry)
     return entries
 

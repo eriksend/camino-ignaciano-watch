@@ -168,3 +168,35 @@ def test_mark_ok_must_not_be_what_decides_first_sight():
     fs.mark_ok(entry)
     # after stamping, the same expression would wrongly say "not new"
     assert (not entry.get("seen_ids") and not entry.get("last_checked")) is False
+
+
+def test_rss_parser_captures_the_publisher_from_source_element():
+    """Google News puts an opaque JS redirect in <link> and the real publisher in
+    <source url=...>. That element is the only usable provenance, because the
+    interstitial serves 0 bytes to anything but a browser and the link blob is
+    not decodable."""
+    import xml.etree.ElementTree as ET
+
+    import rss_compat as rc
+    xml = """<rss><channel><item>
+      <title>Headline</title>
+      <link>https://news.google.com/rss/articles/CBMiopaque</link>
+      <guid isPermaLink="false">CBMiopaque</guid>
+      <description>blah</description>
+      <source url="https://esmtb.com">ESMTB.com</source>
+    </item></channel></rss>"""
+    e = rc._parse_rss(ET.fromstring(xml))[0]
+    assert e["source_title"] == "ESMTB.com"
+    assert e["source_url"] == "https://esmtb.com"
+    assert e["link"].startswith("https://news.google.com")
+
+
+def test_rss_parser_tolerates_a_missing_source_element():
+    import xml.etree.ElementTree as ET
+
+    import rss_compat as rc
+    xml = ("<rss><channel><item><title>T</title>"
+           "<link>https://a.example/x</link></item></channel></rss>")
+    e = rc._parse_rss(ET.fromstring(xml))[0]
+    assert e.get("source_url", "") == ""
+    assert e["link"] == "https://a.example/x"

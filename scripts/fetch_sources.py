@@ -405,7 +405,16 @@ def main() -> None:
                 else:
                     for item in fresh:
                         body = f"{item.get('title','')}\n{item.get('summary','')}".strip()
-                        new_items.append({**meta, "url": item.get("link", src["url"]),
+                        extra = {}
+                        pub, pub_url = item.get("source_title"), item.get("source_url")
+                        if pub or pub_url:
+                            extra = {"publisher": pub or "", "publisher_url": pub_url or ""}
+                            # Google News <link> is an opaque JS interstitial that
+                            # cannot be resolved server-side, so the publisher is
+                            # the only way a reader can find the actual article.
+                            body = f"{body}\n(Published by {pub or pub_url})"
+                        new_items.append({**meta, **extra,
+                                          "url": item.get("link", src["url"]),
                                           "text": body[:MAX_CHARS]})
             entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
                                              fresh_ids, 300)

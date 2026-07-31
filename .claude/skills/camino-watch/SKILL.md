@@ -95,6 +95,7 @@ source was unreachable it simply won't appear in the input; skip it silently.
      "notify": "quiet|alert",
      "kind": "fire_live|fire_aftermath|fire_weather|route_block   (omit if none apply)",
      "stage": 24, "stage_end": "Cervera",
+     "publisher": "ESMTB.com", "publisher_url": "https://esmtb.com",
      "is_new": true
    }
    ```
@@ -102,6 +103,13 @@ source was unreachable it simply won't appear in the input; skip it silently.
    item's `text` field unchanged. This lets the report show a collapsible cached copy.
    `stage`/`stage_end` are optional; set them when an item is tied to a specific stage
    (fire items name the stage in their text — carry it over).
+
+   **`publisher`/`publisher_url`: copy them across verbatim when the item has them, and
+   name the publisher in `summary_en`.** Aggregator items (Google News) carry an opaque
+   `news.google.com/rss/articles/...` link that is a client-side JS interstitial: it serves
+   nothing to a script, the URL blob is not decodable, and it cannot be resolved to the
+   article. The publisher is therefore the only way a reader can actually find the piece, so
+   saying "La Vanguardia reports…" is not padding — it is the usable part of the citation.
 
 6. **Rebuild the report:** `python scripts/build_report.py` (writes `docs/index.html`
    and `report.html`).

@@ -32,8 +32,15 @@ def esc(x) -> str:
     return html.escape(str(x if x is not None else ""))
 
 
+# Hosts where a translate wrapper is pointless or actively harmful. A Google News
+# /rss/articles/ link is a client-side JS interstitial serving 0 bytes to anything
+# but a real browser; proxying that through translate.goog produced a guaranteed
+# dead end for 61 findings before this exclusion existed.
+NO_TRANSLATE_HOSTS = ("news.google.com",)
+
+
 def translate_url(url: str, lang: str) -> str:
-    if lang == "en":
+    if lang == "en" or any(h in url for h in NO_TRANSLATE_HOSTS):
         return url
     return f"https://translate.google.com/translate?sl={lang}&tl=en&u={url}"
 
@@ -200,6 +207,16 @@ def card(f: dict) -> str:
         badges += '<span class="blocktag">route blocked</span>'
     elif kind == "fire_weather":
         badges += '<span class="wxtag">fire weather</span>'
+    # Aggregator items cannot link to the article, so name the publisher and link
+    # to it — that is what makes the finding findable at all.
+    pub, pub_url = f.get("publisher"), f.get("publisher_url")
+    if pub or pub_url:
+        label = esc(pub or pub_url)
+        pub_chip = (f'<a class="chip via" href="{esc(pub_url)}" target="_blank" '
+                    f'rel="noopener">via {label}</a>') if pub_url else \
+                   f'<span class="chip via">via {label}</span>'
+    else:
+        pub_chip = ""
     stage = f.get("stage")
     stage_chip = (f'<span class="chip stage">stage {esc(stage)}'
                   f'{" · " + esc(f["stage_end"]) if f.get("stage_end") else ""}</span>'
@@ -216,7 +233,7 @@ def card(f: dict) -> str:
     {badges}
     <span class="dot" style="background:{color}"></span>{esc(region)} · {esc(f.get('tier',''))}
     <span class="chip lang {langcls}">{esc(LANG_NAMES.get(lang, lang))}</span>
-    <span class="chip">{esc(f.get('source_name',''))}</span>{stage_chip}
+    <span class="chip">{esc(f.get('source_name',''))}</span>{stage_chip}{pub_chip}
     <span>· {when}</span>{' <span class="newtag">new</span>' if f.get('is_new') else ''}
   </div>
   <p class="summary">{esc(f.get('summary_en',''))}</p>
@@ -344,6 +361,8 @@ background:#f7e7c8;border-radius:5px;padding:2px 7px;font-weight:600}}
 .f.blockf:hover{{border-color:#6b2fb5}}
 .f.blockf.on{{background:#6b2fb5;color:#fff;border-color:#6b2fb5}}
 .chip.stage{{background:#e4ecf2;color:#2f6f86}}
+.chip.via{{background:#efe9dd;color:#5b554a;text-decoration:none}}
+.chip.via:hover{{color:var(--waymark-deep);text-decoration:underline}}
 .gen b.al{{color:#b8180d}}
 .src pre{{margin:8px 0 0;font-size:12px;line-height:1.5;white-space:pre-wrap;
 word-break:break-word;color:#4a463f;background:#f0ece4;border-radius:7px;

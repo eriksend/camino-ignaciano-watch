@@ -164,3 +164,24 @@ def test_freshly_baselined_source_is_ok_not_silent():
     all 47 as SILENT would make the panel useless on the day it ships."""
     status, why = br.source_status({"last_checked": ago(1), "last_ok": ago(1)}, NOW)
     assert status == "OK" and "baseline" in why
+
+
+def test_aggregator_links_are_never_translate_wrapped():
+    """Wrapping a Google News JS interstitial in translate.goog produced a
+    guaranteed dead end for 61 findings."""
+    gn = "https://news.google.com/rss/articles/CBMiopaque"
+    assert br.translate_url(gn, "es") == gn
+    assert br.translate_url("https://caminoignaciano.org/x", "es").startswith(
+        "https://translate.google.com")
+
+
+def test_publisher_chip_links_out_when_known():
+    html = br.card(finding(url="https://news.google.com/rss/articles/CBMiopaque",
+                           publisher="ESMTB.com",
+                           publisher_url="https://esmtb.com"))
+    assert 'class="chip via"' in html and "https://esmtb.com" in html
+    assert "via ESMTB.com" in html
+
+
+def test_no_publisher_chip_when_unknown():
+    assert 'chip via' not in br.card(finding())

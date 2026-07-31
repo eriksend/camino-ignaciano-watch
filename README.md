@@ -152,6 +152,18 @@ most likely failure: the world changing underneath it. A test asserting the EFFI
 called `mf010.fwi` passes forever whether or not Copernicus still serves it. That job belongs
 to `preflight.py` and the health panel; the tests exist to stop *edits* breaking working logic.
 
+## A caveat on Google News links
+
+Roughly 40% of findings come from the two Google News feeds, and their item links are
+opaque `news.google.com/rss/articles/CBMi…` redirects, not publisher URLs. Google serves
+those as a client-side JS interstitial (0 bytes to a script), the URL blob is not decodable,
+and following it server-side never leaves news.google.com — so **the article URL cannot be
+recovered.** What the feed does give is `<source url=…>`, the publisher, which the monitor
+now captures and shows as a `via <publisher>` chip linking to their site.
+
+These links are also deliberately excluded from the Google Translate wrapper. Proxying a JS
+interstitial through `translate.goog` turned a merely awkward link into a guaranteed dead end.
+
 ## Monitor health
 
 Every run records per-source outcomes in `state/sources.json` and a run summary in
