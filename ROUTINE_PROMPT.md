@@ -27,7 +27,8 @@ Both optional; set them in the cloud environment's variables.
 ```
 Run the camino-watch routine. Follow .claude/skills/camino-watch/SKILL.md exactly.
 
-In brief: from the repo root, install requirements, then run scripts/fetch_sources.py,
+In brief: from the repo root, install requirements, then run scripts/preflight.py and
+STOP if it exits non-zero. Otherwise run scripts/fetch_sources.py,
 scripts/fetch_fires.py and scripts/fetch_alfa.py. For every item in
 state/new_items.json, state/fire_items.json AND state/alfa_items.json, translate it to English if needed, write a short title and 1-3
 sentence summary, and score its relevance 0-100 per the skill's rubric (applying each

@@ -30,6 +30,13 @@ The work is split so each half does what it's good at:
   closure can block the last two stages — it happened in July 2026. The script trusts the
   closures feed over the level, because spaces have been closed with no municipality at
   level 4. Writes `state/alfa_items.json`.
+- **`scripts/preflight.py`** — an offline gate the routine runs *first*. Validates that every
+  script imports, `sources.yaml` is coherent (types, weights, regions, dates, no duplicate
+  URLs), the 27 stage endpoints are all inside the corridor box *with the 20 km geofence
+  margin*, every stage maps to a climate band, and `findings.json` holds no duplicate ids or
+  out-of-range scores. Exits non-zero so a broken config stops the run loudly instead of
+  quietly producing nothing. It caught a real bug on its first run: two stage endpoints
+  (Laguardia, Navarrete) sat *outside* the bounding box used to query fire detections.
 - **`scripts/build_report.py`** — renders `state/findings.json` into `docs/index.html`
   (and `report.html`): a static, filterable report styled around the camino's own orange
   waymark, regenerated every run.
@@ -132,6 +139,26 @@ python scripts/fetch_alfa.py --show              # print ALFA state, write nothi
 
 Translation and scoring only happen inside the routine (that's where the model is), so a
 purely local run will fetch and report but won't fill in summaries.
+
+## Tests
+
+`tests/` holds ~95 pytest cases over the pure logic — date gating, the change-memory state
+machine, the GeoTIFF parser, the geofence, the report's badges and the health classifier.
+Install with `pip install -r requirements-dev.txt` and run `python -m pytest -q`.
+
+**These are a development tool, not a safety net for the daily run.** Nothing schedules them,
+and by design they never touch the network — which means they cannot catch this project's
+most likely failure: the world changing underneath it. A test asserting the EFFIS layer is
+called `mf010.fwi` passes forever whether or not Copernicus still serves it. That job belongs
+to `preflight.py` and the health panel; the tests exist to stop *edits* breaking working logic.
+
+## Monitor health
+
+Every run records per-source outcomes in `state/sources.json` and a run summary in
+`state/health.json`, and the report renders both as a panel at the top. It distinguishes
+**FAILING** (the last fetch attempt errored) from **STALE** (not being checked at all) from
+**SILENT** (fetching fine, simply unchanged — normal for a static page). That distinction is
+the whole point: without it a dead source produces output identical to a quiet one.
 
 ## A note on courtesy
 

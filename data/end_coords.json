@@ -1,6 +1,7 @@
 {
   "_comment": "Stage END-town coordinates, copied verbatim from END_COORDS in camino-itinerary-v13.html (the planner). Approximate town-centre coords; used for haversine distance filtering of fire detections. Keep in sync with the planner.",
-  "_bbox": {"west": -2.5, "south": 41.4, "east": 2.0, "north": 43.2},
+  "_bbox": {"west": -2.9, "south": 41.25, "east": 2.15, "north": 43.3},
+  "_bbox_note": "WIDENED 2026-07-30. The original box (west -2.5, south 41.4, east 2.0, north 43.2) left Laguardia (-2.583) and Navarrete (-2.559) OUTSIDE it entirely, and cleared no endpoint by the 20 km the geofence promises. FIRMS is queried with this box, so any fire in the excluded strip was invisible; FWI sampling silently clamped those two stages to the box edge. Every edge now clears the extreme endpoint by at least 20 km (0.18 deg lat, 0.25 deg lon). scripts/preflight.py enforces this.",
   "stages": [
     {"stage": 1,  "end": "Zumárraga",            "lat": 43.083, "lon": -2.313, "region": "basque"},
     {"stage": 2,  "end": "Arantzazu",            "lat": 42.981, "lon": -2.398, "region": "basque"},

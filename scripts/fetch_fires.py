@@ -44,6 +44,7 @@ import requests
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COORDS_FILE = os.path.join(ROOT, "data", "end_coords.json")
 STATE_DIR = os.path.join(ROOT, "state")
+HEALTH_FILE = os.path.join(STATE_DIR, "health.json")
 OUT_FILE = os.path.join(STATE_DIR, "fire_items.json")
 
 FIRMS_BASE = "https://firms.modaps.eosdis.nasa.gov/api/area/csv"
@@ -77,6 +78,8 @@ FWI_REPORT_FROM = 21.3   # don't emit anything below "high" — it's noise
 FWI_ALERT_FROM = 38.0    # "very high" and up escalates inside the risk season
 FWI_SANE_MAX = 150.0     # above this it is a nodata sentinel, not weather
 FWI_HYSTERESIS = 2.0     # margin required to call a class transition real
+# Set by fwi_sweep so main() can report EFFIS liveness into health.json.
+FWI_REACHABLE: dict = {"ok": False}
 
 # The Basque/Cantabrian north has a distinct late-winter/spring fire season
 # (dry fohn winds + agricultural burning) that overlaps the walk window.
@@ -366,6 +369,7 @@ def fwi_sweep(bbox: dict, stages: list[dict], today: date,
         grid = fetch_fwi_grid(bbox, day, FWI_LAYER)
         if grid is None:
             continue
+        FWI_REACHABLE["ok"] = True
         anomaly = fetch_fwi_grid(bbox, day, FWI_ANOMALY_LAYER)
         readings = []
         for stage in stages:
@@ -496,6 +500,22 @@ def retro_sweep(key: str, years: list[int], bbox: dict,
     return hits
 
 
+def note_health(**kw) -> None:
+    """Merge this script's liveness into state/health.json (shared with the others)."""
+    try:
+        with open(HEALTH_FILE, encoding="utf-8") as fh:
+            health = json.load(fh)
+    except Exception:
+        health = {}
+    health.update(kw)
+    try:
+        os.makedirs(STATE_DIR, exist_ok=True)
+        with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
+            json.dump(health, fh, ensure_ascii=False, indent=2, sort_keys=True)
+    except Exception as exc:
+        print(f"  · could not update health.json: {exc}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=7,
@@ -530,6 +550,10 @@ def main() -> int:
         fwi_ledger = cl.load()
         fwi_items = fwi_sweep(bbox, stages, today, fwi_ledger)
         cl.save(fwi_ledger)
+        # A silent EFFIS outage must be visible: fwi_reachable is set by the
+        # sweep, and is False when every grid request failed.
+        note_health(fwi_ok=FWI_REACHABLE.get("ok", False),
+                    fwi_run_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
 
     if not key:
         print("FIRMS_MAP_KEY is not set — skipping satellite fire detection.")

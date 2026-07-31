@@ -54,6 +54,7 @@ CACHE_DIR = os.path.join(STATE_DIR, "cache")
 LEDGER_FILE = os.path.join(STATE_DIR, "sources.json")
 LEGACY_STATE_FILE = os.path.join(STATE_DIR, "source_state.json")
 NEW_FILE = os.path.join(STATE_DIR, "new_items.json")
+HEALTH_FILE = os.path.join(STATE_DIR, "health.json")
 
 HEADERS = {
     "User-Agent": (
@@ -97,8 +98,12 @@ SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
 
 
-def fetch_raw(url: str, key: str, kind: str) -> bytes | None:
-    """Fetch URL as bytes; cache on success, fall back to the cached copy."""
+def fetch_raw(url: str, key: str, kind: str) -> tuple[bytes | None, str | None]:
+    """Fetch URL as bytes; cache on success, fall back to the cached copy.
+
+    Returns (data, error_message). The error text is returned rather than only
+    printed so the ledger can record why a source is failing.
+    """
     os.makedirs(CACHE_DIR, exist_ok=True)
     raw_path = cache_path(key, kind)
     try:
@@ -114,14 +119,14 @@ def fetch_raw(url: str, key: str, kind: str) -> bytes | None:
             data = r.content
         with open(raw_path, "wb") as fh:
             fh.write(data)
-        return data
+        return data, None
     except Exception as exc:
         if os.path.exists(raw_path):
             print(f"  ! fetch failed ({exc}); using cached copy")
             with open(raw_path, "rb") as fh:
-                return fh.read()
+                return fh.read(), None
         print(f"  ! fetch failed: {exc}")
-        return None
+        return None, str(exc)[:200]
 
 
 def extract_pdf_text(data: bytes) -> str:
@@ -257,6 +262,28 @@ def added_text(old: str, new: str) -> str:
     return "\n".join(a for a in added if a.strip())
 
 
+def mark_ok(entry: dict) -> None:
+    """Record a successful fetch and CLEAR any previous failure.
+
+    Clearing matters: without it `last_error` latches forever, so one bad
+    afternoon would mark a source permanently broken in the health panel — and a
+    panel that cries wolf is a panel you learn to ignore.
+    """
+    stamp = now_iso()
+    entry["last_checked"] = stamp
+    entry["last_ok"] = stamp
+    entry.pop("last_error", None)
+    entry.pop("last_error_msg", None)
+
+
+def mark_failed(entry: dict, message: str) -> None:
+    """Record a failed fetch, keeping the reason for the health panel."""
+    stamp = now_iso()
+    entry["last_checked"] = stamp
+    entry["last_error"] = stamp
+    entry["last_error_msg"] = str(message)[:200]
+
+
 def retain_recent(previous: list[str], fresh: list[str], cap: int) -> list[str]:
     """Append newly-seen ids and keep the newest `cap`, deterministically.
 
@@ -352,7 +379,15 @@ def main() -> None:
             import rss_compat
 
             feed = rss_compat.parse(src["url"])
+            if not getattr(feed, "ok", True):
+                failed.append(src["name"])
+                mark_failed(entry, getattr(feed, "error", "rss fetch failed"))
+                continue
+            # first_sight MUST be computed before mark_ok(), which stamps
+            # last_checked — otherwise a brand-new feed looks already-seen and
+            # dumps its whole backlog as "news" on the very first run.
             first_sight = not entry.get("seen_ids") and not entry.get("last_checked")
+            mark_ok(entry)
             seen = set(entry.get("seen_ids", []))
             fresh, fresh_ids = [], []
             for item in feed.entries[:25]:
@@ -374,17 +409,16 @@ def main() -> None:
                                           "text": body[:MAX_CHARS]})
             entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
                                              fresh_ids, 300)
-            entry["last_checked"] = now_iso()
 
         else:  # html | pdf
             kind = "pdf" if src["type"] == "pdf" else "html"
-            raw = fetch_raw(src["url"], key, kind)
+            raw, err = fetch_raw(src["url"], key, kind)
             if raw is None:
                 # A dead source must not be indistinguishable from a quiet one.
                 failed.append(src["name"])
-                entry["last_checked"] = now_iso()
-                entry["last_error"] = now_iso()
+                mark_failed(entry, err or "fetch failed")
                 continue
+            mark_ok(entry)
             if kind == "pdf":
                 text = extract_pdf_text(raw)
                 # Prefer hashing the text layer: PDF bytes can churn on metadata
@@ -400,7 +434,6 @@ def main() -> None:
                     raw.decode("utf-8", "replace"), src["url"])
                 if not text.strip():
                     print("  ! extraction produced nothing; leaving baseline alone")
-                    entry["last_checked"] = now_iso()
                     continue
                 # Hash the whitespace-normalised text so formatting jitter alone
                 # cannot look like a content change.
@@ -441,9 +474,19 @@ def main() -> None:
             entry["last_hash"] = digest
             entry["extractor"] = extractor
             entry["extracted"] = text
-            entry["last_checked"] = now_iso()
 
         time.sleep(1.0)  # courtesy pause
+
+    # Drop ledger entries for sources no longer configured. The ledger is keyed
+    # by URL, so a retired source — or an edited URL — otherwise leaves an orphan
+    # that lingers as a phantom FAILING/STALE row in the health panel forever.
+    live_keys = {sid(s["url"]) for s in sources}
+    orphans = [k for k in ledger if k not in live_keys]
+    for k in orphans:
+        ledger.pop(k)
+    if orphans:
+        print(f"  · pruned {len(orphans)} ledger entr(y/ies) for sources no longer "
+              f"in sources.yaml")
 
     with open(NEW_FILE, "w", encoding="utf-8") as fh:
         json.dump(new_items, fh, ensure_ascii=False, indent=2)
@@ -451,6 +494,18 @@ def main() -> None:
         json.dump(ledger, fh, ensure_ascii=False, indent=2)
 
     alerts = sum(1 for i in new_items if i.get("notify") == "alert")
+    # Persist the run summary. It used to be printed and discarded, so a run that
+    # failed half its sources left no trace anywhere a human would look.
+    health = load_json(HEALTH_FILE, {})
+    health.update({
+        "run_at": now_iso(), "sources_total": len(sources),
+        "new_items": len(new_items), "alerts": alerts, "baselined": baselined,
+        "rebaselined": rebaselined, "skipped": skipped,
+        "changed_quiet": changed_quiet, "failed": failed,
+    })
+    with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
+        json.dump(health, fh, ensure_ascii=False, indent=2, sort_keys=True)
+
     print(f"[{now_iso()}] {len(new_items)} new item(s) ({alerts} alert-tier); "
           f"{baselined} baselined; {rebaselined} re-baselined (churn suppressed); "
           f"{skipped} skipped (not due); {changed_quiet} silent change(s); "

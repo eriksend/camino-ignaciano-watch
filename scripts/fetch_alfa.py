@@ -46,6 +46,7 @@ from walk_window import in_walk_window, near_walk
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATE_DIR = os.path.join(ROOT, "state")
+HEALTH_FILE = os.path.join(STATE_DIR, "health.json")
 OUT_FILE = os.path.join(STATE_DIR, "alfa_items.json")
 
 ARCGIS = ("https://services7.arcgis.com/ZCqVt1fRXwwK6GF4/arcgis/rest/services"
@@ -251,6 +252,22 @@ def build_items(today: date, levels: dict, closures: list[dict],
     return items
 
 
+def note_health(**kw) -> None:
+    """Merge this script's liveness into state/health.json (shared with the others)."""
+    try:
+        with open(HEALTH_FILE, encoding="utf-8") as fh:
+            health = json.load(fh)
+    except Exception:
+        health = {}
+    health.update(kw)
+    try:
+        os.makedirs(STATE_DIR, exist_ok=True)
+        with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
+            json.dump(health, fh, ensure_ascii=False, indent=2, sort_keys=True)
+    except Exception as exc:
+        print(f"  · could not update health.json: {exc}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--show", action="store_true",
@@ -266,6 +283,7 @@ def main() -> int:
     closed = query(*CLOSURES_TODAY) or []
     closed_t = query(*CLOSURES_TOMORROW) or []
 
+    note_health(alfa_ok=rows is not None, alfa_run_at=now_iso())
     if rows is None:
         print("  ! level layer unavailable; writing no items")
         if not args.show:

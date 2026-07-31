@@ -44,10 +44,15 @@ class _Entry(dict):
 
 
 class _Feed:
-    def __init__(self, entries):
+    def __init__(self, entries, ok=True, error=None):
         self.entries = entries
         self.feed = {}
-        self.bozo = False
+        self.bozo = not ok
+        # `ok` exists so a FAILED fetch is distinguishable from an EMPTY feed.
+        # Without it a dead feed looks exactly like a quiet one, which is the
+        # defining failure mode for a monitor.
+        self.ok = ok
+        self.error = error
 
 
 def _text(el, *tags):
@@ -94,14 +99,14 @@ def parse(url_or_file):
         resp.raise_for_status()
         content = resp.content
     except Exception as e:
-        print(f"  [feedparser shim] fetch failed: {e}")
-        return _Feed([])
+        print(f"  ! rss fetch failed: {e}")
+        return _Feed([], ok=False, error=f"fetch: {e}")
 
     try:
         root = ET.fromstring(content)
     except ET.ParseError as e:
-        print(f"  [feedparser shim] XML parse error: {e}")
-        return _Feed([])
+        print(f"  ! rss XML parse error: {e}")
+        return _Feed([], ok=False, error=f"xml: {e}")
 
     tag = root.tag.lower() if root.tag else ""
     if "atom" in tag or root.tag == "{http://www.w3.org/2005/Atom}feed":

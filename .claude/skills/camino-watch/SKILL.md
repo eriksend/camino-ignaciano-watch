@@ -22,10 +22,16 @@ source was unreachable it simply won't appear in the input; skip it silently.
 1. **Install + fetch.** Run:
    ```
    pip install -r requirements.txt
+   python scripts/preflight.py        # STOP if this exits non-zero
    python scripts/fetch_sources.py
    python scripts/fetch_fires.py
    python scripts/fetch_alfa.py
    ```
+   **`preflight.py` is a gate, not a formality.** It is offline and takes a second. If it
+   exits non-zero, **stop and report the failures** — do not continue, do not "work around"
+   it, do not commit. A broken config would otherwise let the run finish and produce nothing,
+   which is indistinguishable from a quiet day. Warnings (`WARN`) are informational; carry on.
+
    `fetch_sources.py` writes `state/new_items.json` (new/changed chunks) and updates the
    ledger `state/sources.json`. `fetch_fires.py` writes `state/fire_items.json` (the EFFIS
    Fire Weather Index forecast, which needs no key, plus satellite fire detections if
