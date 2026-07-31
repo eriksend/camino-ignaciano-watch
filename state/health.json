@@ -1,16 +1,16 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-07-31T17:47:21+00:00",
-  "baselined": 23,
-  "changed_quiet": 33,
+  "alfa_run_at": "2026-07-31T14:41:10+00:00",
+  "baselined": 0,
+  "changed_quiet": 0,
   "failed": [],
   "fwi_ok": true,
-  "fwi_run_at": "2026-07-31T17:47:24+00:00",
-  "new_items": 0,
+  "fwi_run_at": "2026-07-31T14:41:03+00:00",
+  "new_items": 2,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 0,
-  "run_at": "2026-07-31T00:59:47+00:00",
-  "skipped": 16,
+  "run_at": "2026-07-31T14:40:53+00:00",
+  "skipped": 31,
   "sources_total": 47
 }
