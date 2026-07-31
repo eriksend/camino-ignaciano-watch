@@ -39,6 +39,14 @@ source was unreachable it simply won't appear in the input; skip it silently.
    levels and, more importantly, natural-space closures). None of them translate or score —
    that is your job.
 
+   **A run may DEFER items, and that is correct behaviour, not a bug.** There is a
+   ceiling of 25 items per run (`MAX_ITEMS_PER_RUN`). If more sources changed than that,
+   the overflow is *postponed* — its ledger baseline is deliberately left unwritten so the
+   next run re-detects and reports it. The run log names them and `state/health.json`
+   records `deferred`/`deferred_items`. So if the log says "4 deferred", do **not** try to
+   hunt them down, re-run the fetcher, or hand-write findings for them: they will arrive
+   tomorrow. Alert-tier items are never deferred.
+
 2. **Load all three** — `state/new_items.json`, `state/fire_items.json` and
    `state/alfa_items.json` — and process the concatenation. Each item has: `source_name`,
    `url`, `region`, `tier`, `lang`, `weight`, `notify`, `text`; fire and ALFA items also carry
@@ -166,7 +174,7 @@ is long over. Low urgency, high value. `notify: quiet`. Score on **damage to the
 - **0–39:** fire in the wider region with no plausible route bearing; a detection whose
   nearest stage endpoint is >15 km away with nothing else to tie it to the corridor.
 
-**(b) Live risk — during the walk (2027-04-19 to ~2027-05-20).** Active fire, fire-risk
+**(b) Live risk — during the walk (2027-04-20 to 2027-05-27).** Active fire, fire-risk
 levels and access restrictions on stages about to be walked. `notify: alert`. Score high
 and be blunt; an access restriction with no fire at all can still block a stage. Treat
 **Pla ALFA** level (Catalonia) and Aragón's fire-risk/`época de peligro alto` restrictions

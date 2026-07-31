@@ -54,6 +54,7 @@ CACHE_DIR = os.path.join(STATE_DIR, "cache")
 LEDGER_FILE = os.path.join(STATE_DIR, "sources.json")
 LEGACY_STATE_FILE = os.path.join(STATE_DIR, "source_state.json")
 NEW_FILE = os.path.join(STATE_DIR, "new_items.json")
+ITINERARY_FILE = os.path.join(ROOT, "data", "itinerary.json")
 HEALTH_FILE = os.path.join(STATE_DIR, "health.json")
 
 HEADERS = {
@@ -65,6 +66,11 @@ HEADERS = {
     "Accept-Language": "es,en;q=0.9,eu;q=0.8,ca;q=0.7",
 }
 MAX_CHARS = 6000  # cap per chunk handed to the model
+# Ceiling on items handed to one routine session. At MAX_CHARS each, 25 items is
+# ~150 KB of text to translate and score — a comfortable load. Overflow is
+# DEFERRED to the next run, never dropped: 8 province weather feeds waking in
+# April 2027 could otherwise hand a single session 30+ items on a stormy day.
+MAX_ITEMS_PER_RUN = 25
 
 # Cadence -> minimum hours between checks. Deliberately under the nominal
 # interval so a run firing slightly early doesn't skip a source.
@@ -262,6 +268,104 @@ def added_text(old: str, new: str) -> str:
     return "\n".join(a for a in added if a.strip())
 
 
+def stage_window(stages: list[int], itinerary: dict) -> tuple[date, date] | None:
+    """Dates a source covering `stages` is worth analyzing, generously padded.
+
+    Eight province weather feeds is the wrong granularity for a linear walk — a
+    Barcelona warning is noise on day two in Gipuzkoa. This narrows each to the
+    stretch it actually covers.
+
+    Padding is deliberately ASYMMETRIC and grows with stage number, because slip
+    accrues: a split or rest day early pushes every later stage later. The planner
+    flags 4 stages for splitting, which alone consume all slack, so the late margin
+    has to widen along the route rather than being a flat constant.
+    """
+    if not stages:
+        return None
+    by_stage = {s["stage"]: s for s in itinerary.get("stages", [])}
+    pad = itinerary.get("_padding", {})
+    early = int(pad.get("early_days", 10))
+    late_base = int(pad.get("late_base_days", 7))
+    late_per = float(pad.get("late_per_stage", 0.6))
+
+    first, last = min(stages), max(stages)
+    if first not in by_stage or last not in by_stage:
+        return None
+    start = as_date(by_stage[first]["nominal_date"])
+    end = as_date(by_stage[last]["nominal_date"])
+    if start is None or end is None:
+        return None
+    return (start - timedelta(days=early),
+            end + timedelta(days=late_base + round(late_per * last)))
+
+
+def resolve_stage_windows(sources: list[dict], itinerary: dict) -> int:
+    """Turn `stages: [a, b]` into analyze_from/stop_after, in place.
+
+    Deliberately reuses the existing date gating instead of adding a second
+    mechanism: once these fields are set, effective_analyze() and due_reason()
+    handle everything and stay pure and testable. An explicitly-configured
+    analyze_from or stop_after always wins, so a source can opt out.
+    """
+    resolved = 0
+    for src in sources:
+        stages = src.get("stages")
+        if not stages:
+            continue
+        window = stage_window([int(s) for s in stages], itinerary)
+        if window is None:
+            continue
+        start, end = window
+        if not src.get("analyze_from"):
+            src["analyze_from"] = start.isoformat()
+        if not src.get("stop_after"):
+            src["stop_after"] = end.isoformat()
+        resolved += 1
+    return resolved
+
+
+def eid_of(item) -> str:
+    return item.get("id") or item.get("link") or item.get("title", "")
+
+
+def triage(candidates: list[dict], limit: int) -> tuple[list[dict], list[dict]]:
+    """Split candidates into (process now, defer). Never drops anything.
+
+    Priority, highest first:
+      1. alert-tier — must never wait behind routine churn
+      2. most-deferred — the anti-starvation guarantee, so a source can't be
+         perpetually crowded out by higher-weight neighbours
+      3. heaviest weight
+      4. oldest unreported change
+    """
+    ordered = sorted(
+        candidates,
+        key=lambda c: (c["notify"] == "alert", c["deferred_count"], c["weight"],
+                       c["last_change_seen"] or ""),
+        reverse=True,
+    )
+    return ordered[:limit], ordered[limit:]
+
+
+def commit_candidate(c: dict) -> None:
+    """Write the ledger state that marks this candidate's change as reported."""
+    entry = c["entry"]
+    if c["kind"] == "html":
+        digest, extractor, text = c["commit"]
+        entry["last_hash"] = digest
+        entry["extractor"] = extractor
+        entry["extracted"] = text
+    else:
+        entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
+                                          [c["eid"]], 300)
+    entry["deferred_count"] = 0
+
+
+def defer_candidate(c: dict) -> None:
+    """Leave the ledger untouched so the next run re-detects this change."""
+    c["entry"]["deferred_count"] = c["deferred_count"] + 1
+
+
 def mark_ok(entry: dict) -> None:
     """Record a successful fetch and CLEAR any previous failure.
 
@@ -335,8 +439,14 @@ def main() -> None:
     os.makedirs(STATE_DIR, exist_ok=True)
     with open(SOURCES, encoding="utf-8") as fh:
         sources = yaml.safe_load(fh)["sources"]
+    itinerary = load_json(ITINERARY_FILE, {})
+    if itinerary:
+        n = resolve_stage_windows(sources, itinerary)
+        if n:
+            print(f"  · resolved stage windows for {n} source(s) from the itinerary")
     ledger = load_ledger()
     new_items: list[dict] = []
+    candidates: list[dict] = []
     baselined = 0
     skipped = 0
     changed_quiet = 0
@@ -413,11 +523,21 @@ def main() -> None:
                             # cannot be resolved server-side, so the publisher is
                             # the only way a reader can find the actual article.
                             body = f"{body}\n(Published by {pub or pub_url})"
-                        new_items.append({**meta, **extra,
-                                          "url": item.get("link", src["url"]),
-                                          "text": body[:MAX_CHARS]})
-            entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
-                                             fresh_ids, 300)
+                        candidates.append({
+                            "item": {**meta, **extra,
+                                     "url": item.get("link", src["url"]),
+                                     "text": body[:MAX_CHARS]},
+                            "entry": entry, "name": src["name"],
+                            "weight": meta["weight"], "notify": notify,
+                            "kind": "rss", "eid": eid_of(item),
+                            "deferred_count": int(entry.get("deferred_count", 0)),
+                            "last_change_seen": entry.get("last_change_seen", ""),
+                        })
+            # Ids for emitted items are committed after triage; a deferred entry
+            # must stay unseen so the next run reports it again.
+            if analyze == "never" or first_sight or not fresh:
+                entry["seen_ids"] = retain_recent(entry.get("seen_ids", []),
+                                                  fresh_ids, 300)
 
         else:  # html | pdf
             kind = "pdf" if src["type"] == "pdf" else "html"
@@ -478,13 +598,39 @@ def main() -> None:
                     if analyze == "never":
                         changed_quiet += 1
                     else:
-                        new_items.append({**meta, "text": delta[:MAX_CHARS]})
+                        candidates.append({
+                            "item": {**meta, "text": delta[:MAX_CHARS]},
+                            "entry": entry, "name": src["name"],
+                            "weight": meta["weight"], "notify": notify,
+                            "kind": "html", "commit": (digest, extractor, text),
+                            "deferred_count": int(entry.get("deferred_count", 0)),
+                            "last_change_seen": entry.get("last_change_seen", ""),
+                        })
 
-            entry["last_hash"] = digest
-            entry["extractor"] = extractor
-            entry["extracted"] = text
+            # The baseline write is DEFERRABLE. Change detection rests entirely on
+            # last_hash/extracted, so withholding these three makes the next run
+            # recompute the same digest and re-emit the same item. That is the whole
+            # deferral mechanism — no separate queue to keep in sync.
+            if not any(c.get("entry") is entry and c["kind"] == "html"
+                       for c in candidates):
+                entry["last_hash"] = digest
+                entry["extractor"] = extractor
+                entry["extracted"] = text
 
         time.sleep(1.0)  # courtesy pause
+
+    # Triage: hand at most MAX_ITEMS_PER_RUN to the model and defer the rest by
+    # withholding their ledger writes, so they surface again next run.
+    take, defer = triage(candidates, MAX_ITEMS_PER_RUN)
+    for c in take:
+        commit_candidate(c)
+        new_items.append(c["item"])
+    for c in defer:
+        defer_candidate(c)
+    deferred_names = sorted({c["name"] for c in defer})
+    if defer:
+        print(f"  · ceiling {MAX_ITEMS_PER_RUN} reached: {len(defer)} item(s) DEFERRED "
+              f"to the next run (not dropped) from: {', '.join(deferred_names)}")
 
     # Drop ledger entries for sources no longer configured. The ledger is keyed
     # by URL, so a retired source — or an edited URL — otherwise leaves an orphan
@@ -511,6 +657,7 @@ def main() -> None:
         "new_items": len(new_items), "alerts": alerts, "baselined": baselined,
         "rebaselined": rebaselined, "skipped": skipped,
         "changed_quiet": changed_quiet, "failed": failed,
+        "deferred_items": len(defer), "deferred": deferred_names,
     })
     with open(HEALTH_FILE, "w", encoding="utf-8") as fh:
         json.dump(health, fh, ensure_ascii=False, indent=2, sort_keys=True)
@@ -518,7 +665,7 @@ def main() -> None:
     print(f"[{now_iso()}] {len(new_items)} new item(s) ({alerts} alert-tier); "
           f"{baselined} baselined; {rebaselined} re-baselined (churn suppressed); "
           f"{skipped} skipped (not due); {changed_quiet} silent change(s); "
-          f"{len(failed)} FAILED. Wrote {NEW_FILE}")
+          f"{len(defer)} deferred; {len(failed)} FAILED. Wrote {NEW_FILE}")
     if failed:
         print("  ! unreachable this run: " + ", ".join(failed))
 

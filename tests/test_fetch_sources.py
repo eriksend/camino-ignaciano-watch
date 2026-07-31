@@ -200,3 +200,54 @@ def test_rss_parser_tolerates_a_missing_source_element():
     e = rc._parse_rss(ET.fromstring(xml))[0]
     assert e.get("source_url", "") == ""
     assert e["link"] == "https://a.example/x"
+
+
+# ---------- stage windows ----------
+
+ITIN = {
+    "_padding": {"early_days": 4, "late_base_days": 7, "late_per_stage": 0.6},
+    "stages": [{"stage": n, "nominal_date": f"2027-04-{19 + n:02d}"}
+               for n in range(1, 12)],
+}
+
+
+def test_stage_window_pads_asymmetrically():
+    """Nominal is the FASTEST pace, so the walker can never run ahead of it —
+    early margin is forecast lead only, late margin absorbs all schedule risk."""
+    start, end = fs.stage_window([1, 2], ITIN)
+    assert start == dt.date(2027, 4, 20) - dt.timedelta(days=4)
+    assert end == dt.date(2027, 4, 21) + dt.timedelta(days=7 + round(0.6 * 2))
+
+
+def test_late_margin_grows_with_stage_number():
+    """Slip accrues along the route, so later stages need more slack."""
+    _, early_end = fs.stage_window([1, 2], ITIN)
+    _, late_end = fs.stage_window([10, 11], ITIN)
+    early_slack = (early_end - dt.date(2027, 4, 21)).days
+    late_slack = (late_end - dt.date(2027, 4, 30)).days
+    assert late_slack > early_slack
+
+
+def test_stage_window_returns_none_for_unknown_stages():
+    assert fs.stage_window([99], ITIN) is None
+    assert fs.stage_window([], ITIN) is None
+
+
+def test_resolve_stage_windows_fills_the_gating_fields():
+    srcs = [{"name": "w", "url": "u", "type": "rss", "stages": [1, 2]}]
+    assert fs.resolve_stage_windows(srcs, ITIN) == 1
+    assert srcs[0]["analyze_from"] == "2027-04-16"
+    assert srcs[0]["stop_after"]
+
+
+def test_resolve_stage_windows_never_overrides_an_explicit_date():
+    srcs = [{"name": "w", "url": "u", "type": "rss", "stages": [1, 2],
+             "analyze_from": "2027-01-01"}]
+    fs.resolve_stage_windows(srcs, ITIN)
+    assert srcs[0]["analyze_from"] == "2027-01-01"
+
+
+def test_resolve_stage_windows_ignores_sources_without_stages():
+    srcs = [{"name": "x", "url": "u", "type": "html"}]
+    assert fs.resolve_stage_windows(srcs, ITIN) == 0
+    assert "analyze_from" not in srcs[0]

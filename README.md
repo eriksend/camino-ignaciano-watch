@@ -71,7 +71,7 @@ Two jobs, scored differently (the rubric is in the skill):
 - **Aftermath** (now → departure, `quiet`) — did fire burn on or near the route? Damage to
   waymarking, tracks, shade, bridges and lodging outlasts the fire by months, so a past
   burn scar is a live planning concern.
-- **Live risk** (during the walk, 2027-04-19 → ~2027-05-20, `alert`) — active fire, fire-risk
+- **Live risk** (during the walk, 2027-04-20 → 2027-05-27, `alert`) — active fire, fire-risk
   levels and access restrictions. In Catalonia a **Pla ALFA** level can close paths in a
   natural park like Montserrat with no fire burning at all.
 
@@ -151,6 +151,24 @@ and by design they never touch the network — which means they cannot catch thi
 most likely failure: the world changing underneath it. A test asserting the EFFIS layer is
 called `mf010.fwi` passes forever whether or not Copernicus still serves it. That job belongs
 to `preflight.py` and the health panel; the tests exist to stop *edits* breaking working logic.
+
+## Load control
+
+Fetching is cheap — 2.3 s/source measured, so even 200 sources is under 8 minutes. What is
+expensive is **changed** items, because each one is text the model must translate and score.
+Two mechanisms keep that bounded:
+
+- **A ceiling of 25 items per run.** Overflow is deferred, never dropped: the source's ledger
+  baseline is left unwritten so the next run re-detects the same change. Priority is
+  alert-tier first, then most-deferred (so nothing starves), then weight. The run log and the
+  health panel both name what was deferred.
+- **Stage-aware weather gating.** Eight province weather feeds is the wrong granularity for a
+  linear walk — a Barcelona warning is noise on day two in Gipuzkoa. Each carries
+  `stages: [first, last]`, and `data/itinerary.json` (the planner's nominal schedule) resolves
+  that into `analyze_from`/`stop_after`. Peak concurrency drops from 8/8 to 5/8. Padding is
+  deliberately asymmetric — the nominal schedule is the *fastest possible* pace, so the walker
+  can only ever run late, never early; the late margin grows with stage number to absorb the
+  four splits the planner already flags.
 
 ## A caveat on Google News links
 

@@ -8,7 +8,7 @@ Two jobs, deliberately scored differently (see SKILL.md):
       Did fire burn on or near the route? Damage to waymarking, tracks, shade,
       bridges and pilgrim lodging persists for months. notify: quiet.
 
-  LIVE RISK (inside the walk window 2027-04-19 .. 2027-05-20)
+  LIVE RISK (inside the walk window 2027-04-20 .. 2027-05-27)
       Active fire near a stage the walker is about to reach. notify: alert.
 
 Detections come from NASA FIRMS. A map key is required and free:

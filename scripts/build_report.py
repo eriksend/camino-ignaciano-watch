@@ -155,6 +155,7 @@ def health_panel(ledger: dict | None, conditions: dict | None,
         run_bits.append(f'sources run {esc(age)}'
                         + ('' if age in ("just now", "never") else ' ago'))
     for label, key in [("new", "new_items"), ("alerts", "alerts"),
+                       ("deferred to next run", "deferred_items"),
                        ("baselined", "baselined"),
                        ("churn suppressed", "rebaselined"),
                        ("not due", "skipped"), ("silent", "changed_quiet")]:
@@ -169,6 +170,11 @@ def health_panel(ledger: dict | None, conditions: dict | None,
     if failed:
         run_line += ('<br><span class="bad">unreachable: '
                      + esc(", ".join(failed)) + "</span>")
+    deferred = h.get("deferred") or []
+    if deferred:
+        # Deferred is POSTPONED, not lost — say so, or a short run looks like a bug.
+        run_line += ('<br>deferred to the next run (not lost): '
+                     + esc(", ".join(deferred)))
 
     return f"""<details class="health"{' open' if bad else ''}>
   <summary>Monitor health — {chips}</summary>

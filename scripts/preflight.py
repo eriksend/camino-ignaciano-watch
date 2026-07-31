@@ -209,6 +209,70 @@ def check_data(mods: dict) -> None:
         fail(f"data/climate_bands.json unreadable: {exc}")
 
 
+def check_itinerary(mods: dict) -> None:
+    """The itinerary drives stage-aware gating, so a hole in it silently darkens a
+    weather feed for the stretch it was meant to cover."""
+    path = os.path.join(DATA, "itinerary.json")
+    if not os.path.exists(path):
+        warn("data/itinerary.json absent — stage-aware gating is inactive")
+        return
+    try:
+        itin = load_json(path)
+    except Exception as exc:
+        fail(f"data/itinerary.json unreadable: {exc}")
+        return
+    fs = mods.get("fetch_sources")
+    ww = mods.get("walk_window")
+    stages = itin.get("stages", [])
+    nums = [s.get("stage") for s in stages]
+    if sorted(nums) != list(range(1, 28)):
+        fail(f"itinerary.json covers stages {sorted(nums)[:3]}…{sorted(nums)[-3:]} "
+             f"({len(nums)} entries) — expected exactly 1-27")
+    dates = [fs.as_date(s.get("nominal_date")) if fs else None for s in stages]
+    if any(d is None for d in dates):
+        fail("itinerary.json has an unparseable nominal_date")
+    elif dates != sorted(dates):
+        fail("itinerary.json nominal_date values are not in stage order")
+    elif ww and dates:
+        if dates[0] != ww.WALK_START:
+            warn(f"itinerary starts {dates[0]} but walk_window.WALK_START is "
+                 f"{ww.WALK_START} — the two should agree")
+        if dates[-1] > ww.WALK_END:
+            fail(f"itinerary's nominal finish {dates[-1]} is already after "
+                 f"WALK_END {ww.WALK_END}")
+    print(f"  itinerary.json: {len(stages)} stages, "
+          f"{itin.get('_total_km','?')} km, splits {itin.get('_likely_splits', [])}")
+
+    # every stages: range must resolve to a usable window
+    if not fs:
+        return
+    try:
+        import yaml
+        with open(SOURCES, encoding="utf-8") as fh:
+            srcs = yaml.safe_load(fh)["sources"]
+    except Exception:
+        return
+    gated = 0
+    for src in srcs:
+        rng = src.get("stages")
+        if not rng:
+            continue
+        gated += 1
+        if not all(isinstance(n, int) and 1 <= n <= 27 for n in rng):
+            fail(f"{src.get('name')}: stages {rng} outside 1-27")
+            continue
+        win = fs.stage_window([int(n) for n in rng], itin)
+        if win is None:
+            fail(f"{src.get('name')}: stages {rng} resolve to no window")
+        elif win[0] > win[1]:
+            fail(f"{src.get('name')}: resolved window is inverted ({win[0]}..{win[1]})")
+        elif ww and win[1] < ww.WALK_END and rng and max(rng) >= 25:
+            warn(f"{src.get('name')}: window ends {win[1]}, before WALK_END "
+                 f"{ww.WALK_END} — it would go dark while still walking")
+    if gated:
+        print(f"  stage-gated sources: {gated}, all windows resolve")
+
+
 def check_findings() -> None:
     path = os.path.join(STATE, "findings.json")
     if not os.path.exists(path):
@@ -263,6 +327,7 @@ def main() -> int:
         print(f"  imports: {len(mods)}/7 scripts load")
     check_sources(mods)
     check_data(mods)
+    check_itinerary(mods)
     check_findings()
     check_state(mods)
 

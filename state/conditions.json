@@ -5,19 +5,19 @@
     "first_seen": "2026-07-30T19:08:25+00:00",
     "last_emitted": "2026-07-30T19:08:25+00:00",
     "last_reason": "suppressed",
-    "last_seen": "2026-07-31T00:57:49+00:00",
+    "last_seen": "2026-07-31T17:47:21+00:00",
     "peak_rank": 1,
     "rank": 1
   },
   "alfa:level:tomorrow": {
-    "emit_count": 2,
-    "fingerprint": "5:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
+    "emit_count": 3,
+    "fingerprint": "4:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
     "first_seen": "2026-07-30T19:08:25+00:00",
-    "last_emitted": "2026-07-31T00:57:49+00:00",
-    "last_reason": "escalated",
-    "last_seen": "2026-07-31T00:57:49+00:00",
+    "last_emitted": "2026-07-31T17:47:21+00:00",
+    "last_reason": "changed",
+    "last_seen": "2026-07-31T17:47:21+00:00",
     "peak_rank": 5,
-    "rank": 5
+    "rank": 4
   },
   "fwi:corridor": {
     "emit_count": 1,
@@ -25,7 +25,7 @@
     "first_seen": "2026-07-30T19:08:29+00:00",
     "last_emitted": "2026-07-30T19:08:29+00:00",
     "last_reason": "suppressed",
-    "last_seen": "2026-07-31T00:57:53+00:00",
+    "last_seen": "2026-07-31T17:47:24+00:00",
     "peak_rank": 4,
     "rank": 4
   }

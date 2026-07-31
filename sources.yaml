@@ -152,6 +152,53 @@ sources:
   #   Camino Ignaciano MTB — mean relevance 6.2 over 6 findings
   #   Històries Manresanes — Camí Ignasià (blog) — mean relevance 10.4 over 7 findings
 
+  # ---- Route towns and diocesan sites (direct publishers) ----
+  # Added 2026-07-31 from measured Google News <source> frequency: these are the
+  # publishers the aggregator keeps surfacing. They are NOT a replacement for the
+  # Google News feeds — 39 distinct publishers appeared across 57 entries, with the
+  # top 5 covering only a third, so the aggregator still earns its place for the
+  # long tail. What these add is direct, followable links to official notices.
+  #
+  # Verified before adding (status, extracted chars). Archidiócesis de Burgos was a
+  # candidate (1 hit) but is off-route and its site carries no Camino Ignaciano
+  # content, so it was deliberately NOT added.
+  - name: "Ayuntamiento de Calahorra — Noticias"
+    url: "https://www.calahorra.es/noticias"
+    type: html
+    lang: es
+    region: rioja
+    tier: town
+    weight: 1.0
+    notify: quiet
+    notify_from: "2027-03-01"
+    stop_after: "2027-06-01"
+    # The single most frequent publisher in the sample (6x) and a route town —
+    # stage 10 ends here. Verified: 44,065 chars extracted, and the page mentioned
+    # Camino/Ignaci at the time of adding.
+  - name: "Diócesis de Vitoria — Noticias"
+    url: "https://www.diocesisvitoria.org/noticias/"
+    type: html
+    lang: es
+    region: basque
+    tier: official
+    weight: 0.9
+    notify: quiet
+    notify_from: "2027-03-01"
+    stop_after: "2027-06-01"
+    # 2x in the sample; covers the Álava stages 3-6. Verified: 2,340 chars.
+  - name: "Ayuntamiento de Zaragoza — Noticias"
+    url: "https://www.zaragoza.es/sede/servicio/noticia/"
+    type: html
+    lang: es
+    region: aragon
+    tier: town
+    weight: 0.9
+    notify: quiet
+    notify_from: "2027-03-01"
+    stop_after: "2027-06-01"
+    # Stage 15 endpoint and a major route city; signs route/convenio agreements.
+    # Verified: 6,480 chars (the /sede/portal/noticias/ path 404s — use this one).
+
   # ---- Transit: the two services the route actually depends on ----
   # Both are logged quietly now (a change in 2026 is signal about how stable the
   # corridor is) and escalate to alert on 2027-04-01, just before departure.
@@ -171,7 +218,7 @@ sources:
     weight: 1.5
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Stable friendly URL; Aragón replaces the file in place. Header inside reads
     # "Horarios oficiales a 14 de octubre de 2025". The authoritative answer on
     # Sunday service and Venta de Santa Lucía times. No HTML equivalent exists.
@@ -184,7 +231,7 @@ sources:
     weight: 1.3
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Operator-side disruption notices. Needs a cookie jar or it 302s to itself
     # forever — fetch_sources.py uses one requests.Session() for exactly this.
   - name: "ATM Lleida — Line 126 / e3 Alcarràs–Lleida (timetable PDF)"
@@ -196,7 +243,7 @@ sources:
     weight: 1.5
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Stable URL keyed by line number. NOTE: the /ca/ path 404s, only /en/ works —
     # don't "fix" it. Day-type legend has no "diumenge"/"festiu" at all, which
     # confirms there is no Sunday service on this line.
@@ -209,7 +256,7 @@ sources:
     weight: 1.4
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # The operator announces every reajustament d'horaris here first, ahead of the
     # ATM PDF. Highest-value single watch for line 126/e3.
 
@@ -281,9 +328,7 @@ sources:
     region: basque
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [1, 2]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — Álava/Araba (stages 3–6)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7501_RSS.xml"
@@ -292,9 +337,7 @@ sources:
     region: basque
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [3, 6]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — La Rioja (stages 7–11)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7626_RSS.xml"
@@ -303,9 +346,7 @@ sources:
     region: rioja
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [7, 11]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — Navarra (stages 5, 12)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP7431_RSS.xml"
@@ -314,9 +355,7 @@ sources:
     region: navarre
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [5, 12]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — Zaragoza (Monegros crossing, stages 13–18)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6250_RSS.xml"
@@ -325,9 +364,7 @@ sources:
     region: aragon
     tier: official
     weight: 1.4
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [13, 18]   # analyze window derived from data/itinerary.json
     notify: alert
     # Highest-stakes weather feed: heat and storm on the exposed desert-steppe
     # stages around Bujaraloz and Venta de Santa Lucía, where there is no shade.
@@ -338,9 +375,7 @@ sources:
     region: aragon
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [19, 20]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — Lleida (stages 21–24)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6925_RSS.xml"
@@ -349,9 +384,7 @@ sources:
     region: catalonia
     tier: official
     weight: 1.3
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [21, 24]   # analyze window derived from data/itinerary.json
     notify: alert
   - name: "AEMET meteoalerta — Barcelona (stages 25–27, Montserrat/Manresa)"
     url: "https://www.aemet.es/documentos_d/eltiempo/prediccion/avisos/rss/CAP_AFAP6908_RSS.xml"
@@ -360,9 +393,7 @@ sources:
     region: catalonia
     tier: official
     weight: 1.2
-    analyze: never        # exercised daily from now; silent until analyze_from
-    analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
-    stop_after: "2027-05-25"
+    stages: [25, 27]   # analyze window derived from data/itinerary.json
     notify: alert
 
   # ---- Cereal harvest timing: the real leading indicator ----
@@ -379,7 +410,7 @@ sources:
     weight: 1.4
     notify: quiet
     notify_from: "2027-03-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # The single best early-harvest watch. This desk carried both precedents: the
     # campaign starting 20 May "a week early because of heat", and the 2020 start
     # in early May in the earliest Segrià zones.
@@ -396,7 +427,7 @@ sources:
     weight: 1.0
     notify: quiet
     notify_from: "2027-03-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # The actual Lleida exchange (there is no separate "Lonja de Lleida" site).
     # Weekly commentary is where an advanced campaign shows up first.
   - name: "Agrodiario — Spanish agriculture news"
@@ -408,7 +439,7 @@ sources:
     weight: 0.8
     notify: quiet
     notify_from: "2027-03-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Substitute for agrodigital.com, whose /feed and /rss both return HTML.
   - name: "Catalonia — Prevenció d'incendis durant la campanya de sega"
     url: "https://agricultura.gencat.cat/ca/ambits/agricultura/maquinaria-agricola/prevencio-incendis-campanya-sega/"
@@ -419,7 +450,7 @@ sources:
     weight: 1.2
     notify: quiet
     notify_from: "2027-03-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # DACC's harvest-machinery fire rules — the Catalan counterpart to Aragón's.
     # Content could not be extracted during research (nav chrome only), so the
     # dates/prohibited hours are still unknown; watch it and read it directly.
@@ -432,7 +463,7 @@ sources:
     weight: 1.0
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Agricultural burning allowed only 16 Oct – 31 Mar; "época de peligro" runs
     # 1 Apr – 15 Oct. The whole walk sits inside the prohibition, so smoke seen
     # on the Aragón stages is illegal, specially authorised, or a real fire.
@@ -445,7 +476,7 @@ sources:
     weight: 1.0
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Under red, harvesting/baling barred 14:00–18:00 within 400 m of woodland
     # over 100 ha; red-plus can ban them outright. NOTE the daily bulletin only
     # publishes 1 Jun – 15 Oct, i.e. after this walk — so during the walk the
@@ -460,7 +491,7 @@ sources:
     analyze: never        # exercised daily from now; silent until analyze_from
     analyze_from: "2027-04-01"  # was dormant_until — see effective_analyze()
     notify: alert
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Publishes daily 1 Jun – 15 Oct, and outside that window only when a zone
     # reaches yellow or above — which is exactly why it is worth watching in
     # Apr–May: if it appears at all, something has escalated early.
@@ -479,7 +510,7 @@ sources:
     analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Standardised Precipitation Index by region, monthly. The 1- and 3-month
     # accumulation windows (?w=1, ?w=2) are the spring-relevant ones.
   - name: "AEMET — Balance hídrico / humedad del suelo"
@@ -493,7 +524,7 @@ sources:
     analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # AEMET's soil-moisture product — the closest thing to a direct read on how
     # dry the stubble and standing grain actually are.
   - name: "AEMET — Resumen de precipitaciones (vs normal)"
@@ -507,7 +538,7 @@ sources:
     analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Accumulated precipitation against normal. Convert the percentage into mm
     # for the affected band using data/climate_bands.json before scoring it.
   - name: "ACA — Portal de la sequera (Catalonia water-supply drought)"
@@ -520,7 +551,7 @@ sources:
     analyze: never        # exercised daily from now; silent until analyze_from
     analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # INDIRECT only: this is water-supply drought (normalitat → emergència by
     # unitat d'explotació), not fire risk. Slow-moving corroboration of a dry
     # spring, never a harvest-timing trigger on its own.
@@ -537,7 +568,7 @@ sources:
     weight: 1.1
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Watched for POLICY change, not daily levels. Levels 0–2 are a permit regime
     # for fire-risk work; level 3 bans open flame and spark-generating machinery
     # but NOT walking; only level 4 can restrict access on foot, discretionarily.
@@ -551,7 +582,7 @@ sources:
     weight: 1.4
     notify: quiet
     notify_from: "2027-03-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Stages 26–27. Carries closures from ANY cause, not just fire: the park was
     # shut under ALFA level 4 in July 2026 (reopened 25 July), and Collbató
     # access was separately closed for African swine fever containment. No RSS.
@@ -568,7 +599,7 @@ sources:
     analyze_from: "2027-02-01"  # was dormant_until — see effective_analyze()
     notify: quiet
     notify_from: "2027-04-01"
-    stop_after: "2027-05-25"
+    stop_after: "2027-06-01"
     # Wakes 2027-02-01 to cover the Basque/Cantabrian Feb–Apr spring fire season
     # (stages 1–6), quiet at first, alert from 2027-04-01. AEMET gives danger
     # levels only — path closures come from Agents Rurals / INFOAR.

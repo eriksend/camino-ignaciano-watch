@@ -1,0 +1,237 @@
+{
+  "_comment": "Nominal schedule copied from DEFAULT_STAGES in camino-itinerary-v13.html (the planner). This is the MOST AMBITIOUS pace: one stage per day, no rest days, no splits. Real walking will be slower, so scripts must pad these dates generously and asymmetrically (later, not earlier). Used only to decide WHEN a region-specific source is worth analyzing.",
+  "_start": "2027-04-20",
+  "_total_km": 672.3,
+  "_likely_splits": [
+    9,
+    13,
+    21,
+    25
+  ],
+  "_padding": {
+    "early_days": 4,
+    "late_base_days": 7,
+    "late_per_stage": 0.6,
+    "_why": "Slip accrues along the route: a split or rest day early pushes every later stage later. The planner already flags 4 stages for splitting (the 30.6-39.3 km days), which alone consume all slack to 2027-05-20, so late margin must grow with stage number.",
+    "_why_asymmetric": "Nominal is the FASTEST possible pace, so the walker can never run ahead of it — only behind. Early margin therefore covers forecast lead time only (AEMET meteoalerta is a today/tomorrow product, so ~4 days is ample). Late margin absorbs all the schedule risk and grows with stage number."
+  },
+  "_region_note": "leg_region is the planner's per-LEG region and differs from data/end_coords.json's per-ENDPOINT region (e.g. stage 13 Tudela->Gallur is navarre by leg, aragon by endpoint). Gating uses stage NUMBERS, not region, to avoid reconciling them.",
+  "stages": [
+    {
+      "stage": 1,
+      "route": "Loyola → Zumárraga",
+      "km": 18.2,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-20",
+      "likely_split": false
+    },
+    {
+      "stage": 2,
+      "route": "Zumárraga → Arantzazu",
+      "km": 21.4,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-21",
+      "likely_split": false
+    },
+    {
+      "stage": 3,
+      "route": "Arantzazu → Araia",
+      "km": 18.0,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-22",
+      "likely_split": false
+    },
+    {
+      "stage": 4,
+      "route": "Araia → Alda",
+      "km": 22.0,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-23",
+      "likely_split": false
+    },
+    {
+      "stage": 5,
+      "route": "Alda → Genevilla",
+      "km": 18.5,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-24",
+      "likely_split": false
+    },
+    {
+      "stage": 6,
+      "route": "Genevilla → Laguardia",
+      "km": 27.3,
+      "leg_region": "basque",
+      "nominal_date": "2027-04-25",
+      "likely_split": false
+    },
+    {
+      "stage": 7,
+      "route": "Laguardia → Navarrete",
+      "km": 19.6,
+      "leg_region": "rioja",
+      "nominal_date": "2027-04-26",
+      "likely_split": false
+    },
+    {
+      "stage": 8,
+      "route": "Navarrete → Logroño",
+      "km": 13.0,
+      "leg_region": "rioja",
+      "nominal_date": "2027-04-27",
+      "likely_split": false
+    },
+    {
+      "stage": 9,
+      "route": "Logroño → Alcanadre",
+      "km": 30.6,
+      "leg_region": "rioja",
+      "nominal_date": "2027-04-28",
+      "likely_split": true
+    },
+    {
+      "stage": 10,
+      "route": "Alcanadre → Calahorra",
+      "km": 21.5,
+      "leg_region": "rioja",
+      "nominal_date": "2027-04-29",
+      "likely_split": false
+    },
+    {
+      "stage": 11,
+      "route": "Calahorra → Alfaro",
+      "km": 25.6,
+      "leg_region": "rioja",
+      "nominal_date": "2027-04-30",
+      "likely_split": false
+    },
+    {
+      "stage": 12,
+      "route": "Alfaro → Tudela",
+      "km": 25.6,
+      "leg_region": "navarre",
+      "nominal_date": "2027-05-01",
+      "likely_split": false
+    },
+    {
+      "stage": 13,
+      "route": "Tudela → Gallur",
+      "km": 39.3,
+      "leg_region": "navarre",
+      "nominal_date": "2027-05-02",
+      "likely_split": true
+    },
+    {
+      "stage": 14,
+      "route": "Gallur → Alagón",
+      "km": 21.7,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-03",
+      "likely_split": false
+    },
+    {
+      "stage": 15,
+      "route": "Alagón → Zaragoza",
+      "km": 30.5,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-04",
+      "likely_split": false
+    },
+    {
+      "stage": 16,
+      "route": "Zaragoza → Fuentes de Ebro",
+      "km": 30.2,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-05",
+      "likely_split": false
+    },
+    {
+      "stage": 17,
+      "route": "Fuentes de Ebro → Venta de Santa Lucía",
+      "km": 29.6,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-06",
+      "likely_split": false
+    },
+    {
+      "stage": 18,
+      "route": "Venta de Santa Lucía → Bujaraloz",
+      "km": 21.3,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-07",
+      "likely_split": false
+    },
+    {
+      "stage": 19,
+      "route": "Bujaraloz → Candasnos",
+      "km": 21.0,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-08",
+      "likely_split": false
+    },
+    {
+      "stage": 20,
+      "route": "Candasnos → Fraga",
+      "km": 26.8,
+      "leg_region": "aragon",
+      "nominal_date": "2027-05-09",
+      "likely_split": false
+    },
+    {
+      "stage": 21,
+      "route": "Fraga → Lleida",
+      "km": 33.0,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-10",
+      "likely_split": true
+    },
+    {
+      "stage": 22,
+      "route": "Lleida → El Palau d'Anglesola",
+      "km": 25.7,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-11",
+      "likely_split": false
+    },
+    {
+      "stage": 23,
+      "route": "El Palau d'Anglesola → Verdú",
+      "km": 24.7,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-12",
+      "likely_split": false
+    },
+    {
+      "stage": 24,
+      "route": "Verdú → Cervera",
+      "km": 17.0,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-13",
+      "likely_split": false
+    },
+    {
+      "stage": 25,
+      "route": "Cervera → Igualada",
+      "km": 38.6,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-14",
+      "likely_split": true
+    },
+    {
+      "stage": 26,
+      "route": "Igualada → Montserrat",
+      "km": 27.0,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-15",
+      "likely_split": false
+    },
+    {
+      "stage": 27,
+      "route": "Montserrat → Manresa",
+      "km": 24.6,
+      "leg_region": "catalonia",
+      "nominal_date": "2027-05-16",
+      "likely_split": false
+    }
+  ]
+}
