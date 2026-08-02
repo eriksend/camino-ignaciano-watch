@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "source_name": "Pla ALFA — daily fire-risk level (Agents Rurals)",
+    "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "weight": 1.0,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "text": "Pla ALFA reaches level 3 on route comarques tomorrow. Municipalities at level 3+: Agramunt (Urgell, level 3), Aguilar de Segarra (Bages, level 3), Alfarràs (Segrià, level 3), Almatret (Segrià, level 3), Calonge de Segarra (Anoia, level 3), Cardona (Bages, level 3), Castellfollit de Riubregós (Anoia, level 3), Castellfollit del Boix (Bages, level 3). Level 3 prohibits open flame everywhere, suspends authorised stubble/pasture/pruning burns, and bans spark-generating machinery on forest land and within 500 m — but it does NOT restrict access on foot. A pilgrim on a marked path breaks no level-3 rule."
+  },
+  {
+    "source_name": "Pla ALFA — natural-space closures (Agents Rurals)",
+    "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "weight": 0.6,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "text": "Pla ALFA currently closes 4 natural space(s) in Catalonia, none on the route: Montsec de Rubies, Montsec d'Ares, Baronia de Rialb, Ribera_salada. Recorded as a base rate for how often access closures are invoked."
+  }
+]
