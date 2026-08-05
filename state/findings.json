@@ -3051,7 +3051,7 @@
     "notify": "quiet",
     "id": "c7052892ecc9166a",
     "detected_at": "2026-08-04T15:54:54Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Jesuit Sources — official guide editions",
@@ -3066,7 +3066,7 @@
     "notify": "quiet",
     "id": "01d52001d922e4c7",
     "detected_at": "2026-08-04T15:54:54Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -3083,7 +3083,7 @@
     "publisher_url": "https://www.elnortedecastilla.es",
     "id": "971c674fec078920",
     "detected_at": "2026-08-04T15:54:54Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
@@ -3098,7 +3098,7 @@
     "notify": "quiet",
     "id": "0ca5fd7fcfcfa0eb",
     "detected_at": "2026-08-04T15:54:54Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
@@ -3116,6 +3116,66 @@
     "stage_end": "Alfaro",
     "id": "fdbce86e02d5d986",
     "detected_at": "2026-08-04T15:54:54Z",
+    "is_new": false
+  },
+  {
+    "id": "fe4d9eb0e7853266",
+    "detected_at": "2026-08-05T14:44:04Z",
+    "source_name": "Parc Natural de Montserrat — Actualitat (closures, all causes)",
+    "url": "https://muntanyamontserrat.gencat.cat/ca/actualitat/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "title": "Montserrat park temporarily restricts some climbing routes, not hiking trails",
+    "summary_en": "Parc Natural de Montserrat announced (05/08/2026) a temporary restriction on access to several rock-climbing routes while it evaluates the stability of the area. This applies to climbing routes specifically, not the waymarked hiking trails the pilgrim route (stage 26 Igualada→Montserrat, stage 27 Montserrat→Manresa) uses.",
+    "source_text": "- \n\t\t\t\t\t\t\t\t\tEs restringeix temporalment l’accés a diverses vies d’escalada per garantir la seguretat dels usuaris mentre s’avalua l’estabilitat de la zona \n  - 05/08/2026",
+    "relevance": 28,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "739ac996524bf27f",
+    "detected_at": "2026-08-05T14:44:04Z",
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "title": "Segre: Lleida pear harvest begins, forecast 8% below last year",
+    "summary_en": "Segre reports the pera blanquilla (Blanquilla pear) harvest has started in Lleida, with good expected quality and larger fruit sizes; the Catalan Department of Agriculture forecasts a harvest about 8% smaller than last year's. This concerns pears, not the barley/wheat cereal harvest that drives this monitor's stubble-fire risk, so it has no bearing on the fire-timing chain.",
+    "source_text": "La cosecha de pera blanquilla empieza en Lleida con buenas perspectivas de calidad y mayores calibres\nLa previsión del Departamento de Agricultura apunta a una cosecha un 8% inferior a la del año pasado",
+    "relevance": 17,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "ca6f9aa5b199188f",
+    "detected_at": "2026-08-05T14:44:04Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra council announces 2026-27 cultural course offerings",
+    "summary_en": "Calahorra's town council announced its 2026-2027 cultural course catalogue (robotics, AI, painting, regional dance, sewing, cooking), with over 100 places, enrollment 7-24 September, and fees from 45 to 260 euros depending on course. None of this concerns the pilgrim route.",
+    "source_text": "El Ayuntamiento de Calahorra presenta su oferta de formativa cultural para el curso 2026-2027\n- Incluye robótica infantil, inteligencia artificial, pintura y dibujo, danza regional, costura y cocina\n- El plazo de inscripción es del 7 al 24 de septiembre\nEl Ayuntamiento de Calahorra oferta más de 100 plazas en los 6 cursos culturales que ha programado para la temporada 2026-2027.\nUna programación diseñada para todas las edades e inquietudes. La propuesta incluye cocina, costura y pintura para mayores, pintura y dibujo a partir de los 14 años y danza regional, robótica e inteligencia artificial para los más pequeños.\nEl plazo de inscripción comenzará el 7 de septiembre y permanecerá abierto hasta el 24 del mismo mes. Las matrículas pueden hacerse presencialmente en la Oficina de Atención al Ciudadano (OAC) de lunes a viernes, de 8:30 a 13:30 horas, y online a través de la página web del Ayuntamiento (www.calahorra.es).\nSi quedasen plazas libres después de finalizar el periodo de inscripción, se aceptarán solicitudes hasta completar el aforo de los cursos.\nEl curso de robótica infantil está destinado a niños de 6 a 12 años y el de inteligencia artificial a jóvenes con edades comprendidas entre los 9 y los 14 años. Tendrán lugar en el Centro cultural ‘Deán Palacios’ los miércoles en 2 turnos: de 17:00 a 18:30 horas y de 18:30 a 20:00 horas y con 12 alumnos en cada uno.\nLos contenidos que se enseñarán son nociones básicas de mecánica, circuitos y programación; construcción de robots; creación de juegos y diseño y resolución de problemas de salud y seguridad, entre otros.\nDe robótica infantil habrá 2 cursos, de octubre a diciembre de 2026 y de enero a marzo de 2027. El de inteligencia infantil se impartirá de abril a mayo.\nEl precio al trimestre es de 45 euros y el curso completo cuesta 135 euros.\nEl curso de pintura y dibujo es para adultos, a partir de 14 años. Empezará el 5 de octubre de 2026 y finalizará el 28 de mayo de 2027.\nLas clases serán los martes y jueves de 18:00 a 20:00 horas en el Centro cultural ‘Deán Palacios’ y se ofertan 12 plazas. Las personas que asistan a este curso trabajarán las líneas y formas, descubrirán el color a través de la luz y aprenderán al menos 3 técnicas de pintura.\nEl coste del curso completo es de 260 euros.\nA partir de los 4 años, los niños podrán aprender danza regional con los monitores Luis Javier Ayensa y Nieves Herce, del grupo de danzas Coletores, en el pabellón del colegio Ángel Oliván.\nSe impartirá desde el 5 de octubre de 2026 hasta el 28 de mayo de 2027 y su precio es de 90 euros.\nLos alumnos de 4 a 10 años tendrán clase los lunes y viernes de 18:00 a 19:00 horas y los alumnos de 11 a 16 años, los mismos días, de 19:00 a 20:00 horas.\nLa oferta cultural también contempla cursos para los mayores de edad. El primero de ellos, el curso de costura, dividido en 3 periodos: de octubre a diciembre de 2026, de enero a marzo de 2027 y de mediados de marzo a mayo de 2027 con un coste trimestral de 45 euros y de 135 euros el curso completo.\nLas clases serán los lunes de 16:00 a 18:00 horas en el Centro cultural ‘Deán Palacios’.\nEl temario del curso es iniciación a la confección, aprender a coser a máquina, arreglos cotidianos en las prendas y elaboración de prendas básicas.\nEl segundo de los cursos para mayores de edad es el de cocina en el Aula Municipal de Cocina. Se desarrollará en 3 trimestres: de octubre a diciembre de 2026, de enero a marzo de 2027 y de mediados de marzo a mayo de 2027.\nLas clases se dividen en 2 turnos: martes o miércoles, de 20:00 a 22:30 horas. Cada persona debe elegir un día de los dos.\nLos participantes aprenderán las técnicas de cocinar cada alimento y sus propiedades, el manejo de los útiles para el desarrollo de los platos, así como se elaborarán uno o varios platos en cada sesión.\nEl precio es de 45 euros al trimestre y de 135 euros los 3 trimestres.\nDescuentos y pago en plazos\nEl Ayuntamiento de Calahorra ofrece descuentos y la posibilidad de pagar el precio del curso a plazos.\nAl abonar el curso completo tendrán descuentos del 10% presentando el carné joven y de un 20% las familias numerosas o monoparentales.\nSi se matriculan 2 miembros de la misma unidad familiar obtendrán un descuento del 25% y si son 3 miembros será del 30% y del 40% si se inscriben 4 o más miembros de la misma unidad familiar. La pertenencia a la misma unidad familiar deberá acreditarse documentalmente (libro de familia o certificado del padrón de habitantes).\nEl descuento para las personas desempleadas que presenten tarjeta acreditativa será del 35%.\nAdemás, se establecen descuentos en los cursos trimestrales (robótica infantil e inteligencia artificial, cocina y costura) de un 20% al matricularse en varios cursos diferentes.\n“Seguimos apostando por una programación formativa cultural de calidad que fomente la creatividad, el aprendizaje y la participación de los calagurritanos. Estos cursos son una muestra del compromiso del Ayuntamiento con la cultura y formación de los ciudadanos”, ha valorado la concejala de Cultura, Reyes Zapata.",
+    "relevance": 3,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "a5ea2697be889131",
+    "detected_at": "2026-08-05T14:44:04Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza council news: road repaving, shuttle route, traffic calming, school solar panels",
+    "summary_en": "Zaragoza's city council reported plans to repave the Camino del Puente de Claveria in Garrapinillos (over 48,000 euros), a more efficient shuttle route to the Estadio Modular, a traffic-calming project on Calle Mas de las Matas, and solar panels for 39 public schools (up to 6.4 million euros over 15 years). None of these are confirmed to intersect the pilgrim route, and a road resurfacing would in any case be a minor improvement rather than a disruption.",
+    "source_text": "- \n                            Zaragoza renovará el asfaltado del camino del Puente de Clavería en Garrapinillos con una inversión de más de 48.000 ...\n La actuación, incluida en el Plan Extraordinario de Inversiones en Barrios Rurales 2026, mejorará... + Seguir leyendo...\n- \n                            El Ayuntamiento de Zaragoza optimiza el servicio de lanzadera al Estadio Modular con un recorrido único más eficiente...\n La reorganización responde al análisis de la demanda real de usuarios y conectará la Puerta del C... + Seguir leyendo...\n- \n                            El Ayuntamiento de Zaragoza mejora la seguridad vial en la calle Mas de las Matas con una actuación para reducir la v...\n La intervención reorganiza el espacio viario mediante soluciones de diseño urbano que favorecen u... + Seguir leyendo...\n- \n                            Zaragoza transformará las cubiertas de 39 colegios públicos en una gran red municipal de energía solar centrada en el...\n El proyecto, con una licitación máxima global de 6,4 millones de euros y una duración de 15 años,... + Seguir leyendo...",
+    "relevance": 4,
+    "notify": "quiet",
     "is_new": true
   }
 ]
