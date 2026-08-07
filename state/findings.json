@@ -3191,7 +3191,7 @@
     "source_text": "- \n\t\t\t\t\t\t\t\t\tRegulació de l’escalada a les agulles de la Miranda del Príncep i el Faraó, no es permet la pràctica de l’escalada fins al 31 d’agost i a la Mòmia i la Momieta fins al 4 de setembre \n  - 06/08/2026",
     "relevance": 28,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "124292bd76814af4",
@@ -3206,7 +3206,7 @@
     "source_text": "El 7 de agosto comienzan las terceras Fiestas de la Juventud en Calahorra ... La Biblioteca municipal 'Pedro Gutiérrez' ha donado más de 250 novelas al punto de lectura estival del C.D.M. 'La Planilla'",
     "relevance": 3,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "738bbb9b9f9f3cb0",
@@ -3223,7 +3223,7 @@
     "notify": "quiet",
     "publisher": "El Periódico de Aragón",
     "publisher_url": "https://www.elperiodicodearagon.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "6f929cd8007c0236",
@@ -3238,7 +3238,7 @@
     "source_text": "El Gobierno de Zaragoza impulsa la segunda fase de la Olmeda de Torre Ramona ... Zaragoza destinará este verano 1,7 millones de euros en la Operación Coles 2026 que llegará a 58 centros educativos",
     "relevance": 4,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "9b840a26aefe435d",
@@ -3256,6 +3256,51 @@
     "kind": "fire_weather",
     "stage": 27,
     "stage_end": "Manresa",
+    "is_new": false
+  },
+  {
+    "id": "eacd0f55c447819c",
+    "detected_at": "2026-08-07T14:43:05+00:00",
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "title": "Lleida plain crops show little hail damage",
+    "summary_en": "Segre reports that Catalonia's agriculture department found no significant damage to fruit trees or vineyards in the Segrià, Noguera and Urgell districts after Thursday's hailstorm on the Lleida plain.",
+    "source_text": "Los cultivos del llano de Lleida, con poca afectación por la granizada de este jueves\nAgricultura no detecta daños significativos en fruta dulce ni en viña en el Segrià, la Noguera y el Urgell",
+    "relevance": 14,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "961388a579a083f0",
+    "detected_at": "2026-08-07T14:43:05+00:00",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra town news: August Youth Festival events and senior programs",
+    "summary_en": "Calahorra council's weekend agenda covers the Fiestas de la Juventud (7-9 August) concerts and activities, a painting exhibition, and the 'active and healthy aging' senior program running through October; nothing relevant to the Camino Ignaciano.",
+    "source_text": "Agenda para el fin de semana\nViernes 7 de agosto\nFiestas de la Juventud. Chupijoven con fiesta de la espuma y dj Joao Rodríguez.\n(...festival and senior-program agenda...)",
+    "relevance": 3,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "4ff688ebee513d8c",
+    "detected_at": "2026-08-07T14:43:05+00:00",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: street renovation and vacant-lot housing conversion",
+    "summary_en": "Zaragoza's mayor inaugurated the renovated Calle de Utrillas, asphalt repaving is planned for Paseo de Sagasta (10-12 August), and the city reports converting 204 vacant properties into 290 new homes so far in 2026.",
+    "source_text": "- \n                            La alcaldesa Natalia Chueca inaugura, tras su reforma integral, la nueva calle de Utrillas en el distrito de Las Fuentes\n La regidora ha visitado esta mañana el resultado final de la vía, situada en el distrito de Las F... + Seguir leyendo...\n- \n                            La operación asfalto mejora la próxima semana 14 nuevos puntos de Zaragoza\n Se producirán trabajos en el Paseo de Sagasta entre el 10 y el 12 de agosto, así como la continua... + Seguir leyendo...\n- \n                            Zaragoza logra convertir 204 locales vacíos y degradados en 290 nuevas viviendas\n Urbanismo ha concedido en lo que va de 2026 un total de 57 licencias para convertir espacios sin ... + Seguir leyendo...",
+    "relevance": 5,
+    "notify": "quiet",
     "is_new": true
   }
 ]

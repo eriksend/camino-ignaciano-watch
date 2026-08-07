@@ -1,17 +1,1 @@
-[
-  {
-    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "catalonia",
-    "tier": "official",
-    "lang": "en",
-    "weight": 0.9,
-    "notify": "quiet",
-    "kind": "fire_weather",
-    "item_key": "fwi:corridor",
-    "fingerprint": "extreme:9+",
-    "stage": 27,
-    "stage_end": "Manresa",
-    "text": "EFFIS Fire Weather Index peaks at 52.8 — 'extreme' on the EFFIS scale — at Manresa (stage 27) on 2026-08-07, across a 3-day forecast from 2026-08-06. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Manresa (stage 27) 53, Fraga (stage 20) 51, Gallur (stage 13) 51, Tudela (stage 12) 50, Araia (stage 3) 50, Manresa (stage 27) 49. At 'very high' or above: stages [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27]. FWI anomaly at Manresa is +3.3 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-  }
-]
+[]
