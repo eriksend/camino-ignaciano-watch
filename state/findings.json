@@ -3271,7 +3271,7 @@
     "source_text": "Los cultivos del llano de Lleida, con poca afectación por la granizada de este jueves\nAgricultura no detecta daños significativos en fruta dulce ni en viña en el Segrià, la Noguera y el Urgell",
     "relevance": 14,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "961388a579a083f0",
@@ -3286,7 +3286,7 @@
     "source_text": "Agenda para el fin de semana\nViernes 7 de agosto\nFiestas de la Juventud. Chupijoven con fiesta de la espuma y dj Joao Rodríguez.\n(...festival and senior-program agenda...)",
     "relevance": 3,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "4ff688ebee513d8c",
@@ -3301,6 +3301,23 @@
     "source_text": "- \n                            La alcaldesa Natalia Chueca inaugura, tras su reforma integral, la nueva calle de Utrillas en el distrito de Las Fuentes\n La regidora ha visitado esta mañana el resultado final de la vía, situada en el distrito de Las F... + Seguir leyendo...\n- \n                            La operación asfalto mejora la próxima semana 14 nuevos puntos de Zaragoza\n Se producirán trabajos en el Paseo de Sagasta entre el 10 y el 12 de agosto, así como la continua... + Seguir leyendo...\n- \n                            Zaragoza logra convertir 204 locales vacíos y degradados en 290 nuevas viviendas\n Urbanismo ha concedido en lo que va de 2026 un total de 57 licencias para convertir espacios sin ... + Seguir leyendo...",
     "relevance": 5,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "3ff642af35e8aac4",
+    "detected_at": "2026-08-08T14:43:33+00:00",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOVM5d1h6QnpJVDdrU2FNcGw0OEEyMEw0RXZIMnVWWFJYbWNid0xHM2F3T1lfT2tFZ2VLMmRia2JSZ2F3bTFYT1Q2VHl5UnVDZDBKTHVlSkx3Z0hmVV9hbENLdkRpajZhdlIzR092Yll2NkpXclBFTlFuY1JheERPZXgxY2dNMjJ4enZ0UFdhNA?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "America Magazine profiles Jesuit who maintains the Ignatian pilgrim path",
+    "summary_en": "America Magazine ran a feature on the Jesuit who works to keep the Camino Ignaciano pilgrimage active. The Google News link is a redirect interstitial with no article body available, so only the headline and publisher are confirmed.",
+    "source_text": "The tireless Jesuit keeping Spain’s St. Ignatius pilgrimage alive - America Magazine\n<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPOVM5d1h6QnpJVDdrU2FNcGw0OEEyMEw0RXZIMnVWWFJYbWNid0xHM2F3T1lfT2tFZ2VLMmRia2JSZ2F3bTFYT1Q2VHl5UnVDZDBKTHVlSkx3Z0hmVV9hbENLdkRpajZhdlIzR092Yll2NkpXclBFTlFuY1JheERPZXgxY2dNMjJ4enZ0UFdhNA?oc=5\" target=\"_blank\">The tireless Jesuit keeping Spain’s St. Ignatius pilgrimage alive</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">America Magazine</font>\n(Published by America Magazine)",
+    "relevance": 29,
+    "notify": "quiet",
+    "publisher": "America Magazine",
+    "publisher_url": "https://www.americamagazine.org",
     "is_new": true
   }
 ]
