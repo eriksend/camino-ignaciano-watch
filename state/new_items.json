@@ -1,14 +1,12 @@
 [
   {
-    "source_name": "Google News — \"Ignatian Camino\" (EN)",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPOVM5d1h6QnpJVDdrU2FNcGw0OEEyMEw0RXZIMnVWWFJYbWNid0xHM2F3T1lfT2tFZ2VLMmRia2JSZ2F3bTFYT1Q2VHl5UnVDZDBKTHVlSkx3Z0hmVV9hbENLdkRpajZhdlIzR092Yll2NkpXclBFTlFuY1JheERPZXgxY2dNMjJ4enZ0UFdhNA?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "en",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
     "weight": 0.9,
     "notify": "quiet",
-    "publisher": "America Magazine",
-    "publisher_url": "https://www.americamagazine.org",
-    "text": "The tireless Jesuit keeping Spain’s St. Ignatius pilgrimage alive - America Magazine\n<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPOVM5d1h6QnpJVDdrU2FNcGw0OEEyMEw0RXZIMnVWWFJYbWNid0xHM2F3T1lfT2tFZ2VLMmRia2JSZ2F3bTFYT1Q2VHl5UnVDZDBKTHVlSkx3Z0hmVV9hbENLdkRpajZhdlIzR092Yll2NkpXclBFTlFuY1JheERPZXgxY2dNMjJ4enZ0UFdhNA?oc=5\" target=\"_blank\">The tireless Jesuit keeping Spain’s St. Ignatius pilgrimage alive</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">America Magazine</font>\n(Published by America Magazine)"
+    "text": "- \n                            Zaragoza renovará el asfaltado del camino de Ronda en Montañana con una inversión de más de 48.000 euros\n La actuación, financiada a través del Plan Extraordinario de Inversiones en Barrios Rurales 2026,... + Seguir leyendo...\n- \n                            Zaragoza premiada por su marca turística con dos premios Red Dot Design, considerados los \"Óscar del diseño\"\n La identidad ha sido reconocida en las categorías de proyecto de branding y de concepto y sistema... + Seguir leyendo..."
   }
 ]

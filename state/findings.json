@@ -3318,6 +3318,21 @@
     "notify": "quiet",
     "publisher": "America Magazine",
     "publisher_url": "https://www.americamagazine.org",
+    "is_new": false
+  },
+  {
+    "id": "f4de018d50bb2e89",
+    "detected_at": "2026-08-09T14:42:29Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: road resurfacing in Montañana and tourism design awards",
+    "summary_en": "Zaragoza's council news feed reports a resurfacing of Camino de Ronda in the Montañana district (over €48,000, funded via the 2026 Rural Neighborhoods Extraordinary Investment Plan), plus two Red Dot Design awards for the city's tourism brand. Camino de Ronda is an unrelated road in a Zaragoza district, not part of the Camino Ignaciano route; neither item bears on the pilgrimage.",
+    "source_text": "- \n                            Zaragoza renovará el asfaltado del camino de Ronda en Montañana con una inversión de más de 48.000 euros\n La actuación, financiada a través del Plan Extraordinario de Inversiones en Barrios Rurales 2026,... + Seguir leyendo...\n- \n                            Zaragoza premiada por su marca turística con dos premios Red Dot Design, considerados los \"Óscar del diseño\"\n La identidad ha sido reconocida en las categorías de proyecto de branding y de concepto y sistema... + Seguir leyendo...",
+    "relevance": 4,
+    "notify": "quiet",
     "is_new": true
   }
 ]
