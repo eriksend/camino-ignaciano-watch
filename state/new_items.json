@@ -1,5 +1,25 @@
 [
   {
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "weight": 1.4,
+    "notify": "quiet",
+    "text": "Sacrifican a los cerdos y las aves de una granja irregular en Les Borges Blanques en plena alerta por la peste porcina\nLa instalación no estaba registrada y no podía acreditar la procedencia ni la trazabilidad de los animales"
+  },
+  {
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "weight": 1.0,
+    "notify": "quiet",
+    "text": "Calahorra celebrará Promostock los días 3, 4, 5 y 6 de septiembre en el paseo del Mercadal\n- Abrirá el jueves a las 17:00 horas y cerrará el domingo a las 14:00 horas\n- Hoy, 10 de agosto, se abre el plazo de inscripción para los comercios de la ciudad interesados en participar en esta Feria de oportunidades\nEl Ayuntamiento de Calahorra abre hoy, 10 de agosto, a las 16:00 horas el plazo de inscripción para participar en una nueva edición de Promostock de verano.\nEl paseo del Mercadal será el escenario, una vez más, de esta Feria de oportunidades, que se celebrará los días 3, 4, 5 y 6 de septiembre con el objetivo de dinamizar el comercio local y acercar a la ciudadanía productos de calidad a precios rebajados.\n“Promostock es una cita que permite al público encontrar productos a precios muy especiales, y, al mismo tiempo, descubrir y apoyar el comercio de Calahorra”, ha destacado la concejala de Comercio, Raquel Moral.\nPodrán participar en Promostock todos los comercios con domicilio social y fiscal en Calahorra que dispongan de establecimiento abierto a pie de calle y cuenten con una antigüedad mínima de un año.\nLos establecimientos no ubicados a pie de calle, así como los comercios de venta online, quedarán en reserva y solo podrán optar a un estand en caso de que queden espacios libres, tras finalizar el plazo de inscripción.\nLos artículos expuestos deberán haber estado a la venta en el comercio al menos un mes antes de la celebración de la feria. No estará permitida la venta de artículos procedentes de otras tiendas ni de ropa de segunda mano.\nHabrá un total de 40 estands, de 3 x 3 metros cada uno. Su adjudicación se realizará por orden de inscripción, mientras que la ubicación concreta se determinará mediante sorteo.\nCada comercio podrá solicitar inicialmente un único estand por NIF. Si quedasen espacios disponibles, se podrá adjudicar un segundo estand a aquellos establecimientos comerciales que lo hayan solicitado en la inscripción, priorizando a los que tienen dos locales abiertos a pie de calle.\nSi hubiese más solicitudes que expositores se efectuará un sorteo.\nEl importe por estand es de 50 euros, que deberá abonarse con carácter previo a su ocupación, en la forma que indique la empresa adjudicataria de la actividad.\nDurante el desarrollo de Promostock los estands deberán permanecer abiertos durante las tres jornadas completas y dentro del horario establecido, no pudiendo colocarse artículos fuera del espacio asignado.\nLa Feria de oportunidades podrá visitarse el jueves 3 de septiembre de 17:00 a 21:00 horas, viernes 4 de septiembre y sábado 5 de septiembre de 10:00 a 14:00 horas y de 17:00 a 21:00 horas y el domingo 6, en horario de mañana de 10:00 a 14:00 horas.\nInscripciones hasta el 19 de agosto\nEl plazo de inscripción permanecerá abierto desde el 10 de agosto a las 16:00 horas hasta las 14:00 horas del 19 de agosto.\nLa concejala de Comercio ha animado a los comercios de la ciudad a participar en Promostock. “Queremos que esta nueva edición vuelva a ser un éxito y que los comerciantes y clientes disfruten estos días vendiendo y comprando”.\nLas solicitudes se enviarán por correo electrónico a la siguiente dirección omic@calahorra.es. No serán válidas las presentadas antes del inicio del plazo ni después de que se cierre.\nCada solicitud deberá incluir el nombre, apellidos y DNI del titular del establecimiento comercial; el nombre y la dirección del comercio; un correo electrónico o teléfono de contacto y una breve descripción del producto que se pondrá a la venta.\nPromostock es una actividad incluida en el Plan de dinamización del comercio local, que impulsa el Ayuntamiento de Calahorra con la colaboración de la Agencia de Desarrollo Económico de La Rioja y el apoyo de las asociaciones de comerciantes de la ciudad."
+  },
+  {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
     "url": "https://www.zaragoza.es/sede/servicio/noticia/",
     "region": "aragon",
@@ -7,6 +27,6 @@
     "lang": "es",
     "weight": 0.9,
     "notify": "quiet",
-    "text": "- \n                            Zaragoza renovará el asfaltado del camino de Ronda en Montañana con una inversión de más de 48.000 euros\n La actuación, financiada a través del Plan Extraordinario de Inversiones en Barrios Rurales 2026,... + Seguir leyendo...\n- \n                            Zaragoza premiada por su marca turística con dos premios Red Dot Design, considerados los \"Óscar del diseño\"\n La identidad ha sido reconocida en las categorías de proyecto de branding y de concepto y sistema... + Seguir leyendo..."
+    "text": "- \n                            El Tubo se convierte en Bien de Interés Turístico de Aragón tras la solicitud del Ayuntamiento de Zaragoza\n La alcaldesa, Natalia Chueca, impulsó esta petición el mes pasado y que el Gobierno de Aragón apr... + Seguir leyendo..."
   }
 ]
