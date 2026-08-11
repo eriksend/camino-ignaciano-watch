@@ -3348,7 +3348,7 @@
     "notify": "quiet",
     "id": "d7256113189deebf",
     "detected_at": "2026-08-10T14:47:44Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Ayuntamiento de Calahorra — Noticias",
@@ -3363,7 +3363,7 @@
     "notify": "quiet",
     "id": "10ea79fffbc6d15a",
     "detected_at": "2026-08-10T14:47:44Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
@@ -3378,7 +3378,7 @@
     "notify": "quiet",
     "id": "1ab6fa27f375bc88",
     "detected_at": "2026-08-10T14:47:44Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Pla ALFA — daily fire-risk level (Agents Rurals)",
@@ -3394,6 +3394,53 @@
     "kind": "fire_weather",
     "id": "4d4065b15b4eda66",
     "detected_at": "2026-08-10T14:47:44Z",
+    "is_new": false
+  },
+  {
+    "id": "30242f65af4ddd03",
+    "detected_at": "2026-08-11T14:44:42Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra: eclipse traffic plan, roadworks, temporary Cidacos riverside path closure",
+    "summary_en": "Calahorra's town council announced traffic closures around the 12 August 2026 solar eclipse and Paseo del Mercadal roadworks, plus closure of the path on the right bank of the río Cidacos (between the highway footbridge and the Carmen gravel pit) from 11 August to 13 September 2026 for canalization work. Other items (school expansion, school-supply grants) are unrelated municipal business. The river-path closure ends well before the spring 2027 walk.",
+    "source_text": "Diversos cortes de tráfico por obras y dispositivo especial con motivo del eclipse\n- El Paseo del Mercadal estará cortado al tráfico por obras previsiblemente hasta el miércoles 12 de agosto\n- El 12 de agosto se establecerán cortes de tráfico especiales en la avenida de Santander y calles adyacentes el eclipse\n- Desde hoy, 11 de agosto, y hasta el 13 de septiembre, se cerrará el camino del margen derecho del río Cidacos por trabajos de canalización\nEl Ayuntamiento de Calahorra y la Policía Local informan a la ciudadanía sobre las distintas afecciones al tráfico rodado que se producirán en el municipio durante los próximos días y semanas, derivadas de obras y la organización de un dispositivo especial de seguridad vial por el eclipse solar.\nCortes de tráfico por obras en el Paseo del Mercadal y calle José María Adán\nCon motivo de los trabajos de asfaltado en el cruce entre el Paseo del Mercadal y la calle José María Adán, este céntrico paseo de la ciudad permanecerá cerrado al tráfico hasta previsiblemente el miércoles 12 de agosto. Pudiendo reducirse este periodo según la evolución de las obras.\nEl acceso quedará permitido únicamente a residentes.\nPara garantizar la movilidad de los vecinos, se ha habilitado la calle José María Adán en doble sentido de circulación, de uso exclusivo para la entrada y salida de los usuarios de garajes de esta zona.\nQueda prohibido el estacionamiento en uno de los lados de la calle José María Adán para permitir el cruce seguro de los vehículos.\nDispositivo de tráfico por el eclipse solar en la avenida de Santander el 12 de agosto\nPara la observación del eclipse solar del próximo miércoles 12 de agosto, se aplicarán restricciones y cortes de circulación en las siguientes vías:\nAvenida de Santander en sus cruces con calle José María Garrido y calle Galicia.\nCalle Navarra en sus cruces con calle Aragón, calle Asturias y Avenida de Santander.\nCierre del margen derecho del río Cidacos del 11 de agosto al 13 de septiembre\nAsimismo, se informa de que, a partir de hoy, martes 11 de agosto, y hasta el próximo 13 de septiembre, el camino situado en el margen derecho del río Cidacos —en el tramo comprendido entre la pasarela de la autopista y la gravera del Carmen— permanecerá totalmente cerrado al tráfico debido a la realización de obras de canalización en la vía.\nDesde la Policía Local se ruega a conductores y peatones prestar máxima atención a las medidas y señalizaciones de seguridad provisionales. Al mismo tiempo, se agradece la comprensión de los vecinos y se piden disculpas por las molestias que estas actuaciones puedan ocasionar, pero que son en beneficio de la ciudad.\nLa ampliación de la Escuela Infantil municipal ‘Santos Mártires’ sale a contratación por 278.867 euros\n- El contrato incluye la redacción del proyecto y la construcción de dos aulas nuevas\n- La Junta de Gobierno Local aprueba la segunda convocatoria de ayudas para material escolar para el curso 2026-2027\nLa Junta de Gobierno Local ha aprobado, esta mañana, los siguientes acuerdos en su sesión ordinaria semanal:\nLicitación de contrato\nLa Junta de Gobierno Local ha aprobado el expediente de contratación para adjudicar el contrato mixto de las obras de ampliación de la Escuela Infantil municipal ‘Santos Mártires’ por un tipo de licitación de 278.867,41 euros.\nLa creación de dos nuevas aulas permitirá aumentar las plazas disponibles, reducir las listas de espera, mejorar la calidad del servicio y favorecer la conciliación familiar y laboral de las familias calagurritanas, garantizando una adecuada atención a los menores de 1 a 2 años.\nSe implantarán módulos prefabricados industrializados en el espacio libre que hay en la Escuela Infantil municipal ‘Santos Mártires’. Con esta solución se optimiza el suelo ya dotacional sin ocupar nuevas parcelas y se facilita la conexión a instalaciones existentes, garantizando la continuidad funcional de la escuela.\nEl Gobierno de La Rioja financiará estas obras de ampliación de este centro educativo infantil con una inversión de 265.000 euros y el Ayuntamiento de Calahorra asumirá el coste de la modificación del contrato de gestión de la Escuela ‘Santos Mártires’ para contratar más personal con un gasto de unos 136.000 euros.\nEl contrato incluye la redacción del proyecto técnico y el estudio de salud y seguridad y la construcción de dos nuevas aulas en el centro educativo.\nEl plazo establecido para la redacción del proyecto es de un mes y de 2 meses para la ejecución de las obras.\nLa calidad del proyecto y del equipo técnico (25%), el precio (69%) y el plazo de garantía (6%) son los criterios que se valorarán en la adjudicación del contrato.\nLos pliegos de cláusulas administrativas particulares y de prescripciones técnicas pueden consultarse en el perfil de contratante del Ayuntamiento de Calahorra (www.calahorra.es) y en la Plataforma de Contratación del Sector Público (http://contrataciondelestado.es).\nSegunda convocatoria de ayudas escolares\nHa acordado la aprobación de las bases reguladoras de la segunda convocatoria de ayudas para la adquisición de libros de texto y material escolar para el curso escolar 2026/2027 con un presupuesto máximo de 26.500 euros.\nLas ayudas son de 30 euros para los escolares de Educación Infantil (0 a 3 años), de 150 euros para los alumnos de Educación Infantil (de 3 a 6 años) y de Educación Especial, de 150 euros para los estudiantes de 1º y 2º de Educación Primaria y de 80 euros para los escolares de 3º a 6º de Educación Primaria.\nEl presupuesto máximo para esta segunda convocatoria es de 26.500 euros.\nEl plazo de presentación de solicitudes será desde el día siguiente a la publicación del anuncio de la presente convocatoria en el Boletín Oficial de La Rioja hasta el 28 de agosto.\nEn la primera convocatoria el Ayuntamiento de Calahorra concedió 819 ayudas por un importe total de 88.500 euros.\nLa partida presupuestaria municipal destinada a ayudas para la adquisición de material escolar para este año 2026 asciende a 115.000 euros.\nS",
+    "relevance": 8,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "d4fa28bfab36814c",
+    "detected_at": "2026-08-11T14:44:42Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcXdoNXJHS1dlQVk0NWNiZ1ltUFVpYXJ6RTY2UHlhZ0dfaEgyOFgzc3RSVkI0QXV0bzNRbTRHeEFuT3h6VVUxTnZ3YVRLNURCYXJTV1lMc0I0VkpnaWc0dzRvcXpqNnpreFgyUl9keV96S3c4bWdyemNJU3dKcmt4MDZUVDdVUkNNLUxhZ1BLUXdyemRQZlFWR00wdWZCMmxsYW5qQnFJU2p1d0lQcmwtQV9GVUlOWktXU2FnZGZNYTA5QjhwbVdMaVhROGZ2aUJOX0IxUG1ZcHM4SDRrT1ZqZWItTFZNcXFDRm5NalM3WQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Zaragoza promotes Camino Ignaciano as inland/spiritual/cultural tourism route",
+    "summary_en": "Aragón Digital reports that Zaragoza is promoting the Camino Ignaciano as a major route for inland, spiritual, and cultural tourism. General promotional coverage with no new route, accommodation, or logistics detail.",
+    "source_text": "Zaragoza impulsa el Camino Ignaciano como gran ruta de turismo interior, espiritual y cultural - Aragón Digital\n<a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxOcXdoNXJHS1dlQVk0NWNiZ1ltUFVpYXJ6RTY2UHlhZ0dfaEgyOFgzc3RSVkI0QXV0bzNRbTRHeEFuT3h6VVUxTnZ3YVRLNURCYXJTV1lMc0I0VkpnaWc0dzRvcXpqNnpreFgyUl9keV96S3c4bWdyemNJU3dKcmt4MDZUVDdVUkNNLUxhZ1BLUXdyemRQZlFWR00wdWZCMmxsYW5qQnFJU2p1d0lQcmwtQV9GVUlOWktXU2FnZGZNYTA5QjhwbVdMaVhROGZ2aUJOX0IxUG1ZcHM4SDRrT1ZqZWItTFZNcXFDRm5NalM3WQ?oc=5\" target=\"_blank\">Zaragoza impulsa el Camino Ignaciano como gran ruta de turismo interior, espiritual y cultural</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aragón Digital</font>\n(Published by Aragón Digital)",
+    "relevance": 18,
+    "notify": "quiet",
+    "publisher": "Aragón Digital",
+    "publisher_url": "https://www.aragondigital.es",
+    "is_new": true
+  },
+  {
+    "id": "f9dc600f260d169d",
+    "detected_at": "2026-08-11T14:44:42Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: eclipse prep, heat-wave alert, senior-centre growth, El Tubo heritage status",
+    "summary_en": "Zaragoza's municipal news covers preparations for the 12 August 2026 solar eclipse, activation of a yellow heat-wave emergency alert, growth in the municipal senior-centre network, and the El Tubo district's new designation as a Bien de Interés Turístico de Aragón. General city administration news with no bearing on the pilgrim route.",
+    "source_text": "- \n                            Zaragoza se prepara para mirar al cielo el día del eclipse y situarse en el mapa mundial de la astronomía\n La ciudad ultima un amplio dispositivo de seguridad, movilidad y acogida para un acontecimiento d... + Seguir leyendo...\n- \n                            El Ayuntamiento de Zaragoza supera los 77.700 socios en la red municipal de centros de mayores, un 22% más en tres años\n La concejal delegada del Mayor, Paloma Espinosa, ha valorado positivamente el auge de los princip... + Seguir leyendo...\n- \n                            Zaragoza activa este miércoles la alerta amarilla del Plan Municipal de Emergencias por ola de calor\n El Ayuntamiento activará el Plan Municipal de Emergencias esta madrugada (la noche del 11 al 12 d... + Seguir leyendo...\n- \n                            El Tubo se convierte en Bien de Interés Turístico de Aragón tras la solicitud del Ayuntamiento de Zaragoza\n La alcaldesa, Natalia Chueca, impulsó esta petición el mes pasado y que el Gobierno de Aragón apr... + Seguir leyendo...",
+    "relevance": 5,
+    "notify": "quiet",
     "is_new": true
   }
 ]
