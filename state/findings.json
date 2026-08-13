@@ -3456,7 +3456,7 @@
     "source_text": "Nueva exposición de fotografías del archivo Bella en la Casa Santa-Museo inclusivo de Fotografía Bella\n- ‘Fotografías taurinas de Calahorra’ permanecerá expuesta hasta el 6 de septiembre\nEl Ayuntamiento de Calahorra ha preparado una nueva exposición en la Casa Santa-Museo inclusivo de Fotografía Bella sobre las fotografías taurinas del archivo Bella.\nEn ellas aparecen imágenes antiguas del coso calagurritano, encierros, toreros de la ciudad y ciudadanos acudiendo a los festejos taurinos.\nLa Casa Santa-Museo inclusivo de Fotografía Bella se puede visitar viernes y sábados de 11:00 a 13:00 horas y de 18:00 a 20:00 horas y los domingos de 11:00 a 14:00 horas con una tarifa máxima de 2 euros.\nEste conjunto fotográfico, completa la exposición permanente de fotografía que dispone de una gran colección de cámaras fotográficas, negativos, películas y diverso material de interés para conocer la evolución de nuestra ciudad y sus gentes en los últimos cien años denominada “Un siglo de fotografía en Calahorra”, porque empieza a principios del siglo XX y concluye en la primera década del XXI, para dar paso a la nueva era de la imagen digital y electrónica.\nEl museo fotográfico alberga los fondos del estudio y archivo Bella, que el Excmo. Ayuntamiento de Calahorra recibió en donación en el año 2015, y en los que a lo largo de todo el pasado siglo se han ido recopilando miles de negativos en los que queda plasmado el acontecer diario de la ciudad de Calahorra.\nUn museo inclusivo para todas las personas, que dispone de pavimento podotáctil, estaciones táctiles, códigos QR, lectura fácil, pero además incluye intérprete de lengua de signos y subtítulos, para que el contenido sea accesible también a personas con problemas de audición.\nPrepárate para ver el eclipse en la avenida Santander\n- El evento contará con música, food truck y una barra\n- Comenzará a las 19:00 y finalizará a las 22:00 horas\n12 de agosto de 2026.- El Ayuntamiento de Calahorra en colaboración con el Consejo de la Juventud Comarcal de Calahorra, el Instituto Riojano de la Juventud y la asociación de hosteleros de Calahorra ha preparado una cita exclusiva para ver el eclipse del 12 de agosto.\nCon la ayuda de las astrofísicas Ana Escorza Santos y Ana Ursúa León, se determinó que el punto con mejor visión en Calahorra para el eclipse total de sol era la avenida Santander.\nEl evento comenzará a las 19:00 horas en la avenida Santander con el cruce de calle Ceuta, con ‘live percussion’, que nos acompañará hasta las 20:20 horas. Tras el eclipse total, a las 20:40 horas empezará la sesión de dj Yerai hasta las 22:00 horas.\nDurante la velada, la asociación de hosteleros de nuestra de nuestra ciudad ha preparado una food truck y una barra para poder servir bebida, bocadillos y raciones para todos los asistentes.\nDesde el Ayuntamiento, invitamos a todo el mundo a ver el eclipse en la avenida Santander, pero queremos recordar que, por el bien de todos, debemos llevar gafas homologadas.\nEn concreto, las gafas deben disponer de la certificación ISO 12312-2, incorporar el marcado CE, identificar al fabricante o importador, incluir instrucciones y advertencias de uso y presentar el filtro en perfecto estado, sin rayaduras, roturas, burbujas ni otros defectos visibles.\nDesde el Gobierno de La Rioja recomiendan una serie de medidas para una observación segura, como que las gafas deben colocarse antes de mirar al Sol y mantenerse puestas durante toda la observación de las fases parciales del eclipse.\nLa Dirección General de Salud Pública insiste también en que nunca deben utilizarse gafas de sol convencionales, radiografías, CDs o DVDs, cristales ahumados, gafas 3D de cine, lentes oscuras sin certificación ni filtros caseros, ya que ninguno de estos elementos protege frente a la intensa radiación solar.\nDel mismo modo, tampoco debe observarse el eclipse mediante cámaras fotográficas, prismáticos o telescopios que no dispongan de filtros solares específicos.\nRiesgo de incendios\nRecordar que se prohíbe la circulación de vehículos a motor de combustión interna que discurran por caminos forestales entre las 15:00 horas del día 12 de agosto y las 7:00 horas del 13 de agosto, con las únicas excepciones: vigilancia e inspección de agentes de la autoridad y servicios forestales; acceso principal a núcleos urbanos habitados, prohibiendo el estacionamiento de vehículos en estos accesos; acceso al mirados La Senoba (Enciso) y Ermita de Santa Bárbara (Ezcaray); fuerza mayor.\nEn Calahorra se consideran caminos y zonas forestales: La Degollada, El Perdiguero, Los Agudos, Raposera y los Sotos del Ebro. Por lo que, en estos lugares, estará prohibida la circulación de vehículos.",
     "relevance": 8,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "052cf319a0dcc4ea",
@@ -3473,7 +3473,7 @@
     "notify": "quiet",
     "publisher": "Onda Cero",
     "publisher_url": "https://www.ondacero.es",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "07bf1fbcbd34747a",
@@ -3490,7 +3490,7 @@
     "notify": "quiet",
     "publisher": "Aragón Digital",
     "publisher_url": "https://www.aragondigital.es",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "04a7e9e3d8801cc0",
@@ -3505,6 +3505,39 @@
     "source_text": "- \n                            El ayuntamiento de Zaragoza se compromete a aportar ayuda de emergencia tras el terremoto registrado en Colombia\n El alcalde accidental, Ángel Lorén, se ha reunido este mediodía con una decena de representantes ... + Seguir leyendo...",
     "relevance": 5,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "df3872b41de05a47",
+    "detected_at": "2026-08-13T15:01:52Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: solar eclipse draws crowds and tourism income",
+    "summary_en": "Zaragoza city hall reports the recent solar eclipse drew large crowds and international astronomy experts, with an estimated €13.6 million economic impact over three days; also notes 834 active-aging workshops planned for the coming year. Unrelated to the pilgrim route.",
+    "source_text": "                            Miles de personas miran al cielo al mismo tiempo, asombradas por una Zaragoza bañada por el eclipse solar\n El fenómeno ha dejado una de las estampas más bonitas de la ciudad, el eclipse solar junto a la B... + Seguir leyendo...\n- \n                            El eclipse atrae a miles de visitantes y deja un impacto económico en la ciudad de 13,6 millones de euros\n \"Se trata de una cifra elevada teniendo en cuenta que hablamos de tres días, desde el lunes al mi... + Seguir leyendo...\n- \n                            Expertos internacionales: \"Zaragoza es una de las mejores ciudades del mundo para ver el eclipse\"\n La consejera de Turismo, Sara Fernández, da la bienvenida a un grupo de 25 expertos internacional... + Seguir leyendo...\n                            El Ayuntamiento de Zaragoza ofertará 834 talleres de envejecimiento activo con más de 17.000 plazas para el curso 202...\n La concejal delegada del Mayor, Paloma Espinosa, ha presentado una programación que vuelve a crec... + Seguir leyendo...\n- \n                            Zaragoza se prepara para mirar al cielo el día del eclipse y situarse en el mapa mundial de la astronomía\n La ciudad ultima un amplio dispositivo de seguridad, movilidad y acogida para un acontecimiento d... + Seguir leyendo...",
+    "relevance": 4,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "e9f113071101b212",
+    "detected_at": "2026-08-13T15:01:52Z",
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "en",
+    "title": "EFFIS FWI hits 'very extreme' (75) at Igualada (stage 25) — off-season August reading",
+    "summary_en": "The EFFIS Fire Weather Index forecast peaks at 75 ('very extreme') at Igualada (stage 25) on 2026-08-15, +7.7 above the seasonal norm, with all 27 stage endpoints at 'high' or worse and stages 2-27 at 'very high' or above. This is mid-August, well outside both the April-May 2027 walk window and the spring cereal-fire season, so it is a routine peak-summer reading with no bearing on next spring's conditions.",
+    "source_text": "EFFIS Fire Weather Index peaks at 75.0 — 'very extreme' on the EFFIS scale — at Igualada (stage 25) on 2026-08-15, across a 3-day forecast from 2026-08-13. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Igualada (stage 25) 75, Verdú (stage 23) 71, Cervera (stage 24) 71, Verdú (stage 23) 68, Igualada (stage 25) 68, Logroño (stage 8) 68. At 'very high' or above: stages [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]. FWI anomaly at Igualada is +7.7 versus the seasonal norm. Reported because: escalated. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70.",
+    "relevance": 20,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 25,
+    "stage_end": "Igualada",
     "is_new": true
   }
 ]
