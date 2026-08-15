@@ -1,17 +1,1 @@
-[
-  {
-    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "catalonia",
-    "tier": "official",
-    "lang": "en",
-    "weight": 0.9,
-    "notify": "quiet",
-    "kind": "fire_weather",
-    "item_key": "fwi:corridor",
-    "fingerprint": "extreme:9+",
-    "stage": 23,
-    "stage_end": "Verdú",
-    "text": "EFFIS Fire Weather Index peaks at 67.8 — 'extreme' on the EFFIS scale — at Verdú (stage 23) on 2026-08-14, across a 3-day forecast from 2026-08-14. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Verdú (stage 23) 68, Igualada (stage 25) 68, Igualada (stage 25) 65, Fraga (stage 20) 65, Alcanadre (stage 9) 65, Manresa (stage 27) 64. At 'very high' or above: stages [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]. FWI anomaly at Verdú is +6.4 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-  }
-]
+[]
