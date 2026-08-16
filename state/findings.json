@@ -3600,7 +3600,7 @@
     "notify": "quiet",
     "publisher": "El Correo",
     "publisher_url": "https://www.elcorreo.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "19aaa6f04e49c335",
@@ -3614,6 +3614,21 @@
     "summary_en": "Zaragoza's municipal news feed reports asphalt resurfacing on Camino de Pinseque near Venta del Olivar (123,379 euros, for road safety, unrelated to the pilgrim route), a summer public-works update, emergency aid pledged to Colombia after an earthquake, and crowds watching a solar eclipse.",
     "source_text": "                            Zaragoza renueva el asfaltado del camino de Pinseque en la Venta del Olivar para mejorar la seguridad vial\n Las obras cuentan con una inversión de 123.379 euros (IVA Incluido) con cargo al Plan Extraordina... + Seguir leyendo...\n                            El Ayuntamiento de Zaragoza profundiza en su plan de obras estivales durante la tercera semana de agosto\n El listado incluye intervenciones destacadas en Juan Pablo Bonet, nuevos avances en Coso, y actua... + Seguir leyendo...\n- \n                            El ayuntamiento de Zaragoza se compromete a aportar ayuda de emergencia tras el terremoto registrado en Colombia\n El alcalde accidental, Ángel Lorén, se ha reunido este mediodía con una decena de representantes ... + Seguir leyendo...\n- \n                            Miles de personas miran al cielo al mismo tiempo, asombradas por una Zaragoza bañada por el eclipse solar\n El fenómeno ha dejado una de las estampas más bonitas de la ciudad, el eclipse solar junto a la B... + Seguir leyendo...",
     "relevance": 4,
+    "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "51d0141fc6695879",
+    "detected_at": "2026-08-16T14:42:06Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza opens applications for youth participation lab",
+    "summary_en": "The Zaragoza city council is recruiting 45 candidates aged 16-30 for the second edition of a youth civic-participation workshop. The notice has no connection to the Camino Ignaciano route, accommodation, or conditions in Zaragoza (stage ~13).",
+    "source_text": "- \n                            Zaragoza busca 45 candidatos para la segunda edición del laboratorio de participación joven\n Se buscan jóvenes, de entre 16 y 30 años, con ganas de participar y aportar, para formar parte de... + Seguir leyendo...",
+    "relevance": 5,
     "notify": "quiet",
     "is_new": true
   }

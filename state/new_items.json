@@ -1,17 +1,5 @@
 [
   {
-    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
-    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWHhUTjViaDdDY3IxTWZCQ3lURFhqUExOOEhwY1lzM1NyZzdUTHBxV2tuOERjQjJKRDVpeGlteWJ6Y3FlZXZycFhSTVo3RDlkbGZDZ0dEaEVqTTcxOUhjSm1WU1pLbU1tMnQwWUMwVWYzaDQzaU9sZ1E4SFVQcHlXaXRlV1VxY000cnQyQXlubWl6b29BcmkwUnZKcUJWVTRTTXVxQUdhN0FKSEVBem1hRlZRZ0ZsSVFy?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "es",
-    "weight": 0.9,
-    "notify": "quiet",
-    "publisher": "El Correo",
-    "publisher_url": "https://www.elcorreo.com",
-    "text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - El Correo\n<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWHhUTjViaDdDY3IxTWZCQ3lURFhqUExOOEhwY1lzM1NyZzdUTHBxV2tuOERjQjJKRDVpeGlteWJ6Y3FlZXZycFhSTVo3RDlkbGZDZ0dEaEVqTTcxOUhjSm1WU1pLbU1tMnQwWUMwVWYzaDQzaU9sZ1E4SFVQcHlXaXRlV1VxY000cnQyQXlubWl6b29BcmkwUnZKcUJWVTRTTXVxQUdhN0FKSEVBem1hRlZRZ0ZsSVFy?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Correo</font>\n(Published by El Correo)"
-  },
-  {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
     "url": "https://www.zaragoza.es/sede/servicio/noticia/",
     "region": "aragon",
@@ -19,6 +7,6 @@
     "lang": "es",
     "weight": 0.9,
     "notify": "quiet",
-    "text": "                            Zaragoza renueva el asfaltado del camino de Pinseque en la Venta del Olivar para mejorar la seguridad vial\n Las obras cuentan con una inversión de 123.379 euros (IVA Incluido) con cargo al Plan Extraordina... + Seguir leyendo...\n                            El Ayuntamiento de Zaragoza profundiza en su plan de obras estivales durante la tercera semana de agosto\n El listado incluye intervenciones destacadas en Juan Pablo Bonet, nuevos avances en Coso, y actua... + Seguir leyendo...\n- \n                            El ayuntamiento de Zaragoza se compromete a aportar ayuda de emergencia tras el terremoto registrado en Colombia\n El alcalde accidental, Ángel Lorén, se ha reunido este mediodía con una decena de representantes ... + Seguir leyendo...\n- \n                            Miles de personas miran al cielo al mismo tiempo, asombradas por una Zaragoza bañada por el eclipse solar\n El fenómeno ha dejado una de las estampas más bonitas de la ciudad, el eclipse solar junto a la B... + Seguir leyendo..."
+    "text": "- \n                            Zaragoza busca 45 candidatos para la segunda edición del laboratorio de participación joven\n Se buscan jóvenes, de entre 16 y 30 años, con ganas de participar y aportar, para formar parte de... + Seguir leyendo..."
   }
 ]
