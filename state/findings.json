@@ -3630,6 +3630,36 @@
     "source_text": "- \n                            Zaragoza busca 45 candidatos para la segunda edición del laboratorio de participación joven\n Se buscan jóvenes, de entre 16 y 30 años, con ganas de participar y aportar, para formar parte de... + Seguir leyendo...",
     "relevance": 5,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "0a321106f4db58e4",
+    "detected_at": "2026-08-17T14:43:38Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra approves church roof restoration, senior-fitness contract",
+    "summary_en": "Calahorra's town council approved restoration of the Iglesia de Santiago crucero roof (€78,000, including a €70,200 regional grant) and the Santa María de Murillo espadaña, put out to tender fitness classes for residents over 60, and awarded a €3,630 healthy-habits study. No impact on the pilgrim route or services.",
+    "source_text": "La Junta de Gobierno Local aprueba los proyectos de restauración de la cubierta del crucero de la parroquia de Santiago y de la espadaña de la iglesia de Murillo\n- El 1 de septiembre finaliza el plazo para solicitar el bono joven cultural\n- El Ayuntamiento saca a contratación las clases de yoga y gimnasia de mantenimiento para mayores de 60 años",
+    "relevance": 5,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "2c0f21ce49bb41fd",
+    "detected_at": "2026-08-17T14:43:38Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza: wastewater residue report, second youth participation lab call",
+    "summary_en": "Zaragoza's council reported its wastewater treatment plants removed nearly 1,500 tonnes of solid waste and wet wipes recently, and opened recruitment for 45 young people (ages 16-30) for the second edition of its youth participation lab. Neither item concerns the pilgrim route.",
+    "source_text": "Los sistemas de depuración de Zaragoza gestionan cerca de 1.500 toneladas de residuos sólidos y toallitas en el últim...\nEl coste de la gestión de estos residuos en las Estaciones Depuradoras de Aguas Residuales (EDAR)... + Seguir leyendo...\nZaragoza busca 45 candidatos para la segunda edición del laboratorio de participación joven\nSe buscan jóvenes, de entre 16 y 30 años, con ganas de participar y aportar, para formar parte de... + Seguir leyendo...",
+    "relevance": 5,
+    "notify": "quiet",
     "is_new": true
   }
 ]
