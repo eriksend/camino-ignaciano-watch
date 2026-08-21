@@ -1,17 +1,1 @@
-[
-  {
-    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "aragon",
-    "tier": "official",
-    "lang": "en",
-    "weight": 0.9,
-    "notify": "quiet",
-    "kind": "fire_weather",
-    "item_key": "fwi:corridor",
-    "fingerprint": "extreme:9+",
-    "stage": 17,
-    "stage_end": "Venta de Santa Lucía",
-    "text": "EFFIS Fire Weather Index peaks at 60.5 — 'extreme' on the EFFIS scale — at Venta de Santa Lucía (stage 17) on 2026-08-21, across a 3-day forecast from 2026-08-20. 22 stage endpoint(s) reach 'high' (>= 21.3) or worse: Venta de Santa Lucía (stage 17) 61, Cervera (stage 24) 58, Bujaraloz (stage 18) 56, Verdú (stage 23) 56, Tudela (stage 12) 56, Candasnos (stage 19) 53. At 'very high' or above: stages [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27]. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-  }
-]
+[]
