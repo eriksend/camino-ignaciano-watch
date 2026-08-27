@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "source_name": "Pla ALFA — daily fire-risk level (Agents Rurals)",
+    "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "weight": 1.0,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "text": "Pla ALFA reaches level 3 on route comarques tomorrow. Municipalities at level 3+: Abrera (Baix Llobregat, level 3), Almatret (Segrià, level 3), Argençola (Anoia, level 3), Balsareny (Bages, level 3), Begues (Baix Llobregat, level 3), Bellprat (Anoia, level 3), Cabrera d'Anoia (Anoia, level 3), Callús (Bages, level 3). Level 3 prohibits open flame everywhere, suspends authorised stubble/pasture/pruning burns, and bans spark-generating machinery on forest land and within 500 m — but it does NOT restrict access on foot. A pilgrim on a marked path breaks no level-3 rule."
+  }
+]
