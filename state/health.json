@@ -1,20 +1,18 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-08-28T14:42:06+00:00",
+  "alfa_run_at": "2026-08-29T14:41:50+00:00",
   "baselined": 0,
   "changed_quiet": 9,
   "deferred": [],
   "deferred_items": 0,
-  "failed": [
-    "Jesuit Sources — official guide editions"
-  ],
+  "failed": [],
   "fwi_ok": true,
-  "fwi_run_at": "2026-08-28T14:42:00+00:00",
-  "new_items": 2,
+  "fwi_run_at": "2026-08-29T14:41:47+00:00",
+  "new_items": 4,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 1,
-  "run_at": "2026-08-28T14:41:51+00:00",
+  "run_at": "2026-08-29T14:41:38+00:00",
   "skipped": 0,
   "sources_total": 50
 }
