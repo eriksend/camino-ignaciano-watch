@@ -4103,7 +4103,7 @@
     "notify": "quiet",
     "id": "90c31b9ca110bf51",
     "detected_at": "2026-08-29T14:42:57Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Google News — \"Ignatian Camino\" (EN)",
@@ -4119,7 +4119,7 @@
     "publisher": "Hawaii Catholic Herald",
     "id": "9a0349bfbfcd8ffe",
     "detected_at": "2026-08-29T14:42:57Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Google News — \"Ignatian Camino\" (EN)",
@@ -4135,7 +4135,7 @@
     "publisher": "FOX4KC.com",
     "id": "f48b1f84b1ca54ae",
     "detected_at": "2026-08-29T14:42:57Z",
-    "is_new": true
+    "is_new": false
   },
   {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
@@ -4150,6 +4150,21 @@
     "notify": "quiet",
     "id": "f60641186789ea6c",
     "detected_at": "2026-08-29T14:42:57Z",
+    "is_new": false
+  },
+  {
+    "id": "b1601fb0eea14276",
+    "detected_at": "2026-08-30T14:42:42Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra town news: fiesta patronales programme for 30 August",
+    "summary_en": "The Calahorra town news page publishes the day's local patronal fiesta schedule for 30 August, covering encierros (bull-runs), food tastings, a floral offering to San Emeterio and San Celedonio, concerts, and fireworks. Nothing in the update concerns the Camino Ignaciano, accommodation, or route conditions.",
+    "source_text": "Programa de fiestas: 30 de agosto\n8:30 h DIANAS con los Gaiteros de Calahorra: zona Raso, calles Raón y Eras hasta ARCCA.\n9:00 h\nDIANAS con la charanga Terremoto Show. Peña El Sol.\nTIRADAS DE FIESTAS. Modalidad Compak Sporting 50 platos. Campo de Tiro Valfondillo. Sociedad Cinegética Calagurritana.\nDEGUSTACIÓN DE MOSCATEL Y PASTAS con la peña Riojana. Pasaje Díaz.\n9:30 h SEXTO ENCIERRO NOVILLOS. Ganadería Macua. Recorrido (corto): Plaza de Toros y calles Julio Longinos, José María Garrido, General Gallarza y vuelta a la Plaza de Toros. Amenizan: Peña La Moza con la charanga Ascape y peña El Sol con Terremoto Show.\n11:30 h\nSALIDA DE LA CORPORACIÓN con los representantes de las fiestas desde el Ayuntamiento para acudir a la Catedral y participar en la ofrenda floral. Recorrido: Ayuntamiento, Mártires, Grande, Raso, Mayor y cuesta de la Catedral.\nDEGUSTACIÓN DE HUEVOS FRITOS CON TORREZNOS. Peña El Sol.\n12:00 h\nOFRENDA FLORAL en honor a San Emeterio y San Celedonio en la plaza de la Catedral. Organiza: Cofradía de los Santos Mártires. A continuación, oración de saludo a los Santos.\nDEGUSTACIÓN DE ZURRACAPOTE. Peña Philips.\n12:30 h\nDEGUSTACIÓN DE CHORIPANES. Paseo del Mercadal. Peña Riojana.\nENCENDIDO DE FOGONES DE LA `II GUERRA DE BRAVAS’ (Concurso de elaboración de patatas bravas). Peña Philips. Plazuela del Mercado.\nDEGUSTACIÓN DE MELÓN CON JAMÓN. Plaza del Raso. Club cultural y de coleccionismo ‘El Lazarillo’.\n12:45 h DEGUSTACIÓN DE LANGOSTINO Y VINO BLANCO. Peña El Hambre. Plaza del Raso.\n13:00 h\nORACIÓN DE SALUDO A LOS SANTOS MÁRTIRES. Catedral de Santa María de Calahorra.\nEXHIBICIÓN DE FOLCLORE TRADICIONAL. Plaza del Raso.\n– Grupo de danzas ‘Coletores’ de Calahorra.\n– Escuela Municipal de Danzas de Calahorra.\nCONCIERTO DE LA BANDA DE ALUMNOS ADULTOS DE LA ESCUELA MUNICIPAL DE MÚSICA DE CALAHORRA. Quiosco del Mercadal.\nVERMÚ MUSICAL. Peña Riojana. Bar Oasis.\nVERMÚ MUSICAL. Peña Calagurritana. La Comedia.\nVERMÚ MUSICAL. Peña Philips. Street Food The Way.\n13:15 h II TORNEO DE CORNHOLE. Peña Calagurritana. Plaza Montecompatri, al lado del bar La Comedia. Inscripciones: gestion@calagurritana.es o media hora antes de comenzar el acto.\n13:30 h\nDEGUSTACIÓN DE PATATAS BRAVAS en la plazuela del Mercado y fallo del jurado del concurso ‘II Guerra de Bravas’.\nVERMÚ MUSICAL. Peña La Moza. Concurso la ‘Patata Caliente’. El Rincón Andaluz.\nVERMÚ MUSICAL. Peña El Sol. El Rincón de Livi.\n13:45 h VERMÚ MUSICAL. Peña El Hambre. Bar La Viña.\n16:00 h XVIII CAMPEONATO DE PARCHÍS. Cuarto de la peña Riojana.\n17:00 h\nTARDEO OPEN AIR en calle Teatro ofrecido por el bar Cue. Peña La Moza.\nBAJADA del Raso hasta el recorrido de mini bueyes. Club\nTaurino.\nBAJADA DE LAS PEÑAS desde la plaza del Raso hasta el recorrido del encierro de mini bueyes.\nSESSION de la Asociación Conecta Calahorra con la colaboración de café Oasis.\n‘ESPRESSO Y AL FRONTÓN’, café en Sabor.es y posterior bajada hacia el frontón Barberito I. Peña Philips.\n17:30 h\nENCIERRO DE MINI BUEYES. Ganadería El Ruiseñor. Recorrido (corto): Plaza de Toros y calles Julio Longinos, José María Garrido y General Gallarza y regreso a la Plaza de Toros.\nTARDEO ACTIBA amenizado con la charanga Terremoto Show. Peña El Sol.\n18:00 h\nTARDEO MUSICAL en el bar Oasis. Peña El Hambre.\nESPECTÁCULO DE MAGIA Y ANIMACIÓN INFANTIL con el mago Juancho. Hotel Ciudad de Calahorra y bar Montserrat 2.0.\n18:30 h\nTORNEO DE PELOTA en el frontón municipal Barberito I. Venta de entradas anticipadas: www. garfepelota.com y en bar Aster. Amenizado por peña Philips.Organiza: Garfe. Colabora: Ayuntamiento Calahorra.\nACTIVIDAD JUVENIL. Peña La Moza. Calle Teatro.\n19:00 h\nV MAHOU FEST. Cuarto de la peña Calagurritana. Apto para personas celiacas.\nBINGO MUSICAL con la animación y conducción de ‘Bárbara, la reina de la Pantaloneta’. ACTIBA en colaboración con la peña El Sol. 1ª Travesía de Paletillas.\nRONDA DE BARES: Frasquita y Toscana. Peña Riojana.\n19:15 h COMPARSA DE GIGANTES Y CABEZUDOS con los Gaiteros de La Rioja. Recorrido: salida desde la sala de cultura ‘Ermita de la Concepción’ por las calles Santa Rita, Estación y Mercadal hasta el Ayuntamiento, para asistir a las solemnes Vísperas. Tras las Vísperas, regreso a la ‘Ermita de la Concepción’ por las calles Mercadal, Estación y Santa Rita.\n20:00 h\nSALIDA DE LA CORPORACIÓN desde el Ayuntamiento, precedida por maceros, Comparsa de Gigantes y Cabezudos, Gaiteros de La Rioja y Banda Municipal de Música para acudir a la Catedral y asistir a las solemnes vísperas. Recorrido: Ayuntamiento, Mártires, Grande, Raso, Mayor y cuesta de la Catedral.\nDEGUSTACIÓN DE GILDAS Y CORTO. Cuarto de la peña El Hambre.\nDEGUSTACIÓN DE ZURRACAPOTE. Cuarto de la peña La Moza.\n20:30 h\nVÍSPERAS SOLEMNES. Catedral de Santa María.\nAPERTURA DEL CUARTO. Peña El Sol.\n21:00 h VINOS MUSICALES. Peña El Sol. Bar Oasis.\n22:30 h\nSALIDA NOCTURNA CON LA CHARANGA. Recorrido: bar Nicolás, Panadera 2.0., Oasis, La Viña y Cue. Peña La Moza\nPASACALLES hasta los fuegos con la charanga ‘La Unión’. Peña Calagurritana.\n23:00 h\nPIROMUSICAL. Pirotecnia Zaragozana. Avenida de Valvanera.\nSALIDA CON TERREMOTO SHOW. Peña El Sol.\n23:30 h\nFIESTA DJS: RASOTÓN FEST: dj Noex, Montana Music, Casual djs y Adrián Pérez. Plaza del Raso.\nFIESTA REMEMBER homenaje a la Pista Azul. Peña El Hambre.\nSALIDA NOCTURNA CHARANGA ‘LA UNIÓN’. Peña Calagurritana por los bares Rioja, Oasis y Teorema.\n00:00 h\nCHARANGLOW. Salida desde el cuarto de la peña Riojana por los bares Oli y Cue.\nNEON PARTY CON DJ YERAY y chupitada. Peña El Sol.\n1:00 h\nGUATEQUE CALAGURRITANO. Cuarto de la peña Calagurritana.\nSALIDA NOCTURNA con la charanga ‘Pintakoda’ por el bar La Comedia. Peña Philips.\n2:00 h CONCIERTAZO WESYKÉ. Cuarto de la peña Riojana.",
+    "relevance": 3,
+    "notify": "quiet",
     "is_new": true
   }
 ]
