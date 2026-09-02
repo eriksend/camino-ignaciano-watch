@@ -4227,7 +4227,7 @@
     "source_text": "\t\t\t\t\t\t\t\t\tRegulació de l’escalada a les agulles de la Mòmia i la Momieta fins al 4 de setembre \n  - 01/09/2026",
     "relevance": 28,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "bbd2743991ac15d9",
@@ -4242,7 +4242,7 @@
     "source_text": "El Teatro Ideal incluye en su programación de septiembre a diciembre teatro, humor y música... (theatre season announcement, September–December 2026)",
     "relevance": 3,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "4a85f6b28f5ab220",
@@ -4257,7 +4257,7 @@
     "source_text": "Zaragoza responde al llamamiento de la FEMP y se suma a la concentración institucional en solidaridad con Ceuta... Zaragoza estrena este domingo un nuevo mercado floral y de productos para mascotas... La Universidad Popular de Zaragoza abre el 3 de septiembre las inscripciones para 131 cursos...",
     "relevance": 5,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "8a3f14d51d6ebf0a",
@@ -4271,6 +4271,70 @@
     "summary_en": "The Cave of Saint Ignatius sanctuary page confirms daily Monday-Saturday mass at 12:45pm from 8 April onward, with no mass on non-precept public holidays (21 February, 6 April/Easter Monday, 1 May, 24 June, 31 August, 11 September, 12 October, 6 December) or 26 December. Relevant for pilgrims planning a La Cova visit during the spring walk.",
     "source_text": "Eucharist at the Cave of Saint Ignatius: From April 8th on all year daily mass from monday to saturday at 12,45 pm. Public holidays in Catalonia and local festivities no precept: 21 February, 6 April (Easter Monday), 1 May, 24 June, 31 August, 11 September, 12 October, 6 December. On December 26 (closed all day there is no mass at 12,45 pm)",
     "relevance": 54,
+    "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "c47246a5d2685892",
+    "detected_at": "2026-09-02T14:42:40Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra expands urban bus service to weekends from 5 September",
+    "summary_en": "Calahorra town council announced its urban bus service will now run on Saturdays and Sundays starting 5 September, alongside fare details (single ticket €0.75, 10-trip pass €5, reduced 10-trip pass €2.50 for seniors/disabled/youth). The item also recaps a positive, incident-free early-August fiesta patronal (San Emeterio y San Celedonio). Neither item concerns the Camino route itself.",
+    "source_text": "El servicio de transporte urbano se amplía a los fines de semana a partir del 5 de septiembre\n- El Ayuntamiento de Calahorra refuerza así este servicio público para facilitar los desplazamientos durante todos los días de la semana\n- Esta ampliación permitirá mejorar la movilidad de vecinos y visitantes y facilitará los desplazamientos durante los sábados y domingos\nA partir de este sábado 5 de septiembre, el autobús urbano prestará servicio también durante los fines de semana.\nCon esta medida, el Ayuntamiento de Calahorra refuerza su apuesta por un transporte público accesible, cómodo y sostenible, atendiendo las necesidades de la ciudadanía y mejorando la movilidad de vecinos y visitantes.\nLa ampliación del servicio de transporte urbano beneficiará especialmente a las personas que necesitan desplazarse durante el fin de semana por motivos laborales, familiares, comerciales, sanitarios o de ocio, así como a aquellas que no disponen de vehículo privado.\nLos nuevos horarios y recorridos de los sábado y domingos, que se pueden consultar en la página web del Ayuntamiento de Calahorra (www.calahorra.es) y pronto también en las marquesinas de las paradas, son los siguientes:\nEl horario de verano es del 12 de junio al 30 de septiembre y el de invierno, desde el 1 de octubre hasta el 11 de junio.\nModificación del contrato para mejorar el servicio\nEl pasado 10 de agosto el pleno aprobó la modificación del contrato de concesión del servicio público de transporte colectivo y urbano de viajeros, adjudicado a Autobuses Jiménez S.L., con los votos favorables de los concejales del Partido Popular, Vox e Izquierda Unida.\nEsta modificación, que supone un incremento del canon anual de 38.323,76 euros, permite ampliar la prestación del servicio de transporte urbano a todos los días de la semana.\nCon esta actuación, el Ayuntamiento deCalahorra continúa ampliando y mejorando los servicios públicos y trabajando para avanzar hacia un modelo de movilidad urbana más accesible para toda la ciudadanía.\nAdemás, el autobús urbano seguirá ofreciendo el servicio de transporte hasta el cementerio municipal ‘San Lázaro’ los últimos miércoles de cada mes. La salida tendrá lugar desde el Ayuntamiento a las 16:30 horas y el regreso desde el cementerio a las 17:30 horas.\nTambién prestará servicio especial el 1 de noviembre con motivo de la festividad de Todos los Santos.\nPrecios y descuentos\nEl precio de un billete sencillo se mantiene en 0,75 euros cada viaje y el bono bus de 10 viajes tiene un coste de 5 euros.\nAsimismo, hay un bono reducido de 10 viajes con un precio de 2,5 euros para personas con diversidad funcional, jóvenes con Carné Joven de La Rioja y para las personas mayores de 65 años.\nPor su parte, los niños menores de 6 años pueden utilizar el autobús urbano gratis y los que tienen edades comprendidas entre los 6 y los 14 años también con el abono infantil.\nCalahorra ha vivido unas fiestas con muy buen ambiente en la calle, gran participación en todos los actos y sin incidencias\n- Las principales novedades del programa han tenido una excelente acogida\n- Los dispositivos especiales de seguridad y limpieza han permitido unas fiestas seguras y limpias\n- Cada día se han celebrado una media de más 60 actos para todas las edades\nLas fiestas patronales de verano en honor a San Emeterio y San Celedonio han concluido con un balance muy positivo por parte del Ayuntamiento de Calahorra, marcado por el buen ambiente en las calles de la ciudad y la elevada participación ciudadana en el conjunto de los actos programados.\nLa ciudadanía ha respondido muy favorablemente a una programación variada, que ha combinado tradición y novedades y ha ofrecido propuestas para todas las edades entre el 25 y el 31 de agosto.\nComo en fiestas anteriores, los actos más tradicionales y arraigados a las fiestas como el chupinazo, las actuaciones musicales, los encierros, los espectáculos de fuegos artificiales, las degustaciones, la ofrenda floral, la procesión en honor a los Santos Patronos de la ciudad, las salidas de la comparsa de Gigantes y Cabezudos con los gaiteros, los partidos de pelota y las sesiones de Gorgorito han sido los más multitudinarios. También las obras de teatro, el partido de fútbol y los vermús musicales, entre otros.\nLas principales novedades de este año como las dos salidas de los mini bueyes por el recorrido del encierro corto, el espectáculo de drones y el concierto del grupo ‘Funambulista’ en el aparcamiento de la Catedral han tenido una excelente acogida. Todas ellas han sido un éxito y han enriquecido el programa festivo.\nAsimismo, las actividades promovidas por las seis peñas locales y el Club Taurino, subvencionadas por el Ayuntamiento dentro de la convocatoria de ayudas de festejos por concurrencia competitiva, han despertado mucho interés, logrando congregar a numerosas personas.\nHan sido las actuaciones musicales de ‘DeNorte’ (peña la Moza) y Pablo Líquido (peña El Hambre), el concurso de paellas (peña Calagurritana), los Festivales de Sarmiento (peña El Sol) y de la tortilla de patata gigante (peña Riojana), el espectáculo infantil ‘Una tarde de indios y vaqueros’ (peña Philips) y el día taurino (Club Taurino).\nEl programa ha contado con una media de más de 60 actos diarios llevados a cabo en diferentes zonas de Calahorra y dirigidos a niños, jóvenes y mayores con el objetivo de que toda la ciudadanía pudiera disfrutar de estos días festivos.\nEl balance también ha sido positivo desde el punto de vista de la convivencia y la seguridad. No se han registrado robos durante el día del chupinazo ni incidentes relevantes a lo largo de toda la semana, lo que demuestra el buen comportamiento general de los asistentes y la eficacia del dispositivo de seguridad especial.\nPolicía Local, Guardia Civil y la agrupación calagurritana de Protección Civil han formado este operativo para velar por la seguridad ciudadana en Calahorra con más presencia de agentes, rondas nocturnas y un punto de atención de incidencias el 25 de ag",
+    "relevance": 8,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "2f67e622345ecfa3",
+    "detected_at": "2026-09-02T14:42:40Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMUU0VEZNQ0VyMTEyRUNRMnNkM3lNOTRZV1JiTkhpd1VZZDVSNHIzOEpHOW4wN3B3bHV3Z0VaM0ZrRjRRMlBqOEFESUdPaHVLamRYdk9Dc2tHTEluRjd3REJERGUzRkxHN3ZjNl8zTUhGN1RybEp5aVd0M3lnSVRGX1U1QmZ0TlpXSXlIaEZfZjlzSlJEYkhyUkR5a2lPc05u?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Jesuits.global feature: “The Ignatian Way, an adventure with God and others” (headline only)",
+    "summary_en": "Google News surfaced a jesuits.global feature titled “El Camino Ignaciano: una aventura con Dios y con los demás” (“The Ignatian Way: an adventure with God and others”). Only the headline is available via the unresolvable Google News interstitial link, so no route-condition detail is available.",
+    "source_text": "El Camino Ignaciano: una aventura con Dios y con los demás - jesuits.global\n<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOMUU0VEZNQ0VyMTEyRUNRMnNkM3lNOTRZV1JiTkhpd1VZZDVSNHIzOEpHOW4wN3B3bHV3Z0VaM0ZrRjRRMlBqOEFESUdPaHVLamRYdk9Dc2tHTEluRjd3REJERGUzRkxHN3ZjNl8zTUhGN1RybEp5aVd0M3lnSVRGX1U1QmZ0TlpXSXlIaEZfZjlzSlJEYkhyUkR5a2lPc05u?oc=5\" target=\"_blank\">El Camino Ignaciano: una aventura con Dios y con los demás</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">jesuits.global</font>\n(Published by jesuits.global)",
+    "relevance": 14,
+    "notify": "quiet",
+    "is_new": true,
+    "publisher": "jesuits.global",
+    "publisher_url": "https://www.jesuits.global"
+  },
+  {
+    "id": "10ae47b8a3097a38",
+    "detected_at": "2026-09-02T14:42:40Z",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQaUlabnplRXUtSUd2YS1RUTVFS3I2RThIR2VqMXJYWkhoQkJVbGRnUWlNUlkzSGFQXzBRMThnb2p6ajdMZzNBTEgtdHhJdUFKZDg2cV9aMFJxdHFDanVEUDRJOExSWnZzQmJES3p5ZHk0bERLZG9aUGJWQVhBcDRuY0FCSjQ0Nkg4Q0JpUnRwMU9hV2I5bU1ONDlWRzh4Ri12ZFRST25uVUFTT2ZEc3lkeU9UbUZzMjZmTzYzR0pJaVdYNUpSdjc5NHJCcHlGbmtlYWp0ZmxpOWt1WmPSAdsBQVVfeXFMTXVwMkxoMm5MN1Y3aGhOeVJXVURYWWdPQlM0Rlp2V3lKVHBBRVY5enFIYWdRNzBzbjhFbkc1R3FhWXhnS2tvWGFMLUwzRjZlMWllVFFiM0RxYmFHSVNqUjczTW5uRHhWZ0RXUU0yUEFXbm83UXJqendxT1F3VTNTaFV4akVYdk94bEo2U2VfTnc1RU9HQXJTNGQ3TDltSXBrZVRQSlV6OXRwMEFjdTd2NVNkcG51WFdld3psX002M2FhNkFoeE54a2ozZlVXTTBLYV9ZdHVEQkRBdExr?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Onda Cero feature promotes the Camino Ignaciano's Catalan stretch (headline only)",
+    "summary_en": "Google News surfaced an Onda Cero article titled “Descubre el Camino ignaciano desde el corazón de Cataluña” (“Discover the Ignatian Way from the heart of Catalonia”). Only the headline is available via the unresolvable Google News interstitial link, so no further route detail is available.",
+    "source_text": "Descubre el Camino ignaciano desde el corazón de Cataluña - Onda Cero\n<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxQaUlabnplRXUtSUd2YS1RUTVFS3I2RThIR2VqMXJYWkhoQkJVbGRnUWlNUlkzSGFQXzBRMThnb2p6ajdMZzNBTEgtdHhJdUFKZDg2cV9aMFJxdHFDanVEUDRJOExSWnZzQmJES3p5ZHk0bERLZG9aUGJWQVhBcDRuY0FCSjQ0Nkg4Q0JpUnRwMU9hV2I5bU1ONDlWRzh4Ri12ZFRST25uVUFTT2ZEc3lkeU9UbUZzMjZmTzYzR0pJaVdYNUpSdjc5NHJCcHlGbmtlYWp0ZmxpOWt1WmPSAdsBQVVfeXFMTXVwMkxoMm5MN1Y3aGhOeVJXVURYWWdPQlM0Rlp2V3lKVHBBRVY5enFIYWdRNzBzbjhFbkc1R3FhWXhnS2tvWGFMLUwzRjZlMWllVFFiM0RxYmFHSVNqUjczTW5uRHhWZ0RXUU0yUEFXbm83UXJqendxT1F3VTNTaFV4akVYdk94bEo2U2VfTnc1RU9HQXJTNGQ3TDltSXBrZVRQSlV6OXRwMEFjdTd2NVNkcG51WFdld3psX002M2FhNkFoeE54a2ozZlVXTTBLYV9ZdHVEQkRBdExr?oc=5\" target=\"_blank\">Descubre el Camino ignaciano desde el corazón de Cataluña</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Onda Cero</font>\n(Published by Onda Cero)",
+    "relevance": 14,
+    "notify": "quiet",
+    "is_new": true,
+    "publisher": "Onda Cero",
+    "publisher_url": "https://www.ondacero.es"
+  },
+  {
+    "id": "3bd84636036876ff",
+    "detected_at": "2026-09-02T14:42:40Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza town news: Ceuta rally, Distrito 7 works, new sports centre — no Camino content",
+    "summary_en": "Zaragoza city council's news roundup covers a solidarity banner for Ceuta, the Distrito 7 redevelopment finishing in October, a new municipal sports centre opening in spring 2027, an Utrecht delegation visit, and local sports/culture events (the Milla Delicias race on 5 September, the Vive Latino festival, and a mental-health awareness walk on 7 September). None of it relates to the Camino Ignaciano.",
+    "source_text": "- \n                            El Ayuntamiento de Zaragoza coloca una pancarta en apoyo a Ceuta\n Las fuentes y la fachada del Ayuntamiento se iluminarán con los colores de la bandera de España + Seguir leyendo...\n- \n                            Zaragoza culminará en octubre las obras de Distrito 7 para convertir la antigua fábrica de Giesa en el gran ecosistem...\n La alcaldesa Natalia Chueca anuncia que el Ayuntamiento recibirá las obras el próximo mes tras un... + Seguir leyendo...\n- \n                            Las obras del Centro Deportivo Municipal Sur avanzan a buen ritmo para abrir sus puertas a final de la primavera de 2027\n La alcaldesa Natalia Chueca comprueba sobre el terreno la finalización de las infraestructuras su... + Seguir leyendo...\n- \n                            Una delegación de la ciudad de Utrecht visita Zaragoza para conocer la fortaleza del comercio local\n Esta iniciativa forma parte de la designación de Zaragoza, Utrecht y Barcelona como finalistas de... + Seguir leyendo...\n- \n                            El atletismo popular y profesional se da cita este sábado en la Milla Delicias Ibercaja Ciudad de Zaragoza\n La histórica prueba, la milla más veterana de España, se disputará el 5 de septiembre en su tradi... + Seguir leyendo...\n- \n                            Zaragoza consolida el Vive Latino como motor cultural y económico tras superar los 25 millones de euros de impacto\n La quinta edición alcanza un hito antes de abrir sus puertas al agotarse por primera vez los 15.0... + Seguir leyendo...\n- \n                            Zaragoza invita a dar \"Un paso + por la salud mental\" este domingo en el Parque Grande\n La Caminata por la Salud Mental, organizada por el Ayuntamiento de Zaragoza en colaboración con l... + Seguir leyendo...\n| Lun | Mar | Mier | Jue | Vie | Sab | Dom | \n|---|---|---|---|---|---|---|\n|  | 1 | 2 | 3 | 4 | 5 | 6 | \n| 7 | 8 | 9 | 10 | 11 | 12 | 13 | \n| 14 | 15 | 16 | 17 | 18 | 19 | 20 | \n| 21 | 22 | 23 | 24 | 25 | 26 | 27 | \n| 28 | 29 | 30 |  |  |  |  |",
+    "relevance": 4,
     "notify": "quiet",
     "is_new": true
   }
