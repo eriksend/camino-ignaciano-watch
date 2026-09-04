@@ -10,23 +10,23 @@
     "rank": 1
   },
   "alfa:level:tomorrow": {
-    "emit_count": 7,
-    "fingerprint": "3:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
+    "emit_count": 8,
+    "fingerprint": "4:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
     "first_seen": "2026-07-30T19:08:25+00:00",
-    "last_emitted": "2026-08-27T14:42:27+00:00",
-    "last_reason": "suppressed",
-    "last_seen": "2026-09-03T14:41:46+00:00",
+    "last_emitted": "2026-09-04T14:42:15+00:00",
+    "last_reason": "changed",
+    "last_seen": "2026-09-04T14:42:15+00:00",
     "peak_rank": 5,
-    "rank": 3
+    "rank": 4
   },
   "fwi:corridor": {
-    "emit_count": 10,
-    "fingerprint": "very extreme:9+",
+    "emit_count": 11,
+    "fingerprint": "extreme:9+",
     "first_seen": "2026-07-30T19:08:29+00:00",
-    "last_emitted": "2026-09-03T14:41:41+00:00",
+    "last_emitted": "2026-09-04T14:42:07+00:00",
     "last_reason": "changed",
-    "last_seen": "2026-09-03T14:41:41+00:00",
+    "last_seen": "2026-09-04T14:42:07+00:00",
     "peak_rank": 5,
-    "rank": 5
+    "rank": 4
   }
 }

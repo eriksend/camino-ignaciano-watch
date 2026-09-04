@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "source_name": "Pla ALFA — daily fire-risk level (Agents Rurals)",
+    "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "weight": 1.0,
+    "notify": "quiet",
+    "kind": "route_block",
+    "text": "Pla ALFA reaches level 4 on route comarques tomorrow, including level 4 in Anoia, Segarra. Municipalities at level 3+: Bellprat (Anoia, level 4), la Llacuna (Anoia, level 4), Orpí (Anoia, level 4), Sanaüja (Segarra, level 4), Sant Martí de Tous (Anoia, level 4), Santa Maria de Miralles (Anoia, level 4), Torrefeta i Florejacs (Segarra, level 4), Abrera (Baix Llobregat, level 3). Level 4 is the only level that can restrict access on foot to protected natural areas and heavily-frequented forest, and it is discretionary — applied by signed resolution — so a level 4 does not by itself mean a stage is shut. Check the closures list, which is authoritative for that."
+  }
+]
