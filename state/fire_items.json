@@ -2,16 +2,16 @@
   {
     "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
     "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "navarre",
+    "region": "catalonia",
     "tier": "official",
     "lang": "en",
     "weight": 0.9,
     "notify": "quiet",
     "kind": "fire_weather",
     "item_key": "fwi:corridor",
-    "fingerprint": "extreme:9+",
-    "stage": 12,
-    "stage_end": "Tudela",
-    "text": "EFFIS Fire Weather Index peaks at 63.1 — 'extreme' on the EFFIS scale — at Tudela (stage 12) on 2026-09-06, across a 3-day forecast from 2026-09-04. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Tudela (stage 12) 63, Igualada (stage 25) 63, Genevilla (stage 5) 62, Verdú (stage 23) 62, Igualada (stage 25) 62, Fuentes de Ebro (stage 16) 61. At 'very high' or above: stages [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+    "fingerprint": "very extreme:9+",
+    "stage": 25,
+    "stage_end": "Igualada",
+    "text": "EFFIS Fire Weather Index peaks at 75.0 — 'very extreme' on the EFFIS scale — at Igualada (stage 25) on 2026-09-07, across a 3-day forecast from 2026-09-05. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Igualada (stage 25) 75, Igualada (stage 25) 67, Igualada (stage 25) 63, Manresa (stage 27) 62, Genevilla (stage 5) 62, Verdú (stage 23) 61. At 'very high' or above: stages [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]. FWI anomaly at Igualada is +12.9 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
   }
 ]
