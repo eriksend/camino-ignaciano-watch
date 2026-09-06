@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "source_name": "Pla ALFA — natural-space closures (Agents Rurals)",
+    "url": "https://interior.gencat.cat/ca/arees_dactuacio/agents-rurals/pla-alfa/",
+    "region": "catalonia",
+    "tier": "official",
+    "lang": "ca",
+    "weight": 0.6,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "text": "Pla ALFA currently closes 2 natural space(s) in Catalonia, none on the route: Mont-Roig, Baronia de Rialb. Recorded as a base rate for how often access closures are invoked."
+  }
+]

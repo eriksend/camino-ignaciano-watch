@@ -1,18 +1,20 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-09-05T14:42:12+00:00",
+  "alfa_run_at": "2026-09-06T14:41:49+00:00",
   "baselined": 0,
-  "changed_quiet": 40,
+  "changed_quiet": 26,
   "deferred": [],
   "deferred_items": 0,
-  "failed": [],
+  "failed": [
+    "Aragón — NAPIF daily alert bulletin (PDF)"
+  ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-09-05T14:42:07+00:00",
-  "new_items": 3,
+  "fwi_run_at": "2026-09-06T14:41:44+00:00",
+  "new_items": 2,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
-  "rebaselined": 1,
-  "run_at": "2026-09-05T14:41:59+00:00",
+  "rebaselined": 6,
+  "run_at": "2026-09-06T14:41:36+00:00",
   "skipped": 0,
   "sources_total": 50
 }

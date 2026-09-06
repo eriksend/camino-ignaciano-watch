@@ -1,11 +1,11 @@
 {
   "alfa:closures:off_route": {
-    "emit_count": 2,
-    "fingerprint": "Baronia de Rialb,Montsec d'Ares,Montsec de Rubies,Ribera_salada",
+    "emit_count": 3,
+    "fingerprint": "Baronia de Rialb,Mont-Roig",
     "first_seen": "2026-07-30T19:08:25+00:00",
-    "last_emitted": "2026-08-02T14:43:40+00:00",
+    "last_emitted": "2026-09-06T14:41:49+00:00",
     "last_reason": "changed",
-    "last_seen": "2026-08-02T14:43:40+00:00",
+    "last_seen": "2026-09-06T14:41:49+00:00",
     "peak_rank": 1,
     "rank": 1
   },
@@ -15,18 +15,18 @@
     "first_seen": "2026-07-30T19:08:25+00:00",
     "last_emitted": "2026-09-04T14:42:15+00:00",
     "last_reason": "suppressed",
-    "last_seen": "2026-09-05T14:42:12+00:00",
+    "last_seen": "2026-09-06T14:41:49+00:00",
     "peak_rank": 5,
     "rank": 4
   },
   "fwi:corridor": {
-    "emit_count": 12,
-    "fingerprint": "very extreme:9+",
+    "emit_count": 13,
+    "fingerprint": "extreme:9+",
     "first_seen": "2026-07-30T19:08:29+00:00",
-    "last_emitted": "2026-09-05T14:42:07+00:00",
+    "last_emitted": "2026-09-06T14:41:44+00:00",
     "last_reason": "changed",
-    "last_seen": "2026-09-05T14:42:07+00:00",
+    "last_seen": "2026-09-06T14:41:44+00:00",
     "peak_rank": 5,
-    "rank": 5
+    "rank": 4
   }
 }
