@@ -1,20 +1,20 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-09-06T14:41:49+00:00",
+  "alfa_run_at": "2026-09-07T14:42:22+00:00",
   "baselined": 0,
-  "changed_quiet": 26,
+  "changed_quiet": 38,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
-    "Aragón — NAPIF daily alert bulletin (PDF)"
+    "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-09-06T14:41:44+00:00",
-  "new_items": 2,
+  "fwi_run_at": "2026-09-07T14:42:14+00:00",
+  "new_items": 3,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 6,
-  "run_at": "2026-09-06T14:41:36+00:00",
+  "run_at": "2026-09-07T14:42:04+00:00",
   "skipped": 0,
   "sources_total": 50
 }
