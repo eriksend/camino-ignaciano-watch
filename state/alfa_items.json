@@ -7,7 +7,7 @@
     "lang": "ca",
     "weight": 1.0,
     "notify": "quiet",
-    "kind": "fire_weather",
-    "text": "Pla ALFA reaches level 3 on route comarques tomorrow. Municipalities at level 3+: Abrera (Baix Llobregat, level 3), Agramunt (Urgell, level 3), Aguilar de Segarra (Bages, level 3), Aitona (Segrià, level 3), Almatret (Segrià, level 3), Argençola (Anoia, level 3), Artés (Bages, level 3), Avinyó (Bages, level 3). Level 3 prohibits open flame everywhere, suspends authorised stubble/pasture/pruning burns, and bans spark-generating machinery on forest land and within 500 m — but it does NOT restrict access on foot. A pilgrim on a marked path breaks no level-3 rule."
+    "kind": "route_block",
+    "text": "Pla ALFA reaches level 5 on route comarques tomorrow, including level 4 in Anoia, Bages, Baix Llobregat, Pla d'Urgell, Segarra, Segrià, Urgell. Municipalities at level 3+: Abrera (Baix Llobregat, level 5), Agramunt (Urgell, level 5), Aguilar de Segarra (Bages, level 5), Aitona (Segrià, level 5), Albatàrrec (Segrià, level 5), Alcanó (Segrià, level 5), Alcarràs (Segrià, level 5), Alcoletge (Segrià, level 5). Level 4 is the only level that can restrict access on foot to protected natural areas and heavily-frequented forest, and it is discretionary — applied by signed resolution — so a level 4 does not by itself mean a stage is shut. Check the closures list, which is authoritative for that."
   }
 ]
