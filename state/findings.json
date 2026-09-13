@@ -4934,7 +4934,7 @@
     "notify": "quiet",
     "publisher": "IMDb",
     "publisher_url": "https://www.imdb.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "cd1f39f0cc5ed5fd",
@@ -4949,6 +4949,38 @@
     "source_text": "- \n                            El otoño trae a Harinera ZGZ música, danza, teatro, circo y talleres para todos los públicos\n La programación que se desarrollará entre septiembre y diciembre en el centro de cultura accesibl... + Seguir leyendo...\n- \n                            Miles de personas disfrutan del Día del Deporte en la Calle en la Plaza del Pilar\n El Ayuntamiento de Zaragoza consolida por segundo año consecutivo el formato de dos jornadas, tan... + Seguir leyendo...",
     "relevance": 3,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "624bb2c83904b5d3",
+    "detected_at": "2026-09-13T14:42:05Z",
+    "source_name": "Ayuntamiento de Calahorra — Noticias",
+    "url": "https://www.calahorra.es/noticias",
+    "region": "rioja",
+    "tier": "town",
+    "lang": "es",
+    "title": "Calahorra town news: Civil Protection volunteers mark 25th anniversary",
+    "summary_en": "Calahorra's mayor and Civil Protection councillor held a ceremony marking 25 years of the town's Civil Protection volunteer corps, with a vehicle/equipment exhibition and medals for volunteers with 5-20 years of service; the group was also recognized for helping with post-flood cleanup in Albal after the Valencia DANA. No Camino Ignaciano content.",
+    "source_text": "Protección Civil de Calahorra celebra sus 25 años de servicio a la ciudad con un homenaje a todos sus voluntarios\n- La celebración también ha incluido exhibiciones de los cuerpos de seguridad y emergencias en el recinto ferial\n- Mónica Arceiz ha agradecido a los 120 voluntarios de estos 25 años “su tiempo, generosidad, disponibilidad y vocación de servicio, y por estar siempre cuando Calahorra os necesita”\nLa alcaldesa de Calahorra, Mónica Arceiz, y la concejala de Seguridad, Reyes Zapata, han asistido a los actos conmemorativos de la celebración del 25 aniversario de la agrupación de voluntarios de Protección Civil de Calahorra.\nPrimero, se han acercado al aparcamiento de la Era Alta para saludar a todos los efectivos de los cuerpos de seguridad, emergencias y voluntarios de La Rioja y Navarra participantes en esta jornada festiva.\nDurante toda la mañana, el recinto ferial ha acogido una amplia muestra de vehículos y equipos de seguridad y emergencia, así como exhibiciones y demostraciones de Policía Nacional, Guardia Civil, Protección Civil, SOS Rioja y Cruz Roja.\nLos ciudadanos presentes allí han podido conocer de cerca el trabajo que desarrollan estos profesionales y la coordinación que existe entre ellos ante diferentes situaciones de emergencia. De una manera didáctica han visto la labor que desarrollan diariamente estos los profesionales y voluntarios de los servicios de seguridad y emergencias, así han ofrecido conocimientos y recomendaciones útiles para actuar ante determinadas situaciones de peligro.\nDespués, la celebración ha continuado en el pabellón Europa, donde se ha rendido un homenaje a los voluntarios de la agrupación de Protección Civil de Calahorra y se han entregado diferentes distinciones y medallas de reconocimiento.\nDesde su creación en 2001, 120 personas han formado parte de la agrupación calagurritana, contribuyendo con su tiempo, formación y compromiso a mejorar la seguridad y la atención a la ciudadanía y convirtiéndose en un apoyo fundamental para los servicios de emergencia y para la organización segura de numerosos acontecimientos que tienen lugar en Calahorra.\nLa alcaldesa de Calahorra, Mónica Arceiz, ha destacado durante su intervención que este aniversario supone, sobre todo, una celebración de las personas que han hecho posible la trayectoria de la agrupación. “Porque estos 25 años no pertenecen solamente a quienes hoy estáis aquí. Pertenecen también a todos los que estuvieron antes. Todos habéis dejado vuestra huella en Protección Civil”.\n“Vosotros, las 120 personas que habéis escrito la historia de Protección Civil de Calahorra, sois de esas personas que simplemente ayudan porque quieren ayudar. Un día decidisteis dar un paso adelante y dedicar parte de vuestro tiempo, de manera altruista y desinteresada, a ayudar a los demás. Porque ser voluntario de Protección Civil significa estar cuando se os necesita”, ha subrayado.\nHa continuado “durante 25 años habéis demostrado que la solidaridad no se dice: se practica. Que el compromiso no se promete: se demuestra. Y que estar al lado de los demás, especialmente cuando más lo necesitan, es una de las formas más bonitas de servir a una ciudad”.\nArceiz ha agradecido a todos los voluntarios de estos 25 años “su tiempo, generosidad, disponibilidad y vocación de servicio, y por estar siempre cuando Calahorra os necesita”.\nTambién, la alcaldesa ha señalado que “nunca falten personas como vosotros porque mientras haya alguien dispuesto a ponerse ese uniforme naranja para ayudar a otro, habrá solidaridad, habrá esperanza y habrá futuro para Calahorra”.\nHa cerrado su intervención felicitando a todos los voluntarios y destacando el valor de su compromiso: “En una sociedad que a veces parece mirar demasiado hacia uno mismo, vosotros sois el ejemplo de todo lo contrario: personas que deciden dedicar su tiempo a los demás sin pedir nada a cambio”.\nLa celebración ha incluido la entrega de medallas de mérito y reconocimiento a la antigüedad y constancia en el servicio a varios voluntarios por sus cinco, diez, quince y veinte años de trayectoria en Protección Civil.\nPor cinco años de servicio han sido reconocidos Jonathan Pison, Juan Revuelta, Sara Geovanna Alvear, Kakhaber Gogishvili, Francisco Javier Castillo y Francisco Javier Alarcón. Por diez años, Abdesalam El Manraqui; por quince años, Gabino Gutiérrez; y por veinte años de servicio, Gerardo Garrido, actual jefe de la agrupación calagurritana, que además ha recibido la medalla de mérito, honorífica y a la constancia en su categoría de bronce, como reconocimiento a su trayectoria al servicio de todos.\nAsimismo, se ha reconocido a los voluntarios de Protección Civil de Calahorra y a los operarios del parque municipal de obras y servicios que se desplazaron hasta Albal para colaborar en las tareas de limpieza y reconstrucción tras la Dana de Valencia con un distintivo honorífico.\nCon este acto, se ha querido rendir homenaje a los 25 años de compromiso, solidaridad y servicio de la agrupación de voluntarios de Protección Civil de Calahorra y a todas las personas que, a lo largo de este cuarto de siglo, han contribuido a construir su historia.",
+    "relevance": 3,
+    "notify": "quiet",
     "is_new": true
+  },
+  {
+    "id": "1aa88817fce73a13",
+    "detected_at": "2026-09-13T14:42:05Z",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPSzFlRUc4VE1UMGp1dURIMFhITjVhTTdTZ01Ea01CcFhnLUhpTWRYaW1wMmRBNnlzREhkWGxXbFdyWFRWOHd3emJGaWhxWkwzUWRFOFcxMlFrcWc2Ukh2QmpKTG8zcF82UVpDRnZmckJZd1BwclhLa3RLdXZaR01HNE5CUHpNWjlycjB3MDRVLTI2eGVWTGtOT0d1cDQ0OGhMTkZhckx5UDFocTV2Vnk3SGEtVF85SlZSci1PNHBIQ01tVmZiYnc?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "Off-topic: Ateneo de Manila alumni convention (keyword match only)",
+    "summary_en": "This “Ignatian Camino” Google News hit is an Ateneo de Manila University announcement that its officials attended the 7th Ateneo Alumni Association of North America (AAANA) convention — unrelated to the physical Camino Ignaciano pilgrimage route in Spain.",
+    "source_text": "Ateneo de Manila University officials attend the 7th Ateneo Alumni Association of North America (AAANA) Convention - Ateneo de Manila University\n<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPSzFlRUc4VE1UMGp1dURIMFhITjVhTTdTZ01Ea01CcFhnLUhpTWRYaW1wMmRBNnlzREhkWGxXbFdyWFRWOHd3emJGaWhxWkwzUWRFOFcxMlFrcWc2Ukh2QmpKTG8zcF82UVpDRnZmckJZd1BwclhLa3RLdXZaR01HNE5CUHpNWjlycjB3MDRVLTI2eGVWTGtOT0d1cDQ0OGhMTkZhckx5UDFocTV2Vnk3SGEtVF85SlZSci1PNHBIQ01tVmZiYnc?oc=5\" target=\"_blank\">Ateneo de Manila University officials attend the 7th Ateneo Alumni Association of North America (AAANA) Convention</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ateneo de Manila University</font>\n(Published by Ateneo de Manila University)",
+    "relevance": 2,
+    "notify": "quiet",
+    "is_new": true,
+    "publisher": "Ateneo de Manila University",
+    "publisher_url": "https://www.ateneo.edu"
   }
 ]
