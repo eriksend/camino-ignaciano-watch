@@ -15,18 +15,18 @@
     "first_seen": "2026-07-30T19:08:25+00:00",
     "last_emitted": "2026-09-09T14:41:59+00:00",
     "last_reason": "suppressed",
-    "last_seen": "2026-09-10T14:42:09+00:00",
+    "last_seen": "2026-09-14T14:42:09+00:00",
     "peak_rank": 5,
     "rank": 3
   },
   "fwi:corridor": {
-    "emit_count": 15,
-    "fingerprint": "extreme:9+",
+    "emit_count": 16,
+    "fingerprint": "very extreme:9+",
     "first_seen": "2026-07-30T19:08:29+00:00",
-    "last_emitted": "2026-09-10T14:42:03+00:00",
-    "last_reason": "suppressed",
-    "last_seen": "2026-09-13T14:41:22+00:00",
+    "last_emitted": "2026-09-14T14:42:05+00:00",
+    "last_reason": "changed",
+    "last_seen": "2026-09-14T14:42:05+00:00",
     "peak_rank": 5,
-    "rank": 4
+    "rank": 5
   }
 }
