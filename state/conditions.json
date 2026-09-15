@@ -15,7 +15,7 @@
     "first_seen": "2026-07-30T19:08:25+00:00",
     "last_emitted": "2026-09-09T14:41:59+00:00",
     "last_reason": "suppressed",
-    "last_seen": "2026-09-14T14:42:09+00:00",
+    "last_seen": "2026-09-15T14:42:12+00:00",
     "peak_rank": 5,
     "rank": 3
   },
@@ -24,8 +24,8 @@
     "fingerprint": "very extreme:9+",
     "first_seen": "2026-07-30T19:08:29+00:00",
     "last_emitted": "2026-09-14T14:42:05+00:00",
-    "last_reason": "changed",
-    "last_seen": "2026-09-14T14:42:05+00:00",
+    "last_reason": "suppressed",
+    "last_seen": "2026-09-15T14:42:06+00:00",
     "peak_rank": 5,
     "rank": 5
   }
