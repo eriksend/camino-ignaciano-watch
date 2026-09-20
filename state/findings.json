@@ -5163,7 +5163,7 @@
     "source_text": "Agricultura destinará 4,9 millones a la recuperación de las explotaciones afectadas por la dermatosis nodular contagiosa\nACN\nLa nueva línea de ayudas servirá para compensar las pérdidas de ingresos y regenerar potencial productivo\nLas altas temperaturas del verano favorecen el crecimiento del fruto y adelantan una semana la recolección",
     "relevance": 18,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "e0a4d1f76c87f7a6",
@@ -5176,6 +5176,21 @@
     "title": "Calahorra town news: Feria del Pimiento y la Conserva, 25-27 Sep",
     "summary_en": "Calahorra will hold its Feria del Pimiento y la Conserva (pepper and preserves fair) from 25-27 September, with markets, guided tours, tastings and a short-film festival. No content relevant to the Camino Ignaciano.",
     "source_text": "La Feria del Pimiento y la Conserva se celebrará del 25 al 27 de septiembre con una programación cultural y gastronómica para todas las edades\n- Mercado, ruta de pinchos, visitas guiadas, charlas y talleres son las principales actividades que se desarrollarán durante el fin de semana",
+    "relevance": 3,
+    "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "3e5503638c5132ca",
+    "detected_at": "2026-09-20T14:42:25Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: monument lighting, back-to-school sales, mobility summit",
+    "summary_en": "The Zaragoza city council news feed reports the first phase of a monumental lighting plan (new ornamental lighting for the city walls, La Zuda tower and the Santo Domingo school), record back-to-school retail sales (€19.3 million from over 66,500 shoppers), and the close of the second Mobility Summit. None of this concerns the Camino Ignaciano route or pilgrim facilities.",
+    "source_text": "- \n                            Zaragoza culmina la primera fase de su Plan Especial de Iluminación Monumental y ensalza el valor de 8 joyas de su pa...\n El Consistorio estrena la nueva luz ornamental de las murallas, La Zuda y el Colegio de Santo Dom... + Seguir leyendo...\n- \n                            La campaña Vuelta al cole de Volveremos genera 19,3 millones de euros en ventas en el comercio de Zaragoza\n Más de 66.500 usuarios únicos han realizado compras durante esta campaña, generando unas ventas p... + Seguir leyendo...\n- \n                            Zaragoza cierra la II edición del Mobility Summit con nuevas soluciones para avanzar hacia una movilidad sin barreras\n Seis equipos multidisciplinares han trabajado durante los días 18 y 19 de septiembre en el II Hac... + Seguir leyendo...",
     "relevance": 3,
     "notify": "quiet",
     "is_new": true
