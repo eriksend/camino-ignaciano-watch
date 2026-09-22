@@ -1,17 +1,1 @@
-[
-  {
-    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "rioja",
-    "tier": "official",
-    "lang": "en",
-    "weight": 0.9,
-    "notify": "quiet",
-    "kind": "fire_weather",
-    "item_key": "fwi:corridor",
-    "fingerprint": "extreme:9+",
-    "stage": 11,
-    "stage_end": "Alfaro",
-    "text": "EFFIS Fire Weather Index peaks at 67.1 — 'extreme' on the EFFIS scale — at Alfaro (stage 11) on 2026-09-22, across a 3-day forecast from 2026-09-21. 27 stage endpoint(s) reach 'high' (>= 21.3) or worse: Alfaro (stage 11) 67, Alfaro (stage 11) 65, Calahorra (stage 10) 63, Tudela (stage 12) 63, Calahorra (stage 10) 61, Gallur (stage 13) 59. At 'very high' or above: stages [3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27]. FWI anomaly at Alfaro is +13.3 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-  }
-]
+[]
