@@ -5409,6 +5409,21 @@
     "notify": "quiet",
     "publisher": "Independent Catholic News",
     "publisher_url": "https://www.indcatholicnews.com",
+    "is_new": false
+  },
+  {
+    "id": "d3717f39d60066fb",
+    "detected_at": "2026-09-27T14:38:42Z",
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "title": "Segre: Lleida farm-sector employment up 5% in August",
+    "summary_en": "Segre reports Lleida farm-sector employment (affiliations) rose 5% in August, now 37% of Catalonia's total; the regional government credits it with sustaining economic activity.",
+    "source_text": "LABORAL\nLleida suma un 5% más de afiliaciones agrarias en agosto\nSegre, Agències\nRepresenta el 37% de las de Catalunya. El Govern destaca la capacidad para “mantener y generar actividad económica”",
+    "relevance": 5,
+    "notify": "quiet",
     "is_new": true
   }
 ]

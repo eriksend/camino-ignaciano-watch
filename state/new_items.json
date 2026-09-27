@@ -1,14 +1,12 @@
 [
   {
-    "source_name": "Google News — \"Ignatian Camino\" (EN)",
-    "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5fUTg1dVJoVDdIZWlDaS1IN0J2THFQOFR1M0p5S1dMRXRIaWU2QllKb0c2QmM0a2x5M19oWlFLcnlHNGRLUDZ4ZVVpR24xVVgzQmhhdQ?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "en",
-    "weight": 0.9,
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "weight": 1.4,
     "notify": "quiet",
-    "publisher": "Independent Catholic News",
-    "publisher_url": "https://www.indcatholicnews.com",
-    "text": "Ignatian Camino in the Basque Country - Independent Catholic News\n<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE5fUTg1dVJoVDdIZWlDaS1IN0J2THFQOFR1M0p5S1dMRXRIaWU2QllKb0c2QmM0a2x5M19oWlFLcnlHNGRLUDZ4ZVVpR24xVVgzQmhhdQ?oc=5\" target=\"_blank\">Ignatian Camino in the Basque Country</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Independent Catholic News</font>\n(Published by Independent Catholic News)"
+    "text": "LABORAL\nLleida suma un 5% más de afiliaciones agrarias en agosto\nSegre, Agències\nRepresenta el 37% de las de Catalunya. El Govern destaca la capacidad para “mantener y generar actividad económica”"
   }
 ]
