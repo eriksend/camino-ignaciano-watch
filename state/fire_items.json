@@ -1,17 +1,1 @@
-[
-  {
-    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
-    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "rioja",
-    "tier": "official",
-    "lang": "en",
-    "weight": 0.9,
-    "notify": "quiet",
-    "kind": "fire_weather",
-    "item_key": "fwi:corridor",
-    "fingerprint": "very high:9+",
-    "stage": 9,
-    "stage_end": "Alcanadre",
-    "text": "EFFIS Fire Weather Index peaks at 48.3 — 'very high' on the EFFIS scale — at Alcanadre (stage 9) on 2026-09-30, across a 3-day forecast from 2026-09-28. 26 stage endpoint(s) reach 'high' (>= 21.3) or worse: Alcanadre (stage 9) 48, Fraga (stage 20) 47, Logroño (stage 8) 46, Alcanadre (stage 9) 46, Calahorra (stage 10) 43, Candasnos (stage 19) 43. At 'very high' or above: stages [3, 7, 8, 9, 10, 11, 18, 19, 20, 23]. FWI anomaly at Alcanadre is +8.4 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
-  }
-]
+[]
