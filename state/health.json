@@ -1,20 +1,21 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-09-29T15:41:32+00:00",
+  "alfa_run_at": "2026-09-30T14:37:59+00:00",
   "baselined": 0,
-  "changed_quiet": 37,
+  "changed_quiet": 26,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
-    "Ayuntamiento de Zaragoza — Noticias"
+    "Ayuntamiento de Zaragoza — Noticias",
+    "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-09-29T15:41:29+00:00",
+  "fwi_run_at": "2026-09-30T14:37:54+00:00",
   "new_items": 1,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 2,
-  "run_at": "2026-09-29T15:41:21+00:00",
+  "run_at": "2026-09-30T14:37:47+00:00",
   "skipped": 0,
   "sources_total": 50
 }
