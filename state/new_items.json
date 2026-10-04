@@ -1,24 +1,12 @@
 [
   {
-    "source_name": "Aragón — Quemas: cuándo puedo realizar las quemas",
-    "url": "https://www.aragon.es/prevencion-y-extincion-de-incendios-forestales/quemas/cuando-puedo-realizar-las-quemas",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
     "region": "aragon",
-    "tier": "official",
+    "tier": "town",
     "lang": "es",
-    "weight": 1.0,
-    "notify": "quiet",
-    "text": "                          ¿Tienes dudas sobre los usos del fuego? Consulta las preguntas frecuentes sobre usos del fuego\n                          ¿Necesitas información sobre trámites y autorizaciones? Consulta las preguntas frecuentes sobre trámites"
-  },
-  {
-    "source_name": "Google News — \"Ignatian Camino\" (EN)",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNek1XaWppTWQxRXoyQTFJMWE3NnBmTWFhMHQ4MFdaeThjeHZoOE5UZFVoc0I0aHU2TFVJR1JKQml2UzQ3R2RsUmNXOHRoVWlqSGQzVS1CTXdnVzAycklSNHBTMDZTbFlYS0NyVTJZNjNSdHdNR2VjSlNXNUlZOFN3YjFLUdIBiAFBVV95cUxNRDVZVThMYTBFVEFkNmNzQTNWRlVpM0RTNWR6YlJ4U2dOUVR1ejN3WVJpeDJhdmFyMGZ6QnE1ZEpKb3ZNcnZobklvTkFSUGY4eGE3dGRUVUswRm1mV0RYZjY2XzdhQ0pDV1pSSTU0TnR4aVp5OWRwckNQMkliNFlwZm9iT1FlR21a?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "en",
     "weight": 0.9,
     "notify": "quiet",
-    "publisher": "Diari ARA",
-    "publisher_url": "https://en.ara.cat",
-    "text": "The Ignatian Way no longer exists! - Diari ARA\n<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNek1XaWppTWQxRXoyQTFJMWE3NnBmTWFhMHQ4MFdaeThjeHZoOE5UZFVoc0I0aHU2TFVJR1JKQml2UzQ3R2RsUmNXOHRoVWlqSGQzVS1CTXdnVzAycklSNHBTMDZTbFlYS0NyVTJZNjNSdHdNR2VjSlNXNUlZOFN3YjFLUdIBiAFBVV95cUxNRDVZVThMYTBFVEFkNmNzQTNWRlVpM0RTNWR6YlJ4U2dOUVR1ejN3WVJpeDJhdmFyMGZ6QnE1ZEpKb3ZNcnZobklvTkFSUGY4eGE3dGRUVUswRm1mV0RYZjY2XzdhQ0pDV1pSSTU0TnR4aVp5OWRwckNQMkliNFlwZm9iT1FlR21a?oc=5\" target=\"_blank\">The Ignatian Way no longer exists!</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Diari ARA</font>\n(Published by Diari ARA)"
+    "text": "- Zaragoza ultima la gran red de saneamiento del Parque del Tío Jorge y prepara el terreno para las nuevas pavimentaciones\nLa instalación del colector principal de 1.500 milímetros entra en su recta final y el Consistori... + Seguir leyendo...\n- Los alcaldes Natalia Chueca y Martínez-Almeida estrechan lazos entre Madrid y Zaragoza\nMadrid respalda la candidatura de Zaragoza a Capital Verde Europea y ambas ciudades refuerzan su ... + Seguir leyendo..."
   }
 ]

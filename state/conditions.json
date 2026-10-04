@@ -20,12 +20,12 @@
     "rank": 3
   },
   "fwi:corridor": {
-    "emit_count": 23,
-    "fingerprint": "high:3-8",
+    "emit_count": 24,
+    "fingerprint": "high:1-2",
     "first_seen": "2026-07-30T19:08:29+00:00",
-    "last_emitted": "2026-10-02T14:37:53+00:00",
-    "last_reason": "suppressed",
-    "last_seen": "2026-10-03T14:37:29+00:00",
+    "last_emitted": "2026-10-04T14:37:14+00:00",
+    "last_reason": "changed",
+    "last_seen": "2026-10-04T14:37:14+00:00",
     "peak_rank": 5,
     "rank": 2
   }

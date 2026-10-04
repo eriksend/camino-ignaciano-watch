@@ -5579,7 +5579,7 @@
     "source_text": "                          ¿Tienes dudas sobre los usos del fuego? Consulta las preguntas frecuentes sobre usos del fuego\n                          ¿Necesitas información sobre trámites y autorizaciones? Consulta las preguntas frecuentes sobre trámites",
     "relevance": 8,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "072450dd801d6ff3",
@@ -5594,8 +5594,41 @@
     "source_text": "The Ignatian Way no longer exists! - Diari ARA\n<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNek1XaWppTWQxRXoyQTFJMWE3NnBmTWFhMHQ4MFdaeThjeHZoOE5UZFVoc0I0aHU2TFVJR1JKQml2UzQ3R2RsUmNXOHRoVWlqSGQzVS1CTXdnVzAycklSNHBTMDZTbFlYS0NyVTJZNjNSdHdNR2VjSlNXNUlZOFN3YjFLUdIBiAFBVV95cUxNRDVZVThMYTBFVEFkNmNzQTNWRlVpM0RTNWR6YlJ4U2dOUVR1ejN3WVJpeDJhdmFyMGZ6QnE1ZEpKb3ZNcnZobklvTkFSUGY4eGE3dGRUVUswRm1mV0RYZjY2XzdhQ0pDV1pSSTU0TnR4aVp5OWRwckNQMkliNFlwZm9iT1FlR21a?oc=5\" target=\"_blank\">The Ignatian Way no longer exists!</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Diari ARA</font>\n(Published by Diari ARA)",
     "relevance": 45,
     "notify": "quiet",
-    "is_new": true,
+    "is_new": false,
     "publisher": "Diari ARA",
     "publisher_url": "https://en.ara.cat"
+  },
+  {
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "id": "1eabb906f13d3d75",
+    "detected_at": "2026-10-04T14:37:27Z",
+    "title": "Zaragoza city news: Tío Jorge park sewer works, Madrid backs Zaragoza green capital bid",
+    "summary_en": "Zaragoza city council news covers sewer main works at Parque del Tío Jorge and Madrid's support for Zaragoza's European Green Capital bid. Nothing tied to the Camino.",
+    "source_text": "- Zaragoza ultima la gran red de saneamiento del Parque del Tío Jorge y prepara el terreno para las nuevas pavimentaciones\nLa instalación del colector principal de 1.500 milímetros entra en su recta final y el Consistori... + Seguir leyendo...\n- Los alcaldes Natalia Chueca y Martínez-Almeida estrechan lazos entre Madrid y Zaragoza\nMadrid respalda la candidatura de Zaragoza a Capital Verde Europea y ambas ciudades refuerzan su ... + Seguir leyendo...",
+    "relevance": 5,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "basque",
+    "tier": "official",
+    "lang": "en",
+    "id": "4553dfdefe873e32",
+    "detected_at": "2026-10-04T14:37:27Z",
+    "title": "EFFIS FWI 'high' (22.3) at Araia (stage 3) — off-season October reading",
+    "summary_en": "EFFIS forecasts a Fire Weather Index of 22.3 ('high') at Araia (stage 3) on 2026-10-06, +3.3 above the seasonal norm. Only one endpoint reaches 'high'; this is an autumn reading, outside the walk window.",
+    "source_text": "EFFIS Fire Weather Index peaks at 22.3 — 'high' on the EFFIS scale — at Araia (stage 3) on 2026-10-06, across a 3-day forecast from 2026-10-04. 1 stage endpoint(s) reach 'high' (>= 21.3) or worse: Araia (stage 3) 22. FWI anomaly at Araia is +3.3 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70.",
+    "relevance": 10,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 3,
+    "stage_end": "Araia",
+    "is_new": true
   }
 ]
