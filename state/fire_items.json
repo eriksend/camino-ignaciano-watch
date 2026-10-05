@@ -2,16 +2,16 @@
   {
     "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
     "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "basque",
+    "region": "rioja",
     "tier": "official",
     "lang": "en",
     "weight": 0.9,
     "notify": "quiet",
     "kind": "fire_weather",
     "item_key": "fwi:corridor",
-    "fingerprint": "high:1-2",
-    "stage": 3,
-    "stage_end": "Araia",
-    "text": "EFFIS Fire Weather Index peaks at 22.3 — 'high' on the EFFIS scale — at Araia (stage 3) on 2026-10-06, across a 3-day forecast from 2026-10-04. 1 stage endpoint(s) reach 'high' (>= 21.3) or worse: Araia (stage 3) 22. FWI anomaly at Araia is +3.3 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+    "fingerprint": "high:3-8",
+    "stage": 9,
+    "stage_end": "Alcanadre",
+    "text": "EFFIS Fire Weather Index peaks at 33.5 — 'high' on the EFFIS scale — at Alcanadre (stage 9) on 2026-10-06, across a 3-day forecast from 2026-10-05. 3 stage endpoint(s) reach 'high' (>= 21.3) or worse: Alcanadre (stage 9) 34, Araia (stage 3) 24, Cervera (stage 24) 24. FWI anomaly at Alcanadre is +4.3 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
   }
 ]
