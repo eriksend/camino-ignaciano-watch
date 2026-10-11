@@ -5866,5 +5866,20 @@
     "relevance": 4,
     "notify": "quiet",
     "is_new": false
+  },
+  {
+    "id": "31f63fed2dbc1150",
+    "detected_at": "2026-10-11T14:37:47Z",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza news: Pilar festival coverage; Zaragoza named European Green Capital 2028",
+    "summary_en": "Zaragoza city news is dominated by Fiestas del Pilar items (over 18,200 at the Virgen del Pilar procession, pregón, safety operation, Ibercaja Gold Medal) and Zaragoza's selection as European Green Capital 2028. Nothing on the Camino, route, lodging or transport.",
+    "source_text": "- Más de 18.200 personas asisten a la subida de la Virgen del Pilar como previa a la Ofrenda de Flores\nLa alcaldesa de Zaragoza, Natalia Chueca, ha participado en este acto solemne que se ha consolida... + Seguir leyendo...\n- Los Bomberos de Zaragoza encienden la emoción de las Fiestas del Pilar con un pregón lleno de sorpresas y una puesta ...\nRepresentantes del Servicio Contra Incendios, de Salvamento y Protección Civil del Ayuntamiento i... + Seguir leyendo...\n- Zaragoza entrega la Medalla de Oro a Ibercaja en su 150 aniversario y las distinciones de la ciudad\nLa alcaldesa de la ciudad, Natalia Chueca, se ha referido a la Fundación Ibercaja y a Ibercaja Ba... + Seguir leyendo...\n- Una de las torres del Pilar cobra vida con un videomapping dedicado al origen de las Fiestas del Pilar\nEl audiovisual ha estrenado justo antes del Pregón de Fiestas y se repetirá en diferentes horario... + Seguir leyendo...\n- Zaragoza presenta esta tarde en Guimaraes su candidatura para ser Capital Verde Europea 2028\nLa delegación que defenderá hoy ante el jurado el proyecto de Zaragoza está encabezada por la alc... + Seguir leyendo...\n- Zaragoza activa el operativo municipal para garantizar la seguridad en las Fiestas del Pilar\nEl Puesto de Mando Avanzado coordinará los servicios de emergencia y seguridad y supervisará la a... + Seguir leyendo...\n- El pregón impulsa un multitudinario arranque del Pilar, con cerca de medio millón de participaciones en dos días\nLos actos del pregón suman 204.700 asistencias, con el desfile «Zaragoza Campeona» como gran prot... + Seguir leyendo...\n- Zaragoza hace historia y se convierte en Capital Verde Europea 2028, el mayor reconocimiento europeo a las políticas ...\nEl jurado internacional reconoce la candidatura zaragozana, que competía con Aalborg, Bielsko-Bia... + Seguir leyendo...\n- El Tubo estrena la restaurada imagen en Estébanes 12 tras una larga intervención de emergencia avalada por los tribun...\nLadrillo a la vista y forjas centenarias vuelven a brillar en el corazón turístico de la ciudad, ... + Seguir leyendo...",
+    "relevance": 5,
+    "notify": "quiet",
+    "is_new": true
   }
 ]
