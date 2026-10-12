@@ -5880,6 +5880,38 @@
     "source_text": "- Más de 18.200 personas asisten a la subida de la Virgen del Pilar como previa a la Ofrenda de Flores\nLa alcaldesa de Zaragoza, Natalia Chueca, ha participado en este acto solemne que se ha consolida... + Seguir leyendo...\n- Los Bomberos de Zaragoza encienden la emoción de las Fiestas del Pilar con un pregón lleno de sorpresas y una puesta ...\nRepresentantes del Servicio Contra Incendios, de Salvamento y Protección Civil del Ayuntamiento i... + Seguir leyendo...\n- Zaragoza entrega la Medalla de Oro a Ibercaja en su 150 aniversario y las distinciones de la ciudad\nLa alcaldesa de la ciudad, Natalia Chueca, se ha referido a la Fundación Ibercaja y a Ibercaja Ba... + Seguir leyendo...\n- Una de las torres del Pilar cobra vida con un videomapping dedicado al origen de las Fiestas del Pilar\nEl audiovisual ha estrenado justo antes del Pregón de Fiestas y se repetirá en diferentes horario... + Seguir leyendo...\n- Zaragoza presenta esta tarde en Guimaraes su candidatura para ser Capital Verde Europea 2028\nLa delegación que defenderá hoy ante el jurado el proyecto de Zaragoza está encabezada por la alc... + Seguir leyendo...\n- Zaragoza activa el operativo municipal para garantizar la seguridad en las Fiestas del Pilar\nEl Puesto de Mando Avanzado coordinará los servicios de emergencia y seguridad y supervisará la a... + Seguir leyendo...\n- El pregón impulsa un multitudinario arranque del Pilar, con cerca de medio millón de participaciones en dos días\nLos actos del pregón suman 204.700 asistencias, con el desfile «Zaragoza Campeona» como gran prot... + Seguir leyendo...\n- Zaragoza hace historia y se convierte en Capital Verde Europea 2028, el mayor reconocimiento europeo a las políticas ...\nEl jurado internacional reconoce la candidatura zaragozana, que competía con Aalborg, Bielsko-Bia... + Seguir leyendo...\n- El Tubo estrena la restaurada imagen en Estébanes 12 tras una larga intervención de emergencia avalada por los tribun...\nLadrillo a la vista y forjas centenarias vuelven a brillar en el corazón turístico de la ciudad, ... + Seguir leyendo...",
     "relevance": 5,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "2912343b4f451b63",
+    "detected_at": "2026-10-12T14:38:46+00:00",
+    "source_name": "Google News — \"Ignatian Camino\" (EN)",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWHBNVk50a2pwTURobVI0VlN4SVRFX1FpRXhpb05yYTNFN0FIdW1wYmVROElSQlZjaWsxc1lETFhCU2NCSVd5SDJUb1ZGM0cwSE1OUExrN0hUVEN6LUt6aW1aY0xSY2ljQUZ6Q2pFQ0puLXI3T2wtY2h3R3g0bE9UNFZrdHpIanBQZ09NZXgwX3hPWE1KYy1uWnpLMVE5eDEyeU5rQW5DODlfYTU0SlhyeA?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "en",
+    "title": "One tireless Jesuit keeps alive a pilgrim path for St. Ignatius in Spain",
+    "summary_en": "CityNews Halifax published a feature on a Jesuit who maintains the Ignatian pilgrim path in Spain. General profile coverage, no route, lodging or seasonal planning details.",
+    "source_text": "One tireless Jesuit keeps alive a pilgrim path for St. Ignatius in Spain - CityNews Halifax\n<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOWHBNVk50a2pwTURobVI0VlN4SVRFX1FpRXhpb05yYTNFN0FIdW1wYmVROElSQlZjaWsxc1lETFhCU2NCSVd5SDJUb1ZGM0cwSE1OUExrN0hUVEN6LUt6aW1aY0xSY2ljQUZ6Q2pFQ0puLXI3T2wtY2h3R3g0bE9UNFZrdHpIanBQZ09NZXgwX3hPWE1KYy1uWnpLMVE5eDEyeU5rQW5DODlfYTU0SlhyeA?oc=5\" target=\"_blank\">One tireless Jesuit keeps alive a pilgrim path for St. Ignatius in Spain</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CityNews Halifax</font>\n(Published by CityNews Halifax)",
+    "relevance": 30,
+    "notify": "quiet",
+    "is_new": true,
+    "publisher": "CityNews Halifax",
+    "publisher_url": "https://halifax.citynews.ca"
+  },
+  {
+    "id": "b5f0180389618ba9",
+    "detected_at": "2026-10-12T14:38:46+00:00",
+    "source_name": "Ayuntamiento de Zaragoza — Noticias",
+    "url": "https://www.zaragoza.es/sede/servicio/noticia/",
+    "region": "aragon",
+    "tier": "town",
+    "lang": "es",
+    "title": "Zaragoza city news: municipal music awards",
+    "summary_en": "The Ayuntamiento de Zaragoza news page lists winners of extraordinary and ordinary music (canto) prizes. Unrelated to the Camino.",
+    "source_text": "- Ángela Aured, Antonio Clos y la pareja formada por Paula Allueva y David Pérez ganan los premios extraordinarios del ...\nPaquita Urbano y Guillermo Olivares logran los primeros premios ordinarios de canto, y Marta Biel... + Seguir leyendo...",
+    "relevance": 3,
+    "notify": "quiet",
     "is_new": true
   }
 ]
