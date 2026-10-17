@@ -24,8 +24,8 @@
     "fingerprint": "very high:9+",
     "first_seen": "2026-07-30T19:08:29+00:00",
     "last_emitted": "2026-10-16T14:39:17+00:00",
-    "last_reason": "changed",
-    "last_seen": "2026-10-16T14:39:17+00:00",
+    "last_reason": "suppressed",
+    "last_seen": "2026-10-17T14:38:07+00:00",
     "peak_rank": 5,
     "rank": 3
   }
