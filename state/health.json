@@ -1,23 +1,26 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-10-22T14:36:35+00:00",
+  "alfa_run_at": "2026-10-23T14:36:46+00:00",
   "baselined": 0,
-  "changed_quiet": 13,
+  "changed_quiet": 10,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
     "Gobierno de Aragón — Horarios T05 (Monegros timetable, official PDF)",
     "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)",
     "Aragón — Quemas: cuándo puedo realizar las quemas",
-    "Aragón — Niveles de alerta (INFOAR/NAPIF doctrine)"
+    "Aragón — Niveles de alerta (INFOAR/NAPIF doctrine)",
+    "Aragón — NAPIF daily alert bulletin (PDF)",
+    "Google News — \"Camino Ignaciano\" (ES)",
+    "Google News — \"Ignatian Camino\" (EN)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-10-22T14:36:31+00:00",
+  "fwi_run_at": "2026-10-23T14:36:43+00:00",
   "new_items": 2,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 0,
-  "run_at": "2026-10-22T14:36:25+00:00",
+  "run_at": "2026-10-23T14:36:37+00:00",
   "skipped": 0,
   "sources_total": 50
 }
