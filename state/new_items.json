@@ -1,5 +1,15 @@
 [
   {
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "weight": 1.4,
+    "notify": "quiet",
+    "text": "AGRICULTURA\nLa segunda cosecha de maíz en Lleida, pendiente de la meteorología\nRedacció\nEl sector advierte que precipitaciones ahora arruinarían los trabajos. Después de una producción muy mala en la primera"
+  },
+  {
     "source_name": "Ayuntamiento de Zaragoza — Noticias",
     "url": "https://www.zaragoza.es/sede/servicio/noticia/",
     "region": "aragon",
@@ -7,6 +17,6 @@
     "lang": "es",
     "weight": 0.9,
     "notify": "quiet",
-    "text": "- Un total de 18 grupos y solistas aspiran a hacerse un hueco en la música aragonesa con el Popyrock 2026\nEl concurso del Ayuntamiento abre las votaciones del público hasta el 26 de octubre y prepara sus... + Seguir leyendo...\n- Zaragoza comparte en Francia dos iniciativas de desarrollo sostenible para jóvenes financiados por el proyecto Gear up!\nDos entidades zaragozanas beneficiarias de las ayudas del proyecto europeo GEAR UP! presentan sus... + Seguir leyendo...\n- La alcaldesa Natalia Chueca da la bienvenida a las 2.000 personas que han convertido a Zaragoza en la Capital de la J...\nLa plaza del Pilar acoge el acto inaugural del XIII Encuentro Nacional de Jóvenes de Hermandades ... + Seguir leyendo..."
+    "text": "- Abierto el plazo para presentar propuestas de actividades para la programación de Harinera ZGZ de los próximos meses\nSe ha activado un formulario en la web municipal para proponer programación cultural, preferentem... + Seguir leyendo...\n- Santiago Auserón lleva al Teatro Principal \"Nerantzi\", su nuevo diálogo musical con la tradición griega\nEl artista zaragozano actuará el martes 27 de octubre junto a Vaggelis Tzeretas y Theodoros Karel... + Seguir leyendo...\n- Zaragoza inspeccionará este lunes y martes los tirantes de la Pasarela del Voluntariado dentro del Plan de Puentes\nLos trabajos técnicos se llevarán a cabo los días 26 y 27 de octubre, de 9:30 a 15:00 horas y de ... + Seguir leyendo...\n- José María Forqué vuelve al barrio zaragozano que le vio nacer de la mano del cine documental\nEl Ayuntamiento de Zaragoza ha organizado la premiere de \"Forqué. El oficio de hacer cine\" que se... + Seguir leyendo..."
   }
 ]
