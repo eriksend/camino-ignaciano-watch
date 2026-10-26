@@ -2,16 +2,16 @@
   {
     "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
     "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "rioja",
+    "region": "navarre",
     "tier": "official",
     "lang": "en",
     "weight": 0.9,
     "notify": "quiet",
     "kind": "fire_weather",
     "item_key": "fwi:corridor",
-    "fingerprint": "high:9+",
-    "stage": 9,
-    "stage_end": "Alcanadre",
-    "text": "EFFIS Fire Weather Index peaks at 37.1 — 'high' on the EFFIS scale — at Alcanadre (stage 9) on 2026-10-25, across a 3-day forecast from 2026-10-25. 9 stage endpoint(s) reach 'high' (>= 21.3) or worse: Alcanadre (stage 9) 37, Logroño (stage 8) 34, Navarrete (stage 7) 34, Bujaraloz (stage 18) 31, Candasnos (stage 19) 31, Fraga (stage 20) 28. FWI anomaly at Alcanadre is +7.6 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+    "fingerprint": "high:3-8",
+    "stage": 5,
+    "stage_end": "Genevilla",
+    "text": "EFFIS Fire Weather Index peaks at 28.3 — 'high' on the EFFIS scale — at Genevilla (stage 5) on 2026-10-27, across a 3-day forecast from 2026-10-26. 8 stage endpoint(s) reach 'high' (>= 21.3) or worse: Genevilla (stage 5) 28, Araia (stage 3) 26, Calahorra (stage 10) 24, Alagón (stage 14) 24, Alcanadre (stage 9) 24, Alfaro (stage 11) 24. FWI anomaly at Genevilla is +4.5 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
   }
 ]
