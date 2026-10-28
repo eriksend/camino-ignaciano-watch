@@ -1,20 +1,23 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-10-27T14:36:42+00:00",
+  "alfa_run_at": "2026-10-28T14:46:19+00:00",
   "baselined": 0,
   "changed_quiet": 8,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
-    "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
+    "Gobierno de Aragón — Horarios T05 (Monegros timetable, official PDF)",
+    "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)",
+    "Aragón — Quemas: cuándo puedo realizar las quemas",
+    "Aragón — Niveles de alerta (INFOAR/NAPIF doctrine)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-10-27T14:36:38+00:00",
-  "new_items": 3,
+  "fwi_run_at": "2026-10-28T14:46:14+00:00",
+  "new_items": 5,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 0,
-  "run_at": "2026-10-27T14:36:31+00:00",
+  "run_at": "2026-10-28T14:46:08+00:00",
   "skipped": 0,
   "sources_total": 50
 }
