@@ -2,16 +2,16 @@
   {
     "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
     "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
-    "region": "navarre",
+    "region": "rioja",
     "tier": "official",
     "lang": "en",
     "weight": 0.9,
     "notify": "quiet",
     "kind": "fire_weather",
     "item_key": "fwi:corridor",
-    "fingerprint": "high:1-2",
-    "stage": 5,
-    "stage_end": "Genevilla",
-    "text": "EFFIS Fire Weather Index peaks at 21.9 — 'high' on the EFFIS scale — at Genevilla (stage 5) on 2026-10-29, across a 3-day forecast from 2026-10-29. 1 stage endpoint(s) reach 'high' (>= 21.3) or worse: Genevilla (stage 5) 22. FWI anomaly at Genevilla is +2.8 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
+    "fingerprint": "extreme:9+",
+    "stage": 11,
+    "stage_end": "Alfaro",
+    "text": "EFFIS Fire Weather Index peaks at 53.5 — 'extreme' on the EFFIS scale — at Alfaro (stage 11) on 2026-11-01, across a 3-day forecast from 2026-10-30. 12 stage endpoint(s) reach 'high' (>= 21.3) or worse: Alfaro (stage 11) 54, Calahorra (stage 10) 51, Alcanadre (stage 9) 49, Tudela (stage 12) 42, Gallur (stage 13) 38, Fuentes de Ebro (stage 16) 33. At 'very high' or above: stages [9, 10, 11, 12, 13]. FWI anomaly at Alfaro is +17.7 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70."
   }
 ]

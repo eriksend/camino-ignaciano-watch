@@ -1,20 +1,20 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-10-29T14:59:50+00:00",
+  "alfa_run_at": "2026-10-30T14:39:32+00:00",
   "baselined": 0,
-  "changed_quiet": 9,
+  "changed_quiet": 8,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
     "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-10-29T14:59:47+00:00",
-  "new_items": 2,
+  "fwi_run_at": "2026-10-30T14:39:29+00:00",
+  "new_items": 23,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 0,
-  "run_at": "2026-10-29T14:59:41+00:00",
+  "run_at": "2026-10-30T14:39:23+00:00",
   "skipped": 0,
   "sources_total": 50
 }
