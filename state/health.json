@@ -1,22 +1,21 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-11-02T14:38:55+00:00",
+  "alfa_run_at": "2026-11-03T14:37:00+00:00",
   "baselined": 0,
-  "changed_quiet": 12,
+  "changed_quiet": 11,
   "deferred": [],
   "deferred_items": 0,
   "failed": [
-    "Cova de Sant Ignasi — Notícies (Manresa)",
-    "Cova de Sant Ignasi — Visiting hours / activities",
+    "Camino Ignaciano — Inicio (ES)",
     "Alsa / Ágreda Bus — Aragón regionales (T05 operator notices)"
   ],
   "fwi_ok": true,
-  "fwi_run_at": "2026-11-02T14:38:51+00:00",
-  "new_items": 2,
+  "fwi_run_at": "2026-11-03T14:36:57+00:00",
+  "new_items": 4,
   "note": "first ledger run: 12 RSS feeds baselined; their backlog was not reported",
   "rebaselined": 0,
-  "run_at": "2026-11-02T14:38:44+00:00",
+  "run_at": "2026-11-03T14:36:51+00:00",
   "skipped": 0,
   "sources_total": 50
 }
