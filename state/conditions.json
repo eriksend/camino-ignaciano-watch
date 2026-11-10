@@ -14,8 +14,8 @@
     "fingerprint": "5:Anoia,Bages,Baix Llobregat,Pla d'Urgell,Segarra,Segrià,Urgell",
     "first_seen": "2026-07-30T19:08:25+00:00",
     "last_emitted": "2026-11-03T14:37:00+00:00",
-    "last_reason": "changed",
-    "last_seen": "2026-11-03T14:37:00+00:00",
+    "last_reason": "suppressed",
+    "last_seen": "2026-11-10T14:35:31+00:00",
     "peak_rank": 5,
     "rank": 5
   },
