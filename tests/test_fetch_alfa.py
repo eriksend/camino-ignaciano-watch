@@ -95,3 +95,51 @@ def test_level_below_three_produces_no_level_item():
     items = fa.build_items(FAR, _levels(2), [], {}, [], [], {})
     assert not [i for i in items if i["kind"] in ("route_block", "fire_weather")
                 and "Pla ALFA reaches" in i["text"]]
+
+
+# ---------- the PERIL_M placeholder (verified live 2026-11-11) ----------
+
+def _rows(levels, comarca="Segarra"):
+    return [{"NOMCOMAR": comarca, "NOMMUNI": f"M{i}", "PERIL_M": v}
+            for i, v in enumerate(levels)]
+
+
+def test_blanket_placeholder_layer_reads_as_unpublished():
+    """Before the daily forecast is published, the tomorrow layer serves
+    PERIL_M=5 for every municipality. Treating that as a level once made a fake
+    'level 5 across all seven comarques' the quarter's highest-scored finding."""
+    out = fa.levels_for_route(_rows([5, 5, 5, 5]))
+    assert out["by_comarca"] == {} and out["hot"] == []
+    assert fa.layer_unpublished(out) is True
+
+
+def test_out_of_range_rows_are_skipped_but_real_rows_still_aggregate():
+    out = fa.levels_for_route(_rows([5, 3, 2, 9]))
+    assert out["by_comarca"] == {"Segarra": 3}
+    assert out["valid"] == 2 and out["invalid"] == 2
+    assert fa.layer_unpublished(out) is False
+
+
+def test_a_normal_layer_is_not_flagged_unpublished():
+    out = fa.levels_for_route(_rows([0, 1, 2, 4]))
+    assert out["invalid"] == 0 and fa.layer_unpublished(out) is False
+    # and an empty layer (no route rows at all) is not "unpublished" either
+    assert fa.layer_unpublished(fa.levels_for_route([])) is False
+
+
+def test_level_four_remains_a_real_reading():
+    out = fa.levels_for_route(_rows([4]))
+    assert out["by_comarca"] == {"Segarra": 4} and out["invalid"] == 0
+
+
+# ---------- off-route condition must clear when the closures lift ----------
+
+def test_off_route_condition_clears_when_list_empties():
+    """'Cardó-Boix' sat in the panel for two months because nothing cleared it."""
+    ledger = {}
+    fa.build_items(FAR, _levels(0), [], {}, [], ["Cardó-Boix"], ledger)
+    assert ledger["alfa:closures:off_route"]["fingerprint"] == "Cardó-Boix"
+    fa.build_items(FAR, _levels(0), [], {}, [], [], ledger)
+    assert ledger["alfa:closures:off_route"]["fingerprint"] is None
+    import condition_ledger as cl
+    assert cl.active(ledger) == []

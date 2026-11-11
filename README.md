@@ -190,6 +190,20 @@ Every run records per-source outcomes in `state/sources.json` and a run summary 
 **SILENT** (fetching fine, simply unchanged — normal for a static page). That distinction is
 the whole point: without it a dead source produces output identical to a quiet one.
 
+## November 2026 review (first quarter of unattended operation)
+
+Measured over the 50 runs of Sep 22 – Nov 10: zero missed days, both external APIs at
+100%, the extraction-churn fix held, and the finding contract survived ~100 unattended
+model runs without drift. Three corrections came out of it: the *tomorrow* ALFA layer
+serves `PERIL_M=5` for every municipality as an "unpublished" placeholder (now treated
+as nodata — it had produced the quarter's highest-scored finding, which was fake); the
+FWI condition fingerprint dropped its breadth bucket, which flapped daily and defeated
+the weekly-reminder design (42 emissions in 102 days instead of ~15); and the July
+publisher experiment was reversed — Calahorra + Zaragoza were 53% of all findings at a
+maximum relevance of 12, so they and Agrodiario are gated until March 2027, and the
+permanently 403-blocked Alsa page was retired. Verdict on further publishers: only El
+Correo recurs in the `via` data (3×) — watched, not added.
+
 ## A note on courtesy
 
 One fetch per source per run, a real User-Agent, a one-second pause between sources. Daily

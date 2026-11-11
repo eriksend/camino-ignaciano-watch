@@ -331,6 +331,18 @@ def main() -> int:
     check_findings()
     check_state(mods)
 
+    try:
+        import subprocess
+        branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                                capture_output=True, text=True, cwd=ROOT,
+                                timeout=10).stdout.strip()
+        if branch and branch != "main":
+            warn(f"running on branch '{branch}', not main — commits here preserve "
+                 f"state but the published report (GitHub Pages serves main) will "
+                 f"go stale until they reach main")
+    except Exception:
+        pass  # not a git checkout, or git unavailable; nothing to say
+
     if not os.environ.get("FIRMS_MAP_KEY", "").strip():
         warn("FIRMS_MAP_KEY unset — satellite fire detection is off "
              "(the EFFIS Fire Weather Index still runs; this is expected)")

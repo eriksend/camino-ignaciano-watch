@@ -404,8 +404,13 @@ def fwi_sweep(bbox: dict, stages: list[dict], today: date,
         edge = thresholds.get(cls)
         if edge is not None and abs(worst_v - edge) < FWI_HYSTERESIS:
             cls = previous_class  # too close to the edge to call it a change
-    band = "1-2" if breadth <= 2 else ("3-8" if breadth <= 8 else "9+")
-    fingerprint = f"{cls}:{band}"
+    # Fingerprint is the danger CLASS alone. It used to also carry a breadth
+    # bucket ("1-2"/"3-8"/"9+"), which flaps daily at bucket edges: the Aug-Nov
+    # record shows 42 emissions in 102 days — 13 of 23 visible ones changed
+    # nothing but the bucket — and the weekly reminder never once fired because
+    # churn always re-emitted first. Breadth stays in the item TEXT, where a
+    # reader wants it, and out of the identity, where it defeats suppression.
+    fingerprint = cls
     rank = [n for _, n in FWI_CLASSES][::-1].index(cls) if cls in [
         n for _, n in FWI_CLASSES] else 0
 

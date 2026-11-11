@@ -115,9 +115,18 @@ def fold(text: str) -> str:
 
 
 def levels_for_route(rows: list[dict]) -> dict:
-    """Aggregate the municipal layer ourselves, since the comarcal layer lies."""
+    """Aggregate the municipal layer ourselves, since the comarcal layer lies.
+
+    PERIL_M outside 0-4 is NODATA, not a level. Verified live 2026-11-11: before
+    the daily forecast is published, the *tomorrow* layer serves PERIL_M=5 for all
+    947 municipalities as a placeholder. Treating that as a real level once made
+    "Pla ALFA level 5 across all seven comarques" the highest-scored finding of an
+    entire quarter — pure artifact. Rows are skipped and counted; a layer whose
+    every route row is invalid is reported as unpublished via `valid`/`invalid`.
+    """
     by_comarca: dict[str, int] = {}
     hot_municipis: list[tuple[str, str, int]] = []
+    valid = invalid = 0
     for row in rows:
         comarca = row.get("NOMCOMAR") or ""
         if comarca not in ROUTE_COMARQUES:
@@ -125,13 +134,25 @@ def levels_for_route(rows: list[dict]) -> dict:
         try:
             level = int(row.get("PERIL_M") or 0)
         except (TypeError, ValueError):
+            invalid += 1
             continue
+        if not 0 <= level <= 4:
+            invalid += 1
+            continue
+        valid += 1
         by_comarca[comarca] = max(by_comarca.get(comarca, 0), level)
         name = row.get("NOMMUNI") or ""
         if level >= LEVEL_REPORT_FROM:
             hot_municipis.append((name, comarca, level))
     hot_municipis.sort(key=lambda x: -x[2])
-    return {"by_comarca": by_comarca, "hot": hot_municipis}
+    return {"by_comarca": by_comarca, "hot": hot_municipis,
+            "valid": valid, "invalid": invalid}
+
+
+def layer_unpublished(levels: dict) -> bool:
+    """True when the layer held route rows but none carried a real 0-4 level —
+    the blanket-placeholder state of a forecast not yet published at run time."""
+    return levels.get("invalid", 0) > 0 and levels.get("valid", 0) == 0
 
 
 def route_closures(rows: list[dict]) -> list[dict]:
@@ -233,6 +254,10 @@ def build_items(today: date, levels: dict, closures: list[dict],
     # 3. Closures elsewhere in Catalonia: context for how often this is invoked.
     off_route = [n for n in all_closures
                  if not any(k in fold(n) for k in ROUTE_SPACES)]
+    if not off_route:
+        # The informational condition must not linger once the closures lift —
+        # "Cardó-Boix" sat in the panel for two months because nothing cleared it.
+        cl.clear(ledger, "alfa:closures:off_route", today)
     if off_route and not closures:
         emit, _ = cl.should_emit(ledger, "alfa:closures:off_route",
                                  ",".join(sorted(off_route)), 1, today)
@@ -293,6 +318,14 @@ def main() -> int:
 
     levels = levels_for_route(rows)
     levels_t = levels_for_route(rows_t)
+    for label, lv in (("today", levels), ("tomorrow", levels_t)):
+        if layer_unpublished(lv):
+            print(f"  · {label} layer not yet published at run time "
+                  f"({lv['invalid']} placeholder row(s)) — ignored, no level item")
+            lv["by_comarca"], lv["hot"] = {}, []
+        elif lv.get("invalid"):
+            print(f"  · {label} layer: {lv['invalid']} row(s) with out-of-range "
+                  f"PERIL_M skipped as nodata")
     names_closed = [c.get("Espai_prot") or c.get("ESPAI_PROT") or "" for c in closed]
     route_hits = route_closures(closed)
     route_hits_t = route_closures(closed_t)

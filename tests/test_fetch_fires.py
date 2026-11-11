@@ -134,3 +134,68 @@ def test_cluster_reports_nearest_distance_not_the_mean():
     c = ff.cluster(hits)[0]
     assert c["detections"] == 2
     assert c["min_distance_km"] < 2.0
+
+
+# ---------- fingerprint churn (the 42-emissions-in-102-days regression) ----------
+
+def _sweep_with(monkeypatch, values_by_call, ledger, day):
+    """Run fwi_sweep against synthetic grids; values_by_call feeds every stage."""
+    import fetch_fires as ff
+    calls = iter(values_by_call)
+
+    def fake_grid(bbox, d, layer, **kw):
+        if layer != ff.FWI_LAYER:
+            return None
+        v = next(calls, values_by_call[-1])
+        return ([v] * 8, 4, 2)
+    monkeypatch.setattr(ff, "fetch_fwi_grid", fake_grid)
+    stages = ff.load_stages()
+    return ff.fwi_sweep(ff.load_bbox(), stages, day, ledger)
+
+
+def test_breadth_change_alone_does_not_re_emit(monkeypatch):
+    """13 of 23 recorded emissions changed nothing but the stage-count bucket.
+    Same danger class => same fingerprint => suppressed."""
+    import datetime as dt
+    import fetch_fires as ff
+    day = dt.date(2026, 11, 11)
+    ledger = {}
+    first = _sweep_with(monkeypatch, [45.0], ledger, day)           # very high, broad
+    assert len(first) == 1
+    assert ledger["fwi:corridor"]["fingerprint"] == "very high"     # class only
+
+    # next day: same class, utterly different breadth — must stay quiet
+    def narrow_grid(bbox, d, layer, **kw):
+        if layer != ff.FWI_LAYER:
+            return None
+        vals = [45.0] + [5.0] * 7                                   # 1 stage high vs 8
+        return (vals * 1, 4, 2)
+    monkeypatch.setattr(ff, "fetch_fwi_grid", narrow_grid)
+    again = ff.fwi_sweep(ff.load_bbox(), ff.load_stages(),
+                         day + dt.timedelta(days=1), ledger)
+    assert again == []
+
+
+def test_class_change_still_emits(monkeypatch):
+    import datetime as dt
+    day = dt.date(2026, 11, 11)
+    ledger = {}
+    assert len(_sweep_with(monkeypatch, [30.0], ledger, day)) == 1          # high
+    assert len(_sweep_with(monkeypatch, [55.0], ledger,
+                           day + dt.timedelta(days=1))) == 1                 # extreme
+    assert ledger["fwi:corridor"]["fingerprint"] == "extreme"
+
+
+def test_old_colon_fingerprints_still_parse_for_hysteresis(monkeypatch):
+    """The ledger on disk still holds 'high:1-2'-shaped values from before."""
+    import datetime as dt
+    L = {"fwi:corridor": {"fingerprint": "high:1-2", "rank": 2,
+                          "peak_rank": 5, "emit_count": 42,
+                          "first_seen": "2026-07-30T19:08:00+00:00",
+                          "last_emitted": "2026-11-09T14:36:00+00:00",
+                          "last_seen": "2026-11-09T14:36:00+00:00"}}
+    # 22.0 reads as 'high' but sits within FWI_HYSTERESIS of the 21.3 boundary;
+    # the previous class must parse out of the old colon-shaped value for the
+    # hysteresis comparison to work at all.
+    _sweep_with(monkeypatch, [22.0], L, dt.date(2026, 11, 11))
+    assert L["fwi:corridor"]["fingerprint"] == "high"

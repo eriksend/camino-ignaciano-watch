@@ -651,7 +651,10 @@ def main() -> None:
     alerts = sum(1 for i in new_items if i.get("notify") == "alert")
     # Persist the run summary. It used to be printed and discarded, so a run that
     # failed half its sources left no trace anywhere a human would look.
-    health = load_json(HEALTH_FILE, {})
+    # A FRESH dict, deliberately: this script runs first each day (fires/alfa
+    # merge their liveness in afterwards), and load-and-merge let a June-era
+    # "note" key ride along in every commit for five months.
+    health = {}
     health.update({
         "run_at": now_iso(), "sources_total": len(sources),
         "new_items": len(new_items), "alerts": alerts, "baselined": baselined,

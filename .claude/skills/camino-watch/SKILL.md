@@ -125,6 +125,16 @@ source was unreachable it simply won't appear in the input; skip it silently.
 7. **Commit and push** the changed files (`state/`, `docs/index.html`, `report.html`)
    with a message like `watch: N new finding(s) YYYY-MM-DD`.
 
+   **Then verify the push reached `main`**: `git ls-remote origin main` must show your
+   new commit hash. If it does not — the push landed on a session branch, or was
+   rejected — also try `git push origin HEAD:main`. If that too fails, the run's data is
+   safe wherever it landed, but the published report (GitHub Pages serves `main`) is now
+   frozen: **state this prominently in your run summary** ("state saved to <branch>;
+   published report frozen at <last main date>") and treat the run as degraded, not
+   successful. Session branches have silently absorbed runs before; the report going
+   quietly stale is the one failure the health panel cannot show, because the panel is
+   inside the unpublished report.
+
 8. **Alert (optional, connector-free).** Push only for **`notify: "alert"`** findings —
    that is the whole point of the tiers. If `CAMINO_NTFY_URL` is set and at least one
    *new* finding is `notify: "alert"` **and** scored ≥ 35, POST a short digest of those
