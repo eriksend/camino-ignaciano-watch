@@ -617,8 +617,12 @@ sources:
   #   ES '"camino ignaciano"' — healthy (63/88 findings route-relevant, unambiguous). Kept.
   #   EN '"ignatian camino" OR "ignatian way"' — ~half its catch is Jesuit-spirituality
   #     noise ("the Ignatian way" = the manner, not the trail), but all of it scores <=14
-  #     and never pushes, while "ignatian way" carried the feed's single best finding
-  #     (Diari ARA, rel 45). Deliberately kept as-is: the scoring layer is the filter.
+  #     and never pushes. Deliberately kept as-is: the scoring layer is the filter.
+  #     (An earlier version of this note cited the rel-45 Diari ARA catch as the term's
+  #     payoff; on reading, that was Empar Moliner's May-2025 satirical column resurfaced
+  #     by Google's sparse-query padding 17 months later. The keep-decision stands on
+  #     containment, not on that item. Lesson: Google News pubDate deserves a staleness
+  #     check before scoring — old items resurface in thin query feeds.)
   #   ES '"ruta ignaciana"' — live-tested and REJECTED: Google pads the sparse query with
   #     2021-2024 items, and its one relevant 2026 hit was already caught by the main feed.
   #   EU '"Ignaziotar bidea"' — zero in-text evidence across 500 findings; skipped.
