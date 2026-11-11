@@ -613,6 +613,26 @@ sources:
     # levels only — path closures come from Agents Rurals / INFOAR.
 
   # ---- Catch-all news (Google News RSS, Spanish + English) ----
+  # Keyword review 2026-11-11, from the first 5 months of catch data:
+  #   ES '"camino ignaciano"' — healthy (63/88 findings route-relevant, unambiguous). Kept.
+  #   EN '"ignatian camino" OR "ignatian way"' — ~half its catch is Jesuit-spirituality
+  #     noise ("the Ignatian way" = the manner, not the trail), but all of it scores <=14
+  #     and never pushes, while "ignatian way" carried the feed's single best finding
+  #     (Diari ARA, rel 45). Deliberately kept as-is: the scoring layer is the filter.
+  #   ES '"ruta ignaciana"' — live-tested and REJECTED: Google pads the sparse query with
+  #     2021-2024 items, and its one relevant 2026 hit was already caught by the main feed.
+  #   EU '"Ignaziotar bidea"' — zero in-text evidence across 500 findings; skipped.
+  #   CA '"camí ignasià"' — ADDED below: the phrase appeared 12x inside findings we only
+  #     caught sideways, and a live test returned 13 items, every one absent from our
+  #     history, from exactly the right desks (Regió7/Manresa x5, 3Cat, El Punt Avui,
+  #     La Veu de l'Anoia). The route's final third speaks Catalan; we didn't.
+  - name: "Google News — \"Camí Ignasià\" (CA)"
+    url: "https://news.google.com/rss/search?q=%22cam%C3%AD+ignasi%C3%A0%22&hl=ca&gl=ES&ceid=ES:ca"
+    type: rss
+    lang: ca
+    region: catalonia
+    tier: social
+    weight: 0.9
   - name: "Google News — \"Camino Ignaciano\" (ES)"
     url: "https://news.google.com/rss/search?q=%22camino+ignaciano%22&hl=es&gl=ES&ceid=ES:es"
     type: rss
