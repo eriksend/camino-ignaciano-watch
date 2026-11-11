@@ -1,13 +1,17 @@
 {
   "alerts": 0,
-  "baselined": 0,
-  "changed_quiet": 0,
+  "alfa_ok": true,
+  "alfa_run_at": "2026-11-11T14:35:48+00:00",
+  "baselined": 1,
+  "changed_quiet": 29,
   "deferred": [],
   "deferred_items": 0,
   "failed": [],
-  "new_items": 0,
+  "fwi_ok": true,
+  "fwi_run_at": "2026-11-11T14:35:46+00:00",
+  "new_items": 1,
   "rebaselined": 0,
-  "run_at": "2026-11-11T05:15:11+00:00",
-  "skipped": 49,
-  "sources_total": 49
+  "run_at": "2026-11-11T14:35:40+00:00",
+  "skipped": 0,
+  "sources_total": 50
 }
