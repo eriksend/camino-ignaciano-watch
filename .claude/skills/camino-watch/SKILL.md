@@ -69,6 +69,11 @@ source was unreachable it simply won't appear in the input; skip it silently.
      changed**, because the delta was scored as if it were the page. If the delta reads like
      an entire page rather than an edit, say so and score it low: that is re-extraction churn,
      not news.
+   - **Check the feed publication date.** Feed items carry a "(Feed publication date:
+     YYYY-MM-DD)" line. A date months in the past means Google resurfaced an old piece to
+     pad a sparse query feed — it is a **stale resurfacing, not news**: score it low (<15)
+     and say in the summary that it is old. Precedent: a May-2025 satirical column
+     resurfaced in October 2026 and was scored 45 as if it were breaking route news.
    - **Be consistent run to run.** The same substantive content should get roughly the same
      score; the push threshold is a hard cutoff at 35, so ±20 points of drift on identical
      material decides whether a phone buzzes. If an item resembles an earlier finding from the

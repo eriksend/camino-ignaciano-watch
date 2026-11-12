@@ -388,6 +388,24 @@ def mark_failed(entry: dict, message: str) -> None:
     entry["last_error_msg"] = str(message)[:200]
 
 
+def rss_body(item) -> str:
+    """The text handed to the scorer for one feed entry.
+
+    Carries the publisher (aggregator links are unresolvable server-side, so the
+    publisher is the usable part of the citation) and the FEED PUBLICATION DATE.
+    The date matters because Google pads sparse query feeds with old content;
+    without it, a May-2025 opinion column resurfaced in October 2026 was scored
+    45 as if it were breaking news. Pure function, so it is actually testable.
+    """
+    body = f"{item.get('title', '')}\n{item.get('summary', '')}".strip()
+    pub = item.get("source_title") or item.get("source_url")
+    if pub:
+        body += f"\n(Published by {pub})"
+    if item.get("published"):
+        body += f"\n(Feed publication date: {item['published']})"
+    return body
+
+
 def retain_recent(previous: list[str], fresh: list[str], cap: int) -> list[str]:
     """Append newly-seen ids and keep the newest `cap`, deterministically.
 
@@ -514,15 +532,11 @@ def main() -> None:
                     changed_quiet += len(fresh)
                 else:
                     for item in fresh:
-                        body = f"{item.get('title','')}\n{item.get('summary','')}".strip()
+                        body = rss_body(item)
                         extra = {}
                         pub, pub_url = item.get("source_title"), item.get("source_url")
                         if pub or pub_url:
                             extra = {"publisher": pub or "", "publisher_url": pub_url or ""}
-                            # Google News <link> is an opaque JS interstitial that
-                            # cannot be resolved server-side, so the publisher is
-                            # the only way a reader can find the actual article.
-                            body = f"{body}\n(Published by {pub or pub_url})"
                         candidates.append({
                             "item": {**meta, **extra,
                                      "url": item.get("link", src["url"]),

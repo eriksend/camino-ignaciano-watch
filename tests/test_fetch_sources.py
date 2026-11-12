@@ -251,3 +251,65 @@ def test_resolve_stage_windows_ignores_sources_without_stages():
     srcs = [{"name": "x", "url": "u", "type": "html"}]
     assert fs.resolve_stage_windows(srcs, ITIN) == 0
     assert "analyze_from" not in srcs[0]
+
+
+# ---------- feed publication dates (the May-2025 resurfacing lesson) ----------
+
+def _rss_item(extra_xml=""):
+    import xml.etree.ElementTree as ET
+
+    import rss_compat as rc
+    xml = f"""<rss><channel><item>
+      <title>Headline</title>
+      <link>https://example.org/a</link>
+      <description>body</description>
+      {extra_xml}
+    </item></channel></rss>"""
+    return rc._parse_rss(ET.fromstring(xml))[0]
+
+
+def test_rfc822_pubdate_normalises_to_iso():
+    """Google News serves RFC-822. Without this field a May-2025 column resurfaced
+    in October 2026 was scored 45 as if it were fresh news."""
+    e = _rss_item("<pubDate>Wed, 06 May 2025 17:08:00 GMT</pubDate>")
+    assert e["published"] == "2025-05-06"
+
+
+def test_missing_pubdate_is_empty_not_invented():
+    assert _rss_item()["published"] == ""
+
+
+def test_garbage_pubdate_passes_through_raw():
+    """A strange date is still more informative than none."""
+    e = _rss_item("<pubDate>mañana, probablemente</pubDate>")
+    assert e["published"] == "mañana, probablemente"
+
+
+def test_atom_published_and_updated_fallback():
+    import xml.etree.ElementTree as ET
+
+    import rss_compat as rc
+    atom = """<feed xmlns="http://www.w3.org/2005/Atom">
+      <entry><title>T</title><id>1</id>
+        <published>2026-10-03T09:00:00Z</published></entry>
+      <entry><title>U</title><id>2</id>
+        <updated>2026-10-04T09:00:00Z</updated></entry>
+    </feed>"""
+    a, b = rc._parse_atom(ET.fromstring(atom))
+    assert a["published"] == "2026-10-03"
+    assert b["published"] == "2026-10-04"
+
+
+def test_rss_body_carries_date_and_publisher():
+    body = fs.rss_body({"title": "T", "summary": "S",
+                        "source_title": "Diari ARA",
+                        "published": "2025-05-06"})
+    assert "(Published by Diari ARA)" in body
+    assert "(Feed publication date: 2025-05-06)" in body
+    assert body.startswith("T\nS")
+
+
+def test_rss_body_omits_absent_fields_cleanly():
+    body = fs.rss_body({"title": "T", "summary": "S"})
+    assert "Published by" not in body and "publication date" not in body
+    assert body == "T\nS"

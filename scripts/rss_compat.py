@@ -18,6 +18,9 @@ Provides just enough of the feedparser API for fetch_sources.py:
   - each entry: dict-like with 'id', 'link', 'title', 'summary'
 """
 from __future__ import annotations
+import datetime
+import email.utils
+
 import requests
 import xml.etree.ElementTree as ET
 
@@ -55,6 +58,28 @@ class _Feed:
         self.error = error
 
 
+def _pub_date(raw):
+    """Normalise a feed timestamp to YYYY-MM-DD.
+
+    RFC-822 ("Wed, 06 May 2025 17:08:00 GMT") is what Google News and most RSS
+    serve; ISO-8601 covers Atom. Unparseable input passes through raw rather than
+    vanishing — a strange date is still more informative than none. This field
+    exists because Google pads sparse query feeds with old content: without it, a
+    May-2025 column resurfaced in October 2026 was scored as if it were fresh news.
+    """
+    raw = (raw or "").strip()
+    if not raw:
+        return ""
+    try:
+        return email.utils.parsedate_to_datetime(raw).date().isoformat()
+    except (TypeError, ValueError):
+        pass
+    try:
+        return datetime.datetime.fromisoformat(raw.replace("Z", "+00:00")).date().isoformat()
+    except ValueError:
+        return raw
+
+
 def _text(el, *tags):
     for tag in tags:
         child = el.find(tag, _NS)
@@ -73,6 +98,7 @@ def _parse_rss(root):
         entry["link"] = _text(item, "link")
         entry["id"] = _text(item, "guid") or entry["link"] or entry["title"]
         entry["summary"] = _text(item, "description", "content:encoded")
+        entry["published"] = _pub_date(_text(item, "pubDate"))
         # Aggregators (notably Google News) put an opaque redirect in <link> and
         # name the real publisher here. It is the only usable provenance they give.
         src_el = item.find("source")
@@ -94,6 +120,8 @@ def _parse_atom(root):
         entry["link"] = link_el.get("href", "") if link_el is not None else ""
         entry["id"] = _text(item, "atom:id") or entry["link"] or entry["title"]
         entry["summary"] = _text(item, "atom:summary", "atom:content")
+        entry["published"] = _pub_date(_text(item, "atom:published")
+                                       or _text(item, "atom:updated"))
         entries.append(entry)
     return entries
 
