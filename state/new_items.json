@@ -1,46 +1,38 @@
 [
   {
-    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
-    "url": "https://www.segre.com/es/agricultura-ganaderia/",
-    "region": "catalonia",
-    "tier": "guide",
-    "lang": "es",
-    "weight": 1.4,
-    "notify": "quiet",
-    "text": "PARO\nLa ganadería respira gracias al final de la huelga de mataderos\nEva M. Muruaga\nEl porcino temía nuevas bajadas de cotizaciones si no se arreglaba. Los salarios subirán un 4% este año"
-  },
-  {
-    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakjSAZYBQVVfeXFMTlE3UmVuRlFGUEVMLWxOLW42TkNBdWpieVBpNW9yb1U3LXktWDJacEk5Ty1CaGtZLWx6azF5YU94dW1RRFY5NjJKcDJhdnBtQ28zdjUtdDFiLU83YWp4VGVEdjNoZXZySUJQaS1iaGFjeW8yUFRwUHdHTGpSUHozRmZLY0U4NUp2Ykk1MUFfVDlnREhqR2JB?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "es",
-    "weight": 0.9,
-    "notify": "quiet",
-    "publisher": "El Correo",
-    "publisher_url": "https://www.elcorreo.com",
-    "text": "Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano - El Correo\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSnNVSF9RUGtLalBPckdmNTh6cWZrY1VRTVJHREZNQnBidHRJWmJfTkhQZzNEcm5UZTZSX2dIR0hFbFBjcVRaV0NyWEVyRjlZYVh0SHJLbThhTG5QR1lXQkFTRW5ONlJrR2JFMGRXVzJtWEMybDlreTI2R2RVaVNkU3J4YmJveDRGZm52cTBiakjSAZYBQVVfeXFMTlE3UmVuRlFGUEVMLWxOLW42TkNBdWpieVBpNW9yb1U3LXktWDJacEk5Ty1CaGtZLWx6azF5YU94dW1RRFY5NjJKcDJhdnBtQ28zdjUtdDFiLU83YWp4VGVEdjNoZXZySUJQaS1iaGFjeW8yUFRwUHdHTGpSUHozRmZLY0U4NUp2Ykk1MUFfVDlnREhqR2JB?oc=5\" target=\"_blank\">Campezo estrenará en primavera el nuevo albergue del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Correo</font>\n(Published by El Correo)"
-  },
-  {
     "source_name": "Google News — \"Camí Ignasià\" (CA)",
-    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNLUh1OEwzUjhWT1JvQkRSZ0J1T2lMQkRTY01ZQkZLeXpBal81azNiYjVNdEdfMGhfbnBXZTVfSTNFdl92UnZiNkJPM3MxMzNxMnFyYzUzamVUaWxTaFZrVzdLb0p0N2pIWHBGMmRjRHQ5M1NuSXBQSDM5cjRSMEc5bGlBQ3hhcmxNemlaYXRBcUU4ejNUMURZYkN6SUFiZldrVnFQcWQ0cTZaZWo2ckdya3hzaExhZVZIMlE1emNkWHRtdkNaN3VvZ3dmZF85ekk1TFBn?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44djBTaWtiaDRRM2M5eDJlbUkyUTRoMDN3U0FnZzVTWVAwY05qZkZxbGNYNlJqYjg1VE1SMU5ucFlMZ2xFN09xbXZkTUVnV0szYm9PUFNobkZYMzFaTFJXNUlmRGxmX0ROa29sS0hVOVJxQQ?oc=5",
     "region": "catalonia",
     "tier": "social",
     "lang": "ca",
     "weight": 0.9,
     "notify": "quiet",
-    "publisher": "El Punt Avui",
-    "publisher_url": "https://www.elpuntavui.cat",
-    "text": "“El 2029, any jubilar, el Camí Ignasià serà un destí turístic consolidat” | Mireia Rourera | Barcelona | Societat - El Punt Avui\n<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNLUh1OEwzUjhWT1JvQkRSZ0J1T2lMQkRTY01ZQkZLeXpBal81azNiYjVNdEdfMGhfbnBXZTVfSTNFdl92UnZiNkJPM3MxMzNxMnFyYzUzamVUaWxTaFZrVzdLb0p0N2pIWHBGMmRjRHQ5M1NuSXBQSDM5cjRSMEc5bGlBQ3hhcmxNemlaYXRBcUU4ejNUMURZYkN6SUFiZldrVnFQcWQ0cTZaZWo2ckdya3hzaExhZVZIMlE1emNkWHRtdkNaN3VvZ3dmZF85ekk1TFBn?oc=5\" target=\"_blank\">“El 2029, any jubilar, el Camí Ignasià serà un destí turístic consolidat” | Mireia Rourera | Barcelona | Societat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Punt Avui</font>\n(Published by El Punt Avui)"
+    "publisher": "Agència Flama",
+    "publisher_url": "https://www.agenciaflama.cat",
+    "text": "Els municipis del Camí Ignasià reforcen l’aliança amb els jesuïtes per impulsar la promoció de la ruta - Agència Flama\n<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE44djBTaWtiaDRRM2M5eDJlbUkyUTRoMDN3U0FnZzVTWVAwY05qZkZxbGNYNlJqYjg1VE1SMU5ucFlMZ2xFN09xbXZkTUVnV0szYm9PUFNobkZYMzFaTFJXNUlmRGxmX0ROa29sS0hVOVJxQQ?oc=5\" target=\"_blank\">Els municipis del Camí Ignasià reforcen l’aliança amb els jesuïtes per impulsar la promoció de la ruta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agència Flama</font>\n(Published by Agència Flama)\n(Feed publication date: 2026-07-09)"
   },
   {
-    "source_name": "Cova de Sant Ignasi — Visiting hours / activities",
-    "url": "https://www.covamanresa.cat/en/sanctuary-activities",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPS0hIaDhrbzMzczVlckZuMEsyZjNoMXpnWWtuNWRKVkwyc3hFOXZPX0JueE8tWTc3UGttNHpranEwa1hTNzRWejhzaWwtMUhtYXMwQ0tUNk9XdUlvb2t2bHJPbWw5ZDk0NEhxeVhKbWI5YkNERXFIMnVLWEZyMlBuWEx0S3RjdVlx0gGOAUFVX3lxTE1LZ3lNOVJ6cmhfdXJQZk1MVjhVbU1iVkZab2pIRzVTQnlyakxFY0VNUjF2SFduMDZUY3pVbnRsbHIwMUlNZWlrM3JhVnZ5cFh3MDd0elk0R3lua0lNd0thVi02V3hOZWJSal8wSi1oY1pLZkNVRVltQ09MWjRGMEp3UXNrak94U2hHTHJ3V2c?oc=5",
     "region": "catalonia",
-    "tier": "official",
-    "lang": "en",
+    "tier": "social",
+    "lang": "ca",
     "weight": 0.9,
     "notify": "quiet",
-    "text": "Visiting hours are from monday to saturday. Sundays from 10 am to 11:30 am."
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "text": "L’Any Jubilar del 2029 marca la data per tenir la feina feta al Camí Ignasià - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPS0hIaDhrbzMzczVlckZuMEsyZjNoMXpnWWtuNWRKVkwyc3hFOXZPX0JueE8tWTc3UGttNHpranEwa1hTNzRWejhzaWwtMUhtYXMwQ0tUNk9XdUlvb2t2bHJPbWw5ZDk0NEhxeVhKbWI5YkNERXFIMnVLWEZyMlBuWEx0S3RjdVlx0gGOAUFVX3lxTE1LZ3lNOVJ6cmhfdXJQZk1MVjhVbU1iVkZab2pIRzVTQnlyakxFY0VNUjF2SFduMDZUY3pVbnRsbHIwMUlNZWlrM3JhVnZ5cFh3MDd0elk0R3lua0lNd0thVi02V3hOZWJSal8wSi1oY1pLZkNVRVltQ09MWjRGMEp3UXNrak94U2hHTHJ3V2c?oc=5\" target=\"_blank\">L’Any Jubilar del 2029 marca la data per tenir la feina feta al Camí Ignasià</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-02-08)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcFJYRjZLTTlYZUl5T1lmMDVYcHZtUnR2YnNQYnViV0kzcFZNV0szRWtYTmo3T3NxMkYzZU50Z19qd2VPSVU4X29YMUx1Mk5BbEc4MnFzRlJDdHloNHVvWEJhS0xTVUhaa2U1b2hJVlp0aDZUMzJNWnFCdEtTOEdFYzVPU19aWVVNYk1iMDJsNm9ZNFNLcWExanhSemFEaEQzendUclNvWWVkVXQzWlV3QjRtUFo3dw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Descobrir",
+    "publisher_url": "https://www.descobrir.cat",
+    "text": "Tàrrega posarà en marxa l’alberg de pelegrins de Cal Trepat - Descobrir\n<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQcFJYRjZLTTlYZUl5T1lmMDVYcHZtUnR2YnNQYnViV0kzcFZNV0szRWtYTmo3T3NxMkYzZU50Z19qd2VPSVU4X29YMUx1Mk5BbEc4MnFzRlJDdHloNHVvWEJhS0xTVUhaa2U1b2hJVlp0aDZUMzJNWnFCdEtTOEdFYzVPU19aWVVNYk1iMDJsNm9ZNFNLcWExanhSemFEaEQzendUclNvWWVkVXQzWlV3QjRtUFo3dw?oc=5\" target=\"_blank\">Tàrrega posarà en marxa l’alberg de pelegrins de Cal Trepat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Descobrir</font>\n(Published by Descobrir)\n(Feed publication date: 2023-08-30)"
   }
 ]

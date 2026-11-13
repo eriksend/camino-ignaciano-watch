@@ -1,44 +1,5 @@
 [
   {
-    "id": "34d264f0d42f5646",
-    "detected_at": "2026-06-11T14:40:16Z",
-    "source_name": "Camino Ignaciano — Aspectos prácticos",
-    "url": "https://caminoignaciano.org/en/practicalities/",
-    "region": "whole",
-    "tier": "official",
-    "lang": "en",
-    "title": "Camino Ignaciano practicalities: spring timing, costs, and gear",
-    "summary_en": "Spring and fall are the recommended seasons; summer temperatures in the Zaragoza/Ebro valley reach 40°C, and winter brings snow risk from Loyola to Logroño. Daily costs run €45–€65, with pilgrim refuges at €15–€20 and hotels at €30–€50; the Los Monegros stretch between Zaragoza and Fraga has limited accommodation and should be planned carefully. Gear recommendations include broken-in shoes, rain poncho, sun protection, and a pack no heavier than 10% of body weight.",
-    "relevance": 90,
-    "is_new": false
-  },
-  {
-    "id": "79d8cbc02f8a574b",
-    "detected_at": "2026-06-11T14:40:16Z",
-    "source_name": "Camino Ignaciano — Credenciales / certificados",
-    "url": "https://caminoignaciano.org/en/tips-for-pilgrims/",
-    "region": "whole",
-    "tier": "official",
-    "lang": "en",
-    "title": "Ignatian Way pilgrim tips: credencial, hostel access, Monegros warning",
-    "summary_en": "Pilgrims should obtain a credencial (pilgrim passport) before departure to access pilgrim hostels along the route; some Camino de Santiago hostels between Montserrat and Logroño may also accept Ignatian Way pilgrims. The Los Monegros section between Zaragoza and Fraga is flagged as the most difficult stretch due to very limited accommodation. Most public hostels allow only a single-night stay.",
-    "relevance": 66,
-    "is_new": false
-  },
-  {
-    "id": "c3e6e99094b53c3b",
-    "detected_at": "2026-06-11T14:40:16Z",
-    "source_name": "Chris Lowney — books / Ignatian Way",
-    "url": "http://chrislowney.com/wp/books/",
-    "region": "whole",
-    "tier": "guide",
-    "lang": "en",
-    "title": "Chris Lowney bookshelf page — no Camino planning content",
-    "summary_en": "The Chris Lowney website bookshelf page lists his published works, including Heroic Leadership, with no specific Camino Ignaciano planning information.",
-    "relevance": 2,
-    "is_new": false
-  },
-  {
     "id": "57af013c1d62e441",
     "detected_at": "2026-06-11T14:40:16Z",
     "source_name": "Google News — \"Ignatian Camino\" (EN)",
@@ -7288,7 +7249,7 @@
     "source_text": "PARO\nLa ganadería respira gracias al final de la huelga de mataderos\nEva M. Muruaga\nEl porcino temía nuevas bajadas de cotizaciones si no se arreglaba. Los salarios subirán un 4% este año",
     "relevance": 4,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "e0ea03a64595ba3d",
@@ -7305,7 +7266,7 @@
     "notify": "quiet",
     "publisher": "El Correo",
     "publisher_url": "https://www.elcorreo.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "fb898e792c506205",
@@ -7322,7 +7283,7 @@
     "notify": "quiet",
     "publisher": "El Punt Avui",
     "publisher_url": "https://www.elpuntavui.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "406b417b0ad9a3d7",
@@ -7337,6 +7298,57 @@
     "source_text": "Visiting hours are from monday to saturday. Sundays from 10 am to 11:30 am.",
     "relevance": 45,
     "notify": "quiet",
+    "is_new": false
+  },
+  {
+    "id": "df52c20db4ed7b0a",
+    "detected_at": "2026-11-13T15:22:14+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE44djBTaWtiaDRRM2M5eDJlbUkyUTRoMDN3U0FnZzVTWVAwY05qZkZxbGNYNlJqYjg1VE1SMU5ucFlMZ2xFN09xbXZkTUVnV0szYm9PUFNobkZYMzFaTFJXNUlmRGxmX0ROa29sS0hVOVJxQQ?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Agència Flama: Camí Ignasià towns strengthen alliance with Jesuits to promote route (July 2026)",
+    "summary_en": "Agència Flama headline: the municipalities of the Camí Ignasià are strengthening their alliance with the Jesuits to promote the route. Stale resurfacing — feed publication date 2026-07-09, matching the July 2026 municipalities–Jesuit tourism pact already logged; headline only, no planning details.",
+    "source_text": "Els municipis del Camí Ignasià reforcen l’aliança amb els jesuïtes per impulsar la promoció de la ruta - Agència Flama\n<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE44djBTaWtiaDRRM2M5eDJlbUkyUTRoMDN3U0FnZzVTWVAwY05qZkZxbGNYNlJqYjg1VE1SMU5ucFlMZ2xFN09xbXZkTUVnV0szYm9PUFNobkZYMzFaTFJXNUlmRGxmX0ROa29sS0hVOVJxQQ?oc=5\" target=\"_blank\">Els municipis del Camí Ignasià reforcen l’aliança amb els jesuïtes per impulsar la promoció de la ruta</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agència Flama</font>\n(Published by Agència Flama)\n(Feed publication date: 2026-07-09)",
+    "relevance": 9,
+    "notify": "quiet",
+    "publisher": "Agència Flama",
+    "publisher_url": "https://www.agenciaflama.cat",
+    "is_new": true
+  },
+  {
+    "id": "f24db9f8846e026e",
+    "detected_at": "2026-11-13T15:22:14+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPS0hIaDhrbzMzczVlckZuMEsyZjNoMXpnWWtuNWRKVkwyc3hFOXZPX0JueE8tWTc3UGttNHpranEwa1hTNzRWejhzaWwtMUhtYXMwQ0tUNk9XdUlvb2t2bHJPbWw5ZDk0NEhxeVhKbWI5YkNERXFIMnVLWEZyMlBuWEx0S3RjdVlx0gGOAUFVX3lxTE1LZ3lNOVJ6cmhfdXJQZk1MVjhVbU1iVkZab2pIRzVTQnlyakxFY0VNUjF2SFduMDZUY3pVbnRsbHIwMUlNZWlrM3JhVnZ5cFh3MDd0elk0R3lua0lNd0thVi02V3hOZWJSal8wSi1oY1pLZkNVRVltQ09MWjRGMEp3UXNrak94U2hHTHJ3V2c?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Regió7: 2029 Jubilee Year set as deadline for work on the Camí Ignasià (Feb 2026)",
+    "summary_en": "Regió7 headline: the 2029 Jubilee Year marks the deadline for completing work on the Camí Ignasià. Stale resurfacing — feed publication date 2026-02-08; headline only, with no specifics on what work or which stages.",
+    "source_text": "L’Any Jubilar del 2029 marca la data per tenir la feina feta al Camí Ignasià - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPS0hIaDhrbzMzczVlckZuMEsyZjNoMXpnWWtuNWRKVkwyc3hFOXZPX0JueE8tWTc3UGttNHpranEwa1hTNzRWejhzaWwtMUhtYXMwQ0tUNk9XdUlvb2t2bHJPbWw5ZDk0NEhxeVhKbWI5YkNERXFIMnVLWEZyMlBuWEx0S3RjdVlx0gGOAUFVX3lxTE1LZ3lNOVJ6cmhfdXJQZk1MVjhVbU1iVkZab2pIRzVTQnlyakxFY0VNUjF2SFduMDZUY3pVbnRsbHIwMUlNZWlrM3JhVnZ5cFh3MDd0elk0R3lua0lNd0thVi02V3hOZWJSal8wSi1oY1pLZkNVRVltQ09MWjRGMEp3UXNrak94U2hHTHJ3V2c?oc=5\" target=\"_blank\">L’Any Jubilar del 2029 marca la data per tenir la feina feta al Camí Ignasià</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-02-08)",
+    "relevance": 9,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "is_new": true
+  },
+  {
+    "id": "d77d00367262de97",
+    "detected_at": "2026-11-13T15:22:14+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcFJYRjZLTTlYZUl5T1lmMDVYcHZtUnR2YnNQYnViV0kzcFZNV0szRWtYTmo3T3NxMkYzZU50Z19qd2VPSVU4X29YMUx1Mk5BbEc4MnFzRlJDdHloNHVvWEJhS0xTVUhaa2U1b2hJVlp0aDZUMzJNWnFCdEtTOEdFYzVPU19aWVVNYk1iMDJsNm9ZNFNLcWExanhSemFEaEQzendUclNvWWVkVXQzWlV3QjRtUFo3dw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Descobrir: Tàrrega to open Cal Trepat pilgrim hostel (Aug 2023 article)",
+    "summary_en": "Descobrir headline: Tàrrega will set up the Cal Trepat pilgrim hostel (alberg de pelegrins). Stale resurfacing — feed publication date 2023-08-30, so this is a three-year-old announcement, not news; it does not confirm the hostel's current status.",
+    "source_text": "Tàrrega posarà en marxa l’alberg de pelegrins de Cal Trepat - Descobrir\n<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQcFJYRjZLTTlYZUl5T1lmMDVYcHZtUnR2YnNQYnViV0kzcFZNV0szRWtYTmo3T3NxMkYzZU50Z19qd2VPSVU4X29YMUx1Mk5BbEc4MnFzRlJDdHloNHVvWEJhS0xTVUhaa2U1b2hJVlp0aDZUMzJNWnFCdEtTOEdFYzVPU19aWVVNYk1iMDJsNm9ZNFNLcWExanhSemFEaEQzendUclNvWWVkVXQzWlV3QjRtUFo3dw?oc=5\" target=\"_blank\">Tàrrega posarà en marxa l’alberg de pelegrins de Cal Trepat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Descobrir</font>\n(Published by Descobrir)\n(Feed publication date: 2023-08-30)",
+    "relevance": 11,
+    "notify": "quiet",
+    "publisher": "Descobrir",
+    "publisher_url": "https://www.descobrir.cat",
     "is_new": true
   }
 ]
