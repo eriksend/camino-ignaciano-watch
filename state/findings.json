@@ -1,31 +1,5 @@
 [
   {
-    "id": "57af013c1d62e441",
-    "detected_at": "2026-06-11T14:40:16Z",
-    "source_name": "Google News — \"Ignatian Camino\" (EN)",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZkNwd3EzNkxWTFFYUG5KVWxTMS00bVNsSkM2M0J2SDBRbjZyUkVFSXRWY1FaZkhmZWNMQUJ6TzRtYTh4a3VUbXRLZDRCRjBPcXNWZ01vUlZ1RXdGZlhvNGJSQWZBWjNaYnNtQlF5eWlNeHBkaFVSVW50eE1sOUlZaU0wdUtDSWVxYmdJQkZxTmwxcHRLMkFpNktURmlLLXFoOFBSdW1ZbS1DQjFwOFE?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "en",
-    "title": "Off-topic: 'Un-Ignatian' crisis response at Ateneo de Manila",
-    "summary_en": "A Tiebreaker Times article criticizes Ateneo de Manila University's institutional response to a crisis as the 'Un-Ignatian' way — this concerns Ignatian spirituality principles at a Philippine university, not the Camino Ignaciano walking route.",
-    "relevance": 0,
-    "is_new": false
-  },
-  {
-    "id": "c03b342d542b0652",
-    "detected_at": "2026-06-11T14:40:16Z",
-    "source_name": "Google News — \"Ignatian Camino\" (EN)",
-    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSGEydElDRHp2QjlwLTlHTEk5RGJlWGdTM2lSVktqRnRaak9qcTVYeEI5bXZSbzJscV9tZERFNVlWSkhxUHEzOXVpenRRUFotZGdmZDBubG1SZnlGLVVUeS0yajhXNDZSZzBaWk80bXh6ZGpaSUxhUncwTDZDQllFUXFTOUpIV3FpY29kTGc4TUp6WFphTHdFUTlCTUprd2s2Sm45ZGNGakpibkVaTUVLeF9UcmV3V2c0MXc?oc=5",
-    "region": "whole",
-    "tier": "social",
-    "lang": "en",
-    "title": "Off-topic: Ateneo de Manila officials at North American alumni convention",
-    "summary_en": "News about Ateneo de Manila University officials attending the 7th Ateneo Alumni Association of North America (AAANA) Convention — entirely unrelated to the Camino Ignaciano pilgrimage route.",
-    "relevance": 0,
-    "is_new": false
-  },
-  {
     "id": "d5a02c7f3495ff5c",
     "detected_at": "2026-06-12T14:36:57Z",
     "source_name": "Google News — \"Camino Ignaciano\" (ES)",
@@ -7315,7 +7289,7 @@
     "notify": "quiet",
     "publisher": "Agència Flama",
     "publisher_url": "https://www.agenciaflama.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "f24db9f8846e026e",
@@ -7332,7 +7306,7 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "d77d00367262de97",
@@ -7349,6 +7323,38 @@
     "notify": "quiet",
     "publisher": "Descobrir",
     "publisher_url": "https://www.descobrir.cat",
+    "is_new": false
+  },
+  {
+    "id": "f39bade333f6d6fa",
+    "detected_at": "2026-11-14T15:41:55+00:00",
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "title": "Segre: Catalan agriculture department to aid farmers hit by sector crises",
+    "summary_en": "Segre (via ACN) reports the Catalan agriculture department will allocate between 70 and 90 million euros to farmers affected by the sector's crises, through a decree-law. Agricultural policy news with no bearing on the route or the harvest calendar.",
+    "source_text": "Agricultura ayudará a los campesinos afectados por las crisis del sector\nACN\nLa medida destinará entre 70 y 90 millones de euros. Se impulsará a través de un decreto ley",
+    "relevance": 4,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "1c97b0daefdc43de",
+    "detected_at": "2026-11-14T15:41:55+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOW1GQWNBanl3ZXZ4WEE5SUJNWUtlZk9wSU95SFIySDZ6amZDTmg3T29HcmhKQVFGLW1FZUNLZnk1WGE0b05La3NLalMwZm5abDlBU3V3Vms5UGE4TEJDRVdFZ2IxN1NSLWZVQ1owaDhpSnFmVUg3ZEk2LU80UWkyVkxnWXJ4NTMxWVo1dXNsX2I1VWYz0gGaAUFVX3lxTFBRT3FNTUVYTkNYMlZFUi1nckRFYzRCWDQ3S05BbWtYMHBqX094aTlONUxuRGlCaEI3bHYzRU5aOWdFSTh2N3ZnZEVPcEZaLVFScEM5alFXREZBYUtqaDdkdzhib2R2UWZOM2QtampyODRvX2h6ajlnMzJoa2lENlNhSW9sUk01M01LN20zVFlYQ25pVnlNV25qUmc?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Regió7: record 500 people at Pla de Lluna on the Camí Ignasià (stale, July 2026)",
+    "summary_en": "Regió7 reports that around five hundred people turned out for the Pla de Lluna event on the Camí Ignasià, the largest edition in its history. The feed publication date is 2026-07-31, so this is an old article resurfaced by Google News, not new route information.",
+    "source_text": "Mig miler de persones converteixen el Pla de Lluna al Camí Ignasià en l'edició més multitudinària de la seva història - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOOW1GQWNBanl3ZXZ4WEE5SUJNWUtlZk9wSU95SFIySDZ6amZDTmg3T29HcmhKQVFGLW1FZUNLZnk1WGE0b05La3NLalMwZm5abDlBU3V3Vms5UGE4TEJDRVdFZ2IxN1NSLWZVQ1owaDhpSnFmVUg3ZEk2LU80UWkyVkxnWXJ4NTMxWVo1dXNsX2I1VWYz0gGaAUFVX3lxTFBRT3FNTUVYTkNYMlZFUi1nckRFYzRCWDQ3S05BbWtYMHBqX094aTlONUxuRGlCaEI3bHYzRU5aOWdFSTh2N3ZnZEVPcEZaLVFScEM5alFXREZBYUtqaDdkdzhib2R2UWZOM2QtampyODRvX2h6ajlnMzJoa2lENlNhSW9sUk01M01LN20zVFlYQ25pVnlNV25qUmc?oc=5\" target=\"_blank\">Mig miler de persones converteixen el Pla de Lluna al Camí Ignasià en l'edició més multitudinària de la seva història</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-07-31)",
+    "relevance": 7,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
     "is_new": true
   }
 ]
