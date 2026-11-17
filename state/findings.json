@@ -1,44 +1,5 @@
 [
   {
-    "id": "e638dd72bf8b0ccd",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Camino Ignaciano — Alojamiento (accommodation list)",
-    "url": "https://caminoignaciano.org/alojamiento/",
-    "region": "whole",
-    "tier": "official",
-    "lang": "es",
-    "title": "Official Camino Ignaciano accommodation list updated (2026)",
-    "summary_en": "The official accommodation page has been updated with lodging options alphabetically by town across the full route. Listings include hostales, pensiones, casas rurales, and municipal albergues with addresses and phone numbers; towns covered run from Agoncillo (La Rioja) through Catalonia, including Alcarràs, Alcoletge, and Alda (Basque Country).",
-    "relevance": 100,
-    "is_new": false
-  },
-  {
-    "id": "6d0da37e34ceeec6",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Camino Ignaciano — Aspectos prácticos",
-    "url": "https://caminoignaciano.org/en/practicalities/",
-    "region": "whole",
-    "tier": "official",
-    "lang": "en",
-    "title": "Ignatian Way practicalities updated: spring/fall best, €45–65/day, Monegros heat",
-    "summary_en": "The official practicalities page confirms spring and fall as the best seasons. Daily costs run €45–65, with refugios €15–20 and hotels €50–90. Warns of extreme summer heat (up to 40°C) in the Zaragoza/Ebro Valley region, winter snow risk on the Loyola–Logroño section, and the cierzo cold dry wind.",
-    "relevance": 69,
-    "is_new": false
-  },
-  {
-    "id": "c30c64d396baaeeb",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Camino Ignaciano — Credenciales / certificados",
-    "url": "https://caminoignaciano.org/en/tips-for-pilgrims/",
-    "region": "whole",
-    "tier": "official",
-    "lang": "en",
-    "title": "Ignatian Way tips: obtain credencial before departure; Monegros hostel gap warning",
-    "summary_en": "The tips page advises obtaining a pilgrim credencial before departure to access pilgrim hostels. It explicitly warns of a critical lack of hostels in the Los Monegros stretch between Zaragoza and Fraga — the loneliest and hardest section — as it was for Ignatius himself.",
-    "relevance": 55,
-    "is_new": false
-  },
-  {
     "id": "58788db0c8d451b7",
     "detected_at": "2026-06-13T14:46:24+00:00",
     "source_name": "Jesuit Sources — official guide editions",
@@ -7320,7 +7281,7 @@
     "notify": "quiet",
     "publisher": "El Diario Vasco",
     "publisher_url": "https://www.diariovasco.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "cb3dd4a8330bdbc0",
@@ -7337,7 +7298,7 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "af5d3f9ad609f4d7",
@@ -7354,7 +7315,7 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "80fba794877f2a49",
@@ -7371,6 +7332,58 @@
     "notify": "quiet",
     "publisher": "Nació Digital",
     "publisher_url": "https://naciodigital.cat",
+    "is_new": false
+  },
+  {
+    "id": "44c227303ecbc9bd",
+    "detected_at": "2026-11-17T15:36:19+00:00",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQQXFSMmFJUnYzQ3N0Y19fUGpfVFZNVHlUekRPbjlQQTBNVktWdE0zRmYzeG9iaWo4TjVMUjBXMlV4VndMc19XNU5LVkRKUWN3UVZacHhpVkxGWUIyWkNlY3A2Z2tFYWJ0eE1NR0dUcTc5Rms0eWYxRXRINDR4djlJZkl1b29JTFFYU1VVbkw3NFdoaWRlQV9lVEI1SWtnQQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "Camino Ignaciano association launches a photography contest",
+    "summary_en": "Ribereno Digital reports that the Camino Ignaciano association has called a photography contest. Promotional news with no bearing on route, lodging or logistics for the walk.",
+    "source_text": "La asociación del Camino Ignaciano convoca un concurso de fotografía - Ribereno Digital\n<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQQXFSMmFJUnYzQ3N0Y19fUGpfVFZNVHlUekRPbjlQQTBNVktWdE0zRmYzeG9iaWo4TjVMUjBXMlV4VndMc19XNU5LVkRKUWN3UVZacHhpVkxGWUIyWkNlY3A2Z2tFYWJ0eE1NR0dUcTc5Rms0eWYxRXRINDR4djlJZkl1b29JTFFYU1VVbkw3NFdoaWRlQV9lVEI1SWtnQQ?oc=5\" target=\"_blank\">La asociación del Camino Ignaciano convoca un concurso de fotografía</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ribereno Digital</font>\n(Published by Ribereno Digital)\n(Feed publication date: 2026-11-17)",
+    "relevance": 14,
+    "notify": "quiet",
+    "publisher": "Ribereno Digital",
+    "publisher_url": "https://riberenodigital.com",
+    "is_new": true
+  },
+  {
+    "id": "2ba320f1ffcfb16d",
+    "detected_at": "2026-11-17T15:36:19+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1vYkhWQ1F5MV9pb29YUGFZX1IwWV9nSmxRT2tkalpVQVMtZXJnbVM3V3hsWXZReGk0MEt5UlFRWmlORERqYmJFdW85MnlzZHpUc29zTFFMWXdpQTltdTl1YXJwTHVTZGNkVnY3MExlWFhnb2RPMndMU1pINA?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Stale resurfacing: Diari ARA column 'El Camí Ignasià ja no existeix!' (May 2025)",
+    "summary_en": "Diari ARA piece titled 'The Camí Ignasià no longer exists!', with a feed publication date of 2025-05-06 — an old item resurfaced by the news feed, not new information. Previously identified as a satirical column; no evidence of any real route change.",
+    "source_text": "El Camí Ignasià ja no existeix! - Diari ARA\n<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1vYkhWQ1F5MV9pb29YUGFZX1IwWV9nSmxRT2tkalpVQVMtZXJnbVM3V3hsWXZReGk0MEt5UlFRWmlORERqYmJFdW85MnlzZHpUc29zTFFMWXdpQTltdTl1YXJwTHVTZGNkVnY3MExlWFhnb2RPMndMU1pINA?oc=5\" target=\"_blank\">El Camí Ignasià ja no existeix!</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Diari ARA</font>\n(Published by Diari ARA)\n(Feed publication date: 2025-05-06)",
+    "relevance": 4,
+    "notify": "quiet",
+    "publisher": "Diari ARA",
+    "publisher_url": "https://www.ara.cat",
+    "is_new": true
+  },
+  {
+    "id": "b16691eff48f390f",
+    "detected_at": "2026-11-17T15:36:19+00:00",
+    "source_name": "EFFIS / Copernicus Fire Weather Index forecast",
+    "url": "https://forest-fire.emergency.copernicus.eu/apps/fire.risk.viewer/",
+    "region": "aragon",
+    "tier": "official",
+    "lang": "en",
+    "title": "EFFIS FWI 'high' (29.8) at Zaragoza (stage 15) on 19 Nov — off-season reading",
+    "summary_en": "EFFIS forecasts a Fire Weather Index peak of 29.8 ('high') at Zaragoza (stage 15) on 2026-11-19, with 5 endpoints at 'high' (stages 15–19, Fuentes de Ebro to Candasnos) and an anomaly of +4.9 vs the seasonal norm. Autumn reading, far outside the walk window and cereal season; no planning impact.",
+    "source_text": "EFFIS Fire Weather Index peaks at 29.8 — 'high' on the EFFIS scale — at Zaragoza (stage 15) on 2026-11-19, across a 3-day forecast from 2026-11-17. 5 stage endpoint(s) reach 'high' (>= 21.3) or worse: Zaragoza (stage 15) 30, Venta de Santa Lucía (stage 17) 30, Candasnos (stage 19) 26, Bujaraloz (stage 18) 24, Fuentes de Ebro (stage 16) 22. FWI anomaly at Zaragoza is +4.9 versus the seasonal norm. Reported because: changed. Classes: low <11.2, moderate 11.2-21.3, high 21.3-38, very high 38-50, extreme 50-70, very extreme >70.",
+    "relevance": 14,
+    "notify": "quiet",
+    "kind": "fire_weather",
+    "stage": 15,
+    "stage_end": "Zaragoza",
     "is_new": true
   }
 ]
