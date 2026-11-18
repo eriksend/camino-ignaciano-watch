@@ -1,31 +1,5 @@
 [
   {
-    "id": "58788db0c8d451b7",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Jesuit Sources — official guide editions",
-    "url": "https://jesuitsources.bc.edu/?s=camino+ignaciano",
-    "region": "whole",
-    "tier": "guide",
-    "lang": "en",
-    "title": "Jesuit Sources bookstore: Journey with Ignatius Pilgrim Pack ($116.85)",
-    "summary_en": "The Jesuit Sources bookstore lists a 'Journey with Ignatius – Pilgrim Pack' at $116.85 and a new edition of 'A Pilgrim's Testament: The Memoirs of Saint Ignatius of Loyola' at $19.95, alongside general Ignatian spirituality titles.",
-    "relevance": 20,
-    "is_new": false
-  },
-  {
-    "id": "d3649c8e3efd4f3b",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Chris Lowney — books / Ignatian Way",
-    "url": "http://chrislowney.com/wp/books/",
-    "region": "whole",
-    "tier": "guide",
-    "lang": "en",
-    "title": "Chris Lowney books page — social media links only, no new Camino content",
-    "summary_en": "The bookshelf page for Chris Lowney, author of Ignatian Way guide content, contains only social media follow links with no updated Camino planning information.",
-    "relevance": 2,
-    "is_new": false
-  },
-  {
     "id": "32064bc8b47f900a",
     "detected_at": "2026-06-13T14:46:24+00:00",
     "source_name": "Gronze — Camino Ignaciano (General)",
@@ -7349,7 +7323,7 @@
     "notify": "quiet",
     "publisher": "Ribereno Digital",
     "publisher_url": "https://riberenodigital.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "2ba320f1ffcfb16d",
@@ -7366,7 +7340,7 @@
     "notify": "quiet",
     "publisher": "Diari ARA",
     "publisher_url": "https://www.ara.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "b16691eff48f390f",
@@ -7384,6 +7358,40 @@
     "kind": "fire_weather",
     "stage": 15,
     "stage_end": "Zaragoza",
+    "is_new": false
+  },
+  {
+    "id": "810efa272cda6292",
+    "detected_at": "2026-11-18T15:36:22+00:00",
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVVpYLVQ3WjFiSVBtOGsyQm9ELUU3cUxjYWZxNjBjQTA3MDZWV3UwS19lenRFa0NWZ21vLUFfbXVrZnFzY0NZZVBKaXVORnNqNFItS3ZNV20xNThnQjVxRmZxMC1lUEtiZEdrNDlqZmJvOGVKbUhwWkFxZzB3X3FjaEo3eVd0ZFZNWFZETE83bE9SMmpMTFVoU1lhcmhaSUx4d01BMWFXVXNJeEpqWHZJRjhCWDF3LVpRNUF4akhWMHJSdw?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "title": "El Diario Montañés: Hereu highlights religious-tourism opportunity with Camino Ignaciano Association",
+    "summary_en": "El Diario Montañés republishes the July 2026 story in which Spain's tourism official Hereu highlights religious tourism alongside the Camino Ignaciano Association (feed date 2026-07-09). This is a stale resurfacing of a story already logged many times; no route, lodging or access information.",
+    "source_text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - El Diario Montañés\n<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVVpYLVQ3WjFiSVBtOGsyQm9ELUU3cUxjYWZxNjBjQTA3MDZWV3UwS19lenRFa0NWZ21vLUFfbXVrZnFzY0NZZVBKaXVORnNqNFItS3ZNV20xNThnQjVxRmZxMC1lUEtiZEdrNDlqZmJvOGVKbUhwWkFxZzB3X3FjaEo3eVd0ZFZNWFZETE83bE9SMmpMTFVoU1lhcmhaSUx4d01BMWFXVXNJeEpqWHZJRjhCWDF3LVpRNUF4akhWMHJSdw?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">El Diario Montañés</font>\n(Published by El Diario Montañés)\n(Feed publication date: 2026-07-09)",
+    "relevance": 11,
+    "notify": "quiet",
+    "publisher": "El Diario Montañés",
+    "publisher_url": "https://www.eldiariomontanes.es",
+    "is_new": true
+  },
+  {
+    "id": "8a0d4ce7d9c16fcb",
+    "detected_at": "2026-11-18T15:36:22+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQWYyX0RHWFFURnlCc2NsWWpWMEtTOEVadWtFajc2eGZUY1NsUWNhSV9uV1FXTHM2eElPSU9qdm1iQkczeDNucTB2SzZjYnpQN1gxenZRb0NfY29ESEVibDZWeTZycjgxTmEtVjVjaFJRYzFFTGhVdmREekh1UnY2OE9hX3FFUTFmWFR0YUdUNUttSGpYSlFuMjV6dldldm1WT0laenpYODFmQVczbUQ1dncwMi14NVp1VzZFQVJLODNYdzdW?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "diba.cat: 2015 local-government bulletin resurfaced in Camí Ignasià feed",
+    "summary_en": "A diba.cat 'Butlletí dels governs locals i Europa' issue dated 21/5/2015 resurfaced in the Camí Ignasià news feed (feed date 2015-05-21). Eleven-year-old content with no stated bearing on the route; stale, not news.",
+    "source_text": "Butlletí dels governs locals i Europa + - 21/5/2015 - diba.cat\n<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOQWYyX0RHWFFURnlCc2NsWWpWMEtTOEVadWtFajc2eGZUY1NsUWNhSV9uV1FXTHM2eElPSU9qdm1iQkczeDNucTB2SzZjYnpQN1gxenZRb0NfY29ESEVibDZWeTZycjgxTmEtVjVjaFJRYzFFTGhVdmREekh1UnY2OE9hX3FFUTFmWFR0YUdUNUttSGpYSlFuMjV6dldldm1WT0laenpYODFmQVczbUQ1dncwMi14NVp1VzZFQVJLODNYdzdW?oc=5\" target=\"_blank\">Butlletí dels governs locals i Europa + - 21/5/2015</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">diba.cat</font>\n(Published by diba.cat)\n(Feed publication date: 2015-05-21)",
+    "relevance": 3,
+    "notify": "quiet",
+    "publisher": "diba.cat",
+    "publisher_url": "https://www.diba.cat",
     "is_new": true
   }
 ]
