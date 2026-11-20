@@ -1,18 +1,5 @@
 [
   {
-    "id": "219f15a1bf077549",
-    "detected_at": "2026-06-13T14:46:24+00:00",
-    "source_name": "Marly Camino — Ignatian Camino",
-    "url": "https://marlycamino.com/camino/ignatian-camino/",
-    "region": "whole",
-    "tier": "tour",
-    "lang": "en",
-    "title": "Marly Camino guided tour: 13 days, 141 km, medium, Pamplona–Barcelona",
-    "summary_en": "Marly Camino offers a guided 13-day/12-night Ignatian Way tour covering 141 km (87.6 mi) at medium difficulty, starting in Pamplona and ending at the Cave of St. Ignatius in Manresa (Barcelona transfer). Includes all breakfasts and 5 dinners; small group format.",
-    "relevance": 13,
-    "is_new": false
-  },
-  {
     "id": "f21838b0d541e6b7",
     "detected_at": "2026-06-13T14:46:24+00:00",
     "source_name": "Camino Ignaciano MTB",
@@ -7357,7 +7344,7 @@
     "notify": "quiet",
     "publisher": "Revista CUINA",
     "publisher_url": "https://www.cuina.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "32616a280fc22824",
@@ -7374,7 +7361,7 @@
     "notify": "quiet",
     "publisher": "El Punt Avui",
     "publisher_url": "https://www.elpuntavui.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "ec8e00206b83d2e0",
@@ -7391,7 +7378,7 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "d42c0a1c77a35de4",
@@ -7408,6 +7395,23 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
+    "is_new": false
+  },
+  {
+    "id": "283467bef38b7755",
+    "detected_at": "2026-11-20T15:35:43Z",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdmlmeTdPY0paYmk1Z2R3M3NVVmNBSXFnejBwSC16cmE3Z1ZlTFB0Ym9EQUZzXzJ2WjdDQ19GSkh6ZDh3eUFIZDFOdl9adVF3YkxNQTVCUGs1VDlFQXVvOVpCU1ZqSm5nQ1h4Z0ZHcjYwRGtyNDVKZGNadmdHZFc0UdIBhgFBVV95cUxOdU9vUEkwWDh5LWo3V1VkX2laRjVOdWtOcjNxbWRDOHpaTnFmXzdibG5LeEVIWmpKUUVPdnQtNkZVNDVLRGIwQVBWeE5OVDR3ZzlQTlVMVWN0WDM0c3RoOU9nUGZLVUwyRDY3OXVrdTJFbHZCenlDYkV5czhSdFVTYS1zNG8xUQ?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Stale (2022): documentary 'El Camí Ignasià' reaches cinemas",
+    "summary_en": "Territoris.cat reports that the documentary 'El Camí Ignasià' is arriving in cinemas. The feed dates this piece to 2022-07-22, so it is an old article resurfaced, not news; no route, lodging or access information.",
+    "source_text": "El documental 'El Camí Ignasià' arriba als cinemes - Territoris.cat\n<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNdmlmeTdPY0paYmk1Z2R3M3NVVmNBSXFnejBwSC16cmE3Z1ZlTFB0Ym9EQUZzXzJ2WjdDQ19GSkh6ZDh3eUFIZDFOdl9adVF3YkxNQTVCUGs1VDlFQXVvOVpCU1ZqSm5nQ1h4Z0ZHcjYwRGtyNDVKZGNadmdHZFc0UdIBhgFBVV95cUxOdU9vUEkwWDh5LWo3V1VkX2laRjVOdWtOcjNxbWRDOHpaTnFmXzdibG5LeEVIWmpKUUVPdnQtNkZVNDVLRGIwQVBWeE5OVDR3ZzlQTlVMVWN0WDM0c3RoOU9nUGZLVUwyRDY3OXVrdTJFbHZCenlDYkV5czhSdFVTYS1zNG8xUQ?oc=5\" target=\"_blank\">El documental 'El Camí Ignasià' arriba als cinemes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Territoris.cat</font>\n(Published by Territoris.cat)\n(Feed publication date: 2022-07-22)",
+    "relevance": 4,
+    "notify": "quiet",
+    "publisher": "Territoris.cat",
+    "publisher_url": "https://www.territoris.cat",
     "is_new": true
   }
 ]
