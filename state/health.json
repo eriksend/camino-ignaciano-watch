@@ -1,17 +1,17 @@
 {
   "alerts": 0,
   "alfa_ok": true,
-  "alfa_run_at": "2026-11-23T15:35:57+00:00",
+  "alfa_run_at": "2026-11-24T15:35:44+00:00",
   "baselined": 0,
-  "changed_quiet": 12,
+  "changed_quiet": 29,
   "deferred": [],
   "deferred_items": 0,
   "failed": [],
   "fwi_ok": true,
-  "fwi_run_at": "2026-11-23T15:35:54+00:00",
-  "new_items": 0,
-  "rebaselined": 5,
-  "run_at": "2026-11-23T15:35:48+00:00",
+  "fwi_run_at": "2026-11-24T15:35:41+00:00",
+  "new_items": 5,
+  "rebaselined": 7,
+  "run_at": "2026-11-24T15:35:35+00:00",
   "skipped": 0,
   "sources_total": 50
 }

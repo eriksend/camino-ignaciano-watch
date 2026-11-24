@@ -1,1 +1,60 @@
-[]
+[
+  {
+    "source_name": "Aragón — Niveles de alerta (INFOAR/NAPIF doctrine)",
+    "url": "https://www.aragon.es/prevencion-y-extincion-de-incendios-forestales/niveles-de-alerta",
+    "region": "aragon",
+    "tier": "official",
+    "lang": "es",
+    "weight": 1.0,
+    "notify": "quiet",
+    "text": "Apartados de esta página"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTll5X0kwU0NuSjJRQTVncE5lMjNkd0Rob2Z5Y29yanNpTzBOYlRpQl9PWEE2b0xISHFaNTZQekZDMl9QY0x2ZXhnTnRpUktXZmt6azE2VXA2by1TUUI4YlBjVHdLcGtLbGJoeEtMcWlfclJHUnp0X3lkSFBtaWxfREk3LUNlT1pDX2FleWNkR2TSAZYBQVVfeXFMT2VQakVZcnlNc2U2V21DVjNLWHBwR0ZrZ19Od0NDelR3cEFhMVlYQnZBRkJFeWFsclFOY3ZJeTNLTGZfSmNHLWRoVHd3R1RtNG5CX3daU05FeWZNRmtlZ3MtU3NyQ2t0V1RjOXpMT1Zkbl9NaEZvbnZnTDhlcFk2S1RMYTRXSXZiMWJRZ3EzSUtyNzVreHRR?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "text": "El govern central destina 450.000 euros al Camí Ignasià que impulsa Manresa - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOTll5X0kwU0NuSjJRQTVncE5lMjNkd0Rob2Z5Y29yanNpTzBOYlRpQl9PWEE2b0xISHFaNTZQekZDMl9QY0x2ZXhnTnRpUktXZmt6azE2VXA2by1TUUI4YlBjVHdLcGtLbGJoeEtMcWlfclJHUnp0X3lkSFBtaWxfREk3LUNlT1pDX2FleWNkR2TSAZYBQVVfeXFMT2VQakVZcnlNc2U2V21DVjNLWHBwR0ZrZ19Od0NDelR3cEFhMVlYQnZBRkJFeWFsclFOY3ZJeTNLTGZfSmNHLWRoVHd3R1RtNG5CX3daU05FeWZNRmtlZ3MtU3NyQ2t0V1RjOXpMT1Zkbl9NaEZvbnZnTDhlcFk2S1RMYTRXSXZiMWJRZ3EzSUtyNzVreHRR?oc=5\" target=\"_blank\">El govern central destina 450.000 euros al Camí Ignasià que impulsa Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOazBpMHkyOHFpREY5TGNYQndoUHQ5ZmpBZlk2NVhqLW1vWjZhWGFlS0k0dXJKNGhmWFB0UU9KaDBKLXBkZkFQalZuTklhcWFnZnhWeHlRc2kwTF9yb29lcjZYeThtYzlMOExjV0RQWHM4dEM1MWc4M012bm1BVFBmVEllYnVWNVo0SjV3Wmc4Z0RTTmk2dlBab3h0OGNsRS1ndGNTM0tlSUs4UkFPVlJUaS1fbXJCTlFkcjVLamtwTWJUejI0OUdUMTQwTXVWaEJTWmgtZktaOFB1UTFBVjFCdnEwTQ?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Nació Digital",
+    "publisher_url": "https://naciodigital.cat",
+    "text": "El Camí Ignasià rep 450.000 euros per impulsar la promoció, la senyalització i l'accessibilitat - Nació Digital\n<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxOazBpMHkyOHFpREY5TGNYQndoUHQ5ZmpBZlk2NVhqLW1vWjZhWGFlS0k0dXJKNGhmWFB0UU9KaDBKLXBkZkFQalZuTklhcWFnZnhWeHlRc2kwTF9yb29lcjZYeThtYzlMOExjV0RQWHM4dEM1MWc4M012bm1BVFBmVEllYnVWNVo0SjV3Wmc4Z0RTTmk2dlBab3h0OGNsRS1ndGNTM0tlSUs4UkFPVlJUaS1fbXJCTlFkcjVLamtwTWJUejI0OUdUMTQwTXVWaEJTWmgtZktaOFB1UTFBVjFCdnEwTQ?oc=5\" target=\"_blank\">El Camí Ignasià rep 450.000 euros per impulsar la promoció, la senyalització i l'accessibilitat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nació Digital</font>\n(Published by Nació Digital)\n(Feed publication date: 2026-11-24)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N30gGQAUFVX3lxTE9ndjk1QVVLYWRQdnRyVWhPdlpBQWV5bTJoZjE4bGxvOElQUDVqeUNKTlA2dExrOTlmeDdVWHkwcno2bzh0MXUzazBEMllRdFpkc2w4d0Fncjg2NlM5dXlpYld1WmpmQ1JibFJOeXVKdWV2WGZ3blJQdnZyYWdmS2RGUnBEdjRqLWs4NUdYQ2paRw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "text": "L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N30gGQAUFVX3lxTE9ndjk1QVVLYWRQdnRyVWhPdlpBQWV5bTJoZjE4bGxvOElQUDVqeUNKTlA2dExrOTlmeDdVWHkwcno2bzh0MXUzazBEMllRdFpkc2w4d0Fncjg2NlM5dXlpYld1WmpmQ1JibFJOeXVKdWV2WGZ3blJQdnZyYWdmS2RGUnBEdjRqLWs4NUdYQ2paRw?oc=5\" target=\"_blank\">L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYWNqd2NnVV9UaHY4WUtmaVB4SGgxYjVKYmJHQ2R1em90R1JyNWM2NEdQX1lqbHc5WFJKS0xLMWlRLTFMdnptSXB1Nk5aMnVjUWl5YjVRcmNka28zVUoxSHI2Mk1pRlVYNHN1eWpyNHVVUU0wSG9OUFRhZ21fTk9nMklRdDVlRTFRQmpqS1VsaW52T25ncXEtQ0tjY9IBoAFBVV95cUxQbm1YTTVWa1lYalpNWFkwMTN0dFR0aFdzOWJXanZFWWRmN29yY0NQQXBoZnl6em5qVmpjTVI1WFMzRFpTWlhpdHZvc0pPY3JUZTRsX3I1T2t3MHhYUjZFSU94X3dWc1g2N0RYb0haTTlWVElIVzcxcTVHbFUxa1J3SzRzRXVJQ1pXWVItU2h3ejV2aThUdkswZ1BkQkI0UkUz?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "text": "El ministre de Turisme Jordi Hereu es compromet a Manresa a impulsar el Camí Ignasià al món - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNYWNqd2NnVV9UaHY4WUtmaVB4SGgxYjVKYmJHQ2R1em90R1JyNWM2NEdQX1lqbHc5WFJKS0xLMWlRLTFMdnptSXB1Nk5aMnVjUWl5YjVRcmNka28zVUoxSHI2Mk1pRlVYNHN1eWpyNHVVUU0wSG9OUFRhZ21fTk9nMklRdDVlRTFRQmpqS1VsaW52T25ncXEtQ0tjY9IBoAFBVV95cUxQbm1YTTVWa1lYalpNWFkwMTN0dFR0aFdzOWJXanZFWWRmN29yY0NQQXBoZnl6em5qVmpjTVI1WFMzRFpTWlhpdHZvc0pPY3JUZTRsX3I1T2t3MHhYUjZFSU94X3dWc1g2N0RYb0haTTlWVElIVzcxcTVHbFUxa1J3SzRzRXVJQ1pXWVItU2h3ejV2aThUdkswZ1BkQkI0UkUz?oc=5\" target=\"_blank\">El ministre de Turisme Jordi Hereu es compromet a Manresa a impulsar el Camí Ignasià al món</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2025-02-14)"
+  }
+]
