@@ -1,17 +1,29 @@
 [
   {
-    "source_name": "Aragón — Niveles de alerta (INFOAR/NAPIF doctrine)",
-    "url": "https://www.aragon.es/prevencion-y-extincion-de-incendios-forestales/niveles-de-alerta",
-    "region": "aragon",
+    "source_name": "Cova de Sant Ignasi — Notícies (Manresa)",
+    "url": "https://www.covamanresa.cat/en/actualitat",
+    "region": "catalonia",
     "tier": "official",
-    "lang": "es",
+    "lang": "en",
     "weight": 1.0,
     "notify": "quiet",
-    "text": "Apartados de esta página"
+    "text": "Next Thursday, 17 December at 12 noon, more than 150 voices from 6 different choirs will come together for a Grand Christmas Charity Choir Concert at the Sanctuary of La Cova Sant Ignasi, conducted by Miquel Àngel Arias Soler."
+  },
+  {
+    "source_name": "Google News — \"Camino Ignaciano\" (ES)",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdGpydmU0dUJHek5qLVIteHIwdmotajB1WHl5Q0tyZ3hpQ2dray1ENi1JY3o3VWNSWGFCNVhlQkhDOGhqYkY2UmJ4SUxKNnFaS0lrQ21NQm9tWkhhLTBOVWx5OWFPS1Z2WXhtcE1ZMktaR2tJRzFBU1V1VWl3SV9IREJ4MjVrTHFGT1loNmU1WWplS3VlbEdVbjFpb1A1Wk1TUnFNaEhQb3hIZ0NNS2RrTkl30gG3AUFVX3lxTE9CWmZRV2VhcE50a0FBbU01OUJFQm42c3N6ZFZzcG9TQXYxNjhRX3FwZl92RmpfeVM4VFJiTFl1MWU3TFNxZW5aSHZPMi01NGd6WnNSc1FoMERjUEYyc2t1UlVjZTZMQWtCTVVZV3NwUHcwOXdlZVhTT2QwVGw0WWxaMG1qWHlEdWJIV2w0dzQxc0pjQ2FsaWtCU1pLTXZhS1E5ck1VVVQtV0ZmaFVhTTFVYUV0UnpiTQ?oc=5",
+    "region": "whole",
+    "tier": "social",
+    "lang": "es",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "ABC",
+    "publisher_url": "https://www.abc.es",
+    "text": "Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano - ABC\n<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQdGpydmU0dUJHek5qLVIteHIwdmotajB1WHl5Q0tyZ3hpQ2dray1ENi1JY3o3VWNSWGFCNVhlQkhDOGhqYkY2UmJ4SUxKNnFaS0lrQ21NQm9tWkhhLTBOVWx5OWFPS1Z2WXhtcE1ZMktaR2tJRzFBU1V1VWl3SV9IREJ4MjVrTHFGT1loNmU1WWplS3VlbEdVbjFpb1A1Wk1TUnFNaEhQb3hIZ0NNS2RrTkl30gG3AUFVX3lxTE9CWmZRV2VhcE50a0FBbU01OUJFQm42c3N6ZFZzcG9TQXYxNjhRX3FwZl92RmpfeVM4VFJiTFl1MWU3TFNxZW5aSHZPMi01NGd6WnNSc1FoMERjUEYyc2t1UlVjZTZMQWtCTVVZV3NwUHcwOXdlZVhTT2QwVGw0WWxaMG1qWHlEdWJIV2w0dzQxc0pjQ2FsaWtCU1pLTXZhS1E5ck1VVVQtV0ZmaFVhTTFVYUV0UnpiTQ?oc=5\" target=\"_blank\">Hereu destaca la oportunidad del turismo religioso con la Asociación del Camino Ignaciano</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC</font>\n(Published by ABC)\n(Feed publication date: 2026-07-09)"
   },
   {
     "source_name": "Google News — \"Camí Ignasià\" (CA)",
-    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTll5X0kwU0NuSjJRQTVncE5lMjNkd0Rob2Z5Y29yanNpTzBOYlRpQl9PWEE2b0xISHFaNTZQekZDMl9QY0x2ZXhnTnRpUktXZmt6azE2VXA2by1TUUI4YlBjVHdLcGtLbGJoeEtMcWlfclJHUnp0X3lkSFBtaWxfREk3LUNlT1pDX2FleWNkR2TSAZYBQVVfeXFMT2VQakVZcnlNc2U2V21DVjNLWHBwR0ZrZ19Od0NDelR3cEFhMVlYQnZBRkJFeWFsclFOY3ZJeTNLTGZfSmNHLWRoVHd3R1RtNG5CX3daU05FeWZNRmtlZ3MtU3NyQ2t0V1RjOXpMT1Zkbl9NaEZvbnZnTDhlcFk2S1RMYTRXSXZiMWJRZ3EzSUtyNzVreHRR?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N3?oc=5",
     "region": "catalonia",
     "tier": "social",
     "lang": "ca",
@@ -19,11 +31,23 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "text": "El govern central destina 450.000 euros al Camí Ignasià que impulsa Manresa - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOTll5X0kwU0NuSjJRQTVncE5lMjNkd0Rob2Z5Y29yanNpTzBOYlRpQl9PWEE2b0xISHFaNTZQekZDMl9QY0x2ZXhnTnRpUktXZmt6azE2VXA2by1TUUI4YlBjVHdLcGtLbGJoeEtMcWlfclJHUnp0X3lkSFBtaWxfREk3LUNlT1pDX2FleWNkR2TSAZYBQVVfeXFMT2VQakVZcnlNc2U2V21DVjNLWHBwR0ZrZ19Od0NDelR3cEFhMVlYQnZBRkJFeWFsclFOY3ZJeTNLTGZfSmNHLWRoVHd3R1RtNG5CX3daU05FeWZNRmtlZ3MtU3NyQ2t0V1RjOXpMT1Zkbl9NaEZvbnZnTDhlcFk2S1RMYTRXSXZiMWJRZ3EzSUtyNzVreHRR?oc=5\" target=\"_blank\">El govern central destina 450.000 euros al Camí Ignasià que impulsa Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
+    "text": "MANRESA | L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N3?oc=5\" target=\"_blank\">MANRESA | L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
   },
   {
     "source_name": "Google News — \"Camí Ignasià\" (CA)",
-    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOazBpMHkyOHFpREY5TGNYQndoUHQ5ZmpBZlk2NVhqLW1vWjZhWGFlS0k0dXJKNGhmWFB0UU9KaDBKLXBkZkFQalZuTklhcWFnZnhWeHlRc2kwTF9yb29lcjZYeThtYzlMOExjV0RQWHM4dEM1MWc4M012bm1BVFBmVEllYnVWNVo0SjV3Wmc4Z0RTTmk2dlBab3h0OGNsRS1ndGNTM0tlSUs4UkFPVlJUaS1fbXJCTlFkcjVLamtwTWJUejI0OUdUMTQwTXVWaEJTWmgtZktaOFB1UTFBVjFCdnEwTQ?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMXRVVjJScFlJTlVNdVk4RHJRVUZYanFnUld4amJ4WUQ1VTFuQVU5c1F0Y0RhVTN5TFV4aEVJdUx4R1hFTi1FQ0M1bW1NTXRxbHE3OTdWS00xQnBUZjVOa1ZsSWctZHRrTGFpOWV5aTUxNTJLSU91RExlMENmUWQtUlJhYkFlOEZETkVzeGh0XzdaNVU4MjBja1NNOGVVSjFMdG5zMnJTNmdmT0U?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Descobrir",
+    "publisher_url": "https://www.descobrir.cat",
+    "text": "Torna la vida al riu: estrenat el primer gran tram de la Via Blava a l'Anoia - Descobrir\n<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOMXRVVjJScFlJTlVNdVk4RHJRVUZYanFnUld4amJ4WUQ1VTFuQVU5c1F0Y0RhVTN5TFV4aEVJdUx4R1hFTi1FQ0M1bW1NTXRxbHE3OTdWS00xQnBUZjVOa1ZsSWctZHRrTGFpOWV5aTUxNTJLSU91RExlMENmUWQtUlJhYkFlOEZETkVzeGh0XzdaNVU4MjBja1NNOGVVSjFMdG5zMnJTNmdmT0U?oc=5\" target=\"_blank\">Torna la vida al riu: estrenat el primer gran tram de la Via Blava a l'Anoia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Descobrir</font>\n(Published by Descobrir)\n(Feed publication date: 2025-11-19)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNVN2QTFfOGdWdkVfcXhfRzBJTkViWWMyVTVrQzhXTDJfclNBY0lreEs1M2Y2M0xUbVd1bGFsdklUYjlyV3c5OEZidTRvSzdzVnFXdVUxcnR4VnNIMmFVblZpTFNHTlkzZld5ZXVmVUNSOFAxWFhLM3VjdGdMQ2NsZmNKLTRKcnpwMDdLX1lJTHRuR0Z2N3R2ZldzTG52RHYxODF3eVd3emI5cFpCNnNhQ1FKaFFFWDR5NHhmdHFUVQ?oc=5",
     "region": "catalonia",
     "tier": "social",
     "lang": "ca",
@@ -31,11 +55,59 @@
     "notify": "quiet",
     "publisher": "Nació Digital",
     "publisher_url": "https://naciodigital.cat",
-    "text": "El Camí Ignasià rep 450.000 euros per impulsar la promoció, la senyalització i l'accessibilitat - Nació Digital\n<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxOazBpMHkyOHFpREY5TGNYQndoUHQ5ZmpBZlk2NVhqLW1vWjZhWGFlS0k0dXJKNGhmWFB0UU9KaDBKLXBkZkFQalZuTklhcWFnZnhWeHlRc2kwTF9yb29lcjZYeThtYzlMOExjV0RQWHM4dEM1MWc4M012bm1BVFBmVEllYnVWNVo0SjV3Wmc4Z0RTTmk2dlBab3h0OGNsRS1ndGNTM0tlSUs4UkFPVlJUaS1fbXJCTlFkcjVLamtwTWJUejI0OUdUMTQwTXVWaEJTWmgtZktaOFB1UTFBVjFCdnEwTQ?oc=5\" target=\"_blank\">El Camí Ignasià rep 450.000 euros per impulsar la promoció, la senyalització i l'accessibilitat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nació Digital</font>\n(Published by Nació Digital)\n(Feed publication date: 2026-11-24)"
+    "text": "La Ignasiana amplia la proposta amb una ruta de 200 quilòmetres des de Fraga - Nació Digital\n<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQNVN2QTFfOGdWdkVfcXhfRzBJTkViWWMyVTVrQzhXTDJfclNBY0lreEs1M2Y2M0xUbVd1bGFsdklUYjlyV3c5OEZidTRvSzdzVnFXdVUxcnR4VnNIMmFVblZpTFNHTlkzZld5ZXVmVUNSOFAxWFhLM3VjdGdMQ2NsZmNKLTRKcnpwMDdLX1lJTHRuR0Z2N3R2ZldzTG52RHYxODF3eVd3emI5cFpCNnNhQ1FKaFFFWDR5NHhmdHFUVQ?oc=5\" target=\"_blank\">La Ignasiana amplia la proposta amb una ruta de 200 quilòmetres des de Fraga</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nació Digital</font>\n(Published by Nació Digital)\n(Feed publication date: 2026-09-04)"
   },
   {
     "source_name": "Google News — \"Camí Ignasià\" (CA)",
-    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N30gGQAUFVX3lxTE9ndjk1QVVLYWRQdnRyVWhPdlpBQWV5bTJoZjE4bGxvOElQUDVqeUNKTlA2dExrOTlmeDdVWHkwcno2bzh0MXUzazBEMllRdFpkc2w4d0Fncjg2NlM5dXlpYld1WmpmQ1JibFJOeXVKdWV2WGZ3blJQdnZyYWdmS2RGUnBEdjRqLWs4NUdYQ2paRw?oc=5",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPb0huU2t3RE01Rnk2Nld6RGJVOTQ4ZWlCRmhsZjlLLVpRTjlFQ3NXNTdUQkJ4cG51bU0zaUhIWnJpNGJZMDk2anl6Y2txSC1DRC1UNUl4dG9sQk1fdEtqOWJJM1F6R1dyWFJKSTFlRFVKV3dPOTFRMUNSby1yV1lkaGxBRHdxWWpYLWF5Y2pXOEM2aE1BZ2V0cEtiLXF1a3ZXeDZqVW1aal9TTHJjZlVqYnFfVW03NjVCZERZOXdrUGQ1ZnBpQW43QmlSZksyenk2R0tZTS1JYw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Nació Digital",
+    "publisher_url": "https://naciodigital.cat",
+    "text": "L'Ajuntament de Manresa obre al públic la nova escala de vianants al Salt de la Creu del Tort - Nació Digital\n<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPb0huU2t3RE01Rnk2Nld6RGJVOTQ4ZWlCRmhsZjlLLVpRTjlFQ3NXNTdUQkJ4cG51bU0zaUhIWnJpNGJZMDk2anl6Y2txSC1DRC1UNUl4dG9sQk1fdEtqOWJJM1F6R1dyWFJKSTFlRFVKV3dPOTFRMUNSby1yV1lkaGxBRHdxWWpYLWF5Y2pXOEM2aE1BZ2V0cEtiLXF1a3ZXeDZqVW1aal9TTHJjZlVqYnFfVW03NjVCZERZOXdrUGQ1ZnBpQW43QmlSZksyenk2R0tZTS1JYw?oc=5\" target=\"_blank\">L'Ajuntament de Manresa obre al públic la nova escala de vianants al Salt de la Creu del Tort</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nació Digital</font>\n(Published by Nació Digital)\n(Feed publication date: 2025-05-29)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOZGJaYnhOMkx3ZDlOMlBrMHpoUUM4NHdudHllZUczU3JWTnJ3cHlMY0lVSE1EYjhGYUlMR3hZaTUzVV80ZEJSQjZLeWdnSG8yLUNZOUNrd2FJUHd2ckxUdFlTNWwzWXJ1cVNVY21LMmJ1eHRZRmVNZWxCdERmZ3JWNWxKUzhybUM2V1R3cXRNRzBxdw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Descobrir",
+    "publisher_url": "https://www.descobrir.cat",
+    "text": "26 km entre Montserrat i Manresa - Descobrir\n<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOZGJaYnhOMkx3ZDlOMlBrMHpoUUM4NHdudHllZUczU3JWTnJ3cHlMY0lVSE1EYjhGYUlMR3hZaTUzVV80ZEJSQjZLeWdnSG8yLUNZOUNrd2FJUHd2ckxUdFlTNWwzWXJ1cVNVY21LMmJ1eHRZRmVNZWxCdERmZ3JWNWxKUzhybUM2V1R3cXRNRzBxdw?oc=5\" target=\"_blank\">26 km entre Montserrat i Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Descobrir</font>\n(Published by Descobrir)\n(Feed publication date: 2020-09-30)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE04TkJzVzJSRDRVSjQwa25ESEExWHlraU5nWlZURVdGMVNZTU1KWEQ5QmhrdDV5U2o3cDI5TlJrOXJLaDN5NW5Wa2dmYUU0VjREeWVma2ppcVljQk1GZk4zQmVTRnVLdzJSM1lBUGZBS09icnFPdmRTbFhR?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Núvol",
+    "publisher_url": "https://www.nuvol.com",
+    "text": "Manresa: focus cultural durant el 2022 - Núvol\n<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE04TkJzVzJSRDRVSjQwa25ESEExWHlraU5nWlZURVdGMVNZTU1KWEQ5QmhrdDV5U2o3cDI5TlJrOXJLaDN5NW5Wa2dmYUU0VjREeWVma2ppcVljQk1GZk4zQmVTRnVLdzJSM1lBUGZBS09icnFPdmRTbFhR?oc=5\" target=\"_blank\">Manresa: focus cultural durant el 2022</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Núvol</font>\n(Published by Núvol)\n(Feed publication date: 2021-11-28)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOUWF4aW1yUmJJY24yRzc3SnZhMkdHaER4OXdiRVNIX2lOUEdpNU9rZmY5N3ZNa1Z6M0VJc19rQVFETUZVdkthTG40UHdLd2MtNGw4aE40VGZWbG5teGkxSjJjbmZHTXc1Tl9lUEg4TFB2U0oyZ01TZEtHTGZBWFBUU3JuMnFpaERoOGxpdUJfUjJRSU5aX05UWnJIbU50M3R3ZFF2VV9IWXE0cXdDcnlZUzFKdHpXUTVuM2JxVE8yNFFvMUJhd3IycldqZHNTNmJrNFQyaklZMFZ4dw?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "weight": 0.9,
+    "notify": "quiet",
+    "publisher": "Nació Digital",
+    "publisher_url": "https://naciodigital.cat",
+    "text": "Una vuitantena de persones descobreixen el Camí Oliba a Viladordis en la caminada Bages-Geoparc - Nació Digital\n<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxOUWF4aW1yUmJJY24yRzc3SnZhMkdHaER4OXdiRVNIX2lOUEdpNU9rZmY5N3ZNa1Z6M0VJc19rQVFETUZVdkthTG40UHdLd2MtNGw4aE40VGZWbG5teGkxSjJjbmZHTXc1Tl9lUEg4TFB2U0oyZ01TZEtHTGZBWFBUU3JuMnFpaERoOGxpdUJfUjJRSU5aX05UWnJIbU50M3R3ZFF2VV9IWXE0cXdDcnlZUzFKdHpXUTVuM2JxVE8yNFFvMUJhd3IycldqZHNTNmJrNFQyaklZMFZ4dw?oc=5\" target=\"_blank\">Una vuitantena de persones descobreixen el Camí Oliba a Viladordis en la caminada Bages-Geoparc</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nació Digital</font>\n(Published by Nació Digital)\n(Feed publication date: 2026-09-25)"
+  },
+  {
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeUVaZnZxV09hbGlMenUzLXk0NTNZUlkzcHdrRnA0emxLdHZQS0hPM2dMWmgwX25FNzlwM1ZPOXlLOXd0OWlQcVRtYnY4VEk5cWM5V3lFOXdaSGl1cGtZdFE5Smo0OXpGcnFVVnhYQnBkMy1BMUt1d05mbkgxaV9qMm9rSXRRdkN4VW11em9oY0daeE9kc1AtUkJWZ21ZM0dVOFBLU01wLWxxS2owRGFnQ1FUZ3VfTXdxOURQNmZCRHlJZU3SAcMBQVVfeXFMTXlFWmZ2cVdPYWxpTHp1My15NDUzWVJZM3B3a0ZwNHpsS3R2UEtITzNnTFpoMF9uRTc5cDNWTzl5Szl3dDlpUHFUbWJ2OFRJOXFjOVd5RTl3WkhpdXBrWXRROUpqNDl6RnJxVVZ4WEJwZDMtQTFLdXdOZm5IMWlfajJva0l0UXZDeFVtdXpvaGNHWnhPZHNQLVJCVmdtWTNHVThQS1NNcC1scUtqMERhZ0NRVGd1X013cTlEUDZmQkR5SWVN?oc=5",
     "region": "catalonia",
     "tier": "social",
     "lang": "ca",
@@ -43,18 +115,6 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "text": "L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSHVPVy1LeHBoUlN0TEw1Q3c5ZF8tUTUydW1GT3JrSTdnYTlCNl84WjNkQUp2MFVyX2hUYkxKQUdYWC1pejRXRzJTZlpPeFpidnJjSEpybTVPZ0JNR3dxN3lBZERiWU03MFFna1VYSDA0WGFMRVN6dG1aOFRheTBsV1N0WVg0TjFrZ1N30gGQAUFVX3lxTE9ndjk1QVVLYWRQdnRyVWhPdlpBQWV5bTJoZjE4bGxvOElQUDVqeUNKTlA2dExrOTlmeDdVWHkwcno2bzh0MXUzazBEMllRdFpkc2w4d0Fncjg2NlM5dXlpYld1WmpmQ1JibFJOeXVKdWV2WGZ3blJQdnZyYWdmS2RGUnBEdjRqLWs4NUdYQ2paRw?oc=5\" target=\"_blank\">L’Any Jubilar del 2029, la pròxima gran cita del Camí Ignasià</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
-  },
-  {
-    "source_name": "Google News — \"Camí Ignasià\" (CA)",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYWNqd2NnVV9UaHY4WUtmaVB4SGgxYjVKYmJHQ2R1em90R1JyNWM2NEdQX1lqbHc5WFJKS0xLMWlRLTFMdnptSXB1Nk5aMnVjUWl5YjVRcmNka28zVUoxSHI2Mk1pRlVYNHN1eWpyNHVVUU0wSG9OUFRhZ21fTk9nMklRdDVlRTFRQmpqS1VsaW52T25ncXEtQ0tjY9IBoAFBVV95cUxQbm1YTTVWa1lYalpNWFkwMTN0dFR0aFdzOWJXanZFWWRmN29yY0NQQXBoZnl6em5qVmpjTVI1WFMzRFpTWlhpdHZvc0pPY3JUZTRsX3I1T2t3MHhYUjZFSU94X3dWc1g2N0RYb0haTTlWVElIVzcxcTVHbFUxa1J3SzRzRXVJQ1pXWVItU2h3ejV2aThUdkswZ1BkQkI0UkUz?oc=5",
-    "region": "catalonia",
-    "tier": "social",
-    "lang": "ca",
-    "weight": 0.9,
-    "notify": "quiet",
-    "publisher": "Regió7",
-    "publisher_url": "https://www.regio7.cat",
-    "text": "El ministre de Turisme Jordi Hereu es compromet a Manresa a impulsar el Camí Ignasià al món - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNYWNqd2NnVV9UaHY4WUtmaVB4SGgxYjVKYmJHQ2R1em90R1JyNWM2NEdQX1lqbHc5WFJKS0xLMWlRLTFMdnptSXB1Nk5aMnVjUWl5YjVRcmNka28zVUoxSHI2Mk1pRlVYNHN1eWpyNHVVUU0wSG9OUFRhZ21fTk9nMklRdDVlRTFRQmpqS1VsaW52T25ncXEtQ0tjY9IBoAFBVV95cUxQbm1YTTVWa1lYalpNWFkwMTN0dFR0aFdzOWJXanZFWWRmN29yY0NQQXBoZnl6em5qVmpjTVI1WFMzRFpTWlhpdHZvc0pPY3JUZTRsX3I1T2t3MHhYUjZFSU94X3dWc1g2N0RYb0haTTlWVElIVzcxcTVHbFUxa1J3SzRzRXVJQ1pXWVItU2h3ejV2aThUdkswZ1BkQkI0UkUz?oc=5\" target=\"_blank\">El ministre de Turisme Jordi Hereu es compromet a Manresa a impulsar el Camí Ignasià al món</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2025-02-14)"
+    "text": "Memoria.cat publica la biografia d'una activista anarquista de la Fàbrica Nova de Manresa - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeUVaZnZxV09hbGlMenUzLXk0NTNZUlkzcHdrRnA0emxLdHZQS0hPM2dMWmgwX25FNzlwM1ZPOXlLOXd0OWlQcVRtYnY4VEk5cWM5V3lFOXdaSGl1cGtZdFE5Smo0OXpGcnFVVnhYQnBkMy1BMUt1d05mbkgxaV9qMm9rSXRRdkN4VW11em9oY0daeE9kc1AtUkJWZ21ZM0dVOFBLU01wLWxxS2owRGFnQ1FUZ3VfTXdxOURQNmZCRHlJZU3SAcMBQVVfeXFMTXlFWmZ2cVdPYWxpTHp1My15NDUzWVJZM3B3a0ZwNHpsS3R2UEtITzNnTFpoMF9uRTc5cDNWTzl5Szl3dDlpUHFUbWJ2OFRJOXFjOVd5RTl3WkhpdXBrWXRROUpqNDl6RnJxVVZ4WEJwZDMtQTFLdXdOZm5IMWlfajJva0l0UXZDeFVtdXpvaGNHWnhPZHNQLVJCVmdtWTNHVThQS1NNcC1scUtqMERhZ0NRVGd1X013cTlEUDZmQkR5SWVN?oc=5\" target=\"_blank\">Memoria.cat publica la biografia d'una activista anarquista de la Fàbrica Nova de Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)"
   }
 ]
