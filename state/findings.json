@@ -1,31 +1,5 @@
 [
   {
-    "id": "27a08f8fd970e9f1",
-    "detected_at": "2026-06-14T14:39:49+00:00",
-    "source_name": "Marly Camino — Ignatian Camino",
-    "url": "https://marlycamino.com/camino/ignatian-camino/",
-    "region": "whole",
-    "tier": "tour",
-    "lang": "en",
-    "title": "Marly Camino guided tour: Ignatian Camino September 2026 — 5,525 € for 13 days",
-    "summary_en": "Tour operator Marly Camino offers a fully supported group walk of the Ignatian Camino in September 2026 (September 15–27) priced at 5,525 € per person (single supplement +1,325 €). The 13-day itinerary starts in Pamplona with a bus to Loyola and includes accommodation, guides, a support vehicle, and travel insurance. 2027 dates and prices are not yet published.",
-    "relevance": 18,
-    "is_new": false
-  },
-  {
-    "id": "7c5f670a6ff1027b",
-    "detected_at": "2026-06-14T14:39:49+00:00",
-    "source_name": "Camino Ignaciano MTB",
-    "url": "https://www.caminoignacianomtb.com/",
-    "region": "whole",
-    "tier": "tour",
-    "lang": "es",
-    "title": "MTB tour operator offers Camino Ignaciano cycling packages with luggage transfer",
-    "summary_en": "A Catalan operator (guiesbtt.cat) offers guided mountain-bike packages for the Camino Ignaciano including luggage transfer, half-board accommodation, GPS tracks, and optional guide service. Contact: info@guiesbtt.cat / +34 610 355 736. No prices listed on the homepage.",
-    "relevance": 6,
-    "is_new": false
-  },
-  {
     "id": "3e766c541b6c5e31",
     "detected_at": "2026-06-14T14:39:49+00:00",
     "source_name": "Històries Manresanes — Camí Ignasià (blog)",
@@ -7327,7 +7301,7 @@
     "source_text": "Next Thursday, 17 December at 12 noon, more than 150 voices from 6 different choirs will come together for a Grand Christmas Charity Choir Concert at the Sanctuary of La Cova Sant Ignasi, conducted by Miquel Àngel Arias Soler.",
     "relevance": 5,
     "notify": "quiet",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "d779d5e10fbd418f",
@@ -7344,7 +7318,7 @@
     "notify": "quiet",
     "publisher": "ABC",
     "publisher_url": "https://www.abc.es",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c53a8cb981a20d62",
@@ -7361,7 +7335,7 @@
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "c9808415d346bc54",
@@ -7378,7 +7352,7 @@
     "notify": "quiet",
     "publisher": "Descobrir",
     "publisher_url": "https://www.descobrir.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "19f1fb6b72278530",
@@ -7395,7 +7369,7 @@
     "notify": "quiet",
     "publisher": "Nació Digital",
     "publisher_url": "https://naciodigital.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "2221016edc159293",
@@ -7412,7 +7386,7 @@
     "notify": "quiet",
     "publisher": "Nació Digital",
     "publisher_url": "https://naciodigital.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "e4ccc467536b1014",
@@ -7429,7 +7403,7 @@
     "notify": "quiet",
     "publisher": "Descobrir",
     "publisher_url": "https://www.descobrir.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "259e4ba857e880df",
@@ -7446,7 +7420,7 @@
     "notify": "quiet",
     "publisher": "Núvol",
     "publisher_url": "https://www.nuvol.com",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "b94965aff4a88831",
@@ -7463,7 +7437,7 @@
     "notify": "quiet",
     "publisher": "Nació Digital",
     "publisher_url": "https://naciodigital.cat",
-    "is_new": true
+    "is_new": false
   },
   {
     "id": "9466ab479d0edbbe",
@@ -7477,6 +7451,38 @@
     "summary_en": "Regió7 reports that Memoria.cat has published a biography of an anarchist activist from the Fàbrica Nova in Manresa. Off-topic local history matched by the feed query.",
     "source_text": "Memoria.cat publica la biografia d'una activista anarquista de la Fàbrica Nova de Manresa - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNeUVaZnZxV09hbGlMenUzLXk0NTNZUlkzcHdrRnA0emxLdHZQS0hPM2dMWmgwX25FNzlwM1ZPOXlLOXd0OWlQcVRtYnY4VEk5cWM5V3lFOXdaSGl1cGtZdFE5Smo0OXpGcnFVVnhYQnBkMy1BMUt1d05mbkgxaV9qMm9rSXRRdkN4VW11em9oY0daeE9kc1AtUkJWZ21ZM0dVOFBLU01wLWxxS2owRGFnQ1FUZ3VfTXdxOURQNmZCRHlJZU3SAcMBQVVfeXFMTXlFWmZ2cVdPYWxpTHp1My15NDUzWVJZM3B3a0ZwNHpsS3R2UEtITzNnTFpoMF9uRTc5cDNWTzl5Szl3dDlpUHFUbWJ2OFRJOXFjOVd5RTl3WkhpdXBrWXRROUpqNDl6RnJxVVZ4WEJwZDMtQTFLdXdOZm5IMWlfajJva0l0UXZDeFVtdXpvaGNHWnhPZHNQLVJCVmdtWTNHVThQS1NNcC1scUtqMERhZ0NRVGd1X013cTlEUDZmQkR5SWVN?oc=5\" target=\"_blank\">Memoria.cat publica la biografia d'una activista anarquista de la Fàbrica Nova de Manresa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-11-24)",
     "relevance": 2,
+    "notify": "quiet",
+    "publisher": "Regió7",
+    "publisher_url": "https://www.regio7.cat",
+    "is_new": false
+  },
+  {
+    "id": "5597a6e3e8d83312",
+    "detected_at": "2026-11-26T15:35:33+00:00",
+    "source_name": "Segre — Agricultura y ganadería (Lleida harvest reporting)",
+    "url": "https://www.segre.com/es/agricultura-ganaderia/",
+    "region": "catalonia",
+    "tier": "guide",
+    "lang": "es",
+    "title": "Segre: Catalan agriculture dept. to offset fertilizer costs with €2.17M aid",
+    "summary_en": "Segre's agriculture page leads with a 2,17 millones de euros aid package to offset higher fertilizer costs for farms this campaign; the rest of the delta is page re-extraction churn (union demands, livestock, drought in mountain flocks). Nothing about cereal phenology or harvest timing relevant to the spring walk.",
+    "source_text": "Agricultura compensará el coste de los fertilizantes con una ayuda dotada de 2,17 millones de euros\nSegre\nSe destinará a explotaciones agrarias que han tenido que asumir un incremento de los costes de producción durante la campaña de este año\nEva M. Muruaga\nACN\nReclaman poder utilizar drones para aplicarlos. Algunos son para frutos secos, cítricos, arroz o maíz\nLa medida destinará entre 70 y 90 millones de euros. Se impulsará a través de un decreto ley\nPARO\nEl porcino temía nuevas bajadas de cotizaciones si no se arreglaba. Los salarios subirán un 4% este año\nEsmeralda Farnell\nUno de los objetivos de Nace FaeNon es arraigar el talento local y prevenir la despoblación\nADMINISTRACIONES\nRaúl Ramírez, Laia Pedrós, JORDI BONILLA\nENTREVISTA\nEl especialista en geopolítica y mercados de materias primas analiza aspectos claves de la cadena de valor agroalimentaria\nLa empresa Pitaies Catalanes adapta variedades de esta fruta tropical al clima mediterráneo y ve potencial para diversificar los cultivos de Ponent.\nLa colaboración entre Osvald Ferreteria Electrocup y Group Saltó aspira a la poda automatizada de árboles en el 2027\ncontingut patrocinat\nEl certamen compta amb 200 empreses i té l’objectiu d’oferir solucions per al sector primari de la mà de les noves tecnologies\nGENERALITAT\nS. COSTA D.\nElaborada por el Govern para facilitar el trabajo de ayuntamientos y profesionales. Especifica los requisitos de cada infraestructura\nAGRICULTURA\nRedacció\nEl sector advierte que precipitaciones ahora arruinarían los trabajos. Después de una producción muy mala en la primera\nSeñala que la enfermedad \"no es zoonótica\" y que no hay \"ningún peligro\" para el consumo de leche y carne\nEDUARDO BAYONA\nSegre, ACN\nUP reclama un gasóleo profesional para abaratar costes y acabar con una política agraria hecha de \"parches\"\nEl conseller apuesta por el diálogo y recuerda que el Gobierno ha movilizado 170 MEUR en los últimos 3 meses\nESTADÍSTICA\nC.M.T.\nJARC reclama doblar hasta los 40 céntimos por litro la compensación del gasóleo agrícola y adelantar las ayudas de la PAC\nGANADERÍA\nLos rebaños de ovejas retornan a casa después del verano en la montaña. Los ganaderos pronostican un invierno malo porla sequía y piden soluciones\nEl sindicato considera insuficientes las medidas de Moncloa e inconcretas las del Govern\nSANIDAD\nSe trata de animales colocados por la Generalitat para controlar la enfermedad. Un équido afectado en San Esteban de Litera\nJORDI BONILLA\nLABORAL\nSegre, Agències\nRepresenta el 37% de las de Catalunya. El Govern destaca la capacidad para “mantener y generar actividad económica”",
+    "relevance": 4,
+    "notify": "quiet",
+    "is_new": true
+  },
+  {
+    "id": "43bede1457d01542",
+    "detected_at": "2026-11-26T15:35:33+00:00",
+    "source_name": "Google News — \"Camí Ignasià\" (CA)",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOczZUTHREeWhiZ1VjdHJFczBjMnhhS0dlZG9QUkwyZ0N6WlphRm9qNFZjd0JxbWRpblB3QmlFVVE2dDh2aXBnQldTZ2laeGdHMklwN01fYVR3cUNiTnNfNnBoWXU4cmxBcTJrM1U5RmZ3dngwSDdDbldnUVY5WGtJLWtBWExqd0p2aDVrY1c3bUJYMngt0gGaAUFVX3lxTE93UW9aQ1ZLYndDeFJWY0FoMnVaQWRDZHdFZFpacEEtWDlhTm5mX1hGSnZuVW16dDBZd0tnWmI4ZzMzc3U1eUh2eXZMdkhOVmpxallKWFBaRFBTbV9GX0NEeGV5bkxlRW15ck5rYUo5ZkFVVE56ek96T1R4aUd3bzdpZy1iQ1VDajRlYmUtWi1hN0dqOHFub0VzOHc?oc=5",
+    "region": "catalonia",
+    "tier": "social",
+    "lang": "ca",
+    "title": "Regió7: Manresa 'Sons del Camí' music series pauses to rethink its future (old, July 2026)",
+    "summary_en": "Regió7 reports that the Sons del Camí music cycle in Manresa is pausing to redefine its future. The feed publication date is 2026-07-28, so this is a stale resurfacing of a months-old piece, not news, and it has no bearing on walking the route.",
+    "source_text": "El cicle de músiques Sons del Camí de Manresa s'atura per redefinir el seu futur - Regió7\n<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOczZUTHREeWhiZ1VjdHJFczBjMnhhS0dlZG9QUkwyZ0N6WlphRm9qNFZjd0JxbWRpblB3QmlFVVE2dDh2aXBnQldTZ2laeGdHMklwN01fYVR3cUNiTnNfNnBoWXU4cmxBcTJrM1U5RmZ3dngwSDdDbldnUVY5WGtJLWtBWExqd0p2aDVrY1c3bUJYMngt0gGaAUFVX3lxTE93UW9aQ1ZLYndDeFJWY0FoMnVaQWRDZHdFZFpacEEtWDlhTm5mX1hGSnZuVW16dDBZd0tnWmI4ZzMzc3U1eUh2eXZMdkhOVmpxallKWFBaRFBTbV9GX0NEeGV5bkxlRW15ck5rYUo5ZkFVVE56ek96T1R4aUd3bzdpZy1iQ1VDajRlYmUtWi1hN0dqOHFub0VzOHc?oc=5\" target=\"_blank\">El cicle de músiques Sons del Camí de Manresa s'atura per redefinir el seu futur</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Regió7</font>\n(Published by Regió7)\n(Feed publication date: 2026-07-28)",
+    "relevance": 4,
     "notify": "quiet",
     "publisher": "Regió7",
     "publisher_url": "https://www.regio7.cat",
